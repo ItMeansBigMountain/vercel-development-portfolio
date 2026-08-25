@@ -279,7 +279,8 @@ fi
 /opt/hermes/.venv/bin/python "$REPO/scripts/verify_hermez_backup_stage.py"
 
 if git diff --cached --quiet; then
-  echo "HeRmEz backup complete: no changes to commit at $STAMP"
+  echo "✅ **HeRmEz backup current**"
+  echo "• No changes to push"
   exit 0
 fi
 
@@ -297,4 +298,5 @@ if [ "$HEAD_SHA" != "$REMOTE_SHA" ]; then
   exit 1
 fi
 
-echo "HeRmEz backup complete and pushed: $HEAD_SHA at $STAMP"
+echo "✅ **HeRmEz backup pushed**"
+echo "• Commit: ${HEAD_SHA:0:12}"

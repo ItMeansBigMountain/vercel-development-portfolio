@@ -7,5 +7,7 @@
     basic_auth {
         oyama $2a$14$avPOYM3SWSwbS0qayef55Ora1QB3GrlvQstdoAeZQG2I.zpZM0j8G
     }
-    reverse_proxy 127.0.0.1:4860
+    reverse_proxy 127.0.0.1:4860 {
+        header_up Host 127.0.0.1:4860
+    }
 }

@@ -239,7 +239,17 @@ def main() -> int:
         "token_errors": token_errors,
         "learnings": str(LEARNINGS),
     }
-    print(json.dumps(payload, indent=2) if args.json else LEARNINGS.read_text(encoding="utf-8"))
+    if args.json:
+        print(json.dumps(payload, indent=2))
+    elif token_errors:
+        print('⚠️ **Viral Radar metrics need attention**')
+        print(f'• Videos checked: {payload["video_ids_seen"]} | stats fetched: {payload["stats_fetched"]}')
+        print(f'• OAuth errors: {len(token_errors)}')
+        print(f'📌 Details: `{LEARNINGS}`')
+    else:
+        print('✅ **Viral Radar metrics updated**')
+        print(f'• Videos checked: {payload["video_ids_seen"]} | stats fetched: {payload["stats_fetched"]}')
+        print(f'📌 Learnings: `{LEARNINGS}`')
     return 0
 
 

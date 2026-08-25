@@ -7,6 +7,7 @@ from datetime import date
 from pathlib import Path
 
 from burnoutboyz.db import Database
+from burnoutboyz.auth import AuthorizationError
 from burnoutboyz.ux import OwnersManualUXService
 
 
@@ -17,7 +18,7 @@ class OwnersManualUXTests(unittest.TestCase):
         self.db.migrate()
         self.conn = self.db.connection
         self._seed()
-        self.ux = OwnersManualUXService(self.conn)
+        self.ux = OwnersManualUXService(self.conn, actor_user_id="u1")
 
     def tearDown(self) -> None:
         self.db.close()
@@ -25,6 +26,7 @@ class OwnersManualUXTests(unittest.TestCase):
 
     def _seed(self) -> None:
         self.conn.execute("INSERT INTO users(id,email,created_at) VALUES ('u1','owner@example.com','2026-01-01T00:00:00+00:00')")
+        self.conn.execute("INSERT INTO users(id,email,created_at) VALUES ('u2','other@example.com','2026-01-01T00:00:00+00:00')")
         self.conn.execute("INSERT INTO garages(id,user_id,name,created_at) VALUES ('g1','u1','Daily drivers','2026-01-01T00:00:00+00:00')")
         self.conn.execute("INSERT INTO provenance_sources(id,source_type,provider_name,source_uri,retrieved_at,license_classification) VALUES ('src_manual','manual','vehicle owner','manual-entry','2026-01-01T00:00:00+00:00','user supplied')")
         self.conn.execute("INSERT INTO provenance_sources(id,source_type,provider_name,source_uri,retrieved_at,license_classification) VALUES ('src_sched','licensed','Synthetic Schedule','file://fixture','2026-01-01T00:00:00+00:00','synthetic test data')")
@@ -79,6 +81,11 @@ class OwnersManualUXTests(unittest.TestCase):
         self.assertEqual(manual["actions"]["reminders"]["aria_live"], "polite")
         self.assertIn("recall_refresh", manual["offline_state"]["blocked_actions"])
         self.assertIn("kept the last known data", manual["error_state"]["message"])
+
+    def test_cross_tenant_vehicle_manual_is_denied_without_leaking_existence(self) -> None:
+        other = OwnersManualUXService(self.conn, actor_user_id="u2")
+        with self.assertRaisesRegex(AuthorizationError, "resource not found"):
+            other.vehicle_manual("v1", as_of=date(2026, 6, 1))
 
 
 if __name__ == "__main__":

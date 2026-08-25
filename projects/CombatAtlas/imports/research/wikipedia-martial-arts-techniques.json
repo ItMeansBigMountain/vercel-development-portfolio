@@ -1,0 +1,447 @@
+{
+  "sourceUrl": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AMartial+arts+techniques&cmlimit=500&format=json",
+  "license": "CC BY-SA 4.0 for page text; names/facts only collected here",
+  "count": 88,
+  "records": [
+    {
+      "pageid": 1995610,
+      "ns": 0,
+      "title": "540 kick"
+    },
+    {
+      "pageid": 2425545,
+      "ns": 0,
+      "title": "Aerial cartwheel"
+    },
+    {
+      "pageid": 26997901,
+      "ns": 0,
+      "title": "Aliveness"
+    },
+    {
+      "pageid": 6563922,
+      "ns": 0,
+      "title": "Ashi guruma"
+    },
+    {
+      "pageid": 6780848,
+      "ns": 0,
+      "title": "Ashi-Hishigi"
+    },
+    {
+      "pageid": 6822383,
+      "ns": 0,
+      "title": "Boxing styles and technique"
+    },
+    {
+      "pageid": 5841355,
+      "ns": 0,
+      "title": "Breaking (martial arts)"
+    },
+    {
+      "pageid": 2322187,
+      "ns": 0,
+      "title": "Butterfly kick"
+    },
+    {
+      "pageid": 80512920,
+      "ns": 0,
+      "title": "Centerline theory (boxing)"
+    },
+    {
+      "pageid": 31547326,
+      "ns": 0,
+      "title": "Choke-out"
+    },
+    {
+      "pageid": 1905451,
+      "ns": 0,
+      "title": "Chokehold"
+    },
+    {
+      "pageid": 3524194,
+      "ns": 0,
+      "title": "Clinch fighting"
+    },
+    {
+      "pageid": 47690601,
+      "ns": 0,
+      "title": "Covering (martial arts)"
+    },
+    {
+      "pageid": 79807871,
+      "ns": 0,
+      "title": "Crab Defense (boxing style)"
+    },
+    {
+      "pageid": 6612740,
+      "ns": 0,
+      "title": "Daki age"
+    },
+    {
+      "pageid": 6600264,
+      "ns": 0,
+      "title": "Daki wakare"
+    },
+    {
+      "pageid": 5292534,
+      "ns": 0,
+      "title": "De ashi barai"
+    },
+    {
+      "pageid": 4277383,
+      "ns": 0,
+      "title": "Do-jime"
+    },
+    {
+      "pageid": 5076628,
+      "ns": 0,
+      "title": "Double Leg (trick)"
+    },
+    {
+      "pageid": 3523296,
+      "ns": 0,
+      "title": "Eye-gouging"
+    },
+    {
+      "pageid": 38981652,
+      "ns": 0,
+      "title": "Fergality"
+    },
+    {
+      "pageid": 66868954,
+      "ns": 0,
+      "title": "Fighting Woman News"
+    },
+    {
+      "pageid": 3522903,
+      "ns": 0,
+      "title": "Fish-hooking"
+    },
+    {
+      "pageid": 2399047,
+      "ns": 0,
+      "title": "Foot sweep"
+    },
+    {
+      "pageid": 1883461,
+      "ns": 0,
+      "title": "Front kick"
+    },
+    {
+      "pageid": 4465680,
+      "ns": 0,
+      "title": "Gainer flash"
+    },
+    {
+      "pageid": 6960692,
+      "ns": 0,
+      "title": "Ganseki otoshi"
+    },
+    {
+      "pageid": 12564,
+      "ns": 0,
+      "title": "Grappling"
+    },
+    {
+      "pageid": 4218003,
+      "ns": 0,
+      "title": "Groin attack"
+    },
+    {
+      "pageid": 1956937,
+      "ns": 0,
+      "title": "Ground fighting"
+    },
+    {
+      "pageid": 5656389,
+      "ns": 0,
+      "title": "Gyaku J\u016bji-jime"
+    },
+    {
+      "pageid": 6053496,
+      "ns": 0,
+      "title": "Hammerblow"
+    },
+    {
+      "pageid": 5824635,
+      "ns": 0,
+      "title": "Hane goshi"
+    },
+    {
+      "pageid": 6616757,
+      "ns": 0,
+      "title": "Hane goshi gaeshi"
+    },
+    {
+      "pageid": 6579631,
+      "ns": 0,
+      "title": "Hane makikomi"
+    },
+    {
+      "pageid": 5784294,
+      "ns": 0,
+      "title": "Harai goshi"
+    },
+    {
+      "pageid": 6616634,
+      "ns": 0,
+      "title": "Harai goshi gaeshi"
+    },
+    {
+      "pageid": 6617345,
+      "ns": 0,
+      "title": "Harai makikomi"
+    },
+    {
+      "pageid": 6564118,
+      "ns": 0,
+      "title": "Harai tsurikomi ashi"
+    },
+    {
+      "pageid": 6600012,
+      "ns": 0,
+      "title": "Hikikomi gaeshi"
+    },
+    {
+      "pageid": 5318013,
+      "ns": 0,
+      "title": "Hiza guruma"
+    },
+    {
+      "pageid": 5654370,
+      "ns": 0,
+      "title": "Ippon seoi nage"
+    },
+    {
+      "pageid": 2575550,
+      "ns": 0,
+      "title": "Joint lock"
+    },
+    {
+      "pageid": 5148346,
+      "ns": 0,
+      "title": "Kata guruma"
+    },
+    {
+      "pageid": 5910804,
+      "ns": 0,
+      "title": "Kata ha jime"
+    },
+    {
+      "pageid": 5656450,
+      "ns": 0,
+      "title": "Kata juji jime"
+    },
+    {
+      "pageid": 5912039,
+      "ns": 0,
+      "title": "Kata te jime"
+    },
+    {
+      "pageid": 6617222,
+      "ns": 0,
+      "title": "Kawazu gake"
+    },
+    {
+      "pageid": 16831,
+      "ns": 0,
+      "title": "Kick"
+    },
+    {
+      "pageid": 3364116,
+      "ns": 0,
+      "title": "Kip-up"
+    },
+    {
+      "pageid": 6219721,
+      "ns": 0,
+      "title": "Cartwheel kick"
+    },
+    {
+      "pageid": 10421353,
+      "ns": 0,
+      "title": "List of capoeira techniques"
+    },
+    {
+      "pageid": 80291957,
+      "ns": 0,
+      "title": "Long guard"
+    },
+    {
+      "pageid": 2399039,
+      "ns": 0,
+      "title": "Lotus kick"
+    },
+    {
+      "pageid": 21915038,
+      "ns": 0,
+      "title": "Maipayat"
+    },
+    {
+      "pageid": 55431987,
+      "ns": 0,
+      "title": "Meia lua de compasso"
+    },
+    {
+      "pageid": 74700856,
+      "ns": 0,
+      "title": "Negativa"
+    },
+    {
+      "pageid": 10122683,
+      "ns": 0,
+      "title": "Nip-up"
+    },
+    {
+      "pageid": 5653681,
+      "ns": 0,
+      "title": "Okuri ashi barai"
+    },
+    {
+      "pageid": 11151044,
+      "ns": 0,
+      "title": "Open-hand strikes"
+    },
+    {
+      "pageid": 13263345,
+      "ns": 0,
+      "title": "Pin (sport wrestling)"
+    },
+    {
+      "pageid": 36894282,
+      "ns": 0,
+      "title": "Poking"
+    },
+    {
+      "pageid": 810547,
+      "ns": 0,
+      "title": "Pressure point"
+    },
+    {
+      "pageid": 509403,
+      "ns": 0,
+      "title": "Punch (combat)"
+    },
+    {
+      "pageid": 3434868,
+      "ns": 0,
+      "title": "Roundhouse kick"
+    },
+    {
+      "pageid": 24462403,
+      "ns": 0,
+      "title": "Rubber guard"
+    },
+    {
+      "pageid": 74662807,
+      "ns": 0,
+      "title": "Scorpion kick (capoeira)"
+    },
+    {
+      "pageid": 10448601,
+      "ns": 0,
+      "title": "Stance (martial arts)"
+    },
+    {
+      "pageid": 574095,
+      "ns": 0,
+      "title": "Strike (attack)"
+    },
+    {
+      "pageid": 7216031,
+      "ns": 0,
+      "title": "Sweep (martial arts)"
+    },
+    {
+      "pageid": 25160190,
+      "ns": 0,
+      "title": "Taiho-jutsu"
+    },
+    {
+      "pageid": 3538948,
+      "ns": 0,
+      "title": "Throw (grappling)"
+    },
+    {
+      "pageid": 13320978,
+      "ns": 0,
+      "title": "Touch of Death"
+    },
+    {
+      "pageid": 47566602,
+      "ns": 0,
+      "title": "Touchless knockout"
+    },
+    {
+      "pageid": 4037113,
+      "ns": 0,
+      "title": "Transition (grappling)"
+    },
+    {
+      "pageid": 80411051,
+      "ns": 0,
+      "title": "Triangle theory (boxing)"
+    },
+    {
+      "pageid": 33675167,
+      "ns": 0,
+      "title": "Tricking (martial arts)"
+    },
+    {
+      "pageid": 28417323,
+      "ns": 0,
+      "title": "Tsubame gaeshi"
+    },
+    {
+      "pageid": 70585411,
+      "ns": 14,
+      "title": "Category:Blocking (martial arts)"
+    },
+    {
+      "pageid": 51443631,
+      "ns": 14,
+      "title": "Category:Brazilian jiu-jitsu techniques"
+    },
+    {
+      "pageid": 74690082,
+      "ns": 14,
+      "title": "Category:Capoeira techniques"
+    },
+    {
+      "pageid": 20920421,
+      "ns": 14,
+      "title": "Category:Firearm techniques"
+    },
+    {
+      "pageid": 3592991,
+      "ns": 14,
+      "title": "Category:Grappling"
+    },
+    {
+      "pageid": 6798398,
+      "ns": 14,
+      "title": "Category:Judo technique"
+    },
+    {
+      "pageid": 40662721,
+      "ns": 14,
+      "title": "Category:Karate techniques"
+    },
+    {
+      "pageid": 7096251,
+      "ns": 14,
+      "title": "Category:Martial arts stances"
+    },
+    {
+      "pageid": 44990125,
+      "ns": 14,
+      "title": "Category:Mixed martial arts techniques"
+    },
+    {
+      "pageid": 20700158,
+      "ns": 14,
+      "title": "Category:Strikes (martial arts)"
+    }
+  ]
+}

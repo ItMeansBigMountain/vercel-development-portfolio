@@ -5,6 +5,8 @@ import sqlite3
 from datetime import date, datetime, timezone
 from typing import Any
 
+from .auth import require_vehicle_owner
+
 
 _FRIENDLY_SEVERITY = {
     "normal": "Standard schedule",
@@ -49,11 +51,17 @@ class OwnersManualUXService:
     using fear-based maintenance copy.
     """
 
-    def __init__(self, connection: sqlite3.Connection):
+    def __init__(self, connection: sqlite3.Connection, *, actor_user_id: str):
         self.connection = connection
         self.connection.row_factory = sqlite3.Row
+        self.actor_user_id = actor_user_id
+
+    def _own_vehicle(self, vehicle_id: str) -> None:
+        require_vehicle_owner(self.connection, self.actor_user_id, vehicle_id)
 
     def garage_dashboard(self, user_id: str, *, as_of: date | None = None) -> dict[str, Any]:
+        if user_id != self.actor_user_id:
+            raise PermissionError("resource not found")
         as_of = as_of or _today()
         garages = []
         for garage in self.connection.execute(
@@ -99,6 +107,7 @@ class OwnersManualUXService:
         }
 
     def vehicle_manual(self, vehicle_id: str, *, as_of: date | None = None) -> dict[str, Any]:
+        self._own_vehicle(vehicle_id)
         as_of = as_of or _today()
         vehicle = self._vehicle_identity(vehicle_id)
         if not vehicle:

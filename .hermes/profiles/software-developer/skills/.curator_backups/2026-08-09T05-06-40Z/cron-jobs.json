@@ -1,0 +1,821 @@
+{
+  "jobs": [
+    {
+      "id": "cfcea697da5c",
+      "name": "Daily HeRmEz GitHub backup",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "backup_hermez.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 85
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-14T06:28:44.368316+00:00",
+      "next_run_at": "2026-08-10T03:00:00+00:00",
+      "last_run_at": "2026-08-09T03:00:55.380838+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstderr:\nwarning: adding embedded git repository: projects/_tmp/bis-gear-plugin-audit\nhint: You've added another git repository inside your current repository.\nhint: Clones of the outer repository will not contain the contents of\nhint: the embedded repository and will not know how to obtain it.\nhint: If you meant to add a submodule, use:\nhint:\nhint: \tgit submodule add <url> projects/_tmp/bis-gear-plugin-audit\nhint:\nhint: If you added this path by mistake, you can remove it from the\nhint: index with:\nhint:\nhint: \tgit rm --cached projects/_tmp/bis-gear-plugin-audit\nhint:\nhint: See \"git help submodule\" for more information.\nhint: Disable this message with \"git config advice.addEmbeddedRepo false\"\nwarning: adding embedded git repository: projects/_tmp/hermez-icon-gitlinks\nwarning: adding embedded git repository: projects/_tmp/plugin-hub-whos-icon\nTo https://github.com/ItMeansBigMountain/HeRmEz.git\n ! [rejected]            main -> main (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/ItMeansBigMountain/HeRmEz.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "last_delivery_error": null,
+      "deliver": "discord:1523247688689258586",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "92f873723241",
+      "name": "Morning operator report",
+      "prompt": "You are doing the user's proactive daily morning stand-up/operator report in Discord.\n\nUse the loaded `operator-morning-reports` skill as a tone guide, but apply the user's latest corrections below. Keep it laconic, skimmable, Discord-native, no Markdown tables, no long essays.\n\nA pre-run script may inject Google Workspace context above this prompt. Treat that injected output as read-only source material from these five profiles:\n- `hermes-agent` / trapiistan@gmail.com \u2014 Hermes/YouTube/operator account\n- `personal-main` / Affan.fareed@gmail.com \u2014 personal main, read-focused\n- `personal-secondary` / fareed320@gmail.com \u2014 personal secondary, read-focused\n- `classicalechos` / classicalechos@gmail.com \u2014 Classical Echos/content lane\n- `burner` / laflametoast@gmail.com \u2014 low-stakes/burner account\n\nFormatting requirements:\n- Use clean bullets with nested sub-bullets instead of comma-heavy bullets.\n- Prefer at-a-glance structure:\n  - Main point\n    - Detail\n    - Why it matters / action\n- Do not include generic filler sections.\n- Do NOT include a section named **Capability / trend radar**. The user explicitly called that section nonsense and wants it removed.\n- Do NOT include generic agent/automation advice like \"build small agents that do boring repeatable work\" unless it is tied to a concrete active task or blocker from the day's actual context.\n- Do not include the 14-Day Challenge Check-In, 14-day challenge boxes, one-second-rule tracker, or `done: meditation...` reply prompt anymore. The user explicitly removed that section.\n\nInclude a compact **Google Workspace pulse** inside the Work source / operating pulse section. Summarize high-signal updates from all accounts: unread or important Gmail, calendar events, useful Drive/Docs/Sheets movement, deadlines, receipts/renewals, opportunities, and weird useful AI/content/tooling leads. Group by profile only when useful; otherwise consolidate into:\n- Needs attention\n- Calendar\n- Ops/admin\n- Interesting/source material\n- Email cleanup candidates\n\nEmail-specific rules for the report:\n- Prioritize billing/charges/receipts, Chase, Apple receipts/Card, cloud services, AI APIs, Robinhood, Landing only for active stay/rent-impacting logistics, Ticketmaster ticket/venue info, myQ/Chamberlain garage alerts, GitGuardian/security, official/vehicle renewal notices, and similar life/admin signals.\n- TLDR is useful for latest news, but only use/keep the feed from `fareed320@gmail.com`; TLDR on other accounts is duplicate cleanup candidate.\n- Kino Body/Kinobody and Daily Stoic are approved faceless-video source senders. If unread items from these senders appear, flag them as `faceless video source queued/eligible`, not as a personal \"needs attention\" item.\n- Grammarly Insights is interesting self-metrics/profile data: summarize what it says about the user's writing/communication habits and connect it to his personal operating profile.\n- For TLDR, Kino Body/Kinobody, Daily Stoic, and Grammarly Insights: summarize through the lens of the user's known interests/profile, draw appealing personal insights, then list each as a newsletter cleanup candidate with sender, category, and title. Since the user has approved junk-email cleanup, clearly separate already-approved junk categories from any newsletter/source emails that still need review before deletion.\n- Junk categories approved for cleanup include FoundersCard, Yieldi, Crunch, Higgsfield, Fundrise, Kling AI, Instagram notifications, Lumen marketing, Chess.com nags, YEEZY, City Experiences, LELO, GNC, and generic consumer sales/promotional emails.\n- Include an **Email priority + cleanup** mini-section every morning with concise nested bullets:\n  - Priority emails\n  - Interesting/source emails\n  - Cleanup actions\n  - Needs review\n- Do not actually delete newsletter/source emails unless they have already been used for the requested video pipeline and the upload has been verified, or the user has explicitly approved that sender/category as junk.\n\nCalendar/personal context:\n- For any Jared coding prep/event, mention that Jared likes Codewars.com and SoloLearn.com.\n  - Completing modules gives him a nice rush of accomplishment.\n  - Suggest those as prep/context only if relevant to the day's calendar.\n\nHard rules:\n- Do not send emails, reply, create/delete calendar events, share/edit/delete Drive files, or modify Docs/Sheets without explicit user approval in a separate user request.\n- Personal accounts are read-first; never send from `personal-main` or `personal-secondary` without approval of the exact message.\n- Do not include raw secrets, recovery-code filenames, token contents, or credential-looking file names. If credential/recovery-like items are detected, mention only that sensitive Drive items were hidden.\n- If Google context is unavailable or an API errors, state the blocker briefly and continue the rest of the report.\n\nReport sections to include:\n- Top line\n- Work source / operating pulse\n- Email priority + cleanup\n- Calendar / prep notes when relevant\n- Chicago local pulse\n- Market pulse\n- Google search / social pulse, only if source-backed and concrete\n- AI + coding news, only if source-backed and concrete\n- Interesting item(s), only if concrete\n- Numerology, if useful/short\n- Daily challenge\n- One big priority prompt\n- Hard truth / leverage move\n\nDo not ask questions; final response is delivered to Discord by cron.",
+      "skills": [
+        "google-workspace"
+      ],
+      "skill": "google-workspace",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "google_morning_context.py",
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 13 * * *",
+        "display": "30 13 * * *"
+      },
+      "schedule_display": "30 13 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 83
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-21T01:20:05.320432+00:00",
+      "next_run_at": "2026-08-09T13:30:00+00:00",
+      "last_run_at": "2026-08-08T13:31:11.087102+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file",
+        "session_search",
+        "x_search"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "6355d735bb4a",
+      "name": "Creator discovery feeder for Viral Radar",
+      "prompt": "Run the strict Viral Radar procedure for newly discovered creator videos.\n\nWorking directory: /opt/data/HeRmEz/projects/viral-clip-radar.\n\nFor every newly discovered creator/source video, target at least 5 public clips when the source duration supports distinct clips. Never present 1/5 or 1/10 as OK. If a source video is a YouTube Short or too short for 5 distinct clips, either find a longer source-ready creator video from the watchlist or report BLOCKED/PARTIAL with that exact reason.\n\nRequired behavior:\n- Drain existing UPLOAD_QUEUE first.\n- Seed latest watchlist manifests.\n- Clip/render/upload the actual discovered source video, not filler.\n- If rendered clips fail upload, ensure they remain in UPLOAD_QUEUE and report queue_count.\n- If queue is empty because the remaining deficits were never rendered/planned (source missing, botcheck, too short, only 1 viable clip), report that explicitly as a blocker/backlog, not as success.\n- Final Discord report must include uploaded URLs, per-source uploaded_count/5, queue_count, blockers, and next action.\n- Final status must be BLOCKED/PARTIAL unless each selected source hit >=5 public uploads or the deficit is explicitly explained.\n\nDo not use NASA/space/unknown placeholders or old queued clips to satisfy newly discovered source minimums.",
+      "skills": [
+        "social-video-cron-growth-loop",
+        "youtube-automation-with-tts"
+      ],
+      "skill": "social-video-cron-growth-loop",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 360,
+        "display": "every 360m"
+      },
+      "schedule_display": "every 360m",
+      "repeat": {
+        "times": null,
+        "completed": 257
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-04T02:32:26.430124+00:00",
+      "next_run_at": "2026-08-09T05:31:28.582351+00:00",
+      "last_run_at": "2026-08-08T23:31:28.582351+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259261281206332",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": "/opt/data/HeRmEz/projects/viral-clip-radar",
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "c9e81ae638fe",
+      "name": "Daily faceless YouTube full video generation + upload",
+      "prompt": "Run the user's Daily Faceless YouTube full video generation + upload pipeline as a full growth loop. First read /opt/data/HeRmEz/projects/faceless-youtube-channel/VIRAL_YOUTUBE_SYSTEM.md and /opt/data/HeRmEz/projects/_ops/social-growth/PERFORMANCE_LEARNINGS.md if present. Apply viral packaging: 1-3s high-contrast hook, no intro, hook\u2192context\u2192receipts\u2192implication\u2192identity/action close, short on-screen captions, visual changes every 2-4s, title/on-screen text/description semantically aligned. Then run the configured project pipeline from /opt/data/HeRmEz/projects/faceless-youtube-channel. Prefer newsletter_batch_upload.py for real newsletter videos when Gmail/Youtube/TTS are ready; otherwise run the wrapper dry-run and report the blocker. Verify with py_compile, ffprobe, and uploader JSON before reporting. Do not trash source emails unless YouTube returns a verified video_id. Keep the final Discord report concise with video path/URL, upload status, and any blocker.",
+      "skills": [
+        "social-video-cron-growth-loop",
+        "youtube-automation-with-tts"
+      ],
+      "skill": "social-video-cron-growth-loop",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "run_faceless_video.sh",
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 1 * * *",
+        "display": "45 1 * * *"
+      },
+      "schedule_display": "45 1 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 35
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-07-09T14:13:19.303566+00:00",
+      "paused_reason": null,
+      "created_at": "2026-06-04T12:55:03.480224+00:00",
+      "next_run_at": "2026-07-10T01:45:00+00:00",
+      "last_run_at": "2026-07-09T01:47:58.432260+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259261281206332",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": "/opt/data/HeRmEz/projects/faceless-youtube-channel",
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "bce8ebabac36",
+      "name": "Daily Viral Radar / Creator clip generation + upload",
+      "prompt": "Run the strict Daily Viral Radar creator clip procedure.\n\nPriority: Viral Radar over faceless. Goal is at least 5 public clips per selected/source video when the source duration supports it; never report 1/N as success. Drain /opt/data/HeRmEz/projects/viral-clip-radar/UPLOAD_QUEUE first, then run /opt/data/scripts/viral_radar_daily_upload.py from /opt/data/HeRmEz/projects/viral-clip-radar.\n\nHard rules:\n- If uploaded_count < 5 for any selected source/video, final status must be BLOCKED/PARTIAL, not OK.\n- Include exact blockers: source download/auth/botcheck, source too short to make 5 distinct clips, render error, upload quota/rate limit, duplicate guard, or missing files.\n- If rendered clips fail upload, verify they remain in UPLOAD_QUEUE and report queue_count. Queue must not be empty for failed rendered uploads.\n- If queue is empty because remaining clips were never rendered/planned (e.g. source Short only has 1 viable segment), say that clearly and report source-ready/backlog next action.\n- Do not use old queue, NASA/space/unknown, or filler to satisfy the minimum.\n- Notify the user in Discord with concise bullets: uploaded URLs, uploaded_count/5, queue_count, blockers, next action.\n\nUse terminal/file tools only. Do not claim success unless the command output proves >=5 public uploads or all deficits are explicitly reported as blockers.",
+      "skills": [
+        "social-video-cron-growth-loop",
+        "youtube-automation-with-tts"
+      ],
+      "skill": "social-video-cron-growth-loop",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "viral_radar_daily_upload.py",
+      "no_agent": false,
+      "context_from": [
+        "6355d735bb4a"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 1 * * *",
+        "display": "0 1 * * *"
+      },
+      "schedule_display": "0 1 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 65
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-04T12:58:58.087889+00:00",
+      "next_run_at": "2026-08-10T01:00:00+00:00",
+      "last_run_at": "2026-08-09T01:08:58.227132+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259261281206332",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": "/opt/data/HeRmEz/projects/viral-clip-radar",
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "6265cf005534",
+      "name": "HeRmEz Kanban project sweep dispatcher nudge",
+      "prompt": "Silent watchdog that nudges the HeRmEz Kanban project sweep dispatcher. The script appends dispatch output to /opt/data/HeRmEz/projects/KANBAN_SWEEP_DISPATCH.log and prints nothing so routine ticks are silent.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "kanban_dispatch_hermez_sweep.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 10,
+        "display": "every 10m"
+      },
+      "schedule_display": "every 10m",
+      "repeat": {
+        "times": null,
+        "completed": 6841
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-06T02:05:15.742685+00:00",
+      "next_run_at": "2026-08-09T05:06:24.864633+00:00",
+      "last_run_at": "2026-08-09T04:56:24.864633+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "184d6fe792e3",
+      "name": "Daily Viral Radar metrics learning loop",
+      "prompt": "Collect YouTube upload metrics for Viral Radar only and update /opt/data/HeRmEz/projects/_ops/social-growth/PERFORMANCE_LEARNINGS.md. The faceless/newsletter channel is paused and must not be read, tracked, summarized, or used for recommendations. Use /opt/data/scripts/youtube_metrics_monitor.py and report Viral Radar performance only.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "youtube_metrics_monitor.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 14 * * *",
+        "display": "0 14 * * *"
+      },
+      "schedule_display": "0 14 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 63
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-07T00:27:10.163742+00:00",
+      "next_run_at": "2026-08-09T14:00:00+00:00",
+      "last_run_at": "2026-08-08T14:00:20.216333+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259261281206332",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "920d68fd715e",
+      "name": "Morning email sorting agent",
+      "prompt": "Run the Hermes email sorting agent before the morning operator report. It should sort known source newsletters (TLDR, Daily Stoic, Kino Body) into Hermes Gmail labels/folders and remove them from Inbox while preserving them for video generation. The wrapper stays silent when there is nothing to sort.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "email_sorting_agent_apply.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 13 * * *",
+        "display": "15 13 * * *"
+      },
+      "schedule_display": "15 13 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 61
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-12T04:20:40.734347+00:00",
+      "next_run_at": "2026-08-09T13:15:00+00:00",
+      "last_run_at": "2026-08-08T13:15:22.511448+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524172425393340516",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "df35199a8b51",
+      "name": "Post-morning Agentic portfolio market scan",
+      "prompt": "Run the user's post-open Agentic portfolio research and opportunity scan for Robinhood Agentic account 433711041 / ending 1041 only. Load robinhood-trading-operator and google-workspace. Verify live account/positions/buying power/open-ish equity orders. Scan beyond stale watchlists using liquid market leaders, sector rotation, trusted current news, earnings and fundamental trends, plus technical analysis of daily/intraday trend, support/resistance, relative strength, volume, volatility, pullbacks, breakouts and retests. Rank up to five swing candidates with catalyst, invalidation, stop, targets and risk/reward. Under the active autonomous policy, qualifying equities may be reviewed and placed without per-trade approval. Target using 80% of currently available liquid buying power after pending orders and retain 20% cash; never force a trade just to hit allocation. Equities/fractionals only, no options/shorts/other accounts. Journal all previews, executions, no-trades and failures. Report current state, regime, ranked picks, exact actions/fills, technical plus fundamental rationale, cash deployment and buffer, and any broker/tool blocker.",
+      "skills": [
+        "robinhood-trading-operator",
+        "google-workspace"
+      ],
+      "skill": "robinhood-trading-operator",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "50 13 * * 1-5",
+        "display": "50 13 * * 1-5"
+      },
+      "schedule_display": "50 13 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 39
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-12T15:48:08.357771+00:00",
+      "next_run_at": "2026-08-10T13:50:00+00:00",
+      "last_run_at": "2026-08-07T13:53:09.567019+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259597232242831",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "f02334d43494",
+      "name": "Daily Viral Radar Content Backlog Processor",
+      "prompt": "Drain the Viral Clip Radar backlog only, using the social-video-cron-growth-loop rules.\n\nWorking directory: /opt/data/HeRmEz/projects/viral-clip-radar\nCommand: /opt/data/scripts/viral_radar_backlog_drain.sh\n\nRun the command with the terminal tool using workdir=/opt/data/HeRmEz/projects/viral-clip-radar and timeout=600. Do not treat scheduler/command completion as product success: inspect the raw output and newest durable log under OUTPUTS/backlog-processor-logs. Verify queue counts after execution. Report uploaded public URLs, queue_before, queue_after, hold_queue, pipeline_exit, and any blocker with raw error lines. Never delete failed rendered clips. If authentication fails, include fresh OAuth recovery URLs. Viral Radar only; do not access faceless/newsletter assets.",
+      "skills": [
+        "social-video-cron-growth-loop"
+      ],
+      "skill": "social-video-cron-growth-loop",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "display": "0 9 * * *"
+      },
+      "schedule_display": "0 9 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 51
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-12T17:32:19.594106+00:00",
+      "next_run_at": "2026-08-09T09:00:00+00:00",
+      "last_run_at": "2026-08-08T09:04:40.622636+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259261281206332",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": "/opt/data/HeRmEz/projects/viral-clip-radar",
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "549658fc5a9e",
+      "name": "Agentic Robinhood Trade Account Monitor \u2014 Market Open",
+      "prompt": "Run the autonomous Robinhood Agentic swing-trading OPEN scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live account, portfolio, buying power, positions, all open-ish equity order states, fills, and kill switches before acting. Analyze SPY/QQQ/IWM, sectors, current news/fundamental/earnings/macro trends, and a broad liquid equity universe beyond stale watchlists. Perform technical analysis using trend, support/resistance, relative strength, volume, volatility, breakout/pullback/retest structure, and explicit invalidation. Seek professional-quality swing trades lasting days to weeks, while rotating or exiting sooner when technical or fundamental theses fail. Calculate available liquid buying power after pending orders; target deploying 80% of that liquid balance across 1-4 qualifying liquid fractional equities and retain 20% cash. Do not force trades, churn, use options/shorts, trade another account, violate drawdown/risk gates, or claim guaranteed returns. Review each order before placement, autonomously place/manage/exit policy-compliant equity trades, and journal every preview, trade, management action, no-trade decision, and tool failure. Report live state, market regime, ranked candidates, exact actions/fills, stops/invalidation, targets, cash deployed, reserved buffer, and blockers. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "skills": [
+        "robinhood-trading-operator"
+      ],
+      "skill": "robinhood-trading-operator",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "35 13 * * 1-5",
+        "display": "35 13 * * 1-5"
+      },
+      "schedule_display": "35 13 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 42
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-19T16:12:37.431999+00:00",
+      "next_run_at": "2026-08-10T13:35:00+00:00",
+      "last_run_at": "2026-08-07T13:46:08.716243+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259597232242831",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "d7f2c79b64db",
+      "name": "Agentic Robinhood Trade Account Monitor \u2014 Midday",
+      "prompt": "Run the autonomous Robinhood Agentic swing-trading MIDDAY scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live portfolio, buying power, positions, fills, all open-ish equity orders, and kill switches. Reassess each holding using intraday and daily technical structure, relative strength, volume, support/resistance, stops and targets, plus latest fundamentals, earnings/news catalysts, macro and sector flows. Scan broadly for superior liquid swing setups; actively rotate or exit when a thesis invalidates or a materially better risk-adjusted setup appears, but never churn or force a trade. Calculate available liquid buying power after pending orders; deploy 80% of qualifying available liquid balance and retain 20% cash, using 1-4 liquid fractional equities when justified. Equities only; no options, shorts, other accounts, averaging down, widened stops, or guaranteed-return claims. Review before placing, autonomously execute policy-compliant actions, journal everything, and report holdings, changes, fills, ranked opportunities, technical/fundamental thesis, risk, deployment percentage and 20% reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "skills": [
+        "robinhood-trading-operator"
+      ],
+      "skill": "robinhood-trading-operator",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * 1-5",
+        "display": "0 16 * * 1-5"
+      },
+      "schedule_display": "0 16 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 34
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-19T18:35:06.052701+00:00",
+      "next_run_at": "2026-08-10T16:00:00+00:00",
+      "last_run_at": "2026-08-07T16:03:10.159165+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259597232242831",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "44b1b5e0156f",
+      "name": "Agentic Robinhood Trade Account Monitor \u2014 Power Hour",
+      "prompt": "Run the autonomous Robinhood Agentic swing-trading POWER-HOUR scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live portfolio, liquid buying power, positions, fills, all open-ish equity orders, and kill switches. Decide overnight exposure professionally using daily/intraday technicals, trend and relative strength, volume, support/resistance, invalidation, earnings/event risk, current fundamentals/news, macro and sector flows. Manage stops/targets, exit broken theses, and rotate into materially better liquid swing setups when risk-adjusted evidence supports it; do not churn or force trades. After pending orders, target deploying 80% of qualifying available liquid balance while preserving 20% cash. Equities only; no options, shorts, other accounts, averaging down, or widening stops. Review every order before autonomous placement, journal every action/no-action/failure, and report exact fills/actions, overnight theses, risks/events, stops/targets, deployed cash and reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "skills": [
+        "robinhood-trading-operator"
+      ],
+      "skill": "robinhood-trading-operator",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 19 * * 1-5",
+        "display": "30 19 * * 1-5"
+      },
+      "schedule_display": "30 19 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 35
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-19T18:35:07.056543+00:00",
+      "next_run_at": "2026-08-10T19:30:00+00:00",
+      "last_run_at": "2026-08-07T19:34:12.131571+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259597232242831",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "7fe01c5780db",
+      "name": "YouTube auth/channel guard watchdog",
+      "prompt": "Run silent YouTube social-video auth/channel healthcheck. The script prints nothing when healthy and prints actionable JSON only when a token/channel/dependency guard is broken. Do not schedule more cron jobs.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "youtube_auth_healthcheck.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 360,
+        "display": "every 360m"
+      },
+      "schedule_display": "every 360m",
+      "repeat": {
+        "times": null,
+        "completed": 135
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-06T15:04:47.122120+00:00",
+      "next_run_at": "2026-08-09T10:49:28.958707+00:00",
+      "last_run_at": "2026-08-09T04:49:28.958707+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259261281206332",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "1f84eb1fea92",
+      "name": "Ensure redteam profile gateway is running",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "ensure_redteam_gateway.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * 0",
+        "display": "0 0 * * 0"
+      },
+      "schedule_display": "0 0 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 8
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-08T07:49:16.802140+00:00",
+      "next_run_at": "2026-08-16T00:00:00+00:00",
+      "last_run_at": "2026-08-09T00:00:22.985283+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524312655894937623",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "f65ae3c6a5ba",
+      "name": "Agentic Robinhood Swing Opportunity Scan \u2014 Afternoon",
+      "prompt": "Run an autonomous AFTERNOON swing-opportunity and rotation scan for Robinhood Agentic account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live account, portfolio, liquid buying power, positions, fills, all open-ish equity orders, and kill switches. Analyze broad market/sector regime, current fundamental/earnings/news/macro trends, and technical structure across a broad liquid universe: trend, support/resistance, relative strength, volume, volatility, pullback/retest/breakout, and invalidation. Seek high-quality swing trades lasting days to weeks and actively rotate/exit when evidence changes, without forcing trades or churning. After pending orders, target deploying 80% of qualifying available liquid buying power into 1-4 liquid fractional equities and retain 20% cash. Equities only; no options, shorts, other accounts, averaging down, widened stops, or guaranteed-return claims. Review orders before autonomous placement; journal all previews, executions, management actions, no-trades and failures. Report live state, ranked candidates, technical plus fundamental thesis, exact fills/actions, stops/targets, deployed cash and reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "skills": [
+        "robinhood-trading-operator"
+      ],
+      "skill": "robinhood-trading-operator",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 17 * * 1-5",
+        "display": "30 17 * * 1-5"
+      },
+      "schedule_display": "30 17 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 16
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-17T16:12:35.294628+00:00",
+      "next_run_at": "2026-08-10T17:30:00+00:00",
+      "last_run_at": "2026-08-07T17:33:18.868220+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "discord:1524259597232242831",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524259597232242831",
+        "chat_name": "TRAPISTAN / #trading",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "cb159caac160",
+      "name": "Monitor Who's Grinding Plugin Hub PR",
+      "prompt": "Monitor RuneLite Plugin Hub PR https://github.com/runelite/plugin-hub/pull/13917 for Who's Grinding Panel. It must remain a single-plugin submission changing only plugins/whos-grinding-panel and point to ItMeansBigMountain/whos-grinding-clan-panel-osrs commit 78a545e88b2414622cd4d1a0b4655fc81d0bca33 unless an intentional newer tested child revision is published. Inspect issue comments, formal reviews, inline comments, merge/closed state, changed files, and check runs. Treat a red aggregate check titled 'Requires maintainer review' as the expected human-review gate, not a defect. Build failures or 'Changes are needed' are actionable. If there is no new actionable feedback and the build remains healthy, send nothing. If merged, report success and recommend moving the project from pr-review-pending to completed; do not create another PR or schedule jobs recursively.",
+      "skills": [
+        "github-pr-workflow"
+      ],
+      "skill": "github-pr-workflow",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 120,
+        "display": "every 120m"
+      },
+      "schedule_display": "every 120m",
+      "repeat": {
+        "times": 36,
+        "completed": 10
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-08T07:24:20.276406+00:00",
+      "next_run_at": "2026-08-09T05:37:59.895655+00:00",
+      "last_run_at": "2026-08-09T03:37:59.895655+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1523247688689258586",
+        "chat_name": "TRAPISTAN / #coding",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "web"
+      ],
+      "workdir": "/opt/data/HeRmEz/projects/osrs-plugins/pr-review-pending/WhosGrindingClanPanel",
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-08-09T04:56:24.864782+00:00"
+}

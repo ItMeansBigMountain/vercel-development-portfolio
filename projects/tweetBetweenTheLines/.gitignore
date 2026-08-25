@@ -4,3 +4,4 @@ packages/*/dist/
 dist/
 dist-*/
 .DS_Store
+.vercel

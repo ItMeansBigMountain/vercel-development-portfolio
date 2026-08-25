@@ -21,43 +21,19 @@ const commonsPhotos = {
   kickboxing: photo('Adidas Kickboxing equipment used by Hamid Amni.jpg', 'Kickboxing gloves and protective training equipment', 'CC BY-SA 4.0', 'Pegah hadad', 'Own work via Wikimedia Commons'),
   'muay-thai': photo('Muay-Thai Thai-boxing-kids IMG 1824.jpg', 'Muay Thai trainees practicing in a boxing ring', 'CC BY-SA 4.0', 'Per Meistrup', 'Own work via Wikimedia Commons'),
   karate: photo('2026-05-24 61. Karate-Europameisterschaften 2026 Frankfurt-Main STP 6787.jpg', 'Karate athletes competing on a tatami mat', 'CC BY-SA 4.0', 'Steffen Prößdorf', 'Self-photographed via Wikimedia Commons'),
-  taekwondo: photo('Ameer Taekwondo Player.jpg', 'Taekwondo athlete in dobok and protective posture', 'CC BY-SA 4.0', 'Cinebus Vlr', 'Own work via Wikimedia Commons'),
+  taekwondo: photo('WTF Taekwondo 1.jpg', 'Taekwondo athletes sparring with protective gear and high kicks', 'CC BY-SA 3.0', 'Stefan Pettersson', 'Own work via Wikimedia Commons'),
   'kung-fu': photo('Kung Fu Tournament.jpg', 'Kung Fu tournament athlete performing in uniform', 'CC BY-SA 4.0', 'ShorelineTaiji', 'Own work via Wikimedia Commons'),
-  sanda: photo('Bozigit Ataev.png', 'Sanda fighter portrait from competition footage', 'CC BY 3.0', 'ННТ Спорт', 'YouTube crop archived on Wikimedia Commons'),
+  sanda: photo('Sanshou (San da) - kick (practice fight) Katwijk, dec 4, 2006.JPG', 'Sanda athletes practicing a kick during a sanshou bout', 'CC BY-SA 3.0', 'Richardkw', 'Own work via Wikimedia Commons'),
   judo: photo('EIJC 2025 Kata - 54381747372.jpg', 'Judo practitioners demonstrating kata grips', 'Public domain', 'Edmonton International Judo Championship', 'Flickr via Wikimedia Commons'),
   bjj: photo('BJJ, brazilian-jiujitsu 01.jpg', 'Brazilian Jiu-Jitsu athletes grappling on mats', 'CC BY-SA 4.0', 'Yossigur', 'Own work via Wikimedia Commons'),
   wrestling: photo('Amateur Wrestling Brothers 2017-06-09.jpg', 'Amateur wrestlers hand fighting on a mat', 'CC BY-SA 4.0', 'Baynosuke', 'Own work via Wikimedia Commons'),
-};
-
-const familyFallbacks = {
-  striking: 'boxing',
-  'traditional striking': 'karate',
-  traditional: 'kung-fu',
-  'striking-grappling': 'sanda',
-  grappling: 'judo',
-  'grappling-combat': 'wrestling',
-  hybrid: 'bjj',
-  'self-defense': 'boxing',
-  'traditional grappling': 'aikido',
-  'traditional self-defense': 'taekwondo',
-  weapons: 'fencing',
-  'weapons-traditional': 'kung-fu',
-  movement: 'kung-fu',
-};
-
-const relatedFallbacks = {
-  sambo: 'wrestling',
-  mma: 'bjj',
-  'krav-maga': 'boxing',
-  aikido: 'judo',
-  hapkido: 'taekwondo',
-  fencing: 'karate',
-  kendo: 'karate',
-  'arnis-kali-eskrima': 'kung-fu',
-  hema: 'karate',
-  capoeira: 'kung-fu',
-  'wing-chun': 'kung-fu',
-  silat: 'sanda',
+  hapkido: photo('Hapkido takmicenje.jpg', 'Hapkido athletes sparring in sport competition', 'CC BY-SA 4.0', 'Aster Igor', 'Own work via Wikimedia Commons'),
+  fencing: photo('Fencing in Greece. Fencing training at Athenaikos Fencing Club with fencers from other clubs.jpg', 'Fencers training at a fencing club', 'CC BY-SA 4.0', 'George E. Koronaios', 'Own work via Wikimedia Commons'),
+  kendo: photo('Georgia Kendo Tournament 2025.jpg', 'Kendo athletes facing each other at the start of a match', 'CC BY 4.0', 'Huntsmanleader', 'Own work via Wikimedia Commons'),
+  'arnis-kali-eskrima': photo('Eskrima.jpg', 'Eskrima practitioners stick fighting during Filipino martial arts training', 'CC BY 3.0', 'Mr.Colling', 'Own work via Wikimedia Commons'),
+  hema: photo('Tarr Bence László, HEMA - Historical European Martial Arts.jpg', 'Historical European Martial Arts practitioner with longsword equipment', 'CC BY-SA 4.0', 'Cyberguru', 'Own work via Wikimedia Commons'),
+  capoeira: photo('Roda de Capoeira Angola.jpg', 'Capoeira practitioners playing in a roda', 'CC BY-SA 4.0', 'Ayres Alves de Lima Sales', 'Own work via Wikimedia Commons'),
+  silat: photo('Pencak Silat Betawi 2.jpg', 'Pencak Silat Betawi practitioner demonstrating a traditional stance', 'CC BY-SA 4.0', 'Gunawan Kartapranata', 'Own work via Wikimedia Commons'),
 };
 
 function photo(fileName, alt, license, creator, credit) {
@@ -75,11 +51,19 @@ function photo(fileName, alt, license, creator, credit) {
   };
 }
 
+function cleanIconMedia(art) {
+  return {
+    imageUrl: art.imageUrl,
+    imageAlt: art.imageAlt,
+    sourceUrl: null,
+    license: 'Generated inline SVG illustration',
+    creator: 'CombatAtlas',
+    credit: 'Generated locally from app data; no external image request.',
+  };
+}
+
 function findPhotoForArt(art) {
-  return commonsPhotos[art.id]
-    || commonsPhotos[relatedFallbacks[art.id]]
-    || commonsPhotos[familyFallbacks[art.family]]
-    || commonsPhotos.boxing;
+  return commonsPhotos[art.id] || cleanIconMedia(art);
 }
 
 export function prefersReducedData() {
@@ -93,14 +77,7 @@ export function normalizeVisualTheme(themeId) {
 
 export function getArtMedia(art, themeId = CLEAN_THEME) {
   if (normalizeVisualTheme(themeId) !== PHOTO_THEME) {
-    return {
-      imageUrl: art.imageUrl,
-      imageAlt: art.imageAlt,
-      sourceUrl: null,
-      license: 'Generated inline SVG illustration',
-      creator: 'CombatAtlas',
-      credit: 'Generated locally from app data; no external image request.',
-    };
+    return cleanIconMedia(art);
   }
   return findPhotoForArt(art);
 }

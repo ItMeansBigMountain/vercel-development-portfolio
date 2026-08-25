@@ -9,6 +9,8 @@ import uuid
 from datetime import datetime, timezone
 from typing import Any, Callable
 
+from .auth import require_connection_owner, require_vehicle_owner
+
 _NHTSA_RECALL_URL = "https://api.nhtsa.gov/recalls/recallsByVehicle?{query}"
 _ALLOWED_SIGNALS = frozenset({"odometer", "oil_life", "dtc"})
 _RECALL_CAVEAT = "Year/make/model results identify campaigns for a model population; this lookup does not prove this VIN is affected or that a repair is outstanding. Confirm VIN-specific open-recall status with NHTSA or the manufacturer."
@@ -45,11 +47,13 @@ class NhtsaRecallClient:
 
 
 class RecallService:
-    def __init__(self, connection: sqlite3.Connection, client: NhtsaRecallClient | None = None):
+    def __init__(self, connection: sqlite3.Connection, *, actor_user_id: str, client: NhtsaRecallClient | None = None):
         self.connection = connection
+        self.actor_user_id = actor_user_id
         self.client = client or NhtsaRecallClient()
 
     def refresh(self, vehicle_id: str) -> dict[str, Any]:
+        require_vehicle_owner(self.connection, self.actor_user_id, vehicle_id)
         vehicle = self.connection.execute(
             "SELECT c.model_year, c.make, c.model FROM vehicles v JOIN vehicle_configurations c ON c.id=v.configuration_id WHERE v.id=? AND v.deleted_at IS NULL",
             (vehicle_id,),
@@ -82,12 +86,15 @@ class RecallService:
 
 
 class ConnectedVehicleService:
-    def __init__(self, connection: sqlite3.Connection, *, adapters: dict[str, Any] | None = None, minimum_refresh_seconds: int = 300):
+    def __init__(self, connection: sqlite3.Connection, *, actor_user_id: str, adapters: dict[str, Any] | None = None, minimum_refresh_seconds: int = 300):
         self.connection = connection
+        self.actor_user_id = actor_user_id
         self.adapters = adapters or {}
         self.minimum_refresh_seconds = max(1, minimum_refresh_seconds)
 
     def connect(self, user_id: str, provider: str, external_subject: str, scopes: list[str], *, consent: bool, token_ciphertext: bytes | None = None) -> str:
+        if user_id != self.actor_user_id:
+            raise PermissionError("resource not found")
         requested = set(scopes)
         if not consent:
             raise ValueError("explicit consent is required")
@@ -102,6 +109,7 @@ class ConnectedVehicleService:
         return connection_id
 
     def revoke(self, connection_id: str) -> None:
+        require_connection_owner(self.connection, self.actor_user_id, connection_id)
         now = _now()
         with self.connection:
             cursor = self.connection.execute("UPDATE connected_accounts SET status='revoked', token_ciphertext=NULL, revoked_at=? WHERE id=? AND status='active'", (now, connection_id))
@@ -109,6 +117,8 @@ class ConnectedVehicleService:
                 raise ValueError("unknown or inactive connection")
 
     def refresh(self, connection_id: str, vehicle_id: str) -> dict[str, Any]:
+        require_connection_owner(self.connection, self.actor_user_id, connection_id)
+        require_vehicle_owner(self.connection, self.actor_user_id, vehicle_id)
         account = self.connection.execute("SELECT provider, external_subject, scopes_json, status, last_refreshed_at FROM connected_accounts WHERE id=?", (connection_id,)).fetchone()
         if not account or account[3] != "active":
             raise ValueError("active owner-authorized connection required")
@@ -145,6 +155,7 @@ class ConnectedVehicleService:
         return {"compatibility": compatibility, "signals": signals, "observed_at": now, "caveat": _SIGNAL_CAVEAT}
 
     def record_manual_mileage(self, vehicle_id: str, value: int, unit: str = "mi") -> str:
+        require_vehicle_owner(self.connection, self.actor_user_id, vehicle_id)
         now, source_id, confidence_id = _now(), _id(), _id()
         with self.connection:
             self.connection.execute("INSERT INTO provenance_sources(id, source_type, provider_name, source_uri, retrieved_at, license_classification) VALUES (?, 'manual', 'vehicle owner', 'manual-entry', ?, 'user supplied')", (source_id, now))

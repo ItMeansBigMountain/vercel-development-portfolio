@@ -83,7 +83,7 @@ def main() -> int:
 
     if removed_files:
         mode = "Would remove" if args.dry_run else "Removed"
-        print(f"YouTube clipping cleanup: {mode} {removed_files} media files ({removed_bytes / 1024**3:.2f} GiB).")
+        print(f"✅ **YouTube cleanup:** {mode.lower()} {removed_files} files • {removed_bytes / 1024**3:.2f} GiB freed")
     return 0
 
 

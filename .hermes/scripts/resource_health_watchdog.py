@@ -85,10 +85,10 @@ def main() -> int:
         'action': 'alert_only',
     }, indent=2) + '\n')
     if emit:
-        print('RESOURCE ALERT (no processes were stopped)')
-        for reason in reasons:
-            print(f'- {reason}')
-        print('- Review active renders/builds first; stale process cleanup requires explicit approval.')
+        print('⚠️ **VPS resources need attention**')
+        for reason in reasons[:3]:
+            print(f'• {reason}')
+        print('📌 No processes stopped. Review active work before cleanup.')
     return 0
 
 

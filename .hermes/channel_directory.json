@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-08-24T08:54:09.595118",
+  "updated_at": "2026-08-25T02:59:14.035651",
   "platforms": {
     "discord": [
       {
         "id": "1499990220077137943",
         "name": "general",
+        "guild": "TRAPISTAN",
+        "type": "channel"
+      },
+      {
+        "id": "1541612171987918980",
+        "name": "ops-alerts",
         "guild": "TRAPISTAN",
         "type": "channel"
       },
@@ -28,19 +34,7 @@
       },
       {
         "id": "1524259261281206332",
-        "name": "youtube-automation",
-        "guild": "TRAPISTAN",
-        "type": "channel"
-      },
-      {
-        "id": "1536538137378164757",
-        "name": "ai-video",
-        "guild": "TRAPISTAN",
-        "type": "channel"
-      },
-      {
-        "id": "1524312655894937623",
-        "name": "redteam",
+        "name": "content-creation",
         "guild": "TRAPISTAN",
         "type": "channel"
       },
@@ -51,10 +45,10 @@
         "type": "channel"
       },
       {
-        "id": "1499990220077137943",
-        "name": "TRAPISTAN / #general",
-        "type": "group",
-        "thread_id": null
+        "id": "1541610170919030905",
+        "name": "kanban-work",
+        "guild": "TRAPISTAN",
+        "type": "channel"
       },
       {
         "id": "1523247688689258586",
@@ -63,8 +57,26 @@
         "thread_id": null
       },
       {
+        "id": "1499990220077137943",
+        "name": "TRAPISTAN / #general",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1541610170919030905",
+        "name": "TRAPISTAN / #kanban-work",
+        "type": "group",
+        "thread_id": null
+      },
+      {
         "id": "1524172425393340516",
         "name": "TRAPISTAN / #personal",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1499990220077137944",
+        "name": "TRAPISTAN / #General",
         "type": "group",
         "thread_id": null
       },

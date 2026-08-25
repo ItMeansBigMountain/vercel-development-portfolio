@@ -20,25 +20,25 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 99
+        "completed": 100
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-14T06:28:44.368316+00:00",
-      "next_run_at": "2026-08-25T03:00:00+00:00",
-      "last_run_at": "2026-08-24T07:48:20.561939+00:00",
+      "next_run_at": "2026-08-26T03:00:00+00:00",
+      "last_run_at": "2026-08-24T08:56:49.742085+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "discord:1523247688689258586",
+      "deliver": "discord:1541612171987918980",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-24T08:56:41.816315+00:00",
-        "by": "064665236bea:105695:f7e5114928624015b055bdea3251b2fa"
+        "at": "2026-08-25T03:00:44.974017+00:00",
+        "by": "064665236bea:105695:94950411e0184aab99540d750c21d45c"
       },
       "failure_streak": 0
     },
@@ -64,15 +64,15 @@
       "schedule_display": "30 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 96
+        "completed": 97
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-21T01:20:05.320432+00:00",
-      "next_run_at": "2026-08-24T13:30:00+00:00",
-      "last_run_at": "2026-08-23T13:30:05.764538+00:00",
+      "next_run_at": "2026-08-25T13:30:00+00:00",
+      "last_run_at": "2026-08-24T13:30:11.796191+00:00",
       "last_status": "blocked_config",
       "last_error": "[blocked_config:silent] attached skill 'google-workspace' is not ready: missing credential file google_token.json. Provide the missing prerequisites or detach the skill from this job.",
       "last_delivery_error": null,
@@ -92,12 +92,13 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "preflight_alerted": true
+      "preflight_alerted": true,
+      "failure_streak": 1
     },
     {
       "id": "6355d735bb4a",
       "name": "Creator discovery feeder for Viral Radar",
-      "prompt": "Run the strict Viral Radar procedure for newly discovered creator videos.\n\nWorking directory: /opt/data/HeRmEz/projects/viral-clip-radar.\n\nFor every newly discovered creator/source video, target at least 5 public clips when the source duration supports distinct clips. Never present 1/5 or 1/10 as OK. If a source video is a YouTube Short or too short for 5 distinct clips, either find a longer source-ready creator video from the watchlist or report BLOCKED/PARTIAL with that exact reason.\n\nRequired behavior:\n- Drain existing UPLOAD_QUEUE first.\n- Seed latest watchlist manifests.\n- Clip/render/upload the actual discovered source video, not filler.\n- If rendered clips fail upload, ensure they remain in UPLOAD_QUEUE and report queue_count.\n- If queue is empty because the remaining deficits were never rendered/planned (source missing, botcheck, too short, only 1 viable clip), report that explicitly as a blocker/backlog, not as success.\n- Final Discord report must include uploaded URLs, per-source uploaded_count/5, queue_count, blockers, and next action.\n- Final status must be BLOCKED/PARTIAL unless each selected source hit >=5 public uploads or the deficit is explicitly explained.\n\nDo not use NASA/space/unknown placeholders or old queued clips to satisfy newly discovered source minimums.",
+      "prompt": "Run the strict Viral Radar procedure for newly discovered creator videos.\n\nWorking directory: /opt/data/HeRmEz/projects/viral-clip-radar.\n\nFor every newly discovered creator/source video, target at least 5 public clips when the source duration supports distinct clips. Never present 1/5 or 1/10 as OK. If a source video is a YouTube Short or too short for 5 distinct clips, either find a longer source-ready creator video from the watchlist or report BLOCKED/PARTIAL with that exact reason.\n\nRequired behavior:\n- Drain existing UPLOAD_QUEUE first.\n- Seed latest watchlist manifests.\n- Clip/render/upload the actual discovered source video, not filler.\n- If rendered clips fail upload, ensure they remain in UPLOAD_QUEUE and report queue_count.\n- If queue is empty because the remaining deficits were never rendered/planned (source missing, botcheck, too short, only 1 viable clip), report that explicitly as a blocker/backlog, not as success.\n- Final Discord report must include uploaded URLs, per-source uploaded_count/5, queue_count, blockers, and next action.\n- Final status must be BLOCKED/PARTIAL unless each selected source hit >=5 public uploads or the deficit is explicitly explained.\n\nDo not use NASA/space/unknown placeholders or old queued clips to satisfy newly discovered source minimums.\n\nDISCORD DELIVERY FORMAT (mandatory): Keep the final user-facing message ultra-simple and phone-friendly. Use 3–6 short lines, no table, no dense paragraph, and no execution narration. Start with exactly one status line: ✅ Done, ⚠️ Needs attention, ❌ Failed, 🔄 Still running, or ⏸️ Paused. Then include only the result, key number/link, blocker, and next action if needed. Keep detailed evidence in durable logs/files.",
       "skills": [
         "social-video-cron-growth-loop",
         "youtube-automation-with-tts"
@@ -117,15 +118,15 @@
       "schedule_display": "every 360m",
       "repeat": {
         "times": null,
-        "completed": 306
+        "completed": 309
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-04T02:32:26.430124+00:00",
-      "next_run_at": "2026-08-24T10:57:58.571067+00:00",
-      "last_run_at": "2026-08-24T04:57:58.571067+00:00",
+      "next_run_at": "2026-08-25T04:59:40.874369+00:00",
+      "last_run_at": "2026-08-24T22:59:40.874369+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -198,7 +199,7 @@
     {
       "id": "bce8ebabac36",
       "name": "Daily Viral Radar / Creator clip generation + upload",
-      "prompt": "Run the strict Daily Viral Radar creator clip procedure.\n\nPriority: Viral Radar over faceless. Goal is at least 5 public clips per selected/source video when the source duration supports it; never report 1/N as success. Drain /opt/data/HeRmEz/projects/viral-clip-radar/UPLOAD_QUEUE first, then run /opt/data/scripts/viral_radar_daily_upload.py from /opt/data/HeRmEz/projects/viral-clip-radar.\n\nHard rules:\n- If uploaded_count < 5 for any selected source/video, final status must be BLOCKED/PARTIAL, not OK.\n- Include exact blockers: source download/auth/botcheck, source too short to make 5 distinct clips, render error, upload quota/rate limit, duplicate guard, or missing files.\n- If rendered clips fail upload, verify they remain in UPLOAD_QUEUE and report queue_count. Queue must not be empty for failed rendered uploads.\n- If queue is empty because remaining clips were never rendered/planned (e.g. source Short only has 1 viable segment), say that clearly and report source-ready/backlog next action.\n- Do not use old queue, NASA/space/unknown, or filler to satisfy the minimum.\n- Notify the user in Discord with concise bullets: uploaded URLs, uploaded_count/5, queue_count, blockers, next action.\n\nUse terminal/file tools only. Do not claim success unless the command output proves >=5 public uploads or all deficits are explicitly reported as blockers.",
+      "prompt": "Run the strict Daily Viral Radar creator clip procedure.\n\nPriority: Viral Radar over faceless. Goal is at least 5 public clips per selected/source video when the source duration supports it; never report 1/N as success. Drain /opt/data/HeRmEz/projects/viral-clip-radar/UPLOAD_QUEUE first, then run /opt/data/scripts/viral_radar_daily_upload.py from /opt/data/HeRmEz/projects/viral-clip-radar.\n\nHard rules:\n- If uploaded_count < 5 for any selected source/video, final status must be BLOCKED/PARTIAL, not OK.\n- Include exact blockers: source download/auth/botcheck, source too short to make 5 distinct clips, render error, upload quota/rate limit, duplicate guard, or missing files.\n- If rendered clips fail upload, verify they remain in UPLOAD_QUEUE and report queue_count. Queue must not be empty for failed rendered uploads.\n- If queue is empty because remaining clips were never rendered/planned (e.g. source Short only has 1 viable segment), say that clearly and report source-ready/backlog next action.\n- Do not use old queue, NASA/space/unknown, or filler to satisfy the minimum.\n- Notify the user in Discord with concise bullets: uploaded URLs, uploaded_count/5, queue_count, blockers, next action.\n\nUse terminal/file tools only. Do not claim success unless the command output proves >=5 public uploads or all deficits are explicitly reported as blockers.\n\nDISCORD DELIVERY FORMAT (mandatory): Keep the final user-facing message ultra-simple and phone-friendly. Use 3–6 short lines, no table, no dense paragraph, and no execution narration. Start with exactly one status line: ✅ Done, ⚠️ Needs attention, ❌ Failed, 🔄 Still running, or ⏸️ Paused. Then include only the result, key number/link, blocker, and next action if needed. Keep detailed evidence in durable logs/files.",
       "skills": [
         "social-video-cron-growth-loop",
         "youtube-automation-with-tts"
@@ -220,15 +221,15 @@
       "schedule_display": "0 1 * * *",
       "repeat": {
         "times": null,
-        "completed": 78
+        "completed": 79
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-04T12:58:58.087889+00:00",
-      "next_run_at": "2026-08-25T01:00:00+00:00",
-      "last_run_at": "2026-08-24T01:20:47.122747+00:00",
+      "next_run_at": "2026-08-26T01:00:00+00:00",
+      "last_run_at": "2026-08-25T01:18:06.359179+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -268,15 +269,15 @@
       "schedule_display": "every 10m",
       "repeat": {
         "times": null,
-        "completed": 8455
+        "completed": 8556
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:05:15.742685+00:00",
-      "next_run_at": "2026-08-24T09:03:57.256400+00:00",
-      "last_run_at": "2026-08-24T08:53:57.256400+00:00",
+      "next_run_at": "2026-08-25T03:10:46.182628+00:00",
+      "last_run_at": "2026-08-25T03:00:46.182628+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -315,15 +316,15 @@
       "schedule_display": "0 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 76
+        "completed": 77
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-07T00:27:10.163742+00:00",
-      "next_run_at": "2026-08-24T14:00:00+00:00",
-      "last_run_at": "2026-08-23T14:00:06.284188+00:00",
+      "next_run_at": "2026-08-25T14:00:00+00:00",
+      "last_run_at": "2026-08-24T14:00:12.260115+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -340,7 +341,8 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "920d68fd715e",
@@ -362,15 +364,15 @@
       "schedule_display": "15 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 74
+        "completed": 75
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-12T04:20:40.734347+00:00",
-      "next_run_at": "2026-08-24T13:15:00+00:00",
-      "last_run_at": "2026-08-23T13:15:05.873659+00:00",
+      "next_run_at": "2026-08-25T13:15:00+00:00",
+      "last_run_at": "2026-08-24T13:15:11.597773+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -386,12 +388,13 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "df35199a8b51",
       "name": "Post-morning Agentic portfolio market scan",
-      "prompt": "Run the user's post-open Agentic portfolio research and opportunity scan for Robinhood Agentic account 433711041 / ending 1041 only. Load robinhood-trading-operator and google-workspace. Verify live account/positions/buying power/open-ish equity orders. Scan beyond stale watchlists using liquid market leaders, sector rotation, trusted current news, earnings and fundamental trends, plus technical analysis of daily/intraday trend, support/resistance, relative strength, volume, volatility, pullbacks, breakouts and retests. Rank up to five swing candidates with catalyst, invalidation, stop, targets and risk/reward. Under the active autonomous policy, qualifying equities may be reviewed and placed without per-trade approval. Target using 80% of currently available liquid buying power after pending orders and retain 20% cash; never force a trade just to hit allocation. Equities/fractionals only, no options/shorts/other accounts. Journal all previews, executions, no-trades and failures. Report current state, regime, ranked picks, exact actions/fills, technical plus fundamental rationale, cash deployment and buffer, and any broker/tool blocker.",
+      "prompt": "Run the user's post-open Agentic portfolio research and opportunity scan for Robinhood Agentic account 433711041 / ending 1041 only. Load robinhood-trading-operator and google-workspace. Verify live account/positions/buying power/open-ish equity orders. Scan beyond stale watchlists using liquid market leaders, sector rotation, trusted current news, earnings and fundamental trends, plus technical analysis of daily/intraday trend, support/resistance, relative strength, volume, volatility, pullbacks, breakouts and retests. Rank up to five swing candidates with catalyst, invalidation, stop, targets and risk/reward. Under the active autonomous policy, qualifying equities may be reviewed and placed without per-trade approval. Target using 80% of currently available liquid buying power after pending orders and retain 20% cash; never force a trade just to hit allocation. Equities/fractionals only, no options/shorts/other accounts. Journal all previews, executions, no-trades and failures. Report current state, regime, ranked picks, exact actions/fills, technical plus fundamental rationale, cash deployment and buffer, and any broker/tool blocker.\n\nTRADING DISCORD FORMAT (mandatory): The final delivery must be easy to scan on mobile and normally no more than 7 short lines:\n💰 **Trading — [Open/Midday/Afternoon/Power Hour]**\n[✅/⚠️/❌] **Status:** one plain-language phrase\n• **Account:** equity | cash/buying power | day P&L if verified\n• **Action:** bought/sold/held/nothing, with ticker and amount\n• **Risk:** stop/invalidation and max relevant downside\n• **Next:** next check or required user action\nDo not dump ranked research, long rationale, raw tool output, or boilerplate into Discord. Put full research and journaling in durable files. If no trade occurred, say why in one line. Never omit a real blocker or fabricate figures.",
       "skills": [
         "robinhood-trading-operator",
         "google-workspace"
@@ -411,15 +414,15 @@
       "schedule_display": "50 13 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 48
+        "completed": 49
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-12T15:48:08.357771+00:00",
-      "next_run_at": "2026-08-24T13:50:00+00:00",
-      "last_run_at": "2026-08-21T13:50:41.671580+00:00",
+      "next_run_at": "2026-08-25T13:50:00+00:00",
+      "last_run_at": "2026-08-24T13:50:10.766846+00:00",
       "last_status": "blocked_config",
       "last_error": "[blocked_config:silent] attached skill 'google-workspace' is not ready: missing credential file google_token.json. Provide the missing prerequisites or detach the skill from this job.",
       "last_delivery_error": null,
@@ -438,12 +441,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": null,
-      "preflight_alerted": true
+      "preflight_alerted": true,
+      "failure_streak": 1
     },
     {
       "id": "f02334d43494",
       "name": "Daily Viral Radar Content Backlog Processor",
-      "prompt": "Drain the Viral Clip Radar backlog only, using the social-video-cron-growth-loop rules.\n\nWorking directory: /opt/data/HeRmEz/projects/viral-clip-radar\nCommand: /opt/data/scripts/viral_radar_backlog_drain.sh\n\nRun the command with the terminal tool using workdir=/opt/data/HeRmEz/projects/viral-clip-radar and timeout=600. Do not treat scheduler/command completion as product success: inspect the raw output and newest durable log under OUTPUTS/backlog-processor-logs. Verify queue counts after execution. Report uploaded public URLs, queue_before, queue_after, hold_queue, pipeline_exit, and any blocker with raw error lines. Never delete failed rendered clips. If authentication fails, include fresh OAuth recovery URLs. Viral Radar only; do not access faceless/newsletter assets.",
+      "prompt": "Drain the Viral Clip Radar backlog only, using the social-video-cron-growth-loop rules.\n\nWorking directory: /opt/data/HeRmEz/projects/viral-clip-radar\nCommand: /opt/data/scripts/viral_radar_backlog_drain.sh\n\nRun the command with the terminal tool using workdir=/opt/data/HeRmEz/projects/viral-clip-radar and timeout=600. Do not treat scheduler/command completion as product success: inspect the raw output and newest durable log under OUTPUTS/backlog-processor-logs. Verify queue counts after execution. Report uploaded public URLs, queue_before, queue_after, hold_queue, pipeline_exit, and any blocker with raw error lines. Never delete failed rendered clips. If authentication fails, include fresh OAuth recovery URLs. Viral Radar only; do not access faceless/newsletter assets.\n\nDISCORD DELIVERY FORMAT (mandatory): Keep the final user-facing message ultra-simple and phone-friendly. Use 3–6 short lines, no table, no dense paragraph, and no execution narration. Start with exactly one status line: ✅ Done, ⚠️ Needs attention, ❌ Failed, 🔄 Still running, or ⏸️ Paused. Then include only the result, key number/link, blocker, and next action if needed. Keep detailed evidence in durable logs/files.",
       "skills": [
         "social-video-cron-growth-loop"
       ],
@@ -462,15 +466,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 65
+        "completed": 66
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-12T17:32:19.594106+00:00",
-      "next_run_at": "2026-08-24T09:00:00+00:00",
-      "last_run_at": "2026-08-23T09:09:32.038704+00:00",
+      "next_run_at": "2026-08-25T09:00:00+00:00",
+      "last_run_at": "2026-08-24T09:00:58.758138+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -487,12 +491,13 @@
       ],
       "workdir": "/opt/data/HeRmEz/projects/viral-clip-radar",
       "profile": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "549658fc5a9e",
       "name": "Agentic Robinhood Trade Account Monitor — Market Open",
-      "prompt": "Run the autonomous Robinhood Agentic swing-trading OPEN scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live account, portfolio, buying power, positions, all open-ish equity order states, fills, and kill switches before acting. Analyze SPY/QQQ/IWM, sectors, current news/fundamental/earnings/macro trends, and a broad liquid equity universe beyond stale watchlists. Perform technical analysis using trend, support/resistance, relative strength, volume, volatility, breakout/pullback/retest structure, and explicit invalidation. Seek professional-quality swing trades lasting days to weeks, while rotating or exiting sooner when technical or fundamental theses fail. Calculate available liquid buying power after pending orders; target deploying 80% of that liquid balance across 1-4 qualifying liquid fractional equities and retain 20% cash. Do not force trades, churn, use options/shorts, trade another account, violate drawdown/risk gates, or claim guaranteed returns. Review each order before placement, autonomously place/manage/exit policy-compliant equity trades, and journal every preview, trade, management action, no-trade decision, and tool failure. Report live state, market regime, ranked candidates, exact actions/fills, stops/invalidation, targets, cash deployed, reserved buffer, and blockers. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "prompt": "Run the autonomous Robinhood Agentic swing-trading OPEN scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live account, portfolio, buying power, positions, all open-ish equity order states, fills, and kill switches before acting. Analyze SPY/QQQ/IWM, sectors, current news/fundamental/earnings/macro trends, and a broad liquid equity universe beyond stale watchlists. Perform technical analysis using trend, support/resistance, relative strength, volume, volatility, breakout/pullback/retest structure, and explicit invalidation. Seek professional-quality swing trades lasting days to weeks, while rotating or exiting sooner when technical or fundamental theses fail. Calculate available liquid buying power after pending orders; target deploying 80% of that liquid balance across 1-4 qualifying liquid fractional equities and retain 20% cash. Do not force trades, churn, use options/shorts, trade another account, violate drawdown/risk gates, or claim guaranteed returns. Review each order before placement, autonomously place/manage/exit policy-compliant equity trades, and journal every preview, trade, management action, no-trade decision, and tool failure. Report live state, market regime, ranked candidates, exact actions/fills, stops/invalidation, targets, cash deployed, reserved buffer, and blockers. If broker/tool/risk state is uncertain, place nothing and report the pause.\n\nTRADING DISCORD FORMAT (mandatory): The final delivery must be easy to scan on mobile and normally no more than 7 short lines:\n💰 **Trading — [Open/Midday/Afternoon/Power Hour]**\n[✅/⚠️/❌] **Status:** one plain-language phrase\n• **Account:** equity | cash/buying power | day P&L if verified\n• **Action:** bought/sold/held/nothing, with ticker and amount\n• **Risk:** stop/invalidation and max relevant downside\n• **Next:** next check or required user action\nDo not dump ranked research, long rationale, raw tool output, or boilerplate into Discord. Put full research and journaling in durable files. If no trade occurred, say why in one line. Never omit a real blocker or fabricate figures.",
       "skills": [
         "robinhood-trading-operator"
       ],
@@ -511,15 +516,15 @@
       "schedule_display": "35 13 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 51
+        "completed": 52
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-19T16:12:37.431999+00:00",
-      "next_run_at": "2026-08-24T13:35:00+00:00",
-      "last_run_at": "2026-08-21T13:38:31.808334+00:00",
+      "next_run_at": "2026-08-25T13:35:00+00:00",
+      "last_run_at": "2026-08-24T13:35:26.075809+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -537,12 +542,13 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "d7f2c79b64db",
       "name": "Agentic Robinhood Trade Account Monitor — Midday",
-      "prompt": "Run the autonomous Robinhood Agentic swing-trading MIDDAY scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live portfolio, buying power, positions, fills, all open-ish equity orders, and kill switches. Reassess each holding using intraday and daily technical structure, relative strength, volume, support/resistance, stops and targets, plus latest fundamentals, earnings/news catalysts, macro and sector flows. Scan broadly for superior liquid swing setups; actively rotate or exit when a thesis invalidates or a materially better risk-adjusted setup appears, but never churn or force a trade. Calculate available liquid buying power after pending orders; deploy 80% of qualifying available liquid balance and retain 20% cash, using 1-4 liquid fractional equities when justified. Equities only; no options, shorts, other accounts, averaging down, widened stops, or guaranteed-return claims. Review before placing, autonomously execute policy-compliant actions, journal everything, and report holdings, changes, fills, ranked opportunities, technical/fundamental thesis, risk, deployment percentage and 20% reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "prompt": "Run the autonomous Robinhood Agentic swing-trading MIDDAY scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live portfolio, buying power, positions, fills, all open-ish equity orders, and kill switches. Reassess each holding using intraday and daily technical structure, relative strength, volume, support/resistance, stops and targets, plus latest fundamentals, earnings/news catalysts, macro and sector flows. Scan broadly for superior liquid swing setups; actively rotate or exit when a thesis invalidates or a materially better risk-adjusted setup appears, but never churn or force a trade. Calculate available liquid buying power after pending orders; deploy 80% of qualifying available liquid balance and retain 20% cash, using 1-4 liquid fractional equities when justified. Equities only; no options, shorts, other accounts, averaging down, widened stops, or guaranteed-return claims. Review before placing, autonomously execute policy-compliant actions, journal everything, and report holdings, changes, fills, ranked opportunities, technical/fundamental thesis, risk, deployment percentage and 20% reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.\n\nTRADING DISCORD FORMAT (mandatory): The final delivery must be easy to scan on mobile and normally no more than 7 short lines:\n💰 **Trading — [Open/Midday/Afternoon/Power Hour]**\n[✅/⚠️/❌] **Status:** one plain-language phrase\n• **Account:** equity | cash/buying power | day P&L if verified\n• **Action:** bought/sold/held/nothing, with ticker and amount\n• **Risk:** stop/invalidation and max relevant downside\n• **Next:** next check or required user action\nDo not dump ranked research, long rationale, raw tool output, or boilerplate into Discord. Put full research and journaling in durable files. If no trade occurred, say why in one line. Never omit a real blocker or fabricate figures.",
       "skills": [
         "robinhood-trading-operator"
       ],
@@ -561,15 +567,15 @@
       "schedule_display": "0 16 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 43
+        "completed": 44
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-19T18:35:06.052701+00:00",
-      "next_run_at": "2026-08-24T16:00:00+00:00",
-      "last_run_at": "2026-08-21T16:03:31.302360+00:00",
+      "next_run_at": "2026-08-25T16:00:00+00:00",
+      "last_run_at": "2026-08-24T16:00:27.035592+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -587,12 +593,13 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "44b1b5e0156f",
       "name": "Agentic Robinhood Trade Account Monitor — Power Hour",
-      "prompt": "Run the autonomous Robinhood Agentic swing-trading POWER-HOUR scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live portfolio, liquid buying power, positions, fills, all open-ish equity orders, and kill switches. Decide overnight exposure professionally using daily/intraday technicals, trend and relative strength, volume, support/resistance, invalidation, earnings/event risk, current fundamentals/news, macro and sector flows. Manage stops/targets, exit broken theses, and rotate into materially better liquid swing setups when risk-adjusted evidence supports it; do not churn or force trades. After pending orders, target deploying 80% of qualifying available liquid balance while preserving 20% cash. Equities only; no options, shorts, other accounts, averaging down, or widening stops. Review every order before autonomous placement, journal every action/no-action/failure, and report exact fills/actions, overnight theses, risks/events, stops/targets, deployed cash and reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "prompt": "Run the autonomous Robinhood Agentic swing-trading POWER-HOUR scan for account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live portfolio, liquid buying power, positions, fills, all open-ish equity orders, and kill switches. Decide overnight exposure professionally using daily/intraday technicals, trend and relative strength, volume, support/resistance, invalidation, earnings/event risk, current fundamentals/news, macro and sector flows. Manage stops/targets, exit broken theses, and rotate into materially better liquid swing setups when risk-adjusted evidence supports it; do not churn or force trades. After pending orders, target deploying 80% of qualifying available liquid balance while preserving 20% cash. Equities only; no options, shorts, other accounts, averaging down, or widening stops. Review every order before autonomous placement, journal every action/no-action/failure, and report exact fills/actions, overnight theses, risks/events, stops/targets, deployed cash and reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.\n\nTRADING DISCORD FORMAT (mandatory): The final delivery must be easy to scan on mobile and normally no more than 7 short lines:\n💰 **Trading — [Open/Midday/Afternoon/Power Hour]**\n[✅/⚠️/❌] **Status:** one plain-language phrase\n• **Account:** equity | cash/buying power | day P&L if verified\n• **Action:** bought/sold/held/nothing, with ticker and amount\n• **Risk:** stop/invalidation and max relevant downside\n• **Next:** next check or required user action\nDo not dump ranked research, long rationale, raw tool output, or boilerplate into Discord. Put full research and journaling in durable files. If no trade occurred, say why in one line. Never omit a real blocker or fabricate figures.",
       "skills": [
         "robinhood-trading-operator"
       ],
@@ -611,15 +618,15 @@
       "schedule_display": "30 19 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 44
+        "completed": 45
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-19T18:35:07.056543+00:00",
-      "next_run_at": "2026-08-24T19:30:00+00:00",
-      "last_run_at": "2026-08-21T19:33:30.742685+00:00",
+      "next_run_at": "2026-08-25T19:30:00+00:00",
+      "last_run_at": "2026-08-24T19:30:39.366386+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -637,7 +644,8 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "1f84eb1fea92",
@@ -661,9 +669,9 @@
         "times": null,
         "completed": 10
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-08-25T00:24:57.688596+00:00",
       "paused_reason": null,
       "created_at": "2026-07-08T07:49:16.802140+00:00",
       "next_run_at": "2026-08-30T00:00:00+00:00",
@@ -685,7 +693,7 @@
     {
       "id": "f65ae3c6a5ba",
       "name": "Agentic Robinhood Swing Opportunity Scan — Afternoon",
-      "prompt": "Run an autonomous AFTERNOON swing-opportunity and rotation scan for Robinhood Agentic account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live account, portfolio, liquid buying power, positions, fills, all open-ish equity orders, and kill switches. Analyze broad market/sector regime, current fundamental/earnings/news/macro trends, and technical structure across a broad liquid universe: trend, support/resistance, relative strength, volume, volatility, pullback/retest/breakout, and invalidation. Seek high-quality swing trades lasting days to weeks and actively rotate/exit when evidence changes, without forcing trades or churning. After pending orders, target deploying 80% of qualifying available liquid buying power into 1-4 liquid fractional equities and retain 20% cash. Equities only; no options, shorts, other accounts, averaging down, widened stops, or guaranteed-return claims. Review orders before autonomous placement; journal all previews, executions, management actions, no-trades and failures. Report live state, ranked candidates, technical plus fundamental thesis, exact fills/actions, stops/targets, deployed cash and reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.",
+      "prompt": "Run an autonomous AFTERNOON swing-opportunity and rotation scan for Robinhood Agentic account 433711041 / ending 1041 only. Load and obey robinhood-trading-operator and /opt/data/HeRmEz/projects/trading-journal/playbook/autonomous-policy.md. Verify live account, portfolio, liquid buying power, positions, fills, all open-ish equity orders, and kill switches. Analyze broad market/sector regime, current fundamental/earnings/news/macro trends, and technical structure across a broad liquid universe: trend, support/resistance, relative strength, volume, volatility, pullback/retest/breakout, and invalidation. Seek high-quality swing trades lasting days to weeks and actively rotate/exit when evidence changes, without forcing trades or churning. After pending orders, target deploying 80% of qualifying available liquid buying power into 1-4 liquid fractional equities and retain 20% cash. Equities only; no options, shorts, other accounts, averaging down, widened stops, or guaranteed-return claims. Review orders before autonomous placement; journal all previews, executions, management actions, no-trades and failures. Report live state, ranked candidates, technical plus fundamental thesis, exact fills/actions, stops/targets, deployed cash and reserve. If broker/tool/risk state is uncertain, place nothing and report the pause.\n\nTRADING DISCORD FORMAT (mandatory): The final delivery must be easy to scan on mobile and normally no more than 7 short lines:\n💰 **Trading — [Open/Midday/Afternoon/Power Hour]**\n[✅/⚠️/❌] **Status:** one plain-language phrase\n• **Account:** equity | cash/buying power | day P&L if verified\n• **Action:** bought/sold/held/nothing, with ticker and amount\n• **Risk:** stop/invalidation and max relevant downside\n• **Next:** next check or required user action\nDo not dump ranked research, long rationale, raw tool output, or boilerplate into Discord. Put full research and journaling in durable files. If no trade occurred, say why in one line. Never omit a real blocker or fabricate figures.",
       "skills": [
         "robinhood-trading-operator"
       ],
@@ -704,15 +712,15 @@
       "schedule_display": "30 17 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 25
+        "completed": 26
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T16:12:35.294628+00:00",
-      "next_run_at": "2026-08-24T17:30:00+00:00",
-      "last_run_at": "2026-08-21T17:33:23.130978+00:00",
+      "next_run_at": "2026-08-25T17:30:00+00:00",
+      "last_run_at": "2026-08-24T17:30:40.533639+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -729,7 +737,8 @@
         "file"
       ],
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "e11ecd9b1861",
@@ -807,7 +816,7 @@
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "discord:1523247688689258586",
+      "deliver": "discord:1541612171987918980",
       "origin": {
         "platform": "discord",
         "chat_id": "1499990220077137943",
@@ -839,19 +848,19 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 420
+        "completed": 456
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T18:13:27.248211+00:00",
-      "next_run_at": "2026-08-24T09:18:56.163179+00:00",
-      "last_run_at": "2026-08-24T08:48:56.163179+00:00",
+      "next_run_at": "2026-08-25T03:21:45.522019+00:00",
+      "last_run_at": "2026-08-25T02:51:45.522019+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "discord:1523247688689258586",
+      "deliver": "discord:1541612171987918980",
       "origin": {
         "platform": "discord",
         "chat_id": "1499990220077137943",
@@ -868,7 +877,7 @@
     {
       "id": "5a17c78d51f0",
       "name": "Autonomous project-completion Kanban operator",
-      "prompt": "Operate the canonical default HeRmEz Kanban board autonomously and continuously. Workdir /opt/data/HeRmEz; DB /opt/data/kanban.db. Standing execution policy: fully complete tweetBetweenTheLines first. Its release gate is THREE PLATFORMS: publicly reachable web, verified/installable iOS, and verified/installable Android. Current P0 cards include t_1e4df44f (public web deploy), t_a194460a (iOS+Android builds/deploys), t_f30ad061 (three-platform verifier), t_5503c223 (production-gap closure), t_207c85af (release gate), and t_b5fa76dd (portfolio absorption). Before declaring iOS/Android deployment blocked, audit this repo and prior maintained HeRmEz dev-project deployments for existing Expo/EAS, TestFlight/App Store, Android internal-track/Play, APK/AAB, signing, credentials, and deployment patterns. Use available legitimate authenticated paths. Never fabricate store status. Then work every remaining actionable card in `hermes kanban list --sort priority` order. If a card is blocked by unavailable credentials, external approval, store access, or human input: inspect whether another maintained path can solve it; if not, record the exact irreducible blocker on-card and immediately pick/dispatch the next highest-priority doable task. Never let one blocker stall the queue. Respect intentionally scheduled holds until explicitly resumed. At each run inspect statuses, comments, logs, runs, diagnostics, repository truth, tests/builds, prior deployment configs, and public URLs. Recover transient failures; create idempotent precise follow-up cards; dispatch ready work within safe resource limits. Remote-first completion: localhost/VPS-only output does not count as delivered. Every completed deployable artifact must have exact verified URLs recorded directly on its Kanban card and labeled Web, iOS, Android plus production/preview/installable status. If no remote URL exists, keep the delivery/release card open or blocked and continue elsewhere. Send concise Discord updates only for meaningful completions, new public/install URLs, or blockers requiring user action.",
+      "prompt": "Operate the canonical default HeRmEz Kanban board autonomously and continuously. Workdir /opt/data/HeRmEz; DB /opt/data/kanban.db. Standing execution policy: fully complete tweetBetweenTheLines first. Its release gate is THREE PLATFORMS: publicly reachable web, verified/installable iOS, and verified/installable Android. Current P0 cards include t_1e4df44f (public web deploy), t_a194460a (iOS+Android builds/deploys), t_f30ad061 (three-platform verifier), t_5503c223 (production-gap closure), t_207c85af (release gate), and t_b5fa76dd (portfolio absorption). Before declaring iOS/Android deployment blocked, audit this repo and prior maintained HeRmEz dev-project deployments for existing Expo/EAS, TestFlight/App Store, Android internal-track/Play, APK/AAB, signing, credentials, and deployment patterns. Use available legitimate authenticated paths. Never fabricate store status. Then work every remaining actionable card in `hermes kanban list --sort priority` order. If a card is blocked by unavailable credentials, external approval, store access, or human input: inspect whether another maintained path can solve it; if not, record the exact irreducible blocker on-card and immediately pick/dispatch the next highest-priority doable task. Never let one blocker stall the queue. Respect intentionally scheduled holds until explicitly resumed. At each run inspect statuses, comments, logs, runs, diagnostics, repository truth, tests/builds, prior deployment configs, and public URLs. Recover transient failures; create idempotent precise follow-up cards; dispatch ready work within safe resource limits. Remote-first completion: localhost/VPS-only output does not count as delivered. Every completed deployable artifact must have exact verified URLs recorded directly on its Kanban card and labeled Web, iOS, Android plus production/preview/installable status. If no remote URL exists, keep the delivery/release card open or blocked and continue elsewhere. Send concise Discord updates only for meaningful completions, new public/install URLs, or blockers requiring user action.\n\nDISCORD DELIVERY FORMAT (mandatory): Keep the final user-facing message ultra-simple and phone-friendly. Use 3–6 short lines, no table, no dense paragraph, and no execution narration. Start with exactly one status line: ✅ Done, ⚠️ Needs attention, ❌ Failed, 🔄 Still running, or ⏸️ Paused. Then include only the result, key number/link, blocker, and next action if needed. Keep detailed evidence in durable logs/files.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -892,19 +901,19 @@
       "schedule_display": "every 20m",
       "repeat": {
         "times": null,
-        "completed": 33
+        "completed": 84
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-23T19:26:23.167147+00:00",
-      "next_run_at": "2026-08-24T09:01:41.174385+00:00",
-      "last_run_at": "2026-08-24T08:27:29.565838+00:00",
+      "next_run_at": "2026-08-25T03:09:39.026153+00:00",
+      "last_run_at": "2026-08-25T02:49:39.026153+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "discord:1523247688689258586",
+      "deliver": "discord:1541610170919030905",
       "origin": {
         "platform": "discord",
         "chat_id": "1523247688689258586",
@@ -959,7 +968,7 @@
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "discord:1523247688689258586",
+      "deliver": "discord:1541610170919030905",
       "origin": {
         "platform": "discord",
         "chat_id": "1499990220077137943",
@@ -976,8 +985,8 @@
     },
     {
       "id": "ff5f881a7276",
-      "name": "VPS memory pressure guard",
-      "prompt": "unused",
+      "name": "VPS memory pressure guard + safe relief",
+      "prompt": "Every 5 minutes, silently check VPS memory pressure. On critical pressure only, gracefully stop the exact approved allowlist: Redteam gateway, Wornly local server, stale Journal AI Vite servers, and MusicAI Flask servers older than four hours. Never stop the default Hermes gateway, dashboard, Kanban workers, package installs, Expo/Playwright/build processes, or arbitrary high-RSS processes. Use hysteresis/state so healthy ticks are silent and alerts are concise.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -999,20 +1008,20 @@
       "schedule_display": "every 5m",
       "repeat": {
         "times": null,
-        "completed": 88
+        "completed": 275
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T01:02:31.821947+00:00",
-      "next_run_at": "2026-08-24T09:00:55.793169+00:00",
-      "last_run_at": "2026-08-24T08:55:55.793169+00:00",
+      "next_run_at": "2026-08-25T03:05:45.152693+00:00",
+      "last_run_at": "2026-08-25T03:00:45.152693+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
-      "deliver": "discord:1523247688689258586",
+      "deliver": "discord:1541612171987918980",
       "origin": {
         "platform": "discord",
         "chat_id": "1523247688689258586",
@@ -1049,20 +1058,20 @@
       "schedule_display": "every 2m",
       "repeat": {
         "times": null,
-        "completed": 156
+        "completed": 518
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T01:05:21.119487+00:00",
-      "next_run_at": "2026-08-24T08:55:59.513005+00:00",
-      "last_run_at": "2026-08-24T08:53:59.513005+00:00",
+      "next_run_at": "2026-08-25T03:02:48.683130+00:00",
+      "last_run_at": "2026-08-25T03:00:48.683130+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
-      "deliver": "discord:1523247688689258586",
+      "deliver": "discord:1541610170919030905",
       "origin": {
         "platform": "discord",
         "chat_id": "1523247688689258586",
@@ -1075,65 +1084,9 @@
       "fire_claim": null
     },
     {
-      "id": "f454f0e63e14",
-      "name": "Overnight priority operator: TTBL → Journal/Burnout → OSRS",
-      "prompt": "Operate the canonical Hermes Kanban default board autonomously for this 12-hour overnight sprint. User priority is strict: (1) tweetBetweenTheLines first, with a working, demonstrably useful WEB state by 2026-08-25 morning UTC; mission is consumer data liberation—give consumers traceable behavioral/interest/attention metrics from synthetic or explicitly consented personal data, including provenance, derivation, limitations, correction/export/delete, with no diagnoses or fake platform coverage. P0 implementation t_c57ec8d3, verifier t_36d36133. (2) Then advance Journal AI and BurnoutBoyz high-priority cards. (3) Then OSRS plugins: get the small submissions to PR finish line; Clan War Board needs real testing/final touches before submission. Wornly is paused prototype. Algorithm Academy/Coding School are deferred. Consumer Advocate is held until tweetBetweenTheLines yields more consumer-psychology/data insight. Each tick: inspect `hermes kanban list --sort priority`, relevant show/log/runs/diagnostics, and repository truth. Dispatch ready cards. Recover transient failures and create precise follow-up/fix cards when handoffs expose actionable gaps; do not invent credentials or mark unverified external deploys complete. Keep priorities/order intact and avoid duplicate cards via idempotency keys. For tweetBetweenTheLines, distinguish the runnable web MVP milestone from later full OAuth/mobile-store production gates. Run/verify real tests and commits for any direct recovery work. COMPLETION RULE: every completed deliverable must have its exact runnable/deployed URL added directly to that Kanban card's completion result or comment, clearly labeled public production, preview, or local-only. If no URL exists, do not invent one; state the blocker and keep the card open or blocked. Write a concise local tick report with completed work, active work, blockers, URLs, and next actions.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-codex",
-      "model_snapshot": "gpt-5.6-sol",
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": [
-        "self"
-      ],
-      "schedule": {
-        "kind": "interval",
-        "minutes": 30,
-        "display": "every 30m"
-      },
-      "schedule_display": "every 30m",
-      "repeat": {
-        "times": 24,
-        "completed": 3
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-24T07:13:39.433790+00:00",
-      "next_run_at": "2026-08-24T09:20:51.913731+00:00",
-      "last_run_at": "2026-08-24T08:50:51.913731+00:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "failure_streak": 0,
-      "deliver": "local",
-      "origin": {
-        "platform": "discord",
-        "chat_id": "1523247688689258586",
-        "chat_name": "TRAPISTAN / #coding",
-        "thread_id": null,
-        "user_id": "219376861866754049"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file",
-        "web"
-      ],
-      "workdir": "/opt/data/HeRmEz",
-      "fire_claim": null
-    },
-    {
       "id": "8fefbcc973e7",
       "name": "Morning sprint report: product priorities",
-      "prompt": "Produce the morning delivery report for the overnight sprint on the canonical default Kanban board. Inspect actual Kanban cards, task runs/logs, git status/history/remotes, test/build results, and any live/deployed URLs. Priority order: tweetBetweenTheLines web MVP first (t_c57ec8d3 and t_36d36133), then Journal AI and BurnoutBoyz, then OSRS plugins including Who's Grinding/BIS Loadouts/Clan War Board. Confirm Wornly, Consumer Advocate, and Algorithm Academy/Coding School remain paused. Report only verified outcomes: what now works, exact tests/builds, commits/push state, runnable/deployed URL, outstanding blockers, and next actions. Explicitly explain the consumer-data-liberation value demonstrated by tweetBetweenTheLines and distinguish a working web MVP from unverified full production OAuth/mobile releases. Audit the completion rule: every completed deliverable must have its exact verified URL recorded directly on its Kanban card and labeled production, preview, or local-only. Flag any completed card missing its URL and repair the card record when a verified URL is available; never invent one.",
+      "prompt": "Produce the morning delivery report for the overnight sprint on the canonical default Kanban board. Inspect actual Kanban cards, task runs/logs, git status/history/remotes, test/build results, and any live/deployed URLs. Priority order: tweetBetweenTheLines web MVP first (t_c57ec8d3 and t_36d36133), then Journal AI and BurnoutBoyz, then OSRS plugins including Who's Grinding/BIS Loadouts/Clan War Board. Confirm Wornly, Consumer Advocate, and Algorithm Academy/Coding School remain paused. Report only verified outcomes: what now works, exact tests/builds, commits/push state, runnable/deployed URL, outstanding blockers, and next actions. Explicitly explain the consumer-data-liberation value demonstrated by tweetBetweenTheLines and distinguish a working web MVP from unverified full production OAuth/mobile releases. Audit the completion rule: every completed deliverable must have its exact verified URL recorded directly on its Kanban card and labeled production, preview, or local-only. Flag any completed card missing its URL and repair the card record when a verified URL is available; never invent one.\n\nDISCORD DELIVERY FORMAT (mandatory): Keep the final user-facing message ultra-simple and phone-friendly. Use 3–6 short lines, no table, no dense paragraph, and no execution narration. Start with exactly one status line: ✅ Done, ⚠️ Needs attention, ❌ Failed, 🔄 Still running, or ⏸️ Paused. Then include only the result, key number/link, blocker, and next action if needed. Keep detailed evidence in durable logs/files.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -1168,7 +1121,7 @@
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
-      "deliver": "origin",
+      "deliver": "discord:1541610170919030905",
       "origin": {
         "platform": "discord",
         "chat_id": "1523247688689258586",
@@ -1182,7 +1135,180 @@
         "web"
       ],
       "workdir": "/opt/data/HeRmEz"
+    },
+    {
+      "id": "c996958179c5",
+      "name": "Monthly free frontier LLM fallback review",
+      "prompt": "Review the main Hermes fallback chain for newer, genuinely capable FREE LLMs.\n\nCurrent primary is OpenAI Codex gpt-5.6-sol. Current free fallbacks are z-ai/glm-5.2:free, nvidia/nemotron-3-ultra-550b-a55b:free, then openrouter/free.\n\nProcedure:\n1. Query OpenRouter's live /api/v1/models catalog using the configured OPENROUTER_API_KEY without printing or exposing the key.\n2. Consider only models whose live prompt and completion prices are both exactly zero. Exclude image/audio-only, safety classifiers, tiny models, batch-only variants, stealth/unknown models without credible documentation, and models unsuitable for tool-using agents.\n3. Research current trustworthy benchmark/model-card evidence for reasoning, coding, long-context work, instruction following, and tool/function calling. Prefer official model cards, OpenRouter metadata/rankings, and reputable independent benchmarks. Do not rank by parameter count or release date alone.\n4. Compare candidates against the current GLM 5.2 and Nemotron 3 Ultra fallbacks. A model is an upgrade only if evidence shows a meaningful capability or reliability advantage for Hermes agent work.\n5. Live-smoke-test the strongest new candidate through Hermes/OpenRouter with a strict response test and one harmless web tool-call test. Do not change the fallback chain automatically.\n6. If there is no verified upgrade, respond exactly [SILENT].\n7. If there is a verified upgrade, send an ultra-simple mobile Discord report, maximum 6 short lines:\n✅ **New free LLM candidate**\n• Model: provider/model-id\n• Better at: one concise evidence-backed advantage\n• Tests: response + tool call status\n• Pricing: verified $0 input/output\n📌 Next: ask whether to promote it into the fallback chain\nNever expose credentials, dump benchmark tables, or claim a model is free without checking the live catalog on that run.",
+      "skills": [
+        "hermes-agent"
+      ],
+      "skill": "hermes-agent",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.6-sol",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 15 1 * * *",
+        "display": "0 15 1 * * *"
+      },
+      "schedule_display": "0 15 1 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-25T00:46:23.652759+00:00",
+      "next_run_at": "2026-09-01T15:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null,
+        "user_id": "219376861866754049"
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "b48122316873",
+      "name": "Weekly Social Publisher capability and connector review",
+      "prompt": "Maintain and improve the Hermes Social Publisher project at /opt/data/HeRmEz/projects/hermes-social-publisher. The monitored Postiz latest-release metadata changed, or this is the baseline run. Research the exact upstream release notes, security advisories, Postiz API/CLI/MCP changes, supported-platform connector changes, official social-platform API/OAuth changes, and migration implications. Update PRODUCT_DIRECTION.md, DEVELOPMENT_PLAN.md, docs/PLATFORM_MATRIX.md, or a release-watch log only when evidence requires it. Inspect the canonical default Kanban board and create one precise idempotent follow-up card assigned to software-developer only when a verified actionable change is not already represented. Never auto-upgrade a production deployment, expose credentials, or invent compatibility. Discord delivery must be mobile-first and at most 6 short lines: status, meaningful change, impact, exact doc/card updated, and next action. If the baseline/change contains no actionable capability, security, connector, or migration update, respond exactly [SILENT].",
+      "skills": [
+        "software-project-delivery"
+      ],
+      "skill": "software-project-delivery",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.6-sol",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": "https://api.github.com/repos/gitroomhq/postiz-app/releases/latest",
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 14 * * 1",
+        "display": "0 14 * * 1"
+      },
+      "schedule_display": "0 14 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-25T02:27:58.055870+00:00",
+      "next_run_at": "2026-08-31T14:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "discord:1524259261281206332",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null,
+        "user_id": "219376861866754049"
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file"
+      ],
+      "workdir": "/opt/data/HeRmEz/projects/hermes-social-publisher"
+    },
+    {
+      "id": "27d8aa85ea0a",
+      "name": "Weekly specialist-team routing and self-improvement review",
+      "prompt": "Audit and continuously improve the Hermes specialist-agent operating model. Source of truth: /opt/data/HeRmEz/AGENT_TEAM.md, /opt/data/SOUL.md, /opt/data/profiles/*/SOUL.md and profile descriptions, the canonical default Kanban board, recent specialist task events, current cron routing, and recent Discord/session evidence. Verify that substantial work routes to the correct named specialist; non-specialists preserve context and hand off instead of improvising; implementers route non-trivial work to reviewer; completed apps/cards include public test URLs/QR/install paths; trading, redteam, credentials, publishing, payments, and production safety boundaries remain intact. Identify routing failures, duplicate roles, missing specialist skills, noisy reports, stale instructions, repeated blockers, and opportunities for better synergy. Make only low-risk evidence-backed prompt/document/skill-reference corrections directly; never alter trading policy, credentials, real orders, public publishing, destructive permissions, or production deployment without explicit approval. Create precise idempotent Kanban remediation cards assigned to the correct specialist for larger changes. Validate every change by re-reading files/profile descriptions and running harmless profile routing smoke tests when needed. Discord output: [SILENT] if no meaningful improvement; otherwise at most 6 short mobile-first lines with status, evidence, exact change/card, impact, and next action.",
+      "skills": [
+        "hermes-agent-operations",
+        "ai-coding-agents"
+      ],
+      "skill": "hermes-agent-operations",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-codex",
+      "model_snapshot": "gpt-5.6-sol",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * 0",
+        "display": "0 16 * * 0"
+      },
+      "schedule_display": "0 16 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-25T02:40:29.413080+00:00",
+      "next_run_at": "2026-08-30T16:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "discord:1499990220077137943",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null,
+        "user_id": "219376861866754049"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "session_search",
+        "web"
+      ],
+      "workdir": "/opt/data/HeRmEz"
     }
   ],
-  "updated_at": "2026-08-24T08:56:41.816748+00:00"
+  "updated_at": "2026-08-25T03:00:48.685419+00:00"
 }

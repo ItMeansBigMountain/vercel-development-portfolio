@@ -5,14 +5,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-24T08:37:07.223883+00:00",
-    "last_viewed_at": "2026-08-24T08:37:07.219098+00:00",
+    "last_used_at": "2026-08-25T00:59:51.864252+00:00",
+    "last_viewed_at": "2026-08-25T00:59:51.862177+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "github-pr-workflow": {
     "archived_at": null,
@@ -20,14 +20,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-24T08:37:07.222158+00:00",
-    "last_viewed_at": "2026-08-24T08:37:07.220864+00:00",
+    "last_used_at": "2026-08-25T00:59:51.863247+00:00",
+    "last_viewed_at": "2026-08-25T00:59:51.860903+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "kanban-worker": {
     "archived_at": null,
@@ -35,14 +35,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-24T08:36:59.217785+00:00",
-    "last_viewed_at": "2026-08-24T08:36:59.216318+00:00",
+    "last_used_at": "2026-08-25T02:36:45.003100+00:00",
+    "last_viewed_at": "2026-08-25T02:36:45.001835+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 29,
-    "view_count": 19
+    "use_count": 32,
+    "view_count": 22
   },
   "sdlc-review": {
     "archived_at": null,
@@ -50,13 +50,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-24T07:39:49.778623+00:00",
+    "last_used_at": "2026-08-25T03:00:48.458195+00:00",
     "last_viewed_at": "2026-08-24T07:39:49.777506+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 9,
+    "use_count": 10,
     "view_count": 3
   },
   "test-driven-development": {

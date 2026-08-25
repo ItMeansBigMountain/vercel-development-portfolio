@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://api.github.com/repos/gitroomhq/postiz-app/releases/latest",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 2,
+      "url": "https://raw.githubusercontent.com/gitroomhq/postiz-app/v2.23.0/LICENSE",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 3,
+      "url": "https://docs.postiz.com/self-host/installation/system-requirements.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 4,
+      "url": "https://docs.postiz.com/self-host/architecture.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 5,
+      "url": "https://docs.postiz.com/self-host/configuration/reference.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 6,
+      "url": "https://docs.postiz.com/general/platforms/overview.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 7,
+      "url": "https://docs.postiz.com/self-host/providers/overview.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 8,
+      "url": "https://docs.postiz.com/public-api/introduction.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 9,
+      "url": "https://docs.postiz.com/cli/introduction.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 10,
+      "url": "https://docs.postiz.com/mcp/introduction.md",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 11,
+      "url": "https://registry.npmjs.org/postiz/latest",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 12,
+      "url": "https://www.hostinger.com/tutorials/what-is-docker-compose",
+      "title": "",
+      "accessed": "2026-08-25"
+    },
+    {
+      "id": 13,
+      "url": "https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu",
+      "title": "",
+      "accessed": "2026-08-25"
+    }
+  ]
+}

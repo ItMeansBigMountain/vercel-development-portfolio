@@ -1,0 +1,983 @@
+{
+  "robots_en.wikipedia.org": {
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "first_lines": [
+      "\ufeff# robots.txt for http://www.wikipedia.org/ and friends",
+      "#",
+      "# Please note: There are a lot of pages on this site, and there are",
+      "# some misbehaved spiders out there that go _way_ too fast. If you're",
+      "# irresponsible, your access to the site may be blocked.",
+      "#",
+      "",
+      "# Observed spamming large amounts of https://en.wikipedia.org/?curid=NNNNNN",
+      "# and ignoring 429 ratelimit responses, claims to respect robots:",
+      "# http://mj12bot.com/",
+      "User-agent: MJ12bot",
+      "Disallow: /",
+      "",
+      "# advertising-related bots:",
+      "User-agent: Mediapartners-Google*",
+      "Disallow: /",
+      "",
+      "# Wikipedia work bots:",
+      "User-agent: IsraBot",
+      "Disallow:",
+      "",
+      "User-agent: Orthogaffe",
+      "Disallow:",
+      "",
+      "# Crawlers that are kind enough to obey, but which we'd rather not have",
+      "# unless they're feeding search engines.",
+      "User-agent: UbiCrawler",
+      "Disallow: /",
+      "",
+      "User-agent: DOC",
+      "Disallow: /",
+      "",
+      "User-agent: Zao",
+      "Disallow: /",
+      "",
+      "# Some bots are known to be trouble, particularly those designed to copy",
+      "# entire sites. Please obey robots.txt.",
+      "User-agent: sitecheck.internetseer.com",
+      "Disallow: /",
+      ""
+    ]
+  },
+  "robots_www.wikidata.org": {
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "first_lines": [
+      "\ufeff# robots.txt for http://www.wikipedia.org/ and friends",
+      "#",
+      "# Please note: There are a lot of pages on this site, and there are",
+      "# some misbehaved spiders out there that go _way_ too fast. If you're",
+      "# irresponsible, your access to the site may be blocked.",
+      "#",
+      "",
+      "# Observed spamming large amounts of https://en.wikipedia.org/?curid=NNNNNN",
+      "# and ignoring 429 ratelimit responses, claims to respect robots:",
+      "# http://mj12bot.com/",
+      "User-agent: MJ12bot",
+      "Disallow: /",
+      "",
+      "# advertising-related bots:",
+      "User-agent: Mediapartners-Google*",
+      "Disallow: /",
+      "",
+      "# Wikipedia work bots:",
+      "User-agent: IsraBot",
+      "Disallow:",
+      "",
+      "User-agent: Orthogaffe",
+      "Disallow:",
+      "",
+      "# Crawlers that are kind enough to obey, but which we'd rather not have",
+      "# unless they're feeding search engines.",
+      "User-agent: UbiCrawler",
+      "Disallow: /",
+      "",
+      "User-agent: DOC",
+      "Disallow: /",
+      "",
+      "User-agent: Zao",
+      "Disallow: /",
+      "",
+      "# Some bots are known to be trouble, particularly those designed to copy",
+      "# entire sites. Please obey robots.txt.",
+      "User-agent: sitecheck.internetseer.com",
+      "Disallow: /",
+      ""
+    ]
+  },
+  "robots_commons.wikimedia.org": {
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "first_lines": [
+      "\ufeff# robots.txt for http://www.wikipedia.org/ and friends",
+      "#",
+      "# Please note: There are a lot of pages on this site, and there are",
+      "# some misbehaved spiders out there that go _way_ too fast. If you're",
+      "# irresponsible, your access to the site may be blocked.",
+      "#",
+      "",
+      "# Observed spamming large amounts of https://en.wikipedia.org/?curid=NNNNNN",
+      "# and ignoring 429 ratelimit responses, claims to respect robots:",
+      "# http://mj12bot.com/",
+      "User-agent: MJ12bot",
+      "Disallow: /",
+      "",
+      "# advertising-related bots:",
+      "User-agent: Mediapartners-Google*",
+      "Disallow: /",
+      "",
+      "# Wikipedia work bots:",
+      "User-agent: IsraBot",
+      "Disallow:",
+      "",
+      "User-agent: Orthogaffe",
+      "Disallow:",
+      "",
+      "# Crawlers that are kind enough to obey, but which we'd rather not have",
+      "# unless they're feeding search engines.",
+      "User-agent: UbiCrawler",
+      "Disallow: /",
+      "",
+      "User-agent: DOC",
+      "Disallow: /",
+      "",
+      "User-agent: Zao",
+      "Disallow: /",
+      "",
+      "# Some bots are known to be trouble, particularly those designed to copy",
+      "# entire sites. Please obey robots.txt.",
+      "User-agent: sitecheck.internetseer.com",
+      "Disallow: /",
+      ""
+    ]
+  },
+  "robots_wiktenauer.com": {
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "first_lines": [
+      "# As a condition of accessing this website, you agree to abide by the following",
+      "# content signals:",
+      "",
+      "# (a)  If a Content-Signal = yes, you may collect content for the corresponding",
+      "#      use.",
+      "# (b)  If a Content-Signal = no, you may not collect content for the",
+      "#      corresponding use.",
+      "# (c)  If the website operator does not include a Content-Signal for a",
+      "#      corresponding use, the website operator neither grants nor restricts",
+      "#      permission via Content-Signal with respect to the corresponding use.",
+      "",
+      "# The content signals and their meanings are:",
+      "",
+      "# search:   building a search index and providing search results (e.g., returning",
+      "#           hyperlinks and short excerpts from your website's contents). Search does not",
+      "#           include providing AI-generated search summaries.",
+      "# ai-input: inputting content into one or more AI models (e.g., retrieval",
+      "#           augmented generation, grounding, or other real-time taking of content for",
+      "#           generative AI search answers).",
+      "# ai-train: training or fine-tuning AI models.",
+      "# use:      how AI systems may consume the content (immediate, reference, or full).",
+      "",
+      "# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF",
+      "# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT",
+      "# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.",
+      "",
+      "# BEGIN Cloudflare Managed content",
+      "",
+      "User-agent: *",
+      "Content-Signal: search=yes,ai-train=no,use=reference",
+      "Allow: /",
+      "",
+      "User-agent: Amazonbot",
+      "Disallow: /",
+      "",
+      "User-agent: Applebot-Extended",
+      "Disallow: /",
+      "",
+      "User-agent: Bytespider",
+      "Disallow: /"
+    ]
+  },
+  "robots_ubershmekel.github.io": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "robots_www.gutenberg.org": {
+    "status": 200,
+    "content_type": "text/plain",
+    "first_lines": [
+      "User-agent: *",
+      "Disallow: /ebooks/search",
+      ""
+    ]
+  },
+  "robots_www.loc.gov": {
+    "status": 200,
+    "content_type": "text/plain; charset=UTF-8",
+    "first_lines": [
+      "",
+      "User-agent: 008",
+      "Disallow: /",
+      "",
+      "#Baiduspider",
+      "User-agent: Baiduspider",
+      "Disallow: /",
+      "",
+      "User-agent: Baiduspider-image",
+      "Disallow: /",
+      "",
+      "User-agent: *",
+      "Disallow: /cgi-bin/",
+      "Disallow: /web_arch/",
+      "Disallow: /rr/mopic/staff",
+      "Disallow: /loc/volunteers",
+      "Disallow: /ficmanagers",
+      "Disallow: /preserv/extranet/",
+      "Disallow: /myloc",
+      "Disallow: /nationalfilmregistry",
+      "Disallow: /fedsearch",
+      "Disallow: /search",
+      "Disallow: /pictures/search",
+      "Disallow: /pictures/related",
+      "Crawl-Delay: 5",
+      "",
+      "Sitemap: https://www.loc.gov/sitemap.xml"
+    ]
+  },
+  "robots_vicos.si": {
+    "status": 200,
+    "content_type": "text/plain",
+    "first_lines": [
+      "User-agent: *"
+    ]
+  },
+  "robots_www.kaggle.com": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "wikipedia_category": {
+    "url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AMartial+arts+techniques&cmlimit=500&format=json",
+    "count": 88,
+    "sample": [
+      {
+        "pageid": 1995610,
+        "ns": 0,
+        "title": "540 kick"
+      },
+      {
+        "pageid": 2425545,
+        "ns": 0,
+        "title": "Aerial cartwheel"
+      },
+      {
+        "pageid": 26997901,
+        "ns": 0,
+        "title": "Aliveness"
+      },
+      {
+        "pageid": 6563922,
+        "ns": 0,
+        "title": "Ashi guruma"
+      },
+      {
+        "pageid": 6780848,
+        "ns": 0,
+        "title": "Ashi-Hishigi"
+      },
+      {
+        "pageid": 6822383,
+        "ns": 0,
+        "title": "Boxing styles and technique"
+      },
+      {
+        "pageid": 5841355,
+        "ns": 0,
+        "title": "Breaking (martial arts)"
+      },
+      {
+        "pageid": 2322187,
+        "ns": 0,
+        "title": "Butterfly kick"
+      },
+      {
+        "pageid": 80512920,
+        "ns": 0,
+        "title": "Centerline theory (boxing)"
+      },
+      {
+        "pageid": 31547326,
+        "ns": 0,
+        "title": "Choke-out"
+      }
+    ]
+  },
+  "wiktenauer_Category:Techniques": {
+    "url": "https://wiktenauer.com/api.php?action=query&titles=Category%3ATechniques&prop=info&inprop=url&format=json",
+    "data": {
+      "batchcomplete": "",
+      "query": {
+        "pages": {
+          "1843": {
+            "pageid": 1843,
+            "ns": 14,
+            "title": "Category:Techniques",
+            "contentmodel": "wikitext",
+            "pagelanguage": "en",
+            "pagelanguagehtmlcode": "en",
+            "pagelanguagedir": "ltr",
+            "touched": "2026-07-13T11:33:41Z",
+            "lastrevid": 81871,
+            "length": 237,
+            "fullurl": "https://wiktenauer.com/wiki/Category:Techniques",
+            "editurl": "https://wiktenauer.com/index.php?title=Category:Techniques&action=edit",
+            "canonicalurl": "https://wiktenauer.com/wiki/Category:Techniques"
+          }
+        }
+      }
+    }
+  },
+  "wiktenauer_Category:Glossary": {
+    "url": "https://wiktenauer.com/api.php?action=query&titles=Category%3AGlossary&prop=info&inprop=url&format=json",
+    "data": {
+      "batchcomplete": "",
+      "query": {
+        "pages": {
+          "-1": {
+            "ns": 14,
+            "title": "Category:Glossary",
+            "missing": "",
+            "contentmodel": "wikitext",
+            "pagelanguage": "en",
+            "pagelanguagehtmlcode": "en",
+            "pagelanguagedir": "ltr",
+            "fullurl": "https://wiktenauer.com/wiki/Category:Glossary",
+            "editurl": "https://wiktenauer.com/index.php?title=Category:Glossary&action=edit",
+            "canonicalurl": "https://wiktenauer.com/wiki/Category:Glossary"
+          }
+        }
+      }
+    }
+  },
+  "wiktenauer_Historical European Martial Arts": {
+    "url": "https://wiktenauer.com/api.php?action=query&titles=Historical+European+Martial+Arts&prop=info&inprop=url&format=json",
+    "data": {
+      "batchcomplete": "",
+      "query": {
+        "pages": {
+          "747": {
+            "pageid": 747,
+            "ns": 0,
+            "title": "Historical European Martial Arts",
+            "contentmodel": "wikitext",
+            "pagelanguage": "en",
+            "pagelanguagehtmlcode": "en",
+            "pagelanguagedir": "ltr",
+            "touched": "2026-07-13T11:30:53Z",
+            "lastrevid": 85951,
+            "length": 60,
+            "fullurl": "https://wiktenauer.com/wiki/Historical_European_Martial_Arts",
+            "editurl": "https://wiktenauer.com/index.php?title=Historical_European_Martial_Arts&action=edit",
+            "canonicalurl": "https://wiktenauer.com/wiki/Historical_European_Martial_Arts"
+          }
+        }
+      }
+    }
+  },
+  "wiktenauer_Johannes Liechtenauer": {
+    "url": "https://wiktenauer.com/api.php?action=query&titles=Johannes+Liechtenauer&prop=info&inprop=url&format=json",
+    "data": {
+      "batchcomplete": "",
+      "query": {
+        "pages": {
+          "836": {
+            "pageid": 836,
+            "ns": 0,
+            "title": "Johannes Liechtenauer",
+            "contentmodel": "wikitext",
+            "pagelanguage": "en",
+            "pagelanguagehtmlcode": "en",
+            "pagelanguagedir": "ltr",
+            "touched": "2026-08-24T15:37:56Z",
+            "lastrevid": 166453,
+            "length": 72956,
+            "fullurl": "https://wiktenauer.com/wiki/Johannes_Liechtenauer",
+            "editurl": "https://wiktenauer.com/index.php?title=Johannes_Liechtenauer&action=edit",
+            "canonicalurl": "https://wiktenauer.com/wiki/Johannes_Liechtenauer"
+          }
+        }
+      }
+    }
+  },
+  "bjjdata": {
+    "url": "https://ubershmekel.github.io/bjjdata/data.json",
+    "content_type": "application/json; charset=utf-8",
+    "top_type": "dict",
+    "count": 2,
+    "sample": [
+      [
+        "created",
+        "2023-08-12T00:48:38.327Z"
+      ],
+      [
+        "entries",
+        [
+          {
+            "title": "Jakub Zajkowski vs Rafael Da Silva Barros - FINAL - London Warriors Cup 2019 - Black Adult",
+            "id": "2019-zajkowski-barros-1md",
+            "link": "https://www.youtube.com/watch?v=XtggrUd1q78",
+            "date": "2019",
+            "who": [
+              "Jakub Zajkowski",
+              "Rafael Da Silva Barros"
+            ],
+            "clips": [
+              {
+                "start": "6:55",
+                "end": "7:13",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "canto-choke",
+                  "choke",
+                  "top"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Gustavo Batista VS Jake Watson / Pan Championship 2020",
+            "id": "2020-gustavo-watson-1md",
+            "link": "https://www.youtube.com/watch?v=7YrUFIo609s",
+            "date": "2020",
+            "who": [
+              "Gustavo Batista",
+              "Jake Watson"
+            ],
+            "clips": [
+              {
+                "start": "3:36",
+                "end": "3:45",
+                "tags": [
+                  "gi",
+                  "tournament",
+                  "open-weight",
+                  "arm-triangle"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Gustavo Batista v Christopher Passerrello / Pan Championship 2021",
+            "id": "2021-batista-passerrello-1md",
+            "link": "https://www.youtube.com/watch?v=z4hiAPLdcOw",
+            "date": "2021",
+            "who": [
+              "Gustavo Batista",
+              "Christopher Passerrello"
+            ],
+            "clips": [
+              {
+                "start": "2:00",
+                "end": "2:19",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "collar-choke",
+                  "cross-collar-choke",
+                  "heavy-weight",
+                  "top"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Renato Canuto vs Jake Shields 3CG 8",
+            "id": "2021-canuto-shields-1md",
+            "link": "https://www.youtube.com/watch?v=1KFOTybl2vw",
+            "date": "2021",
+            "who": [
+              "Renato Canuto",
+              "Jake Shields"
+            ],
+            "clips": [
+              {
+                "start": "7:37",
+                "end": "7:48",
+                "tags": [
+                  "no-gi",
+                  "tournament",
+                  "armbar",
+                  "flying",
+                  "joint-lock"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Tainan Dalpra v Tommy Langaker / World Championship 2021",
+            "id": "2021-dalpra-tommy-1md",
+            "link": "https://www.youtube.com/watch?v=_VNIAkoTFYs",
+            "date": "2021",
+            "who": [
+              "Tainan Dalpra",
+              "Tommy Langaker"
+            ],
+            "clips": [
+              {
+                "start": "6:34",
+                "end": "6:59",
+                "tags": [
+                  "tournament",
+                  "collar-choke",
+                  "choke",
+                  "back"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Micael Galv\u00e3o vs Levi Jones-Leary. Quarterfinal 77kg Abu Dhabi World Professional Jiu Jitsu 2021",
+            "id": "2021-galvao-levi-1md",
+            "link": "https://www.youtube.com/watch?v=CijdjWsLh5c",
+            "date": "2021",
+            "who": [
+              "Micael Galv\u00e3o",
+              "Levi Jones-Leary"
+            ],
+            "clips": [
+              {
+                "start": "1:22",
+                "end": "1:57",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "choke",
+                  "triangle",
+                  "light-weight"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Gordon Ryan vs Vagner Rocha",
+            "id": "2021-gordon-vagner-1md",
+            "link": "https://www.youtube.com/watch?v=JvEAAroDDqc",
+            "date": "2021-03-26",
+            "who": [
+              "Gordon Ryan",
+              "Vagner Rocha"
+            ],
+            "clips": [
+              {
+                "start": "21:29",
+                "end": "21:42",
+                "tags": [
+                  "tournament",
+                  "no-gi",
+                  "reverse-triangle",
+                  "choke",
+                  "heavy-weight"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nicholas Meregali v Roberto \"Cyborg\" Abreu / World Championship 2021",
+            "id": "2021-meregali-abreu-1md",
+            "link": "https://www.youtube.com/watch?v=FknfX8bvZMQ",
+            "date": "2021",
+            "who": [
+              "Nicholas Meregali",
+              "Roberto \"Cyborg\" Abreu"
+            ],
+            "clips": [
+              {
+                "start": "2:55",
+                "end": "3:12",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "choke",
+                  "loop-choke",
+                  "bottom"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nicholas Meregali v Marlon Tanaka / World Championship 2021",
+            "id": "2021-meregali-tanaka-1md",
+            "link": "https://www.youtube.com/watch?v=RZ55Cg0PxxU",
+            "date": "2021",
+            "who": [
+              "Nicholas Meregali",
+              "Marlon Tanaka"
+            ],
+            "clips": [
+              {
+                "start": "1:31",
+                "end": "1:57",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "triangle",
+                  "choke"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Diogo Reis v Lucas Pinheiro / World Championship 2022",
+            "id": "2022-diogo-pinheiro-1md",
+            "link": "https://www.youtube.com/watch?v=UpThlsKJIIo",
+            "date": "2022",
+            "who": [
+              "Diogo Reis",
+              "Lucas Pinheiro"
+            ],
+            "clips": [
+              {
+                "start": "9:20",
+                "end": "9:47",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "toe-hold",
+                  "joint-lock",
+                  "light-weight"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Micael Galv\u00e3o Finaliza Lucas Hulk No BJJ STARS 8",
+            "id": "2022-galvao-lucas-1md",
+            "link": "https://www.youtube.com/watch?v=6YxnJbowEJ8",
+            "date": "2022",
+            "who": [
+              "Micael Galv\u00e3o",
+              "Lucas Barbosa"
+            ],
+            "clips": [
+              {
+                "start": "10:20",
+                "end": "10:44",
+                "tags": [
+                  "gi",
+                  "tournament",
+                  "choke",
+                  "back",
+                  "sliding-collar-choke",
+                  "middle-weight"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Micael Galv\u00e2o v Pedro Maia / Brasileiro 2022",
+            "id": "2022-galvao-maia-1md",
+            "link": "https://www.youtube.com/watch?v=D1wsP1qvmNY",
+            "date": "2022",
+            "who": [
+              "Micael Galv\u00e2o",
+              "Pedro Maia"
+            ],
+            "clips": [
+              {
+                "start": "9:52",
+                "end": "10:13",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "choke",
+                  "side-triangle",
+                  "middle-weight"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Mica Galv\u00e3o v Servio Tulio / Brasileiro 2022",
+            "id": "2022-galvao-servio-1md",
+            "link": "https://www.youtube.com/watch?v=4Tr7R3oygO8",
+            "date": "2022",
+            "who": [
+              "Mica Galv\u00e3o",
+              "Servio Tulio"
+            ],
+            "clips": [
+              {
+                "start": "2:59",
+                "end": "3:10",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "armbar",
+                  "middle-weight",
+                  "joint-lock"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Max Gimenis v Levi Moura / New Haven Open No-Gi 2022",
+            "id": "2022-gimenis-levi-1md",
+            "link": "https://www.youtube.com/watch?v=Ue3qYK8FhN0",
+            "date": "2022",
+            "who": [
+              "Max Gimenis",
+              "Levi Moura"
+            ],
+            "clips": [
+              {
+                "start": "4:59",
+                "end": "5:35",
+                "tags": [
+                  "no-gi",
+                  "tournament",
+                  "arm-triangle",
+                  "choke",
+                  "top",
+                  "ultraheavy-weight"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "2022 ADCC World Championships | Kade Ruotolo vs Roberto Jimenez",
+            "id": "2022-kade-jimenez-1md",
+            "link": "https://www.youtube.com/watch?v=QUYui-viwwU",
+            "date": "2022",
+            "who": [
+              "Kade Ruotolo",
+              "Roberto Jimenez"
+            ],
+            "clips": [
+              {
+                "start": "2:16",
+                "end": "2:30",
+                "tags": [
+                  "no-gi",
+                  "tournament",
+                  "heel-hook",
+                  "joint-lock"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "2022 Match of The Year | Kade Ruotolo vs PJ Barch - 2022 ADCC World Championships",
+            "id": "2022-kade-pjb-1md",
+            "link": "https://www.youtube.com/watch?v=3gotA-Y0gXQ",
+            "date": "2022",
+            "who": [
+              "Kade Ruotolo",
+              "PJ Barch"
+            ],
+            "clips": [
+              {
+                "start": "12:00",
+                "end": "12:14",
+                "tags": [
+                  "no-gi",
+                  "tournament",
+                  "armbar",
+                  "joint-lock"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Leandro Lo v Bruno Tosto / Pan Championship 2022",
+            "id": "2022-leandro-tosto-1md",
+            "link": "https://www.youtube.com/watch?v=iK7X-O2HTlg",
+            "date": "2022",
+            "who": [
+              "Leandro Lo",
+              "Bruno Tosto"
+            ],
+            "clips": [
+              {
+                "start": "8:48",
+                "end": "9:14",
+                "tags": [
+                  "gi",
+                  "tournament",
+                  "sliding-collar-choke",
+                  "back"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nicholas Meregali v Fellipe Andrew / World Championship 2022",
+            "id": "2022-meregali-fellipe-1md",
+            "link": "https://www.youtube.com/watch?v=8Hydk5Erhvc",
+            "date": "2022",
+            "who": [
+              "Nicholas Meregali",
+              "Fellipe Andrew"
+            ],
+            "clips": [
+              {
+                "start": "5:24",
+                "end": "5:35",
+                "tags": [
+                  "tournament",
+                  "back",
+                  "choke",
+                  "collar-choke",
+                  "sliding-collar-choke",
+                  "gi"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nicholas Meregali v Fellipe Andrew / World Championship 2022",
+            "id": "2022-meregali-fellipe-armbarmd",
+            "link": "https://www.youtube.com/watch?v=M5DLu0PdI-w",
+            "date": "2022",
+            "who": [
+              "Nicholas Meregali",
+              "Fellipe Andrew"
+            ],
+            "clips": [
+              {
+                "start": "5:44",
+                "end": "5:50",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "armbar",
+                  "open-weight",
+                  "joint-lock"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nicholas Meregali vs Breylor Grout | Tezos WNO: Who's Next Finale | Full Match",
+            "id": "2022-meregali-grout-1md",
+            "link": "https://www.youtube.com/watch?v=geKoUDYj3Zs",
+            "date": "2022",
+            "who": [
+              "Nicholas Meregali",
+              "Breylor Grout"
+            ],
+            "clips": [
+              {
+                "start": "13:10",
+                "end": "13:20",
+                "tags": [
+                  "tournament",
+                  "no-gi",
+                  "choke",
+                  "back",
+                  "arm-triangle"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nicholas Meregali v Wallace Costa / World Championship 2022",
+            "id": "2022-mergali-costa-1md",
+            "link": "https://www.youtube.com/watch?v=4otDPTc7_Ok",
+            "date": "",
+            "who": [
+              "Nicholas Meregali",
+              "Wallace Costa"
+            ],
+            "clips": [
+              {
+                "start": "6:10",
+                "end": "6:17",
+                "tags": [
+                  "choke",
+                  "bottom",
+                  "loop-choke"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Tainan Dalpra v Andy Murasaki / World Championship 2022",
+            "id": "2022-tainan-andy-1md",
+            "link": "https://www.youtube.com/watch?v=2S3fK8lhueY",
+            "date": "2022",
+            "who": [
+              "Tainan Dalpra",
+              "Andy Murasaki"
+            ],
+            "clips": [
+              {
+                "start": "4:39",
+                "end": "5:30",
+                "tags": [
+                  "tournament",
+                  "choke",
+                  "lapel-choke",
+                  "top",
+                  "middle-weight",
+                  "gi"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Tainan Dalpra v Caio Caetano / World Championship 2022",
+            "id": "2022-tainan-caio-1md",
+            "link": "https://www.youtube.com/watch?v=UmnDlhrwlXY",
+            "date": "2022",
+            "who": [
+              "Tainan Dalpra",
+              "Caio Caetano"
+            ],
+            "clips": [
+              {
+                "start": "2:00",
+                "end": "2:12",
+                "tags": [
+                  "tournament",
+                  "sliding-collar-choke",
+                  "choke",
+                  "back",
+                  "gi",
+                  "middle-weight"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Tainan Dalpra v Roberto Jimenez / Pan Championship 2022",
+            "id": "2022-tainan-roberto-1md",
+            "link": "https://www.youtube.com/watch?v=1e0aEtcr2Q0",
+            "date": "2022",
+            "who": [
+              "Tainan Dalpra",
+              "Roberto Jimenez"
+            ],
+            "clips": [
+              {
+                "start": "1:43",
+                "end": "1:58",
+                "tags": [
+                  "tournament",
+                  "gi",
+                  "triangle",
+                  "choke"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Tezos WNO 19 | Kaynan Duarte vs Nicholas Meregali",
+            "id": "2023-meregali-kaynan-1md",
+            "link": "https://www.youtube.com/watch?v=0Dy2U48ADmE",
+            "date": "2023",
+            "who": [
+              "Nicholas Meregali",
+              "Kaynan Duarte"
+            ],
+            "clips": [
+              {
+                "start": "15:20",
+                "end": "15:33",
+                "tags": [
+                  "tournament",
+                  "no-gi",
+                  "arm-triangle",
+                  "choke",
+                  "top"
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    ]
+  }
+}

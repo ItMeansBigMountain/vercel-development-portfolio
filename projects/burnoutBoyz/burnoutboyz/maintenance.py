@@ -8,6 +8,10 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+from .auth import require_record_owner, require_vehicle_owner
+
+_RECEIPT_MEDIA_TYPES = frozenset({"image/jpeg", "image/png", "image/webp", "application/pdf"})
+
 
 def _id() -> str:
     return str(uuid.uuid4())
@@ -24,12 +28,18 @@ def _iso_date(value: str) -> str:
 class MaintenanceService:
     """Owner-confirmed maintenance evidence, reminders, costs, and privacy operations."""
 
-    def __init__(self, connection: sqlite3.Connection, *, receipt_root: str | Path):
+    def __init__(self, connection: sqlite3.Connection, *, receipt_root: str | Path, actor_user_id: str, max_receipt_bytes: int = 10 * 1024 * 1024, max_notifications_per_run: int = 20):
         self.connection = connection
         self.connection.row_factory = sqlite3.Row
         self.connection.execute("PRAGMA foreign_keys = ON")
         self.receipt_root = Path(receipt_root)
         self.receipt_root.mkdir(parents=True, exist_ok=True)
+        self.actor_user_id = actor_user_id
+        self.max_receipt_bytes = max(1, max_receipt_bytes)
+        self.max_notifications_per_run = max(1, max_notifications_per_run)
+
+    def _own_vehicle(self, vehicle_id: str) -> None:
+        require_vehicle_owner(self.connection, self.actor_user_id, vehicle_id)
 
     def _fingerprint(self, vehicle_id: str, performed_at: str, odometer_value: int | None, item_ids: Iterable[str]) -> str:
         payload = [vehicle_id, performed_at, odometer_value, sorted(set(item_ids))]
@@ -51,6 +61,7 @@ class MaintenanceService:
         parts: list[str] | None = None, fluids: list[str] | None = None, shop: str | None = None,
         notes: str | None = None, costs: list[dict[str, Any]] | None = None, receipt: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
+        self._own_vehicle(vehicle_id)
         performed_at = _iso_date(performed_at)
         if odometer_value is not None and (not isinstance(odometer_value, int) or odometer_value < 0):
             raise ValueError("odometer must be a non-negative integer")
@@ -90,20 +101,27 @@ class MaintenanceService:
         content = receipt.get("content")
         if not isinstance(content, bytes) or not content:
             raise ValueError("receipt content must be non-empty bytes")
+        if len(content) > self.max_receipt_bytes:
+            raise ValueError("receipt exceeds size limit")
+        media_type = receipt.get("media_type")
+        if media_type not in _RECEIPT_MEDIA_TYPES:
+            raise ValueError("unsupported receipt media type")
         digest = hashlib.sha256(content).hexdigest()
         receipt_id = _id()
         path = self.receipt_root / f"{receipt_id}-{digest}"
         path.write_bytes(content)
         self.connection.execute(
             "INSERT INTO receipts(id,service_record_id,storage_key,media_type,original_filename,sha256,created_at) VALUES (?,?,?,?,?,?,?)",
-            (receipt_id, record_id, str(path), receipt.get("media_type"), receipt.get("filename", "receipt"), digest, now),
+            (receipt_id, record_id, str(path), media_type, Path(str(receipt.get("filename", "receipt"))).name, digest, now),
         )
 
     def list_records(self, vehicle_id: str) -> list[dict[str, Any]]:
+        self._own_vehicle(vehicle_id)
         ids = [r[0] for r in self.connection.execute("SELECT id FROM service_records WHERE vehicle_id=? AND deleted_at IS NULL ORDER BY performed_at,id", (vehicle_id,))]
         return [self.get_record(record_id) for record_id in ids]
 
     def get_record(self, record_id: str) -> dict[str, Any]:
+        require_record_owner(self.connection, self.actor_user_id, record_id)
         row = self.connection.execute("SELECT * FROM service_records WHERE id=? AND deleted_at IS NULL", (record_id,)).fetchone()
         if not row:
             raise ValueError("unknown service record")
@@ -122,6 +140,7 @@ class MaintenanceService:
         return result
 
     def edit_record(self, record_id: str, *, notes: str | None = None, shop: str | None = None, receipt: dict[str, Any] | None = None) -> None:
+        require_record_owner(self.connection, self.actor_user_id, record_id)
         before = self.get_record(record_id)
         now = _now()
         with self.connection:
@@ -138,6 +157,7 @@ class MaintenanceService:
                     Path(row[1]).unlink(missing_ok=True)
 
     def import_history(self, vehicle_id: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
+        self._own_vehicle(vehicle_id)
         report: dict[str, Any] = {"created": 0, "duplicates": 0, "errors": 0, "rows": []}
         for index, row in enumerate(rows):
             try:
@@ -151,6 +171,7 @@ class MaintenanceService:
         return report
 
     def set_reminder_preferences(self, vehicle_id: str, *, enabled: bool, channels: list[str], lead_days: int, lead_miles: int) -> None:
+        self._own_vehicle(vehicle_id)
         allowed = {"email", "push", "sms", "in_app"}
         if not channels or not set(channels) <= allowed or lead_days < 0 or lead_miles < 0:
             raise ValueError("invalid reminder preferences")
@@ -158,10 +179,11 @@ class MaintenanceService:
             self.connection.execute("INSERT INTO reminder_preferences(vehicle_id,enabled,channels_json,lead_days,lead_miles,updated_at) VALUES (?,?,?,?,?,?) ON CONFLICT(vehicle_id) DO UPDATE SET enabled=excluded.enabled,channels_json=excluded.channels_json,lead_days=excluded.lead_days,lead_miles=excluded.lead_miles,updated_at=excluded.updated_at", (vehicle_id, int(enabled), json.dumps(sorted(set(channels))), lead_days, lead_miles, _now()))
 
     def notifications(self, vehicle_id: str, *, as_of: date, current_mileage: int | None, upcoming: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        self._own_vehicle(vehicle_id)
         pref = self.connection.execute("SELECT * FROM reminder_preferences WHERE vehicle_id=?", (vehicle_id,)).fetchone()
         if not pref or not pref["enabled"]:
             return []
-        notices = []
+        notices, seen = [], set()
         for item in upcoming:
             source_state = item.get("state", "expected")
             due_date = date.fromisoformat(item["due_date"]) if item.get("due_date") else None
@@ -169,10 +191,14 @@ class MaintenanceService:
             overdue = source_state == "overdue" or (due_date is not None and due_date < as_of) or (due_mileage is not None and current_mileage is not None and due_mileage < current_mileage)
             near = (due_date is not None and (due_date - as_of).days <= pref["lead_days"]) or (due_mileage is not None and current_mileage is not None and due_mileage - current_mileage <= pref["lead_miles"])
             if overdue or near:
-                notices.append({"occurrence_id": item.get("occurrence_id"), "item_id": item["item_id"], "classification": "overdue" if overdue else "upcoming", "source_state": source_state, "channels": json.loads(pref["channels_json"])})
+                key = (item.get("occurrence_id"), item["item_id"], "overdue" if overdue else "upcoming")
+                if key not in seen and len(notices) < self.max_notifications_per_run:
+                    seen.add(key)
+                    notices.append({"occurrence_id": item.get("occurrence_id"), "item_id": item["item_id"], "classification": key[2], "source_state": source_state, "channels": json.loads(pref["channels_json"])})
         return sorted(notices, key=lambda n: (n["classification"] != "overdue", n["item_id"]))
 
     def annual_cost_summary(self, vehicle_id: str, year: int) -> dict[str, Any]:
+        self._own_vehicle(vehicle_id)
         rows = self.connection.execute("SELECT c.currency,c.cost_type,SUM(c.amount_minor) amount FROM service_costs c JOIN service_records r ON r.id=c.service_record_id WHERE r.vehicle_id=? AND r.deleted_at IS NULL AND substr(r.performed_at,1,4)=? GROUP BY c.currency,c.cost_type", (vehicle_id, f"{year:04d}")).fetchall()
         by_type = {f"{r['currency']}:{r['cost_type']}": r["amount"] for r in rows}
         totals: dict[str, int] = {}
@@ -181,6 +207,7 @@ class MaintenanceService:
         return {"vehicle_id": vehicle_id, "year": year, "totals": totals, "by_type": by_type}
 
     def export_vehicle(self, vehicle_id: str) -> dict[str, Any]:
+        self._own_vehicle(vehicle_id)
         vehicle = self.connection.execute("SELECT v.*,c.model_year,c.make,c.model,c.attributes_json FROM vehicles v JOIN vehicle_configurations c ON c.id=v.configuration_id WHERE v.id=?", (vehicle_id,)).fetchone()
         if not vehicle: raise ValueError("unknown vehicle")
         odometer = [dict(r) for r in self.connection.execute("SELECT observed_at,distance_value,distance_unit FROM odometer_observations WHERE vehicle_id=? ORDER BY observed_at", (vehicle_id,))]
@@ -188,15 +215,24 @@ class MaintenanceService:
         related = {}
         for name in ("usage_profiles", "expected_occurrences", "reminders", "recalls", "recall_refreshes", "connected_signal_observations"):
             related[name] = [dict(r) for r in self.connection.execute(f"SELECT * FROM {name} WHERE vehicle_id=?", (vehicle_id,))]
-        return {"schema_version": 1, "exported_at": _now(), "vehicle": dict(vehicle), "odometer": odometer, "service_records": self.list_records(vehicle_id), "reminder_preferences": dict(pref) if pref else None, **related}
+        safe_vehicle = dict(vehicle)
+        safe_vehicle.pop("vin_ciphertext", None)
+        safe_vehicle.pop("vin_fingerprint", None)
+        records = self.list_records(vehicle_id)
+        for record in records:
+            for receipt in record["receipts"]:
+                receipt.pop("storage_key", None)
+                receipt.pop("storage_exists", None)
+        return {"schema_version": 1, "exported_at": _now(), "vehicle": safe_vehicle, "odometer": odometer, "service_records": records, "reminder_preferences": dict(pref) if pref else None, **related}
 
-    def delete_vehicle(self, vehicle_id: str, *, requested_by_user_id: str) -> str:
+    def delete_vehicle(self, vehicle_id: str) -> str:
+        self._own_vehicle(vehicle_id)
         exported = self.export_vehicle(vehicle_id)
         configuration_id = exported["vehicle"]["configuration_id"]
         event, now = _id(), _now()
         receipt_paths = [r[0] for r in self.connection.execute("SELECT storage_key FROM receipts WHERE service_record_id IN (SELECT id FROM service_records WHERE vehicle_id=?)", (vehicle_id,))]
         with self.connection:
-            self.connection.execute("INSERT INTO deletion_events(id,requested_by_user_id,reason,requested_at,status) VALUES (?,?,?,?,'pending')", (event, requested_by_user_id, "owner requested complete vehicle deletion", now))
+            self.connection.execute("INSERT INTO deletion_events(id,requested_by_user_id,reason,requested_at,status) VALUES (?,?,?,?,'pending')", (event, self.actor_user_id, "owner requested complete vehicle deletion", now))
             self.connection.execute("UPDATE service_records SET matched_expected_occurrence_id=NULL WHERE vehicle_id=?", (vehicle_id,))
             for table in ("reminders", "reminder_preferences", "expected_occurrences", "usage_profiles", "odometer_observations", "recalls", "recall_refreshes", "connected_signal_observations", "connected_vehicle_links"):
                 self.connection.execute(f"DELETE FROM {table} WHERE vehicle_id=?", (vehicle_id,))

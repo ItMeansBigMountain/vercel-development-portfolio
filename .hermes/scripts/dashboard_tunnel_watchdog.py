@@ -99,15 +99,14 @@ def main() -> None:
             '/opt/data/.local/bin/hermes', 'config', 'set',
             'dashboard.public_url', url,
         ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
-        print('Kanban dashboard tunnel URL changed and is healthy:')
-        print(url + '/kanban')
-        print('Use the existing saved dashboard credential.')
+        print('✅ **Kanban dashboard link updated**')
+        print('• ' + url + '/kanban')
     elif recovered:
-        print('Kanban dashboard tunnel recovered:')
-        print(url + '/kanban')
-        print('Use the existing saved dashboard credential.')
+        print('✅ **Kanban dashboard recovered**')
+        print('• ' + url + '/kanban')
     elif failed:
-        print('⚠️ Kanban dashboard tunnel is unavailable; s6 supervision is retrying automatically.')
+        print('⚠️ **Kanban dashboard unavailable**')
+        print('🔄 s6 is retrying automatically.')
 
     save_state({'url': url, 'healthy': healthy})
 

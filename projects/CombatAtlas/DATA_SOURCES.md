@@ -2,6 +2,14 @@
 
 The app is designed so external data sources are import-time enrichers, not runtime blockers.
 
+For the full 2026-08-25 legal/source audit, expansion plan, and machine-readable inventory, see:
+
+- `DATA_EXPANSION_PLAN.md`
+- `imports/research/source-inventory.json`
+- `imports/research/probe-results.json`
+- `imports/research/wikipedia-martial-arts-techniques.json`
+- `imports/research/bjjdata-sample.json`
+
 ## Ready without keys
 
 ### Wikipedia / MediaWiki

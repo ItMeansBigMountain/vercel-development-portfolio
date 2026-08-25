@@ -1,0 +1,120 @@
+{
+  "previewUrl": "http://127.0.0.1:4174/",
+  "dimensions": {
+    "width": 390,
+    "height": 6230,
+    "devicePixelRatio": 3
+  },
+  "cards": [
+    {
+      "name": "Boxing",
+      "alt": "Boxers practicing in a historic Welsh boxing school",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20boxing%20school%20established%20in%20Llanarmon%20by%20W%20G%20Buchanan%2C%20an%20ex-air%20force%20boxing%20champion%2C%20and%20the%20Rev%20T%20D%20Williams%20(15162039803).jpg?width=720"
+    },
+    {
+      "name": "Kickboxing",
+      "alt": "Kickboxing gloves and protective training equipment",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Adidas%20Kickboxing%20equipment%20used%20by%20Hamid%20Amni.jpg?width=720"
+    },
+    {
+      "name": "Muay Thai",
+      "alt": "Muay Thai trainees practicing in a boxing ring",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Muay-Thai%20Thai-boxing-kids%20IMG%201824.jpg?width=720"
+    },
+    {
+      "name": "Karate",
+      "alt": "Karate athletes competing on a tatami mat",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/2026-05-24%2061.%20Karate-Europameisterschaften%202026%20Frankfurt-Main%20STP%206787.jpg?width=720"
+    },
+    {
+      "name": "Taekwondo",
+      "alt": "Taekwondo athletes sparring with protective gear and high kicks",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/WTF%20Taekwondo%201.jpg?width=720"
+    },
+    {
+      "name": "Kung Fu / Chinese Martial Arts",
+      "alt": "Kung Fu tournament athlete performing in uniform",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Kung%20Fu%20Tournament.jpg?width=720"
+    },
+    {
+      "name": "Sanda",
+      "alt": "Sanda athletes practicing a kick during a sanshou bout",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanshou%20(San%20da)%20-%20kick%20(practice%20fight)%20Katwijk%2C%20dec%204%2C%202006.JPG?width=720"
+    },
+    {
+      "name": "Judo",
+      "alt": "Judo practitioners demonstrating kata grips",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/EIJC%202025%20Kata%20-%2054381747372.jpg?width=720"
+    },
+    {
+      "name": "Brazilian Jiu-Jitsu",
+      "alt": "Brazilian Jiu-Jitsu athletes grappling on mats",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/BJJ%2C%20brazilian-jiujitsu%2001.jpg?width=720"
+    },
+    {
+      "name": "Wrestling",
+      "alt": "Amateur wrestlers hand fighting on a mat",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Amateur%20Wrestling%20Brothers%202017-06-09.jpg?width=720"
+    },
+    {
+      "name": "Sambo",
+      "alt": "Sambo training illustration",
+      "currentSrc": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20900%20620%22%20role%3D%22img%22%20aria-label%3D%22Sambo%22%3E%0A%20%20%20%20%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231c1917%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2316a34a%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%22620%22%20fill%3D%22url(%23g)%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22708%22%20cy%3D%22110%22%20r%3D%22172%22%20fill%3D%22%23dcfce7%22%20opacity%3D%220.14%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22145%22%20cy%3D%22520%22%20r%3D%22250%22%20fill%3D%22%23dcfce7%22%20opacity%3D%220.10%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M192%20415%20C285%20280%20392%20265%20474%20355%20C542%20428%20636%20401%20721%20292%22%20fill%3D%22none%22%20stroke%3D%22%23dcfce7%22%20stroke-width%3D%2230%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.72%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22372%22%20cy%3D%22258%22%20r%3D%2258%22%20fill%3D%22%23dcfce7%22%20opacity%3D%220.82%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M280%20390%20L385%20318%20L517%20384%20L628%20312%22%20fill%3D%22none%22%20stroke%3D%22%23dcfce7%22%20stroke-width%3D%2242%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20opacity%3D%220.86%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2252%22%20y%3D%2288%22%20fill%3D%22%23dcfce7%22%20font-size%3D%2254%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22800%22%20letter-spacing%3D%22-2%22%3ESambo%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2256%22%20y%3D%22548%22%20fill%3D%22%23dcfce7%22%20opacity%3D%220.78%22%20font-size%3D%2228%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22700%22%3Esambo%20martial%20arts%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+    },
+    {
+      "name": "Mixed Martial Arts",
+      "alt": "Mixed Martial Arts training illustration",
+      "currentSrc": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20900%20620%22%20role%3D%22img%22%20aria-label%3D%22Mixed%20Martial%20Arts%22%3E%0A%20%20%20%20%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23292524%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237c3aed%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%22620%22%20fill%3D%22url(%23g)%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22708%22%20cy%3D%22110%22%20r%3D%22172%22%20fill%3D%22%23ede9fe%22%20opacity%3D%220.14%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22145%22%20cy%3D%22520%22%20r%3D%22250%22%20fill%3D%22%23ede9fe%22%20opacity%3D%220.10%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M192%20415%20C285%20280%20392%20265%20474%20355%20C542%20428%20636%20401%20721%20292%22%20fill%3D%22none%22%20stroke%3D%22%23ede9fe%22%20stroke-width%3D%2230%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.72%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22372%22%20cy%3D%22258%22%20r%3D%2258%22%20fill%3D%22%23ede9fe%22%20opacity%3D%220.82%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M280%20390%20L385%20318%20L517%20384%20L628%20312%22%20fill%3D%22none%22%20stroke%3D%22%23ede9fe%22%20stroke-width%3D%2242%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20opacity%3D%220.86%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2252%22%20y%3D%2288%22%20fill%3D%22%23ede9fe%22%20font-size%3D%2254%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22800%22%20letter-spacing%3D%22-2%22%3EMixed%20Martial%20Arts%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2256%22%20y%3D%22548%22%20fill%3D%22%23ede9fe%22%20opacity%3D%220.78%22%20font-size%3D%2228%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22700%22%3Emixed%20martial%20arts%20training%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+    },
+    {
+      "name": "Krav Maga",
+      "alt": "Krav Maga training illustration",
+      "currentSrc": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20900%20620%22%20role%3D%22img%22%20aria-label%3D%22Krav%20Maga%22%3E%0A%20%20%20%20%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23111111%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238a5d2c%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%22620%22%20fill%3D%22url(%23g)%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22708%22%20cy%3D%22110%22%20r%3D%22172%22%20fill%3D%22%23f6f3ee%22%20opacity%3D%220.14%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22145%22%20cy%3D%22520%22%20r%3D%22250%22%20fill%3D%22%23f6f3ee%22%20opacity%3D%220.10%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M192%20415%20C285%20280%20392%20265%20474%20355%20C542%20428%20636%20401%20721%20292%22%20fill%3D%22none%22%20stroke%3D%22%23f6f3ee%22%20stroke-width%3D%2230%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.72%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22372%22%20cy%3D%22258%22%20r%3D%2258%22%20fill%3D%22%23f6f3ee%22%20opacity%3D%220.82%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M280%20390%20L385%20318%20L517%20384%20L628%20312%22%20fill%3D%22none%22%20stroke%3D%22%23f6f3ee%22%20stroke-width%3D%2242%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20opacity%3D%220.86%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2252%22%20y%3D%2288%22%20fill%3D%22%23f6f3ee%22%20font-size%3D%2254%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22800%22%20letter-spacing%3D%22-2%22%3EKrav%20Maga%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2256%22%20y%3D%22548%22%20fill%3D%22%23f6f3ee%22%20opacity%3D%220.78%22%20font-size%3D%2228%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22700%22%3Eself%20defense%20training%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+    },
+    {
+      "name": "Aikido",
+      "alt": "Aikido training illustration",
+      "currentSrc": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20900%20620%22%20role%3D%22img%22%20aria-label%3D%22Aikido%22%3E%0A%20%20%20%20%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231f2937%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b45309%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%22620%22%20fill%3D%22url(%23g)%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22708%22%20cy%3D%22110%22%20r%3D%22172%22%20fill%3D%22%23fef3c7%22%20opacity%3D%220.14%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22145%22%20cy%3D%22520%22%20r%3D%22250%22%20fill%3D%22%23fef3c7%22%20opacity%3D%220.10%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M192%20415%20C285%20280%20392%20265%20474%20355%20C542%20428%20636%20401%20721%20292%22%20fill%3D%22none%22%20stroke%3D%22%23fef3c7%22%20stroke-width%3D%2230%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.72%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22372%22%20cy%3D%22258%22%20r%3D%2258%22%20fill%3D%22%23fef3c7%22%20opacity%3D%220.82%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M280%20390%20L385%20318%20L517%20384%20L628%20312%22%20fill%3D%22none%22%20stroke%3D%22%23fef3c7%22%20stroke-width%3D%2242%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20opacity%3D%220.86%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2252%22%20y%3D%2288%22%20fill%3D%22%23fef3c7%22%20font-size%3D%2254%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22800%22%20letter-spacing%3D%22-2%22%3EAikido%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2256%22%20y%3D%22548%22%20fill%3D%22%23fef3c7%22%20opacity%3D%220.78%22%20font-size%3D%2228%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22700%22%3Eaikido%20dojo%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+    },
+    {
+      "name": "Hapkido",
+      "alt": "Hapkido athletes sparring in sport competition",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Hapkido%20takmicenje.jpg?width=720"
+    },
+    {
+      "name": "Fencing",
+      "alt": "Fencers training at a fencing club",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Fencing%20in%20Greece.%20Fencing%20training%20at%20Athenaikos%20Fencing%20Club%20with%20fencers%20from%20other%20clubs.jpg?width=720"
+    },
+    {
+      "name": "Kendo",
+      "alt": "Kendo athletes facing each other at the start of a match",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Georgia%20Kendo%20Tournament%202025.jpg?width=720"
+    },
+    {
+      "name": "Arnis / Kali / Eskrima",
+      "alt": "Eskrima practitioners stick fighting during Filipino martial arts training",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Eskrima.jpg?width=720"
+    },
+    {
+      "name": "Historical European Martial Arts",
+      "alt": "Historical European Martial Arts practitioner with longsword equipment",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarr%20Bence%20L%C3%A1szl%C3%B3%2C%20HEMA%20-%20Historical%20European%20Martial%20Arts.jpg?width=720"
+    },
+    {
+      "name": "Capoeira",
+      "alt": "Capoeira practitioners playing in a roda",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Roda%20de%20Capoeira%20Angola.jpg?width=720"
+    },
+    {
+      "name": "Wing Chun",
+      "alt": "Wing Chun training illustration",
+      "currentSrc": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20900%20620%22%20role%3D%22img%22%20aria-label%3D%22Wing%20Chun%22%3E%0A%20%20%20%20%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%232563eb%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%22620%22%20fill%3D%22url(%23g)%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22708%22%20cy%3D%22110%22%20r%3D%22172%22%20fill%3D%22%23dbeafe%22%20opacity%3D%220.14%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22145%22%20cy%3D%22520%22%20r%3D%22250%22%20fill%3D%22%23dbeafe%22%20opacity%3D%220.10%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M192%20415%20C285%20280%20392%20265%20474%20355%20C542%20428%20636%20401%20721%20292%22%20fill%3D%22none%22%20stroke%3D%22%23dbeafe%22%20stroke-width%3D%2230%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.72%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22372%22%20cy%3D%22258%22%20r%3D%2258%22%20fill%3D%22%23dbeafe%22%20opacity%3D%220.82%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M280%20390%20L385%20318%20L517%20384%20L628%20312%22%20fill%3D%22none%22%20stroke%3D%22%23dbeafe%22%20stroke-width%3D%2242%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20opacity%3D%220.86%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2252%22%20y%3D%2288%22%20fill%3D%22%23dbeafe%22%20font-size%3D%2254%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22800%22%20letter-spacing%3D%22-2%22%3EWing%20Chun%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2256%22%20y%3D%22548%22%20fill%3D%22%23dbeafe%22%20opacity%3D%220.78%22%20font-size%3D%2228%22%20font-family%3D%22Inter%2CArial%2Csans-serif%22%20font-weight%3D%22700%22%3Ewing%20chun%20wooden%20dummy%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+    },
+    {
+      "name": "Pencak Silat",
+      "alt": "Pencak Silat Betawi practitioner demonstrating a traditional stance",
+      "currentSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Pencak%20Silat%20Betawi%202.jpg?width=720"
+    }
+  ]
+}

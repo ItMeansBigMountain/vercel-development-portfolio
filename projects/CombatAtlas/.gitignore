@@ -1,2 +1,286 @@
-[Ee]xample/
-.vercel
+# Keep the backup repo from accidentally publishing local secrets or volatile runtime files.
+# The .hermes/ directory itself is intentionally tracked as a sanitized backup.
+
+# Secrets / credentials
+.env
+.env.*
+!.env.example
+!.env.*.template
+.git-credentials
+.netrc
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.template
+**/*secret*
+**/*token*
+**/*credential*
+**/*service_account*.json
+**/google_service_account.json
+**/cred.json
+**/auth.json
+**/auth.lock
+**/auth-*.json
+**/oauth*.json
+**/keyring*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/id_rsa*
+**/id_ed25519*
+
+# Runtime locks / pids / sockets
+*.lock
+*.pid
+*.sock
+*.log
+**/.tick.lock
+/projects/KANBAN_SWEEP_DISPATCH.log
+
+# Caches and transient build artifacts
+
+# Sanitized backup should not track local caches, browser binaries, package caches, SDKs, session logs, or DB snapshots
+/.hermes/.cache/
+/.hermes/.config/
+/.hermes/.npm/
+/.hermes/.gradle/
+/.hermes/.local/
+/.hermes/.expo/
+/.hermes/jdks/
+/.hermes/tmp/
+/.hermes/bin/
+/.hermes/cache/
+/.hermes/lsp/
+/.hermes/logs/
+/.hermes/sessions/
+/.hermes/audio_cache/
+/.hermes/state-snapshots/
+/.hermes/backups/
+/.hermes/ibmcloud-cli/
+/.hermes/hermes-agent/
+/.hermes/credentials/
+/.hermes/secrets/
+/.hermes/models_dev_cache.json
+/.hermes/state.db
+/.hermes/**/*.db
+/.hermes/**/*.sqlite
+/.hermes/**/*.sqlite3
+/.hermes/**/.venv/
+/.hermes/**/venv/
+/.hermes/**/node_modules/
+/.hermes/**/dist/
+/.hermes/**/build/
+/.hermes/**/web_dist/
+/.hermes/**/.next/
+/.hermes/**/.nuxt/
+/.hermes/**/__pycache__/
+/.hermes/**/*.egg-info/
+
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.expo/
+**/.next/
+**/.nuxt/
+**/node_modules/
+**/dist/
+**/build/
+**/coverage/
+**/db.sqlite3
+**/*.sqlite3
+**/.DS_Store
+**/Thumbs.db
+
+# Git internals from nested repos/backups
+**/.git/
+
+# Original root-owned source copy after legacy project import; active copies live under /projects/
+/legacy-projects/
+
+# Imported raw aggregate archive; active project copies live in top-level /projects folders
+/projects/legacy-src/
+
+# Nested standalone Git repos managed separately
+/projects/algos/
+/projects/az204/
+/projects/cox-elementary-pta/
+/projects/robinhood-daily-portfolio-report/
+
+# GitHub portfolio imports: nested standalone repos (managed by their own git remotes)
+/projects/account-legacy-card-osrs/
+/projects/boss-readiness-score-osrs/
+/projects/whos-grinding-clan-panel-osrs/
+/projects/skill-streaks-osrs/
+/projects/smart-hiscore-lookup-osrs/
+/projects/skill-race-creator-osrs/
+/projects/skill-nemesis-osrs/
+/projects/rival-radar-osrs/
+/projects/personal-progress-timeline-osrs/
+/projects/name-change-watcher-osrs/
+/projects/ice-barrage-timer-osrs/
+/projects/group-iron-progress-board-osrs/
+/projects/competition-overlay-osrs/
+/projects/clan-grind-heatmap-osrs/
+/projects/boss-streaks-osrs/
+/projects/boss-race-creator-osrs/
+/projects/boss-k-c-rival-lookup-osrs/
+/projects/breach-check-osrs/
+/projects/Multiplayer/
+/projects/pdf-emailer/
+/projects/mcp-servers/
+/projects/Generative-AI/
+/projects/frequencyFinder.Hz/
+/projects/REST_Templates/
+/projects/Financial.Market.ML/
+/projects/Kubernetes-Docker/
+/projects/darkSouls-Unity/
+/projects/genSpark/
+/projects/OptaPlanner/
+/projects/spring_Oauth/
+/projects/React.web_userLoginForm/
+/projects/react.web_MovieList/
+/projects/HTML_REGEX/
+/projects/react.web_taskList/
+/projects/Spring_Boot_webDev/
+/projects/spring_template/
+/projects/snake-REACT_NATIVE/
+/projects/Fintech/
+
+# Other nested git projects managed by their own remotes
+/projects/penTest/
+/projects/viral-clip-radar/
+/projects/youtube-high-ticket-leverage/
+/projects/plugin-hub/
+
+# Generated YouTube metrics (may exceed GitHub file limits)
+/projects/faceless-youtube-channel/ANALYTICS/youtube_metrics.jsonl
+
+# -----------------------------------------------------------------------------
+# Backup hygiene: preserve source and recovery definitions, not machine images
+# -----------------------------------------------------------------------------
+
+# Root-level one-off trading/research scratch output. Durable reviews belong in
+# /projects/trading-journal; reusable automation belongs in /scripts or a project.
+/afternoon_*
+/analyze_*
+/compact_*
+/execute_*
+/final_quotes_*
+/fund_*
+/fundamentals_*
+/hist.json
+/manage_midday_*
+/midday_*
+/nvda_*
+/open_*
+/parse_rh_scan.py
+/ph_*
+/place_nvda_*
+/position_detail_*
+/positions_live_*
+/post_*
+/postopen_*
+/power_hour_*
+/powerhour_*
+/review_nvda_*
+/rh_*
+/rhdeep.py
+/rhfinal_*
+/rhscan_*
+/robinhood_powerhour_raw.txt
+/schema_out.txt
+/schema_registry.py
+/slb_refresh_*
+/sofi_exit_*
+/summarize*.py
+/summary_cron.py
+/tmp_*
+/unh_execution_*
+/agentic_monitor_raw.json
+/agentic_run.py
+/bars.py
+
+# Root-level downloaded SDKs/scaffolds and disposable local environments
+/dotnet/
+/dotnet-install.sh
+/frontend/
+/.venv/
+
+# Project staging/reconciliation worktrees are not backups
+/projects/_tmp/
+
+# Provider/build/deployment state that is always reproducible
+**/.terraform/
+**/.terragrunt-cache/
+**/.vercel/
+**/.angular/
+**/.turbo/
+**/.parcel-cache/
+**/.cache/
+**/*.tsbuildinfo
+**/bin/
+**/obj/
+**/test-results/
+
+# Runtime databases and journals
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+
+# Generated media and downloads. Keep deliberate source assets by placing them
+# under an assets/ or fixtures/ directory rather than runtime output directories.
+**/output_render/
+**/downloads/
+**/videos/
+**/audio/
+**/*.mp4
+**/*.webm
+**/*.wav
+**/*.mp3
+
+# Hermes machine/runtime state; retain skills, scripts, hooks, plugins, profiles,
+# cron definitions, templates, and sanitized configuration elsewhere in .hermes.
+/.hermes/.nuget/
+/.hermes/.dotnet/
+/.hermes/home/
+/.hermes/kanban/workspaces/
+/.hermes/kanban/logs/
+/.hermes/sandboxes/
+/.hermes/image_cache/
+/.hermes/images/
+/.hermes/processes.json
+/.hermes/gateway_state.json
+/.hermes/gateway_voice_mode.json
+/.hermes/context_length_cache.yaml
+/.hermes/provider_models_cache.json
+/.hermes/ollama_cloud_models_cache.json
+/.hermes/kanban.db*
+/.hermes/kanban*.bak
+/.hermes/kanban*.sql
+/.hermes/*oauth_pending*.json
+/.hermes/**/*oauth_pending*.json
+/.hermes/*.bak*
+
+# Deliberate recovery artifacts and registered submodule gitlinks are durable.
+# These narrow exceptions override broad machine-state/project ignore rules.
+!/projects/_backups/kanban-consolidation-20260529T053711Z/
+!/projects/_backups/kanban-consolidation-20260529T053711Z/**
+# Preserve the recovery bundle, but never its live SQLite journal sidecars.
+/projects/_backups/kanban-consolidation-20260529T053711Z/**/*.db-shm
+/projects/_backups/kanban-consolidation-20260529T053711Z/**/*.db-wal
+!/projects/_ops/google-credentials-inventory.md
+!/projects/algos
+!/projects/cox-elementary-pta
+!/projects/faceless-youtube-channel/videos/
+!/projects/faceless-youtube-channel/videos/.gitkeep
+!/projects/osrs-plugins/completed/BisLoadouts
+!/projects/osrs-plugins/completed/DeadmanBreachTimer
+!/projects/osrs-plugins/in-progress/ClanWarBoard
+!/projects/osrs-plugins/pr-review-pending/WhosGrindingClanPanel
+!/projects/osrs-plugins/services/clan-war-board-service
+!/projects/plugin-hub

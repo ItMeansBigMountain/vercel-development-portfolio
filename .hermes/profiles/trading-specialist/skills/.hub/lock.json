@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "installed": {
+    "baoyu-article-illustrator": {
+      "source": "official",
+      "identifier": "official/creative/baoyu-article-illustrator",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:49c09a0ee50b2e59",
+      "install_path": "creative/baoyu-article-illustrator",
+      "files": [
+        "PORT_NOTES.md",
+        "SKILL.md",
+        "prompts/system.md",
+        "references/palettes/macaron.md",
+        "references/palettes/mono-ink.md",
+        "references/palettes/neon.md",
+        "references/palettes/warm.md",
+        "references/prompt-construction.md",
+        "references/style-presets.md",
+        "references/styles/blueprint.md",
+        "references/styles/chalkboard.md",
+        "references/styles/editorial.md",
+        "references/styles/elegant.md",
+        "references/styles/fantasy-animation.md",
+        "references/styles/flat-doodle.md",
+        "references/styles/flat.md",
+        "references/styles/ink-notes.md",
+        "references/styles/intuition-machine.md",
+        "references/styles/minimal.md",
+        "references/styles/nature.md",
+        "references/styles/notion.md",
+        "references/styles/pixel-art.md",
+        "references/styles/playful.md",
+        "references/styles/retro.md",
+        "references/styles/scientific.md",
+        "references/styles/screen-print.md",
+        "references/styles/sketch-notes.md",
+        "references/styles/sketch.md",
+        "references/styles/vector-illustration.md",
+        "references/styles/vintage.md",
+        "references/styles/warm.md",
+        "references/styles/watercolor.md",
+        "references/styles.md",
+        "references/usage.md",
+        "references/workflow.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-06-05T14:39:14.199554+00:00",
+      "updated_at": "2026-06-05T14:39:14.199554+00:00"
+    },
+    "baoyu-comic": {
+      "source": "official",
+      "identifier": "official/creative/baoyu-comic",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:4378c8ba82fd3649",
+      "install_path": "creative/baoyu-comic",
+      "files": [
+        "PORT_NOTES.md",
+        "SKILL.md",
+        "references/analysis-framework.md",
+        "references/art-styles/chalk.md",
+        "references/art-styles/ink-brush.md",
+        "references/art-styles/ligne-claire.md",
+        "references/art-styles/manga.md",
+        "references/art-styles/minimalist.md",
+        "references/art-styles/realistic.md",
+        "references/auto-selection.md",
+        "references/base-prompt.md",
+        "references/character-template.md",
+        "references/layouts/cinematic.md",
+        "references/layouts/dense.md",
+        "references/layouts/four-panel.md",
+        "references/layouts/mixed.md",
+        "references/layouts/splash.md",
+        "references/layouts/standard.md",
+        "references/layouts/webtoon.md",
+        "references/ohmsha-guide.md",
+        "references/partial-workflows.md",
+        "references/presets/concept-story.md",
+        "references/presets/four-panel.md",
+        "references/presets/ohmsha.md",
+        "references/presets/shoujo.md",
+        "references/presets/wuxia.md",
+        "references/storyboard-template.md",
+        "references/tones/action.md",
+        "references/tones/dramatic.md",
+        "references/tones/energetic.md",
+        "references/tones/neutral.md",
+        "references/tones/romantic.md",
+        "references/tones/vintage.md",
+        "references/tones/warm.md",
+        "references/workflow.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-06-05T14:39:14.223307+00:00",
+      "updated_at": "2026-06-05T14:39:14.223307+00:00"
+    },
+    "creative-ideation": {
+      "source": "official",
+      "identifier": "official/creative/creative-ideation",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:7fe271b209c35bf2",
+      "install_path": "creative/creative-ideation",
+      "files": [
+        "SKILL.md",
+        "references/anti-slop.md",
+        "references/method-catalog.md",
+        "references/heuristics.md",
+        "references/full-prompt-library.md",
+        "references/exercises.md",
+        "references/methods/scamper.md",
+        "references/methods/triz-principles.md",
+        "references/methods/first-principles.md",
+        "references/methods/volume-generation.md",
+        "references/methods/story-skeletons.md",
+        "references/methods/derive-and-mapping.md",
+        "references/methods/jobs-to-be-done.md",
+        "references/methods/chance-and-remix.md",
+        "references/methods/oulipo.md",
+        "references/methods/lateral-provocations.md",
+        "references/methods/affinity-diagrams.md",
+        "references/methods/premortem-and-inversion.md",
+        "references/methods/polya.md",
+        "references/methods/pattern-languages.md",
+        "references/methods/defamiliarization.md",
+        "references/methods/compression-progress.md",
+        "references/methods/biomimicry.md",
+        "references/methods/pataphysics.md",
+        "references/methods/oblique-strategies.md",
+        "references/methods/leverage-points.md",
+        "references/methods/creative-discipline.md",
+        "references/methods/analogy-and-blending.md"
+      ],
+      "metadata": {},
+      "scan_provenance": {
+        "source": "official",
+        "source_url": "official/creative/creative-ideation",
+        "bundle_hash": "sha256:7fe271b209c35bf2a87d8d1e490e375894a1d90df7897f9615859cb2f3badb96",
+        "scanner_version": "skills-guard-v1",
+        "verdict": "safe",
+        "trust_level": "builtin",
+        "findings": [],
+        "rules": [],
+        "scanned_at": "2026-08-24T07:31:39.578072+00:00",
+        "summary": "creative-ideation: clean scan, no threats detected",
+        "fresh": true
+      },
+      "installed_at": "2026-08-24T07:31:39.585775+00:00",
+      "updated_at": "2026-08-24T07:31:39.585784+00:00"
+    },
+    "pixel-art": {
+      "source": "official",
+      "identifier": "official/creative/pixel-art",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:37cb6e0295ed909f",
+      "install_path": "creative/pixel-art",
+      "files": [
+        "ATTRIBUTION.md",
+        "SKILL.md",
+        "references/palettes.md",
+        "scripts/pixel_art_video.py",
+        "scripts/pixel_art.py",
+        "scripts/__init__.py",
+        "scripts/palettes.py"
+      ],
+      "metadata": {},
+      "scan_provenance": {
+        "source": "official",
+        "source_url": "official/creative/pixel-art",
+        "bundle_hash": "sha256:37cb6e0295ed909f064f1ef98d9c0fb54029ea47dd04744ef511259a189444a6",
+        "scanner_version": "skills-guard-v1",
+        "verdict": "safe",
+        "trust_level": "builtin",
+        "findings": [
+          {
+            "pattern_id": "python_subprocess",
+            "severity": "medium",
+            "category": "execution",
+            "file": "ATTRIBUTION.md",
+            "line": 31,
+            "match": "- `ffmpeg` invocation switched from `os.system` to `subprocess.run(check=True)`",
+            "description": "Python subprocess execution"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "SKILL.md",
+            "line": 192,
+            "match": "- Pillow (`pip install Pillow`)",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "python_subprocess",
+            "severity": "medium",
+            "category": "execution",
+            "file": "scripts/pixel_art_video.py",
+            "line": 297,
+            "match": "subprocess.run(",
+            "description": "Python subprocess execution"
+          },
+          {
+            "pattern_id": "python_subprocess",
+            "severity": "medium",
+            "category": "execution",
+            "file": "scripts/pixel_art_video.py",
+            "line": 309,
+            "match": "subprocess.run(",
+            "description": "Python subprocess execution"
+          }
+        ],
+        "rules": [
+          "python_subprocess",
+          "unpinned_pip_install"
+        ],
+        "scanned_at": "2026-08-24T07:31:40.256638+00:00",
+        "summary": "pixel-art: safe — 4 finding(s) in execution, supply_chain",
+        "fresh": true
+      },
+      "installed_at": "2026-08-24T07:31:40.261714+00:00",
+      "updated_at": "2026-08-24T07:31:40.261726+00:00"
+    },
+    "minecraft-modpack-server": {
+      "source": "official",
+      "identifier": "official/gaming/minecraft-modpack-server",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:86334ae63b0b58b1",
+      "install_path": "gaming/minecraft-modpack-server",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "scan_provenance": {
+        "source": "official",
+        "source_url": "official/gaming/minecraft-modpack-server",
+        "bundle_hash": "sha256:86334ae63b0b58b1712766cf3894bb896f6424794a201fe384da6e963a181c29",
+        "scanner_version": "skills-guard-v1",
+        "verdict": "caution",
+        "trust_level": "builtin",
+        "findings": [
+          {
+            "pattern_id": "persistence_cron",
+            "severity": "medium",
+            "category": "persistence",
+            "file": "SKILL.md",
+            "line": 173,
+            "match": "(crontab -l 2>/dev/null | grep -v \"minecraft/backup.sh\"; echo \"0 * * * * $HOME/minecraft-server/backup.sh >> $HOME/mi...",
+            "description": "modifies cron jobs"
+          },
+          {
+            "pattern_id": "unicode_escape_chain",
+            "severity": "medium",
+            "category": "obfuscation",
+            "file": "SKILL.md",
+            "line": 71,
+            "match": "motd=\\u00a7b\\u00a7lServer Name \\u00a7r\\u00a78| \\u00a7aModpack Name",
+            "description": "chain of unicode escapes (possible obfuscation)"
+          },
+          {
+            "pattern_id": "sudo_usage",
+            "severity": "high",
+            "category": "privilege_escalation",
+            "file": "SKILL.md",
+            "line": 48,
+            "match": "- Minecraft 1.21+ → Java 21: `sudo apt install openjdk-21-jre-headless`",
+            "description": "uses sudo (privilege escalation)"
+          },
+          {
+            "pattern_id": "sudo_usage",
+            "severity": "high",
+            "category": "privilege_escalation",
+            "file": "SKILL.md",
+            "line": 49,
+            "match": "- Minecraft 1.18-1.20 → Java 17: `sudo apt install openjdk-17-jre-headless`",
+            "description": "uses sudo (privilege escalation)"
+          },
+          {
+            "pattern_id": "sudo_usage",
+            "severity": "high",
+            "category": "privilege_escalation",
+            "file": "SKILL.md",
+            "line": 50,
+            "match": "- Minecraft 1.16 and below → Java 8: `sudo apt install openjdk-8-jre-headless`",
+            "description": "uses sudo (privilege escalation)"
+          },
+          {
+            "pattern_id": "sudo_usage",
+            "severity": "high",
+            "category": "privilege_escalation",
+            "file": "SKILL.md",
+            "line": 128,
+            "match": "sudo ufw allow 25565/tcp comment \"Minecraft Server\"",
+            "description": "uses sudo (privilege escalation)"
+          },
+          {
+            "pattern_id": "sudo_usage",
+            "severity": "high",
+            "category": "privilege_escalation",
+            "file": "SKILL.md",
+            "line": 130,
+            "match": "Check with: `sudo ufw status | grep 25565`",
+            "description": "uses sudo (privilege escalation)"
+          }
+        ],
+        "rules": [
+          "persistence_cron",
+          "sudo_usage",
+          "unicode_escape_chain"
+        ],
+        "scanned_at": "2026-08-24T07:31:40.379259+00:00",
+        "summary": "minecraft-modpack-server: caution — 7 finding(s) in obfuscation, persistence, privilege_escalation",
+        "fresh": true
+      },
+      "installed_at": "2026-08-24T07:31:40.383305+00:00",
+      "updated_at": "2026-08-24T07:31:40.383312+00:00"
+    },
+    "pokemon-player": {
+      "source": "official",
+      "identifier": "official/gaming/pokemon-player",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:fe6ba66a30db56b8",
+      "install_path": "gaming/pokemon-player",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "scan_provenance": {
+        "source": "official",
+        "source_url": "official/gaming/pokemon-player",
+        "bundle_hash": "sha256:fe6ba66a30db56b8403d5a9891669228d0412fccd65bf69db9deb9b6c2a80e04",
+        "scanner_version": "skills-guard-v1",
+        "verdict": "safe",
+        "trust_level": "builtin",
+        "findings": [],
+        "rules": [],
+        "scanned_at": "2026-08-24T07:31:40.501927+00:00",
+        "summary": "pokemon-player: clean scan, no threats detected",
+        "fresh": true
+      },
+      "installed_at": "2026-08-24T07:31:40.504958+00:00",
+      "updated_at": "2026-08-24T07:31:40.504964+00:00"
+    },
+    "dspy": {
+      "source": "official",
+      "identifier": "official/mlops/research/dspy",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:bbbe1148d27953a8",
+      "install_path": "mlops/research/dspy",
+      "files": [
+        "SKILL.md",
+        "references/examples.md",
+        "references/modules.md",
+        "references/optimizers.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-06-05T14:39:14.239812+00:00",
+      "updated_at": "2026-06-05T14:39:14.239812+00:00"
+    },
+    "agentmail": {
+      "source": "official",
+      "identifier": "official/email/agentmail",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:8b1766faf804f4e3",
+      "install_path": "email/agentmail",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "scan_provenance": {
+        "source": "official",
+        "source_url": "official/email/agentmail",
+        "bundle_hash": "sha256:8b1766faf804f4e3a7cca8d687c6e499ef8640a0f415e63c3b4a0e91daae2468",
+        "scanner_version": "skills-guard-v1",
+        "verdict": "dangerous",
+        "trust_level": "builtin",
+        "findings": [
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "SKILL.md",
+            "line": 114,
+            "match": "- The `mcp` Python package must be installed: `pip install mcp`",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "hermes_config_mod",
+            "severity": "critical",
+            "category": "persistence",
+            "file": "SKILL.md",
+            "line": 40,
+            "match": "Add to `~/.hermes/config.yaml` (paste your actual key — MCP env vars are not expanded from .env):",
+            "description": "references Hermes configuration files directly"
+          }
+        ],
+        "rules": [
+          "hermes_config_mod",
+          "unpinned_pip_install"
+        ],
+        "scanned_at": "2026-08-24T08:22:43.271409+00:00",
+        "summary": "agentmail: dangerous — 2 finding(s) in persistence, supply_chain",
+        "fresh": true
+      },
+      "installed_at": "2026-08-24T08:22:43.292382+00:00",
+      "updated_at": "2026-08-24T08:22:43.292395+00:00"
+    }
+  }
+}

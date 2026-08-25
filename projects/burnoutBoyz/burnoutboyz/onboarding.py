@@ -15,6 +15,8 @@ from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from typing import Any, Callable
 
+from .auth import require_garage_owner
+
 _VIN_RE = re.compile(r"^[A-HJ-NPR-Z0-9]{17}$")
 _TRANSLITERATION = {**{str(i): i for i in range(10)}, **dict(zip("ABCDEFGH", (1, 2, 3, 4, 5, 6, 7, 8))), **dict(zip("JKLMNPR", (1, 2, 3, 4, 5, 7, 9))), **dict(zip("STUVWXYZ", (2, 3, 4, 5, 6, 7, 8, 9)))}
 _WEIGHTS = (8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2)
@@ -137,15 +139,19 @@ def _values(row: dict[str, Any], groups: tuple[tuple[str, ...], ...]) -> tuple[d
 
 
 class OnboardingService:
-    def __init__(self, connection: sqlite3.Connection, vin_protector: VinProtector):
+    def __init__(self, connection: sqlite3.Connection, vin_protector: VinProtector, *, actor_user_id: str):
         self.connection = connection
         self.vin_protector = vin_protector
+        self.actor_user_id = actor_user_id
 
     def list_garages(self, user_id: str) -> list[dict[str, Any]]:
+        if user_id != self.actor_user_id:
+            raise PermissionError("resource not found")
         rows = self.connection.execute("SELECT id, name, created_at FROM garages WHERE user_id=? AND deleted_at IS NULL ORDER BY created_at", (user_id,)).fetchall()
         return [dict(row) for row in rows]
 
     def rename_garage(self, garage_id: str, name: str) -> None:
+        require_garage_owner(self.connection, self.actor_user_id, garage_id)
         if not name.strip():
             raise ValueError("garage name is required")
         with self.connection:
@@ -154,6 +160,7 @@ class OnboardingService:
                 raise ValueError("unknown garage")
 
     def delete_garage(self, garage_id: str) -> None:
+        require_garage_owner(self.connection, self.actor_user_id, garage_id)
         with self.connection:
             active = self.connection.execute("SELECT COUNT(*) FROM vehicles WHERE garage_id=? AND deleted_at IS NULL", (garage_id,)).fetchone()[0]
             if active:
@@ -163,6 +170,7 @@ class OnboardingService:
                 raise ValueError("unknown garage")
 
     def add_vehicle(self, garage_id: str, *, identity: dict[str, Any], vin: str | None = None, nickname: str | None = None, mileage: int | None = None, in_service_date: str | None = None, usage_answers: dict[str, bool] | None = None, selected_engine: dict[str, Any] | None = None, selected_transmission: dict[str, Any] | None = None, selected_drivetrain: str | None = None, source_uri: str = "manual-entry", source_type: str = "manual") -> str:
+        require_garage_owner(self.connection, self.actor_user_id, garage_id)
         year, make, model = identity.get("year"), _clean(identity.get("make")), _clean(identity.get("model"))
         if not isinstance(year, int) or year < 1886 or year > date.today().year + 2 or not make or not model:
             raise ValueError("valid year, make and model are required")
