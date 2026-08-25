@@ -37,3 +37,7 @@
 	path = projects/osrs-plugins/completed/DeadmanBreachTimer
 	url = https://github.com/ItMeansBigMountain/breach-check-osrs.git
 	branch = master
+[submodule "projects/CombatAtlas"]
+	path = projects/CombatAtlas
+	url = https://github.com/ItMeansBigMountain/CombatAtlas.git
+	branch = main
