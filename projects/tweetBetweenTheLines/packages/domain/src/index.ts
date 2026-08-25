@@ -5,6 +5,7 @@ export * from './explainableMetrics.js'
 export * from './personalityWellbeing.js'
 export * from './operations.js'
 export * from './archiveEngine.js'
+export * from './archiveOnboarding.js'
 export * from './privateReflection.js'
 
 export type PersonalEventKind = 'post' | 'message' | 'reaction' | 'view' | 'listen' | 'search' | 'import-note'
