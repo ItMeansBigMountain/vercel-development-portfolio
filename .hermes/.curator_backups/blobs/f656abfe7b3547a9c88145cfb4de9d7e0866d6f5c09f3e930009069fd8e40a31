@@ -1,0 +1,43 @@
+# Viral Radar token-default and source-blocker repair pattern (2026-06)
+
+Use when Viral Radar / creator clip jobs report auth fixed in one probe but cron replay still shows `invalid_grant`, `needs_provider_credentials`, or YouTube bot/source download failures.
+
+## What happened
+
+A YouTube upload token for the Trapiistan/Sosai Oyama channel was reauthorized and verified successfully:
+
+- token: `/opt/data/secrets/youtube-trapiistan/youtube_upload_token.json`
+- channel: `Sosai Oyama`
+- channel id: `UCsxzQlusqwmMUdjMvKAJDfA`
+- metrics recovered after reauth (`stats_fetched` became nonzero and `token_errors` cleared)
+
+But Viral Radar replay still showed `invalid_grant` because project scripts were defaulting to the Classical Echos token unless `YOUTUBE_UPLOAD_TOKEN` was explicitly set.
+
+## Durable fix pattern
+
+1. Reauth and verify the YouTube token with `/opt/data/scripts/google_reauth_workflow.py`.
+2. Run the same failing script with `YOUTUBE_UPLOAD_TOKEN=/opt/data/secrets/youtube-trapiistan/youtube_upload_token.json` to prove token selection is the issue.
+3. Patch project/default wrapper scripts so Viral Radar defaults to the Trapiistan token, not Classical Echos:
+   - `/opt/data/HeRmEz/projects/viral-clip-radar/scripts/seed_latest_longform_manifests.py`
+   - `/opt/data/scripts/viral_radar_daily_upload.py`
+4. Re-run `seed_latest_longform_manifests.py` and `viral_radar_daily_upload.py`.
+5. Resume the cron only if the job reaches a real product-success state or the remaining blockers are intentional and separately handled.
+
+## Remaining blocker class
+
+Upload OAuth does **not** solve source acquisition. `yt-dlp` may still fail on cloud/VPS IPs with:
+
+> Sign in to confirm you’re not a bot
+
+Treat that as a source/provider blocker, not an OAuth-upload blocker. Fix with one of:
+
+- YouTube cookies file wired into the downloader
+- residential proxy
+- local/Drive MP4 source
+- official clipping provider key (`OPUS_CLIP_API_KEY` preferred; alternatives: Choppity, Vizard, Klap, MuAPI)
+
+## Pitfalls
+
+- Do not stop after verifying OAuth in isolation; replay the actual cron/script and confirm it uses the same token path.
+- Do not mark scheduler `ok` as upload success. Report product status: `ok_uploaded`, `blocked_auth`, `blocked_source`, or `blocked_provider`.
+- If source/provider blockers remain, pause noisy recurring jobs until credentials/cookies/provider setup exists, then resume and replay.

@@ -277,9 +277,17 @@
       1786692616000000000,
       9073
     ],
+    "devops/tweetbetweenthelines-deployment/SKILL.md": [
+      1787680113528308148,
+      5053
+    ],
     "devops/kanban-worker/SKILL.md": [
       1780990302000000000,
       10979
+    ],
+    "devops/system-portfolio-cleanup/SKILL.md": [
+      1787642277488432626,
+      2601
     ],
     "devops/kanban-orchestrator/SKILL.md": [
       1780969689633102248,
@@ -764,6 +772,40 @@
         "requires_toolsets": [
           "kanban"
         ],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "system-portfolio-cleanup",
+      "category": "devops",
+      "frontmatter_name": "system-portfolio-cleanup",
+      "description": "Audit workspace against mandate; classify, archive, dehost.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "tweetbetweenthelines-deployment",
+      "category": "devops",
+      "frontmatter_name": "tweetbetweenthelines-deployment",
+      "description": "Deploy tweetBetweenTheLines via Vercel/GitHub Actions/EAS.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
         "fallback_for_tools": [],
         "requires_tools": []
       }

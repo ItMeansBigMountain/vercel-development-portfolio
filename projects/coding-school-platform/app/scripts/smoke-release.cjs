@@ -65,6 +65,7 @@ async function expectVisible(page, text) {
   const sandboxCount = await page.locator('iframe[title="Secure coding sandbox preview"][sandbox=""]').count();
   if (sandboxCount !== 1) throw new Error(`Expected one script-free sandbox iframe, found ${sandboxCount}`);
 
+  await page.getByLabel('Trace-table blank').fill('value');
   await page.getByLabel('Lesson reflection').fill('I traced the loop and will compare index with value next.');
   await page.getByText('Save evidence for teacher review').click();
   await page.getByLabel('Switch to teacher demo view').click();
@@ -72,6 +73,10 @@ async function expectVisible(page, text) {
   await expectVisible(page, 'I traced the loop');
   await page.getByText('Approve mastery').click();
   await expectVisible(page, 'Status: approved');
+
+  await page.getByLabel('Switch to parent demo view').click();
+  await expectVisible(page, 'Parent weekly progress');
+  await expectVisible(page, 'Learning Journey export');
 
   await page.getByLabel('Switch to admin demo view').click();
   await expectVisible(page, 'Admin release console');
@@ -85,7 +90,7 @@ async function expectVisible(page, text) {
   await browser.close();
   if (errors.length) throw new Error(`Console/page errors: ${errors.join(' | ')}`);
   if (served.server) served.server.close();
-  console.log(JSON.stringify({ ok: true, baseURL: served.baseURL, paths: ['learner', 'teacher', 'admin'], viewports: ['390x844', '1280x900'] }));
+  console.log(JSON.stringify({ ok: true, baseURL: served.baseURL, paths: ['learner', 'teacher', 'parent', 'admin'], viewports: ['390x844', '1280x900'] }));
 })().catch(async error => {
   console.error(error);
   process.exit(1);

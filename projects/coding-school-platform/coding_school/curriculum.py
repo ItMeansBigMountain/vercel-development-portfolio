@@ -1,6 +1,36 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
+from pathlib import Path
+
+
+@dataclass(frozen=True)
+class ExerciseSpec:
+    student_prompt: str
+    teacher_notes: str
+    starter_code: str
+    solution_visibility: str = "teacher-only"
+
+
+@dataclass(frozen=True)
+class AssessmentSpec:
+    rubric: tuple[str, ...]
+    evidence_types: tuple[str, ...]
+    mastery_levels: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class ProjectSpec:
+    prompt: str
+    milestones: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class ProgressSpec:
+    unlock_rule: str
+    badges: tuple[str, ...]
+    parent_summary_template: str
 
 
 @dataclass(frozen=True)
@@ -15,45 +45,71 @@ class CurriculumItem:
     prerequisites: tuple[str, ...]
     rubric: tuple[str, ...]
     badges: tuple[str, ...]
+    age_band: str = "10-14 JavaScript Core"
+    student_facing_goal: str = ""
+    teacher_facing_goal: str = ""
+    learning_loop: tuple[str, ...] = ()
+    exercise: ExerciseSpec | None = None
+    assessment: AssessmentSpec | None = None
+    project: ProjectSpec | None = None
+    progress: ProgressSpec | None = None
+    source_files: tuple[str, ...] = ()
     starter_code: str = ""
 
 
-_BASIC = (
-    "Print 1-255", "Print odd numbers 1-255", "Sum 1-255", "Print list values",
-    "Find maximum", "Find average", "Collect odd numbers", "Square values",
-    "Count above threshold", "Convert matches to zero", "Min, max, average",
-    "Shift list values", "Replace negatives",
-)
+def _manifest_path() -> Path:
+    return Path(__file__).resolve().parents[1] / "curriculum" / "canonical-curriculum-manifest.json"
+
+
+def _load_manifest() -> dict[str, object]:
+    return json.loads(_manifest_path().read_text())
+
+
+def _item_from_manifest(item: dict[str, object]) -> CurriculumItem:
+    exercise = item.get("exercise") or {}
+    assessment = item.get("assessment") or {}
+    project = item.get("project") or {}
+    progress = item.get("progress") or {}
+    return CurriculumItem(
+        id=str(item["id"]),
+        track=str(item["track"]),
+        stage=str(item["stage"]),
+        module=str(item["module"]),
+        lesson=str(item["title"]),
+        concept_tags=tuple(item.get("conceptTags", ())),
+        skill_tags=tuple(item.get("skillTags", ())),
+        prerequisites=tuple(item.get("prerequisites", ())),
+        rubric=tuple(assessment.get("rubric") or item.get("rubric", ())),
+        badges=tuple(progress.get("badges") or item.get("badges", ())),
+        age_band=str(item.get("ageBand", "10-14 JavaScript Core")),
+        student_facing_goal=str(item.get("studentFacingGoal", "")),
+        teacher_facing_goal=str(item.get("teacherFacingGoal", "")),
+        learning_loop=tuple(item.get("learningLoop", ())),
+        exercise=ExerciseSpec(
+            student_prompt=str(exercise.get("studentPrompt", "")),
+            teacher_notes=str(exercise.get("teacherNotes", "")),
+            starter_code=str(exercise.get("starterCode", "")),
+            solution_visibility=str(exercise.get("solutionVisibility", "teacher-only")),
+        ) if exercise else None,
+        assessment=AssessmentSpec(
+            rubric=tuple(assessment.get("rubric", ())),
+            evidence_types=tuple(assessment.get("evidenceTypes", ())),
+            mastery_levels=tuple(assessment.get("masteryLevels", ())),
+        ) if assessment else None,
+        project=ProjectSpec(
+            prompt=str(project.get("prompt", "")),
+            milestones=tuple(project.get("milestones", ())),
+        ) if project else None,
+        progress=ProgressSpec(
+            unlock_rule=str(progress.get("unlockRule", "")),
+            badges=tuple(progress.get("badges", ())),
+            parent_summary_template=str(progress.get("parentSummaryTemplate", "")),
+        ) if progress else None,
+        source_files=tuple(item.get("sourceFiles", ())),
+        starter_code=str(exercise.get("starterCode", "")),
+    )
 
 
 def curriculum_catalog() -> tuple[CurriculumItem, ...]:
-    teacher = tuple(
-        CurriculumItem(
-            id=f"teacher-t{level}", track="teacher", stage=f"T{level}",
-            module=("Safety onboarding", "Basic 13 coaching", "Algorithm coaching")[level],
-            lesson=("Child-safe platform use", "Teach loops and lists", "Teach search strategies")[level],
-            concept_tags=(("safe-AI-use",), ("loops", "lists"), ("search", "indexing"))[level],
-            skill_tags=("explaining-code", "teacher-observation"), prerequisites=(() if level == 0 else (f"teacher-t{level-1}",)),
-            rubric=("Submit evidence", "Receive reviewer approval"), badges=(f"teacher-t{level}-ready",),
-        ) for level in range(3)
-    )
-    basic = tuple(
-        CurriculumItem(
-            id=f"student-basic-{number:02d}", track="student", stage="2", module="Basic 13",
-            lesson=title, concept_tags=("loops", "lists"),
-            skill_tags=("reading-code", "predicting-output", "debugging"),
-            prerequisites=(() if number == 1 else (f"student-basic-{number-1:02d}",)),
-            rubric=("Read", "Predict", "Run", "Fix", "Challenge", "Reflect"),
-            badges=("basic-13-builder",),
-        ) for number, title in enumerate(_BASIC, 1)
-    )
-    linear = CurriculumItem(
-        id="student-linear-search", track="student", stage="3", module="Algorithm Academy",
-        lesson="Linear Search Treasure Hunt", concept_tags=("search", "indexing", "loops"),
-        skill_tags=("tracing", "debugging", "explaining-code"),
-        prerequisites=("student-basic-13",),
-        rubric=("Trace target", "Return index", "Handle not found", "Explain index vs value"),
-        badges=("trace-passed", "bug-fixed", "explanation-approved"),
-        starter_code="def linear_search(nums, target):\n    for index, value in enumerate(nums):\n        if value == target:\n            return index\n    return -1\n",
-    )
-    return teacher + basic + (linear,)
+    manifest = _load_manifest()
+    return tuple(_item_from_manifest(item) for item in manifest["lessons"])

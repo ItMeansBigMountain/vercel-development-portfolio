@@ -1,0 +1,52 @@
+{
+  "task_id": "t_160aa964",
+  "generated_at_utc": "2026-08-25T20:15:37Z",
+  "migration_preconditions": {
+    "software_task": "t_d1c1935a",
+    "software_status": "done",
+    "trading_validation_task": "t_899e5551",
+    "trading_validation_status": "done",
+    "retirement_readiness": "passed for low-trust discovery-only use"
+  },
+  "production_frontend": {
+    "url": "https://stock-news-frontend-chi.vercel.app/",
+    "label": "production; retirement blocked",
+    "pre_retirement_http_status": 200,
+    "vercel_project_name": "stock-news-frontend",
+    "vercel_project_id": "prj_2PYd7tq2vZev24wYaGX6XsxjBHDB",
+    "vercel_org_id": "team_9IP8D1xXFQSrBMZrMjRnl9sD",
+    "removal_status": "not removed: Vercel CLI has no authenticated credentials and browser automation has no runnable Chrome session",
+    "required_next_step": "authenticate Vercel in an operator session, delete only project stock-news-frontend, then verify project readback is not found and the production URL no longer serves the app"
+  },
+  "previous_backend_retirement_evidence": "/opt/data/HeRmEz/projects/_ops/vercel-stocknews-backend-retirement-2026-06-29.json",
+  "github_repository": {
+    "url": "https://github.com/ItMeansBigMountain/stockNews",
+    "label": "archived source repository",
+    "archived": true,
+    "archive_patch_http_status": 200,
+    "archive_readback_http_status": 200,
+    "default_branch": "main",
+    "remote_head": "331f669589ecb73dc7924baadf5d16e7563ff6d2"
+  },
+  "backup": {
+    "path": "/opt/data/HeRmEz/projects/_backups/stockNews-retirement-20260825T201537Z",
+    "local_source_archive": {
+      "path": "/opt/data/HeRmEz/projects/_backups/stockNews-retirement-20260825T201537Z/stockNews-local-tracked.tar.gz",
+      "sha256": "a90969bab3b32fb41d2dcd32657765493e6b5a07408e1b4e427d71bda04dbc1b",
+      "files_restored_in_smoke_test": 69
+    },
+    "remote_history_bundle": {
+      "path": "/opt/data/HeRmEz/projects/_backups/stockNews-retirement-20260825T201537Z/stockNews-remote-all.bundle",
+      "sha256": "660bacd9a4f1679760d28e9b6937f8a1338426e0303038bc1e15b45be8ce8b2a",
+      "bundle_verify": "complete history; main and HEAD at 331f669589ecb73dc7924baadf5d16e7563ff6d2",
+      "clone_smoke_test": "passed"
+    }
+  },
+  "source_location": {
+    "path": "/opt/data/HeRmEz/projects/stockNews",
+    "status": "preserved in place; no local removal performed",
+    "tracked_files": 69,
+    "local_changes": 0
+  },
+  "overall_status": "blocked_pending_vercel_authentication"
+}

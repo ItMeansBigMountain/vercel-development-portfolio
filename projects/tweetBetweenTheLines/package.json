@@ -8,6 +8,8 @@
     "packages/*"
   ],
   "scripts": {
+    "lint": "npm run typecheck",
+    "validate:fixtures": "node scripts/validate-archive-fixtures.mjs",
     "test": "npm run test -w @tweet-between-the-lines/domain && npm run test -w @tweet-between-the-lines/api",
     "typecheck": "npm run typecheck -w @tweet-between-the-lines/domain && npm run typecheck -w @tweet-between-the-lines/api && npm run typecheck -w @tweet-between-the-lines/mobile",
     "build": "npm run build -w @tweet-between-the-lines/domain && npm run build -w @tweet-between-the-lines/api && npm run build:web -w @tweet-between-the-lines/mobile",

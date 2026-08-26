@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "baseURL": "http://127.0.0.1:43047/",
+  "generatedAt": "2026-08-26T00:53:17.093Z",
+  "roles": [
+    "learner",
+    "teacher",
+    "parent",
+    "admin"
+  ],
+  "viewports": [
+    {
+      "viewport": "phone-portrait",
+      "size": "390x844",
+      "covered": [
+        "keyboard focus",
+        "textarea editor",
+        "fill-in-the-blank",
+        "word bank",
+        "paste",
+        "autosave reload",
+        "submission",
+        "teacher feedback",
+        "parent export",
+        "admin validation",
+        "focus/scroll",
+        "accessibility button names",
+        "horizontal overflow"
+      ]
+    },
+    {
+      "viewport": "phone-landscape",
+      "size": "844x390",
+      "covered": [
+        "keyboard focus",
+        "textarea editor",
+        "fill-in-the-blank",
+        "word bank",
+        "paste",
+        "autosave reload",
+        "submission",
+        "teacher feedback",
+        "parent export",
+        "admin validation",
+        "focus/scroll",
+        "accessibility button names",
+        "horizontal overflow"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "size": "768x1024",
+      "covered": [
+        "keyboard focus",
+        "textarea editor",
+        "fill-in-the-blank",
+        "word bank",
+        "paste",
+        "autosave reload",
+        "submission",
+        "teacher feedback",
+        "parent export",
+        "admin validation",
+        "focus/scroll",
+        "accessibility button names",
+        "horizontal overflow"
+      ]
+    },
+    {
+      "viewport": "laptop",
+      "size": "1366x768",
+      "covered": [
+        "keyboard focus",
+        "textarea editor",
+        "fill-in-the-blank",
+        "word bank",
+        "paste",
+        "autosave reload",
+        "submission",
+        "teacher feedback",
+        "parent export",
+        "admin validation",
+        "focus/scroll",
+        "accessibility button names",
+        "horizontal overflow"
+      ]
+    },
+    {
+      "viewport": "wide-monitor",
+      "size": "1920x1080",
+      "covered": [
+        "keyboard focus",
+        "textarea editor",
+        "fill-in-the-blank",
+        "word bank",
+        "paste",
+        "autosave reload",
+        "submission",
+        "teacher feedback",
+        "parent export",
+        "admin validation",
+        "focus/scroll",
+        "accessibility button names",
+        "horizontal overflow"
+      ]
+    }
+  ]
+}

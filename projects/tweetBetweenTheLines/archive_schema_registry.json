@@ -1,0 +1,110 @@
+{
+  "schema_version": "tweetbetweenthelines-archive-registry@1",
+  "last_verified_at": "2026-08-25",
+  "admission": {
+    "accepted_containers": ["zip"],
+    "compressed_bytes_max": 250000000,
+    "uncompressed_bytes_total_max": 1000000000,
+    "entry_bytes_max": 50000000,
+    "entries_max": 10000,
+    "nested_depth_max": 1,
+    "require_malware_scan": "clean",
+    "reject_entry_kinds": ["symlink", "device"],
+    "reject_paths": ["absolute", "drive_letter", "dotdot", "nul"],
+    "sandbox": { "network": "denied", "filesystem": "read-only", "privilege": "unprivileged", "execute_content": false }
+  },
+  "normalized_categories": ["posts", "likes", "follows", "searches", "watch_history", "ads_interests", "profile", "messages_metadata"],
+  "platforms": [
+    {
+      "platform": "google_youtube",
+      "parser_version": "google_youtube_archive@1",
+      "source_kind": "api_and_user_archive",
+      "official_sources": [1, 2, 3, 4, 5, 6],
+      "oauth": { "pkce": true, "scopes": ["openid", "email", "profile", "https://www.googleapis.com/auth/youtube.readonly"], "review_required": true, "api_ceiling": "metadata/deltas; not complete watch/search history" },
+      "archive": { "container": "zip", "sample_status": "sample_required", "representative_paths": ["Takeout/YouTube and YouTube Music/history/watch-history.json", "Takeout/YouTube and YouTube Music/history/search-history.json"] },
+      "field_maps": [
+        { "category": "watch_history", "source_path": "sample_required", "fields": { "sourceRecordId": "official_field: titleUrl or deterministic row hash", "occurredAt": "official_field: time", "content": "official_field: title", "rawObjectRef": "product_metadata: archive path + json pointer" } },
+        { "category": "searches", "source_path": "sample_required", "fields": { "sourceRecordId": "deterministic sha256(platform,path,index,time,query)", "occurredAt": "official_field: time", "content": "official_field: search query/title" } }
+      ]
+    },
+    {
+      "platform": "x_twitter",
+      "parser_version": "x_twitter_archive@1",
+      "source_kind": "user_archive_primary_api_optional",
+      "official_sources": [16, 17, 18, 19],
+      "oauth": { "pkce": true, "scopes": ["tweet.read", "users.read", "offline.access"], "review_required": true, "paid_tier_required": true, "api_ceiling": "tier/rate limited; not complete archive" },
+      "archive": { "container": "zip", "sample_status": "sample_required", "representative_paths": ["data/tweets.js", "data/like.js", "data/following.js", "data/follower.js", "data/ad-engagements.js"] },
+      "field_maps": [
+        { "category": "posts", "source_path": "data/tweets.js", "fields": { "sourceRecordId": "official_field: id_str", "occurredAt": "official_field: created_at", "content": "official_field: full_text", "locale": "official_field: lang" } },
+        { "category": "likes", "source_path": "data/like.js", "fields": { "sourceRecordId": "official_field: tweetId", "occurredAt": "official_field or null", "content": "official_field: fullText" } },
+        { "category": "follows", "source_path": "data/following.js", "fields": { "sourceRecordId": "official_field: accountId", "occurredAt": "official_field or null", "content": "official_field: userLink/screenName" } }
+      ]
+    },
+    {
+      "platform": "spotify",
+      "parser_version": "spotify_archive@1",
+      "source_kind": "api_and_user_archive",
+      "official_sources": [51, 52, 53, 54],
+      "oauth": { "pkce": true, "scopes": ["user-read-recently-played", "user-top-read", "user-library-read", "playlist-read-private"], "review_required": true, "api_ceiling": "recent/top/library surfaces; extended streaming history through export" },
+      "archive": { "container": "zip", "sample_status": "high_confidence_json", "representative_paths": ["StreamingHistory_music_0.json", "endsong_0.json", "YourLibrary.json", "Playlist*.json"] },
+      "field_maps": [
+        { "category": "watch_history", "source_path": "StreamingHistory*.json or endsong*.json", "fields": { "sourceRecordId": "deterministic sha256(platform,ts,track,artist,msPlayed)", "occurredAt": "official_field: endTime or ts", "content": "official_fields: artistName/trackName or master_metadata_*", "durationMs": "official_field: msPlayed" } },
+        { "category": "likes", "source_path": "YourLibrary.json", "fields": { "sourceRecordId": "official_field: uri or deterministic row hash", "content": "official_fields: artist/album/track/show" } }
+      ]
+    },
+    {
+      "platform": "bluesky_atproto",
+      "parser_version": "bluesky_atproto_repo@1",
+      "source_kind": "api_and_repository_export",
+      "official_sources": [38, 39, 40],
+      "oauth": { "pkce": true, "scopes": ["atproto"], "review_required": false, "api_ceiling": "repo records; off-repo logs/DMs not covered" },
+      "archive": { "container": "car", "sample_status": "sample_required", "representative_paths": ["repo.car", "decoded/app.bsky.feed.post/*.json", "decoded/app.bsky.feed.like/*.json", "decoded/app.bsky.graph.follow/*.json"] },
+      "field_maps": [
+        { "category": "posts", "source_path": "app.bsky.feed.post", "fields": { "sourceRecordId": "official_field: AT URI/CID", "occurredAt": "official_field: createdAt", "content": "official_field: text" } },
+        { "category": "likes", "source_path": "app.bsky.feed.like", "fields": { "sourceRecordId": "official_field: subject.uri + subject.cid", "occurredAt": "official_field: createdAt", "content": "derived_deterministic: liked record ref" } },
+        { "category": "follows", "source_path": "app.bsky.graph.follow", "fields": { "sourceRecordId": "official_field: subject DID", "occurredAt": "official_field: createdAt", "content": "official_field: subject DID" } }
+      ]
+    },
+    {
+      "platform": "tumblr",
+      "parser_version": "tumblr_blog_export@1",
+      "source_kind": "api_and_blog_export",
+      "official_sources": [44, 45, 46],
+      "oauth": { "pkce": false, "scopes": ["oauth1_or_api_v2_app_permissions"], "review_required": false, "api_ceiling": "owned blogs/posts, not dashboard history" },
+      "archive": { "container": "zip", "sample_status": "sample_required", "representative_paths": ["posts/*.html", "media/*", "posts.json"] },
+      "field_maps": [
+        { "category": "posts", "source_path": "posts/*", "fields": { "sourceRecordId": "official_field or deterministic post URL/path", "occurredAt": "official_field: post date", "content": "official_field: title/body/caption" } }
+      ]
+    },
+    {
+      "platform": "mastodon_fediverse",
+      "parser_version": "mastodon_instance_export@1",
+      "source_kind": "api_and_instance_export",
+      "official_sources": [55, 56, 57],
+      "oauth": { "pkce": true, "scopes": ["read", "read:accounts", "read:statuses", "read:favourites"], "review_required": false, "api_ceiling": "per-instance history; moderation/deletion/federation caveats" },
+      "archive": { "container": "zip_or_instance_export", "sample_status": "sample_required", "representative_paths": ["outbox.json", "following_accounts.csv", "followers.csv", "favourites.csv"] },
+      "field_maps": [
+        { "category": "posts", "source_path": "outbox.json", "fields": { "sourceRecordId": "official_field: object.id", "occurredAt": "official_field: published", "content": "official_field: content" } },
+        { "category": "follows", "source_path": "following_accounts.csv", "fields": { "sourceRecordId": "official_field: acct/url", "content": "official_field: acct/url" } }
+      ]
+    },
+    {
+      "platform": "meta_family_manual_import",
+      "parser_version": "meta_archive_sample_required@1",
+      "covers": ["facebook", "instagram", "threads"],
+      "source_kind": "user_archive_primary",
+      "official_sources": [7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "archive": { "container": "zip", "sample_status": "sample_required", "representative_paths": ["posts/*", "comments/*", "likes_and_reactions/*", "followers_and_following/*", "search_history/*", "ads_information/*"] },
+      "field_maps": []
+    },
+    {
+      "platform": "sample_required_group",
+      "parser_version": "manual_archive_sample_required@1",
+      "covers": ["tiktok", "reddit", "linkedin", "snapchat", "discord", "pinterest", "twitch"],
+      "source_kind": "user_archive_or_privacy_export",
+      "official_sources": [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 41, 42, 43, 47, 48, 49, 50],
+      "archive": { "container": "zip", "sample_status": "sample_required", "representative_paths": [] },
+      "field_maps": []
+    }
+  ]
+}

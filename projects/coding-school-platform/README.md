@@ -2,9 +2,17 @@
 
 Coding school operations and product suite: teacher hiring plan, student progress app, coding community, worksheets, Scratch/Python material, and interactive story learning app.
 
+## Definitive P0 product specification
+
+The current competitor-researched product specification is `COMPETITOR_RESEARCH_AND_PRODUCT_SPEC.md`. It defines the complete child-safe coding-class tool: teacher/student/parent/admin roles, rosters and scheduling, live classroom presence, teacher-reviewed submissions, syntax-only linting with no arbitrary code execution, fill-in-the-blank / typed-answer / word-bank / code-text activities, mastery metrics, AI-summary paste with local parser fallback, teacher training, curriculum authoring, and explicit non-goals.
+
+The prioritized implementation backlog is `IMPLEMENTATION_BACKLOG.md`. Treat its P0 checklist as the next build sequence before adding runtime execution, LMS integrations, public galleries, billing, or production student data.
+
 ## Curriculum source of truth
 
 The canonical teacher-first curriculum and Algorithm Academy scope is `CURRICULUM_SOURCE_OF_TRUTH.md`. Use it before implementing learner, teacher, progress, AI-coding, or portfolio workflows.
+
+The machine-readable synchronized module map is `curriculum/canonical-curriculum-manifest.json`. It preserves the authorized Drive/business-channel sequence for the ages 10-14 JavaScript Core track: Basic 13, Data Objects and Arrays, APIs/JSON/fetch/errors, and Algorithm Academy foundations. Teacher solution/debugging notes are represented as teacher-only metadata and are not surfaced as learner prompts.
 
 ## Implemented domain slice
 

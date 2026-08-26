@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>tweetBetweenTheLines Social Life Blueprint Preview</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #10213a;
+      --card: #111827;
+      --ink: #f8fafc;
+      --muted: #cbd5e1;
+      --subtle: #94a3b8;
+      --cyan: #67e8f9;
+      --blue: #0369a1;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --red: #f87171;
+      --line: #334155;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at top, #0f3158 0, var(--bg) 44rem); color: var(--ink); font: 16px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width: min(100%, 430px); margin: 0 auto; min-height: 100vh; padding: 20px 16px 96px; }
+    .eyebrow { color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 8px 0 10px; font-size: 34px; line-height: 1.05; letter-spacing: -0.04em; }
+    p { color: var(--muted); margin: 0; }
+    .notice { margin: 18px 0; padding: 12px 14px; background: #0c4a6e; border: 1px solid #0e7490; border-radius: 16px; color: #e0f2fe; }
+    .tabs { position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; padding: 8px 0; background: linear-gradient(var(--bg), rgba(7,17,31,.82)); backdrop-filter: blur(12px); }
+    .tab { min-height: 44px; border: 1px solid var(--line); border-radius: 13px; background: rgba(15, 23, 42, .8); color: var(--ink); font-size: 11px; font-weight: 800; }
+    .tab.active { border-color: var(--cyan); background: #155e75; }
+    .panel, .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin: 14px 0; }
+    .panel { background: rgba(16, 33, 58, .94); }
+    .card { background: rgba(17, 24, 39, .95); }
+    .row { display: flex; align-items: start; justify-content: space-between; gap: 10px; }
+    .chip { display: inline-flex; align-items: center; min-height: 28px; padding: 4px 9px; border-radius: 999px; background: #164e63; color: #cffafe; font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .chip.green { background: #14532d; color: #dcfce7; }
+    .chip.amber { background: #78350f; color: #fef3c7; }
+    h2, h3 { margin: 0; letter-spacing: -0.02em; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    .meta { color: var(--subtle); font-size: 13px; }
+    .timeline { position: relative; padding-left: 18px; }
+    .timeline::before { content: ""; position: absolute; left: 3px; top: 8px; bottom: 8px; width: 2px; background: #1e40af; }
+    .event { position: relative; padding: 12px 0; }
+    .event::before { content: ""; position: absolute; left: -20px; top: 20px; width: 12px; height: 12px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 4px #082f49; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    button { min-height: 44px; border: 0; border-radius: 12px; padding: 10px 13px; background: var(--blue); color: #fff; font-weight: 900; }
+    button.secondary { background: #1f2937; border: 1px solid var(--line); }
+    button.danger { background: #991b1b; }
+    .evidence { margin-top: 12px; padding: 12px; border: 1px dashed #475569; border-radius: 15px; background: rgba(15, 23, 42, .72); }
+    .coverage { display: grid; gap: 8px; margin-top: 12px; }
+    .coverage div { min-height: 44px; padding: 10px 12px; border-radius: 14px; background: #0f172a; border: 1px solid #1e293b; }
+    .nav { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); width: min(calc(100% - 24px), 430px); display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px; border: 1px solid var(--line); border-radius: 20px; background: rgba(2, 6, 23, .92); backdrop-filter: blur(14px); }
+    .nav a { min-height: 44px; display: grid; place-items: center; border-radius: 14px; color: var(--muted); text-decoration: none; font-size: 11px; font-weight: 800; }
+    .nav a:first-child { background: #155e75; color: white; }
+    .warning { border-color: #92400e; background: rgba(120, 53, 15, .35); }
+    @media (min-width: 760px) { main { width: min(100%, 760px); } .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">tweetBetweenTheLines · mobile-first blueprint</div>
+    <h1>Your social life, with receipts.</h1>
+    <p>A private timeline and blueprint built from official exports and consented sources. Every reflection shows evidence, confidence, limitations, and controls.</p>
+    <div class="notice" role="status">Synthetic preview. No live platform data, diagnosis, or complete-history claim.</div>
+
+    <div class="tabs" role="tablist" aria-label="Blueprint sections">
+      <button class="tab active">Timeline</button>
+      <button class="tab">Blueprint</button>
+      <button class="tab">Sources</button>
+      <button class="tab">Stories</button>
+      <button class="tab">Control</button>
+    </div>
+
+    <section class="panel">
+      <div class="row">
+        <h2>Coverage snapshot</h2>
+        <span class="chip amber">Medium · 68%</span>
+      </div>
+      <p class="meta">142 synthetic events · X archive, YouTube Takeout, Spotify history · Jan 2023–Aug 2026</p>
+      <div class="coverage" aria-label="Source coverage">
+        <div><strong>X archive</strong><br><span class="meta">Posts, likes, follows · 91 records · parser x_archive@1</span></div>
+        <div><strong>YouTube Takeout</strong><br><span class="meta">Views/searches · 33 records · missing comments</span></div>
+        <div><strong>Spotify history</strong><br><span class="meta">Listens/playlists · 18 records · extended history sample</span></div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <div class="row">
+          <h3>Blueprint card</h3>
+          <span class="chip green">Evidence-backed</span>
+        </div>
+        <p><strong>Chapter proposal:</strong> “Creator learning sprint” appeared in 28 events across X and YouTube between Mar–May 2026.</p>
+        <div class="evidence">
+          <strong>Why shown</strong><br>
+          <span class="meta">Formula chapter-burst@1 matched repeated learning/coding creator metadata and a time-bounded activity increase.</span>
+        </div>
+        <div class="actions">
+          <button>View evidence</button>
+          <button class="secondary">Rename</button>
+          <button class="secondary">Hide</button>
+        </div>
+      </section>
+
+      <section class="card warning">
+        <div class="row">
+          <h3>Persuasion transparency</h3>
+          <span class="chip amber">Caveated</span>
+        </div>
+        <p>Repeated recommendation loops may reflect platform design, your choices, available data, or missing data. This does not prove manipulation or intent.</p>
+        <div class="actions">
+          <button>Inspect aggregate</button>
+          <button class="secondary">Mark inaccurate</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <h2>Life timeline</h2>
+      <div class="timeline">
+        <div class="event">
+          <span class="chip">Mar 2026</span>
+          <p><strong>New community cluster</strong> · 14 posts and views mention coding-school, creators, and project demos.</p>
+          <p class="meta">Sources: X archive, YouTube Takeout · Confidence medium because one platform window is missing comments.</p>
+        </div>
+        <div class="event">
+          <span class="chip">Jun 2026</span>
+          <p><strong>Adventure candidate</strong> · Concert/photo/listening records cluster around a weekend trip.</p>
+          <p class="meta">Private by default. User must confirm title before it becomes a chapter.</p>
+        </div>
+        <div class="event">
+          <span class="chip">Aug 2026</span>
+          <p><strong>Consolidation suggestion</strong> · Review stale connected sources and unsupported files before next import.</p>
+          <p class="meta">Suggestion only; export/delete controls remain available on all tiers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h3>Optional stories/video</h3>
+        <span class="chip amber">Off by default</span>
+      </div>
+      <p>AI storylines and personalized videos require separate user approval, minimized evidence, visible model metadata, and delete controls. Rendering is never automatic.</p>
+      <div class="actions">
+        <button class="secondary">Review consent</button>
+        <button class="secondary">Draft storyboard</button>
+        <button class="danger">Delete story data</button>
+      </div>
+    </section>
+  </main>
+  <nav class="nav" aria-label="Primary">
+    <a href="#">Timeline</a>
+    <a href="#">Cards</a>
+    <a href="#">Sources</a>
+    <a href="#">Stories</a>
+    <a href="#">Control</a>
+  </nav>
+</body>
+</html>

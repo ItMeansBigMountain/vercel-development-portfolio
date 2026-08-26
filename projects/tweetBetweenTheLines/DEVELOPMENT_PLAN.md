@@ -1,6 +1,6 @@
 # tweetBetweenTheLines Development Plan
 
-Last updated: 2026-08-24
+Last updated: 2026-08-25
 
 ## Current role
 
@@ -23,12 +23,15 @@ High — explicitly promoted to active development.
 - `PRODUCT_DIRECTION.md`
 - `PRODUCT_ARCHITECTURE.md`
 - `PLATFORM_OAUTH_ARCHIVE_MATRIX.md`
+- `SOCIAL_LIFE_BLUEPRINT.md`
+- `IMPLEMENTATION_BACKLOG.md`
 
 ## Development phases
 
 1. Preserve prior-art audit and build-vs-rewrite map.
 2. Establish TypeScript/Expo universal architecture with a tested domain package.
 3. Implement connector registry, consent receipts, archive import sandbox, token vault, profile cards, and export/delete workflows in small TDD slices.
+4. Build the Social Life Blueprint layer: unified life timeline, evidence-backed themes/relationships/chapters/achievements/adventures/counts/consolidations, user-initiated heartbreak/recovery reflection, persuasion-pattern transparency, optional AI storylines, and media-generation consent gates.
 
 ## Vercel / hosting plan
 
@@ -40,4 +43,5 @@ Do not deploy until consent, revoke, export/delete, source provenance, and no-di
 - [ ] No secrets, tokens, private data, or real student/customer records committed.
 - [ ] Public demo has clear empty/loading/error states.
 - [ ] Mobile-first layout is reviewed.
+- [ ] Every Social Life Blueprint card shows evidence, confidence, limitations, edit/hide/delete/export controls, and no-diagnosis/no-false-fact copy.
 - [ ] README / workspace trackers updated with live URL and blockers.

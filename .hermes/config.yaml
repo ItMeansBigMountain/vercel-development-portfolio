@@ -505,7 +505,7 @@ cron:
     callback_url: ''
     expected_audience: ''
     nas_jwks_url: ''
-  wrap_response: true
+  wrap_response: false
 kanban:
   dispatch_in_gateway: true
   dispatch_interval_seconds: 60

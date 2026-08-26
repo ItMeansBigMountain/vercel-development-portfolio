@@ -1,0 +1,90 @@
+Cellphone Scripts — https://cellphonescripts.vercel.app/ should just be a git repo but do all the cool stuff we can use on ios mobile ide apps that run our code. we can make an easy copy and paste repo for it. then remove this from vercel. it doesnt neeed a website. do your research on apps and then communities around those apps for example pythonista for ios 
+
+
+
+Addictive Mobile Games — https://addictive-mobile-games.vercel.app/ is gonna be published into the app stores like ios and android so think about that as well as you document what to do for that application
+
+API Requests — https://api-requests-one.vercel.app/
+API.Requests — https://apirequests.vercel.app/
+we dont need this as a Vercel URL. isnt this in my github?
+
+Cloud Automation — https://cloudautomation.vercel.app/ this is just for learning and can stay in github as something i worked on to learn stuff. i still need to think about my learning ark with you. we have been building so much ive been neglecting learning
+
+Consumer Advocate — https://consumer-advocate-app.vercel.app/ should be consolidated into tweetbetweenthelines and if it doesnt fit then throw it away. i dont want you working on it anymore as a single project. think that through and understand my direction with tweetbetweenthelines by reviewing everything i talked about. make sure that our kanban board matches everything im telling you right now 
+
+Algorithm Academy/Algos — https://algos-beta.vercel.app/ we already have the coding school so we can close this and any useful context can go to the code school efforts. why dont you remember that when i give you project ideas. like youre an ai... you should be like oh he already has a project MAYBE I SHOULD ASK HIM WHAT THE HES TALKING ABOUT WHILE ASING FOR POLLS THAT I CAN REPLY TO YOU BACK AND FORTH MORE BECAUSE YOU NEED TO REMEMBER THAT 
+
+
+these dont need vercel urls either 
+Deployment Docs — https://deploymentdocs.vercel.app/
+Docs — https://docs-umber-two-76.vercel.app/
+Jupyter Notebooks — https://jupyter-notebooks-green.vercel.app/
+Legacy Source — https://legacy-src.vercel.app/
+School — https://school-plum-beta.vercel.app/
+Selenium — https://selenium-alpha.vercel.app/
+Networking — https://networking-ebon.vercel.app/
+
+i remember muscle madness was created when i was finally getting the swing of full stack development. way before you ai bots came into picture lol
+
+
+these need to be worked on and either incorporated into current projects and injected or really fleshed out because i really like music psycology.
+Music — https://music-lac-seven.vercel.app/
+Music Mood — https://music-mood-app-chi.vercel.app/ 
+
+we need to flesh this out so that i can show off a landing page for myself and my company "oyamaProductions"
+Oyama Productions Legal — https://oyama-productions-legal.vercel.app/
+
+
+these dont need a website 
+Scraper Project — https://scraper-project-five.vercel.app/
+Selenium — https://selenium-alpha.vercel.app/
+
+
+this needs to be part of tweetbetweenthelines. dude you gotta consolidate better! 
+
+
+dont we need to consolidate this with another project? 
+Stock News — https://stock-news-frontend-chi.vercel.app/
+
+
+this is tik tok shop stuff dummy
+Store Code Content Studio — https://store-code-content-studio.vercel.app/
+TikTok Shop Commerce — https://tiktok-shop-shopify-commerce.vercel.app/
+
+we need to think of a better idea for this and consolidate it with policy pit. this was also one of the first apps i ever developed to learn code it would be nice to see it running on the web and ios again on vercel the way it did back when i used to contribute to the repo for these 
+TicVoter — https://ticvoter.vercel.app/
+TicVoter REST API — https://ticvoter-rest-api.vercel.app/
+
+Tournament Wager — https://tournament-wager-app.vercel.app/ im always afraid of taking peoples money or information because what if i get hacked or do something illegal accidentally? 
+
+consolidate into the teaching app 
+Tutoring REPL — https://tutoring-repl.vercel.app/
+
+think of ways this could be a good idea in modern 2026 with deep research into things like viral ai videos for content creation but we dont need this website at the moment 
+Tweet Video Generator — https://tweetvideogenerator.vercel.app/
+
+these dont need websites 
+Watson AI — https://watsonai.vercel.app/
+WebCrawl — https://webcrawl-ochre.vercel.app/
+
+stop hosting this and put it on standby so we can pick up exactly where we started later 
+Cox Elementary PTA review shell — https://cox-elementary-pta.vercel.app/
+
+
+we dont need a website for this Faceless YouTube Channel — https://faceless-youtube-channel-beta.vercel.app/ this was completely out of line and im not sure what made you think i wanted this made. i didnt say to make this 
+
+
+why are these not consolidated? 
+Journal AI — https://journal-ai-sooty.vercel.app/
+Journal App — https://journal-app-five-delta.vercel.app/
+
+
+PARENTS
+Coding School — https://coding-school-platform.vercel.app/ ingests all those side little coding projects for teaching
+MusicAI — https://musicai-rouge.vercel.app/ ingests all those side little coding projects for music
+
+Local Meeting Transcriber — https://local-meeting-transcriber-frontend.vercel.app/ we consolidated this into the journal app and we also had that other transcriber one that needs to now be in journals functionality 
+
+
+Honda Tech Upgrade — https://honda-tech-upgrade.vercel.app/ this is burnout boyz so we need to consolidate that 
+

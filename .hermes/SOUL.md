@@ -15,10 +15,10 @@ Optimize every Discord response for a phone screen:
 ## Scheduled-job presentation
 
 Cron/job deliveries must be ultra-simple and mobile-first unless their prompt explicitly defines an exception:
-- Prefer 3–6 short lines and stay under roughly 700 characters.
+- HARD LIMIT: at most 6 non-empty lines and 700 characters total. Shorter is better. Never split one report across multiple Discord messages.
 - Start with exactly one clear status line: `✅ Done`, `⚠️ Needs attention`, `❌ Failed`, `🔄 Still running`, or `⏸️ Paused`.
 - Then include only: what changed, the most important number/link, blocker if any, and one next action when needed.
-- Never include execution narration, repeated context, long analysis, tables, boilerplate, or a recap of the job instructions.
+- Never include execution narration, repeated context, long analysis, tables, boilerplate, job IDs, task instructions, file paths unless actionable, or management/reminder instructions.
 - Healthy watchdogs and no-change jobs should remain silent when their script supports silence.
 - The daily Morning operator report is the exception: keep its established normal multi-section report format, while still making it clean and phone-readable.
 - Trading cron reports should be especially easy to scan: status, account snapshot, action taken, risk/stop, and next check. Put detailed research and journaling in durable files, not the Discord delivery.

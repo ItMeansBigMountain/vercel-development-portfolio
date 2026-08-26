@@ -1,0 +1,110 @@
+
+from django.contrib import messages
+from django.db.models import Q
+from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
+from collections import OrderedDict
+from .forms import VolunteerInterestForm
+from .models import Announcement, DonationCampaign, Event, NewsletterIssue, SiteSettings, Sponsor, VolunteerOpportunity
+
+def get_settings():
+    return SiteSettings.objects.first() or SiteSettings()
+
+def active_announcements():
+    today = timezone.localdate()
+    return Announcement.objects.filter(
+        published=True,
+        publish_date__lte=today,
+    ).filter(Q(expires_date__isnull=True) | Q(expires_date__gte=today))
+
+def home(request):
+    return render(request, 'pta/home.html', {
+        'featured_events': Event.objects.filter(published=True, featured=True)[:5],
+        'latest_newsletter': NewsletterIssue.objects.filter(published=True).first(),
+        'opportunities': VolunteerOpportunity.objects.filter(active=True)[:3],
+        'campaign': DonationCampaign.objects.filter(active=True).first(),
+        'announcements': active_announcements()[:4],
+    })
+
+def newsletter(request):
+    return render(request, 'pta/newsletter.html', {'issues': NewsletterIssue.objects.filter(published=True)})
+
+def newsletter_detail(request, slug):
+    return render(request, 'pta/newsletter_detail.html', {'newsletter': get_object_or_404(NewsletterIssue, slug=slug, published=True)})
+
+def announcement_detail(request, pk):
+    announcement = get_object_or_404(active_announcements(), pk=pk)
+    return render(request, 'pta/announcement_detail.html', {'announcement': announcement})
+
+def announcement_print(request, pk):
+    announcement = get_object_or_404(active_announcements(), pk=pk)
+    return render(request, 'pta/announcement_print.html', {'announcement': announcement})
+
+def events(request):
+    category = request.GET.get('category')
+    qs = Event.objects.filter(published=True)
+    if category:
+        qs = qs.filter(category=category)
+
+    today = timezone.localdate()
+    current_key = (today.year, today.month)
+    grouped = OrderedDict()
+    for event in qs:
+        key = (event.date.year, event.date.month)
+        if key not in grouped:
+            grouped[key] = {
+                'key': f'{event.date.year}-{event.date.month:02d}',
+                'label': event.date.strftime('%B %Y'),
+                'events': [],
+                'is_past': key < current_key,
+                'is_current': key == current_key,
+            }
+        grouped[key]['events'].append(event)
+
+    open_key = None
+    if current_key in grouped:
+        open_key = grouped[current_key]['key']
+    else:
+        future_groups = [group for key, group in grouped.items() if key > current_key]
+        if future_groups:
+            open_key = future_groups[0]['key']
+        elif grouped:
+            open_key = next(reversed(grouped.values()))['key']
+
+    event_months = []
+    for group in grouped.values():
+        group['is_open'] = group['key'] == open_key
+        event_months.append(group)
+
+    return render(request, 'pta/events.html', {
+        'events': qs,
+        'event_months': event_months,
+        'category': category,
+        'categories': Event.CATEGORY_CHOICES,
+    })
+
+def event_detail(request, slug):
+    return render(request, 'pta/event_detail.html', {'event': get_object_or_404(Event, slug=slug, published=True)})
+
+def volunteer(request):
+    if request.method == 'POST':
+        form=VolunteerInterestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you — the PTA volunteer team received your interest form.')
+            return redirect('pta:volunteer')
+    else:
+        form=VolunteerInterestForm()
+    return render(request, 'pta/volunteer.html', {'opportunities': VolunteerOpportunity.objects.filter(active=True), 'form': form})
+
+def resources(request):
+    return render(request, 'pta/resources.html')
+
+def join_pta(request):
+    return render(request, 'pta/join_pta.html', {'settings': get_settings()})
+
+def fundraising(request):
+    return render(request, 'pta/fundraising.html', {'campaign': DonationCampaign.objects.filter(active=True).first(), 'sponsors': Sponsor.objects.filter(active=True)})
+
+def about_contact(request):
+    return render(request, 'pta/about_contact.html')

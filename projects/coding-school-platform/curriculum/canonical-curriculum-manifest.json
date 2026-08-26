@@ -1,0 +1,2496 @@
+{
+  "schemaVersion": "1.1.0",
+  "updatedAt": "2026-08-25",
+  "program": "Algorithm Academy / Coding School Platform",
+  "canonicalDriveFolder": {
+    "url": "https://drive.google.com/drive/folders/1pI-haF9EhHcHU__8zIRn1OPf4aH374TP",
+    "owner": "affan.fareed@gmail.com",
+    "recoveredBusinessChannelSources": {
+      "driveFolder": "https://drive.google.com/drive/folders/1pI-haF9EhHcHU__8zIRn1OPf4aH374TP",
+      "basic13Workbook": "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+      "teacherSolutionsDebuggingGuide": "https://docs.google.com/document/d/1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA/edit",
+      "eightWeekCurriculum": "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+      "driveIndex": "https://docs.google.com/document/d/1QgBkr-DD89e6UW1oRy9w89wt_6N_frJFV1_XuDOsJmw/edit"
+    },
+    "syncStatus": "blocked: researcher profile has no Google OAuth token; unauthenticated Drive folder redirected to Google sign-in and embedded folder view returned 401, so Drive docs were not modified in this run."
+  },
+  "constraints": [
+    "ages 10-14 JavaScript Core track for student modules in this slice",
+    "teacher mastery appears before student lessons",
+    "teacher solution/debugging guide and answer keys stay private from learner surfaces",
+    "progress is evidence-based and teacher-reviewed, not click-through completion",
+    "demo/fixture data only; no private student data"
+  ],
+  "learningLoop": [
+    "understand",
+    "inputs/outputs",
+    "hand examples",
+    "pseudocode",
+    "implement",
+    "edge tests",
+    "debug",
+    "improve",
+    "explain"
+  ],
+  "modules": [
+    {
+      "id": "teacher-mastery",
+      "title": "Teacher Mastery Track",
+      "track": "teacher",
+      "ageBand": "adult teacher/coaches",
+      "order": 0,
+      "summary": "Required teacher-before-student path; teacher solutions/debugging guide remains private from learner surfaces."
+    },
+    {
+      "id": "basic-13",
+      "title": "Basic 13 Foundations",
+      "track": "student",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 10,
+      "summary": "Beginner Basic 13 workbook sequence using understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain."
+    },
+    {
+      "id": "javascript-data",
+      "title": "Data Objects and Arrays",
+      "track": "student",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 20,
+      "summary": "Separate beginner module for JavaScript objects, arrays, and object manipulation."
+    },
+    {
+      "id": "api-json-fetch",
+      "title": "APIs, JSON, Fetch, and Errors",
+      "track": "student",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 30,
+      "summary": "Separate beginner module for safe API literacy: JSON shape, fetch flow, loading, and friendly error handling."
+    },
+    {
+      "id": "algorithm-academy",
+      "title": "Algorithm Academy Foundations",
+      "track": "student",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 40,
+      "summary": "Strategy-first search/sort missions beginning with Linear Search Treasure Hunt."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "teacher-t0",
+      "track": "teacher",
+      "stage": "T0",
+      "moduleId": "teacher-mastery",
+      "module": "Teacher Mastery Track",
+      "title": "Platform and safety onboarding",
+      "ageBand": "adult teacher/coaches",
+      "order": 0,
+      "prerequisites": [],
+      "conceptTags": [
+        "safe-AI-use"
+      ],
+      "skillTags": [
+        "explaining-code",
+        "teacher-observation"
+      ],
+      "studentFacingGoal": "Teacher-only; not visible in learner module surfaces.",
+      "teacherFacingGoal": "Teacher uses demo data safely with minors and writes parent-safe notes.",
+      "exercise": {
+        "studentPrompt": "teacher-only",
+        "teacherNotes": "Teacher uses demo data safely with minors and writes parent-safe notes.",
+        "starterCode": "",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Submit evidence",
+          "Receive reviewer approval",
+          "Write parent-safe reflection"
+        ],
+        "evidenceTypes": [
+          "teacher-observation",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Create a reusable coaching artifact for this level.",
+        "milestones": [
+          "coaching-artifact",
+          "reviewer-approved"
+        ]
+      },
+      "progress": {
+        "unlockRule": "teacher-reviewed evidence required",
+        "badges": [
+          "teacher-t0-ready"
+        ],
+        "parentSummaryTemplate": "Teacher readiness item, not shown as student progress."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA/edit"
+      ]
+    },
+    {
+      "id": "teacher-t1",
+      "track": "teacher",
+      "stage": "T1",
+      "moduleId": "teacher-mastery",
+      "module": "Teacher Mastery Track",
+      "title": "Basic 13 coaching mastery",
+      "ageBand": "adult teacher/coaches",
+      "order": 1,
+      "prerequisites": [
+        "teacher-t0"
+      ],
+      "conceptTags": [
+        "loops",
+        "lists"
+      ],
+      "skillTags": [
+        "explaining-code",
+        "teacher-observation"
+      ],
+      "studentFacingGoal": "Teacher-only; not visible in learner module surfaces.",
+      "teacherFacingGoal": "Teacher explains loops, counters, arrays/lists, aggregation, mutation, edge tests, and index/value distinction.",
+      "exercise": {
+        "studentPrompt": "teacher-only",
+        "teacherNotes": "Teacher explains loops, counters, arrays/lists, aggregation, mutation, edge tests, and index/value distinction.",
+        "starterCode": "",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Submit evidence",
+          "Receive reviewer approval",
+          "Write parent-safe reflection"
+        ],
+        "evidenceTypes": [
+          "teacher-observation",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Create a reusable coaching artifact for this level.",
+        "milestones": [
+          "coaching-artifact",
+          "reviewer-approved"
+        ]
+      },
+      "progress": {
+        "unlockRule": "teacher-reviewed evidence required",
+        "badges": [
+          "teacher-t1-ready"
+        ],
+        "parentSummaryTemplate": "Teacher readiness item, not shown as student progress."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA/edit"
+      ]
+    },
+    {
+      "id": "teacher-t2",
+      "track": "teacher",
+      "stage": "T2",
+      "moduleId": "teacher-mastery",
+      "module": "Teacher Mastery Track",
+      "title": "Algorithm Academy coaching mastery",
+      "ageBand": "adult teacher/coaches",
+      "order": 2,
+      "prerequisites": [
+        "teacher-t1"
+      ],
+      "conceptTags": [
+        "search",
+        "sorting"
+      ],
+      "skillTags": [
+        "explaining-code",
+        "teacher-observation"
+      ],
+      "studentFacingGoal": "Teacher-only; not visible in learner module surfaces.",
+      "teacherFacingGoal": "Teacher facilitates search/sort strategy lessons without turning them into memorization.",
+      "exercise": {
+        "studentPrompt": "teacher-only",
+        "teacherNotes": "Teacher facilitates search/sort strategy lessons without turning them into memorization.",
+        "starterCode": "",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Submit evidence",
+          "Receive reviewer approval",
+          "Write parent-safe reflection"
+        ],
+        "evidenceTypes": [
+          "teacher-observation",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Create a reusable coaching artifact for this level.",
+        "milestones": [
+          "coaching-artifact",
+          "reviewer-approved"
+        ]
+      },
+      "progress": {
+        "unlockRule": "teacher-reviewed evidence required",
+        "badges": [
+          "teacher-t2-ready"
+        ],
+        "parentSummaryTemplate": "Teacher readiness item, not shown as student progress."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA/edit"
+      ]
+    },
+    {
+      "id": "teacher-t3",
+      "track": "teacher",
+      "stage": "T3",
+      "moduleId": "teacher-mastery",
+      "module": "Teacher Mastery Track",
+      "title": "Debugging coaching mastery",
+      "ageBand": "adult teacher/coaches",
+      "order": 3,
+      "prerequisites": [
+        "teacher-t2"
+      ],
+      "conceptTags": [
+        "debugging"
+      ],
+      "skillTags": [
+        "explaining-code",
+        "teacher-observation"
+      ],
+      "studentFacingGoal": "Teacher-only; not visible in learner module surfaces.",
+      "teacherFacingGoal": "Teacher coaches reproduce-read-isolate-change-rerun-reflect debugging.",
+      "exercise": {
+        "studentPrompt": "teacher-only",
+        "teacherNotes": "Teacher coaches reproduce-read-isolate-change-rerun-reflect debugging.",
+        "starterCode": "",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Submit evidence",
+          "Receive reviewer approval",
+          "Write parent-safe reflection"
+        ],
+        "evidenceTypes": [
+          "teacher-observation",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Create a reusable coaching artifact for this level.",
+        "milestones": [
+          "coaching-artifact",
+          "reviewer-approved"
+        ]
+      },
+      "progress": {
+        "unlockRule": "teacher-reviewed evidence required",
+        "badges": [
+          "teacher-t3-ready"
+        ],
+        "parentSummaryTemplate": "Teacher readiness item, not shown as student progress."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA/edit"
+      ]
+    },
+    {
+      "id": "teacher-t4",
+      "track": "teacher",
+      "stage": "T4",
+      "moduleId": "teacher-mastery",
+      "module": "Teacher Mastery Track",
+      "title": "Child-safe AI coding mastery",
+      "ageBand": "adult teacher/coaches",
+      "order": 4,
+      "prerequisites": [
+        "teacher-t3"
+      ],
+      "conceptTags": [
+        "safe-AI-use"
+      ],
+      "skillTags": [
+        "explaining-code",
+        "teacher-observation"
+      ],
+      "studentFacingGoal": "Teacher-only; not visible in learner module surfaces.",
+      "teacherFacingGoal": "Teacher uses AI for hints, examples, and tests while protecting student thinking and private data.",
+      "exercise": {
+        "studentPrompt": "teacher-only",
+        "teacherNotes": "Teacher uses AI for hints, examples, and tests while protecting student thinking and private data.",
+        "starterCode": "",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Submit evidence",
+          "Receive reviewer approval",
+          "Write parent-safe reflection"
+        ],
+        "evidenceTypes": [
+          "teacher-observation",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Create a reusable coaching artifact for this level.",
+        "milestones": [
+          "coaching-artifact",
+          "reviewer-approved"
+        ]
+      },
+      "progress": {
+        "unlockRule": "teacher-reviewed evidence required",
+        "badges": [
+          "teacher-t4-ready"
+        ],
+        "parentSummaryTemplate": "Teacher readiness item, not shown as student progress."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA/edit"
+      ]
+    },
+    {
+      "id": "teacher-t5",
+      "track": "teacher",
+      "stage": "T5",
+      "moduleId": "teacher-mastery",
+      "module": "Teacher Mastery Track",
+      "title": "Portfolio coaching mastery",
+      "ageBand": "adult teacher/coaches",
+      "order": 5,
+      "prerequisites": [
+        "teacher-t4"
+      ],
+      "conceptTags": [
+        "portfolio"
+      ],
+      "skillTags": [
+        "explaining-code",
+        "teacher-observation"
+      ],
+      "studentFacingGoal": "Teacher-only; not visible in learner module surfaces.",
+      "teacherFacingGoal": "Teacher helps students scope, ship, demo, and iterate on small runnable projects.",
+      "exercise": {
+        "studentPrompt": "teacher-only",
+        "teacherNotes": "Teacher helps students scope, ship, demo, and iterate on small runnable projects.",
+        "starterCode": "",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Submit evidence",
+          "Receive reviewer approval",
+          "Write parent-safe reflection"
+        ],
+        "evidenceTypes": [
+          "teacher-observation",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Create a reusable coaching artifact for this level.",
+        "milestones": [
+          "coaching-artifact",
+          "reviewer-approved"
+        ]
+      },
+      "progress": {
+        "unlockRule": "teacher-reviewed evidence required",
+        "badges": [
+          "teacher-t5-ready"
+        ],
+        "parentSummaryTemplate": "Teacher readiness item, not shown as student progress."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA/edit"
+      ]
+    },
+    {
+      "id": "student-basic-01",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Print 1-255",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 1,
+      "prerequisites": [],
+      "conceptTags": [
+        "loops",
+        "arrays"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Print every number from 1 through 255.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Print 1-255: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Print 1-255\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-02",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Odd numbers",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 2,
+      "prerequisites": [
+        "student-basic-01"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Print only the odd numbers from 1 through 255.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Odd numbers: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Odd numbers\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-03",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Running sum",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 3,
+      "prerequisites": [
+        "student-basic-02"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "aggregation"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Add every number from 1 through 255 and report the running total.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Running sum: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Running sum\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-04",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Traverse array",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 4,
+      "prerequisites": [
+        "student-basic-03"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "lists"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Visit each array/list item and print the value.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Traverse array: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Traverse array\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-05",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Max",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 5,
+      "prerequisites": [
+        "student-basic-04"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "aggregation"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Track the largest value seen in an array/list.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Max: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Max\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-06",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Average",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 6,
+      "prerequisites": [
+        "student-basic-05"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "aggregation"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Combine sum and count to find the average.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Average: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Average\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-07",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Odd-number array",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 7,
+      "prerequisites": [
+        "student-basic-06"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "filtering"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Build a new array/list containing only odd values.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Odd-number array: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Odd-number array\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-08",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Count above Y",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 8,
+      "prerequisites": [
+        "student-basic-07"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "filtering"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Count values greater than a chosen Y threshold.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Count above Y: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Count above Y\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-09",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Square values",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 9,
+      "prerequisites": [
+        "student-basic-08"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "mutation"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Square each value and store the result.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Square values: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Square values\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-10",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Replace negatives",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 10,
+      "prerequisites": [
+        "student-basic-09"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "conditions"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Replace negative values with a safe placeholder.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Replace negatives: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Replace negatives\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-11",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Min/max/avg",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 11,
+      "prerequisites": [
+        "student-basic-10"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "aggregation"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Report the smallest, largest, and average values.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Min/max/avg: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Min/max/avg\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-12",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Shift values",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 12,
+      "prerequisites": [
+        "student-basic-11"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "mutation"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Move values left and fill the final slot safely.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Shift values: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Shift values\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-basic-13",
+      "track": "student",
+      "stage": "2",
+      "moduleId": "basic-13",
+      "module": "Basic 13",
+      "title": "Replace negatives with Dojo",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 13,
+      "prerequisites": [
+        "student-basic-12"
+      ],
+      "conceptTags": [
+        "loops",
+        "arrays",
+        "conditions"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Replace negative values with the string Dojo.",
+      "teacherFacingGoal": "Coach the learner through the full eight-step loop for Replace negatives with Dojo: understand, inputs/outputs, hand examples, pseudocode, implement, edge tests, debug, improve, explain.",
+      "exercise": {
+        "studentPrompt": "Understand the goal, name inputs/outputs, do a hand example, write pseudocode, implement, test edges, debug, improve, and explain.",
+        "teacherNotes": "Use hints before answers; teacher solution/debugging notes remain private and separate from learner surfaces.",
+        "starterCode": "// Replace negatives with Dojo\nconst nums = [3, -1, 8, 4];\n// understand \u2192 inputs/outputs \u2192 hand examples \u2192 pseudocode \u2192 implement \u2192 edge tests \u2192 debug \u2192 improve \u2192 explain\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Understand",
+          "Inputs/outputs",
+          "Hand example",
+          "Pseudocode",
+          "Implement",
+          "Edge tests",
+          "Debug",
+          "Improve",
+          "Explain"
+        ],
+        "evidenceTypes": [
+          "worksheet-response",
+          "runnable-code",
+          "edge-test",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Turn this into a tiny number-list helper for a game score, classroom tally, or treasure inventory.",
+        "milestones": [
+          "first-run",
+          "edge-tested",
+          "bug-fixed",
+          "variation-solved",
+          "reflection-complete"
+        ]
+      },
+      "progress": {
+        "unlockRule": "previous Basic 13 mission completed or teacher override",
+        "badges": [
+          "basic-13-builder"
+        ],
+        "parentSummaryTemplate": "Learner practiced array/loop reasoning with teacher-reviewed evidence."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y/edit",
+        "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+        "legacy-src/coders-school/repls/algos/basic13.py"
+      ]
+    },
+    {
+      "id": "student-js-objects-01",
+      "track": "student",
+      "stage": "2B",
+      "moduleId": "javascript-data",
+      "module": "Data Objects and Arrays",
+      "title": "Object Detective",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 1,
+      "prerequisites": [
+        "student-basic-13"
+      ],
+      "conceptTags": [
+        "JavaScript",
+        "objects",
+        "objects"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "documentation"
+      ],
+      "studentFacingGoal": "Read an object and explain key/value pairs.",
+      "teacherFacingGoal": "Bridge Basic 13 array thinking into JavaScript object/array data without private student data.",
+      "exercise": {
+        "studentPrompt": "Inspect fixture data, predict output, make one safe change, and explain the data shape.",
+        "teacherNotes": "Use fixture-only profiles; no real student information. Keep answer keys private.",
+        "starterCode": "const learner = { name: \"Demo Learner\", badges: [\"loop-builder\"] };\n// Read, change one field, and explain the shape.\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Identify keys and values",
+          "Predict output",
+          "Make one safe update",
+          "Explain the data shape"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "worksheet-response",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a safe demo profile, inventory, or scoreboard card from fixture data.",
+        "milestones": [
+          "data-shape-explained",
+          "safe-update-made",
+          "demo-card-rendered"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Basic 13 completed or teacher assigns as bridge module",
+        "badges": [
+          "js-data-builder"
+        ],
+        "parentSummaryTemplate": "Learner organized safe demo information with JavaScript data structures."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "CODERSCHOOL_CRM_RESEARCH_AND_PLAN.md"
+      ]
+    },
+    {
+      "id": "student-js-objects-02",
+      "track": "student",
+      "stage": "2B",
+      "moduleId": "javascript-data",
+      "module": "Data Objects and Arrays",
+      "title": "Profile Card Builder",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 2,
+      "prerequisites": [
+        "student-js-objects-01"
+      ],
+      "conceptTags": [
+        "JavaScript",
+        "objects",
+        "objects"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "documentation"
+      ],
+      "studentFacingGoal": "Create and update a fixture-only profile object without private data.",
+      "teacherFacingGoal": "Bridge Basic 13 array thinking into JavaScript object/array data without private student data.",
+      "exercise": {
+        "studentPrompt": "Inspect fixture data, predict output, make one safe change, and explain the data shape.",
+        "teacherNotes": "Use fixture-only profiles; no real student information. Keep answer keys private.",
+        "starterCode": "const learner = { name: \"Demo Learner\", badges: [\"loop-builder\"] };\n// Read, change one field, and explain the shape.\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Identify keys and values",
+          "Predict output",
+          "Make one safe update",
+          "Explain the data shape"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "worksheet-response",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a safe demo profile, inventory, or scoreboard card from fixture data.",
+        "milestones": [
+          "data-shape-explained",
+          "safe-update-made",
+          "demo-card-rendered"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Basic 13 completed or teacher assigns as bridge module",
+        "badges": [
+          "js-data-builder"
+        ],
+        "parentSummaryTemplate": "Learner organized safe demo information with JavaScript data structures."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "CODERSCHOOL_CRM_RESEARCH_AND_PLAN.md"
+      ]
+    },
+    {
+      "id": "student-js-arrays-01",
+      "track": "student",
+      "stage": "2B",
+      "moduleId": "javascript-data",
+      "module": "Data Objects and Arrays",
+      "title": "Array Explorer",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 3,
+      "prerequisites": [
+        "student-js-objects-02"
+      ],
+      "conceptTags": [
+        "JavaScript",
+        "arrays",
+        "arrays"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "documentation"
+      ],
+      "studentFacingGoal": "Use arrays as ordered collections and practice map/filter/reduce thinking.",
+      "teacherFacingGoal": "Bridge Basic 13 array thinking into JavaScript object/array data without private student data.",
+      "exercise": {
+        "studentPrompt": "Inspect fixture data, predict output, make one safe change, and explain the data shape.",
+        "teacherNotes": "Use fixture-only profiles; no real student information. Keep answer keys private.",
+        "starterCode": "const learner = { name: \"Demo Learner\", badges: [\"loop-builder\"] };\n// Read, change one field, and explain the shape.\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Identify keys and values",
+          "Predict output",
+          "Make one safe update",
+          "Explain the data shape"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "worksheet-response",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a safe demo profile, inventory, or scoreboard card from fixture data.",
+        "milestones": [
+          "data-shape-explained",
+          "safe-update-made",
+          "demo-card-rendered"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Basic 13 completed or teacher assigns as bridge module",
+        "badges": [
+          "js-data-builder"
+        ],
+        "parentSummaryTemplate": "Learner organized safe demo information with JavaScript data structures."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "CODERSCHOOL_CRM_RESEARCH_AND_PLAN.md"
+      ]
+    },
+    {
+      "id": "student-js-arrays-02",
+      "track": "student",
+      "stage": "2B",
+      "moduleId": "javascript-data",
+      "module": "Data Objects and Arrays",
+      "title": "Inventory Organizer",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 4,
+      "prerequisites": [
+        "student-js-arrays-01"
+      ],
+      "conceptTags": [
+        "JavaScript",
+        "arrays",
+        "arrays"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "documentation"
+      ],
+      "studentFacingGoal": "Add, remove, filter, and sort items in an array of objects.",
+      "teacherFacingGoal": "Bridge Basic 13 array thinking into JavaScript object/array data without private student data.",
+      "exercise": {
+        "studentPrompt": "Inspect fixture data, predict output, make one safe change, and explain the data shape.",
+        "teacherNotes": "Use fixture-only profiles; no real student information. Keep answer keys private.",
+        "starterCode": "const learner = { name: \"Demo Learner\", badges: [\"loop-builder\"] };\n// Read, change one field, and explain the shape.\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Identify keys and values",
+          "Predict output",
+          "Make one safe update",
+          "Explain the data shape"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "worksheet-response",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a safe demo profile, inventory, or scoreboard card from fixture data.",
+        "milestones": [
+          "data-shape-explained",
+          "safe-update-made",
+          "demo-card-rendered"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Basic 13 completed or teacher assigns as bridge module",
+        "badges": [
+          "js-data-builder"
+        ],
+        "parentSummaryTemplate": "Learner organized safe demo information with JavaScript data structures."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "CODERSCHOOL_CRM_RESEARCH_AND_PLAN.md"
+      ]
+    },
+    {
+      "id": "student-js-manipulation-01",
+      "track": "student",
+      "stage": "2B",
+      "moduleId": "javascript-data",
+      "module": "Data Objects and Arrays",
+      "title": "Scoreboard Refactor",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 5,
+      "prerequisites": [
+        "student-js-arrays-02"
+      ],
+      "conceptTags": [
+        "JavaScript",
+        "objects",
+        "object-manipulation"
+      ],
+      "skillTags": [
+        "reading-code",
+        "predicting-output",
+        "debugging",
+        "documentation"
+      ],
+      "studentFacingGoal": "Combine arrays and objects to update a small scoreboard.",
+      "teacherFacingGoal": "Bridge Basic 13 array thinking into JavaScript object/array data without private student data.",
+      "exercise": {
+        "studentPrompt": "Inspect fixture data, predict output, make one safe change, and explain the data shape.",
+        "teacherNotes": "Use fixture-only profiles; no real student information. Keep answer keys private.",
+        "starterCode": "const learner = { name: \"Demo Learner\", badges: [\"loop-builder\"] };\n// Read, change one field, and explain the shape.\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Identify keys and values",
+          "Predict output",
+          "Make one safe update",
+          "Explain the data shape"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "worksheet-response",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a safe demo profile, inventory, or scoreboard card from fixture data.",
+        "milestones": [
+          "data-shape-explained",
+          "safe-update-made",
+          "demo-card-rendered"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Basic 13 completed or teacher assigns as bridge module",
+        "badges": [
+          "js-data-builder"
+        ],
+        "parentSummaryTemplate": "Learner organized safe demo information with JavaScript data structures."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "CODERSCHOOL_CRM_RESEARCH_AND_PLAN.md"
+      ]
+    },
+    {
+      "id": "student-api-json-01",
+      "track": "student",
+      "stage": "3A",
+      "moduleId": "api-json-fetch",
+      "module": "APIs, JSON, Fetch, and Errors",
+      "title": "JSON Message Decoder",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 1,
+      "prerequisites": [
+        "student-js-manipulation-01"
+      ],
+      "conceptTags": [
+        "APIs",
+        "JSON",
+        "web"
+      ],
+      "skillTags": [
+        "reading-code",
+        "debugging",
+        "testing",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Parse JSON and identify shape, fields, and missing data.",
+      "teacherFacingGoal": "Teach APIs as safe structured data requests; require loading/error states before success states.",
+      "exercise": {
+        "studentPrompt": "Read sample JSON, predict fields, fetch/load fixture data, handle one friendly error, and explain what happened.",
+        "teacherNotes": "Use mock/public sample data first. No private data, tokens, addresses, or school details in API calls.",
+        "starterCode": "async function loadDemoData() {\n  const response = await fetch(\"https://example.com/demo.json\");\n  if (!response.ok) throw new Error(\"Could not load demo data\");\n  return response.json();\n}\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Read JSON shape",
+          "Handle loading state",
+          "Handle error state",
+          "Explain fetch/result"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "screenshot",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a tiny safe data card with fixture or approved public API data and clear error messages.",
+        "milestones": [
+          "json-decoded",
+          "fetch-flow-traced",
+          "error-state-shown",
+          "card-demo-ready"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Data Objects and Arrays module completed and teacher approves API safety rules",
+        "badges": [
+          "api-safety-scout"
+        ],
+        "parentSummaryTemplate": "Learner practiced reading web data safely and explaining app error states."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "legacy-src/coders-school/API",
+        "legacy-src/coders-school/repls/api.requests"
+      ]
+    },
+    {
+      "id": "student-api-fetch-01",
+      "track": "student",
+      "stage": "3A",
+      "moduleId": "api-json-fetch",
+      "module": "APIs, JSON, Fetch, and Errors",
+      "title": "Fetch Weather Card",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 2,
+      "prerequisites": [
+        "student-api-json-01"
+      ],
+      "conceptTags": [
+        "APIs",
+        "fetch",
+        "web"
+      ],
+      "skillTags": [
+        "reading-code",
+        "debugging",
+        "testing",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Trace fetch flow from request to response to rendered summary.",
+      "teacherFacingGoal": "Teach APIs as safe structured data requests; require loading/error states before success states.",
+      "exercise": {
+        "studentPrompt": "Read sample JSON, predict fields, fetch/load fixture data, handle one friendly error, and explain what happened.",
+        "teacherNotes": "Use mock/public sample data first. No private data, tokens, addresses, or school details in API calls.",
+        "starterCode": "async function loadDemoData() {\n  const response = await fetch(\"https://example.com/demo.json\");\n  if (!response.ok) throw new Error(\"Could not load demo data\");\n  return response.json();\n}\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Read JSON shape",
+          "Handle loading state",
+          "Handle error state",
+          "Explain fetch/result"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "screenshot",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a tiny safe data card with fixture or approved public API data and clear error messages.",
+        "milestones": [
+          "json-decoded",
+          "fetch-flow-traced",
+          "error-state-shown",
+          "card-demo-ready"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Data Objects and Arrays module completed and teacher approves API safety rules",
+        "badges": [
+          "api-safety-scout"
+        ],
+        "parentSummaryTemplate": "Learner practiced reading web data safely and explaining app error states."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "legacy-src/coders-school/API",
+        "legacy-src/coders-school/repls/api.requests"
+      ]
+    },
+    {
+      "id": "student-api-errors-01",
+      "track": "student",
+      "stage": "3A",
+      "moduleId": "api-json-fetch",
+      "module": "APIs, JSON, Fetch, and Errors",
+      "title": "Friendly Error Handler",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 3,
+      "prerequisites": [
+        "student-api-fetch-01"
+      ],
+      "conceptTags": [
+        "APIs",
+        "errors",
+        "web"
+      ],
+      "skillTags": [
+        "reading-code",
+        "debugging",
+        "testing",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Handle loading, empty, not-found, and network error states kindly.",
+      "teacherFacingGoal": "Teach APIs as safe structured data requests; require loading/error states before success states.",
+      "exercise": {
+        "studentPrompt": "Read sample JSON, predict fields, fetch/load fixture data, handle one friendly error, and explain what happened.",
+        "teacherNotes": "Use mock/public sample data first. No private data, tokens, addresses, or school details in API calls.",
+        "starterCode": "async function loadDemoData() {\n  const response = await fetch(\"https://example.com/demo.json\");\n  if (!response.ok) throw new Error(\"Could not load demo data\");\n  return response.json();\n}\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Read JSON shape",
+          "Handle loading state",
+          "Handle error state",
+          "Explain fetch/result"
+        ],
+        "evidenceTypes": [
+          "runnable-code",
+          "screenshot",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a tiny safe data card with fixture or approved public API data and clear error messages.",
+        "milestones": [
+          "json-decoded",
+          "fetch-flow-traced",
+          "error-state-shown",
+          "card-demo-ready"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Data Objects and Arrays module completed and teacher approves API safety rules",
+        "badges": [
+          "api-safety-scout"
+        ],
+        "parentSummaryTemplate": "Learner practiced reading web data safely and explaining app error states."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "legacy-src/coders-school/API",
+        "legacy-src/coders-school/repls/api.requests"
+      ]
+    },
+    {
+      "id": "student-linear-search",
+      "track": "student",
+      "stage": "3",
+      "moduleId": "algorithm-academy",
+      "module": "Algorithm Academy",
+      "title": "Linear Search Treasure Hunt",
+      "ageBand": "10-14 JavaScript Core",
+      "order": 1,
+      "prerequisites": [
+        "student-basic-13"
+      ],
+      "conceptTags": [
+        "search",
+        "indexing",
+        "loops"
+      ],
+      "skillTags": [
+        "tracing",
+        "debugging",
+        "explaining-code"
+      ],
+      "studentFacingGoal": "Trace a target, return its index, and handle a missing value.",
+      "teacherFacingGoal": "Coach strategy-first algorithm thinking: value is the treasure, index is its address.",
+      "exercise": {
+        "studentPrompt": "Trace target values, complete the condition, test found/not-found cases, then explain index vs value.",
+        "teacherNotes": "Use the worksheet treasure-hunt analogy and require a trace table before code. Teacher solution stays separate.",
+        "starterCode": "function linearSearch(nums, target) {\n  for (let index = 0; index < nums.length; index += 1) {\n    const value = nums[index];\n    // Your condition here\n  }\n  return -1;\n}\n",
+        "solutionVisibility": "teacher-only"
+      },
+      "learningLoop": [
+        "understand",
+        "inputs/outputs",
+        "hand examples",
+        "pseudocode",
+        "implement",
+        "edge tests",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "assessment": {
+        "rubric": [
+          "Trace target",
+          "Return index",
+          "Handle not found",
+          "Explain index vs value"
+        ],
+        "evidenceTypes": [
+          "trace-table",
+          "runnable-code",
+          "bug-fix",
+          "reflection"
+        ],
+        "masteryLevels": [
+          "introduced",
+          "practicing",
+          "developing",
+          "proficient"
+        ]
+      },
+      "project": {
+        "prompt": "Build a treasure-finder helper for a tiny game inventory.",
+        "milestones": [
+          "trace-passed",
+          "bug-fixed",
+          "variation-solved",
+          "explanation-approved"
+        ]
+      },
+      "progress": {
+        "unlockRule": "Basic 13 list/loop mastery or teacher override",
+        "badges": [
+          "trace-passed",
+          "bug-fixed",
+          "explanation-approved"
+        ],
+        "parentSummaryTemplate": "Learner traced a search and explained where an item is versus what it is."
+      },
+      "sourceFiles": [
+        "CURRICULUM_SOURCE_OF_TRUTH.md",
+        "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
+        "LINEAR_SEARCH_TREASURE_HUNT_WORKSHEET.md",
+        "curriculum/source-algos/search.java"
+      ]
+    }
+  ],
+  "progressFields": [
+    "studentId",
+    "lessonId",
+    "moduleId",
+    "badgeId",
+    "evidenceText",
+    "artifactUrlOrPath",
+    "teacherReviewStatus",
+    "masteryLevel",
+    "confidenceScore",
+    "createdAt",
+    "reviewedBy",
+    "reviewedAt",
+    "parentSafeSummary",
+    "nextUnlockedLessonIds"
+  ],
+  "assessmentFields": [
+    "rubric",
+    "evidenceTypes",
+    "masteryLevels",
+    "teacherReviewStatus",
+    "revisionReason",
+    "safeAiPolicy"
+  ],
+  "sourceFiles": [
+    "CURRICULUM_SOURCE_OF_TRUTH.md",
+    "AI_ERA_CODING_CURRICULUM.md",
+    "LINEAR_SEARCH_TREASURE_HUNT_WORKSHEET.md",
+    "curriculum/source-algos/BASIC_13_DESCRIPTIONS.txt",
+    "legacy-src/coders-school/repls/algos/basic13.py",
+    "legacy-src/coders-school/API",
+    "legacy-src/coders-school/repls/api.requests",
+    "CODERSCHOOL_CRM_RESEARCH_AND_PLAN.md",
+    "docs/plans/2026-05-26-coding-school-crm.md",
+    "TEACHER_HIRING_LOCATION_PLAN.md"
+  ]
+}

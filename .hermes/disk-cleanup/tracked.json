@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "path": "/opt/data/cache/spillover/call-8dd686c9-078b-426e-9aa0-581d45f866c2.txt",
+    "timestamp": "2026-08-25T17:33:02.017056+00:00",
+    "category": "temp",
+    "size": 246828
+  }
+]

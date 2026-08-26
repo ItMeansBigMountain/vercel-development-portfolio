@@ -3,6 +3,9 @@ from __future__ import annotations
 from datetime import datetime, UTC
 from unittest import TestCase
 
+import json
+from pathlib import Path
+
 from coding_school.curriculum import curriculum_catalog
 from coding_school.models import Account, Evidence, MasteryLevel, PortfolioProject, ReviewStatus, Role, Submission
 from coding_school.service import LearningPlatform
@@ -39,6 +42,25 @@ class LearningPlatformTests(TestCase):
         self.assertEqual(teacher_items[0].stage, "T0")
         self.assertEqual(len(basic_items), 13)
         self.assertIn("indexing", linear_search.concept_tags)
+        self.assertTrue(all(item.age_band == "adult teacher/coaches" for item in teacher_items))
+        self.assertTrue(any(item.module == "Data Objects and Arrays" for item in catalog))
+        self.assertTrue(any(item.module == "APIs, JSON, Fetch, and Errors" for item in catalog))
+        self.assertTrue(all((item.exercise is None or item.exercise.solution_visibility == "teacher-only") for item in catalog))
+
+    def test_curriculum_manifest_matches_required_module_map(self) -> None:
+        manifest_path = Path(__file__).resolve().parents[1] / "curriculum" / "canonical-curriculum-manifest.json"
+        manifest = json.loads(manifest_path.read_text())
+        lesson_ids = {item["id"] for item in manifest["lessons"]}
+        module_ids = {item["id"] for item in manifest["modules"]}
+        self.assertIn("basic-13", module_ids)
+        self.assertIn("javascript-data", module_ids)
+        self.assertIn("api-json-fetch", module_ids)
+        self.assertEqual(len([item for item in manifest["lessons"] if item["moduleId"] == "basic-13"]), 13)
+        self.assertIn("student-js-manipulation-01", lesson_ids)
+        self.assertIn("student-api-errors-01", lesson_ids)
+        self.assertTrue(all(item["ageBand"] in ("10-14 JavaScript Core", "adult teacher/coaches") for item in manifest["lessons"]))
+        self.assertTrue(all(item["exercise"]["solutionVisibility"] == "teacher-only" for item in manifest["lessons"]))
+        self.assertIn("teacherReviewStatus", manifest["progressFields"])
 
     def test_demo_student_privacy_boundary(self) -> None:
         with self.assertRaises(ValueError):

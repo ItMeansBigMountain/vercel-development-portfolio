@@ -1,0 +1,50 @@
+ONE
+    print all numbers 1 - 255
+
+
+TWO
+    print all odd numbers 1 - 255
+
+
+THREE
+    print the sum of all numbers 1 - 255
+
+
+FOUR
+    print all values in an array (please create an array filled with integers)
+
+
+FIVE
+    print maximum value in an array (please create an array filled with integers)
+
+
+SIX
+    print the average of an array (please create an array filled with integers)
+
+
+SEVEN
+    push all odd numbers from 1 - 255 into an array (please create an empty array)
+
+
+EIGHT
+    square all values in an array (please create an array filled with integers)
+
+
+NINE
+    print all items greater than 10 within an array (please create an array filled with integers)
+
+
+TEN 
+    convert all odd items into zero within an array (please create an array filled with integers)
+
+
+ELEVEN 
+    print maximum, minimum, and average of an array (please create an array filled with integers)
+
+
+TWELVE
+    shift all values of an array to the left, making the last item the first item (please create an array filled with integers)
+
+
+THIRTEEN 
+    convert all negative items into the string --> "below zero", within an array (please create an array filled with integers)

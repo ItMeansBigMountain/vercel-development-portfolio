@@ -6,6 +6,10 @@ Codology becomes the learning engine inside the broader school platform.
 
 A parent/student/teacher learning portal where students practice coding, parents track progress, and teachers record lesson notes/test outcomes.
 
+The definitive P0 product specification is `COMPETITOR_RESEARCH_AND_PRODUCT_SPEC.md`, backed by official competitor/source research. The prioritized build sequence is `IMPLEMENTATION_BACKLOG.md`.
+
+The product wedge is a child-safe coding-class operating system: rosters/schedules, live classroom presence, teacher-reviewed submissions, syntax-only linting with no arbitrary code execution, structured activities, progress/mastery evidence, AI-summary paste with local fallback, parent-safe reports, teacher training, and curriculum authoring.
+
 The current curriculum/product source of truth is `CURRICULUM_SOURCE_OF_TRUTH.md`. It supersedes scattered curriculum notes for implementation sequencing and requires the teacher mastery track before learner-facing Algorithm Academy workflows.
 
 ## Core roles
@@ -13,6 +17,15 @@ The current curriculum/product source of truth is `CURRICULUM_SOURCE_OF_TRUTH.md
 - Students: lessons, examples, practice, quizzes, streaks, confidence checks.
 - Parents: child progress, strengths, gaps, upcoming lessons, teacher notes.
 - Teachers: lesson notes, test results, attendance, assignments, progress updates.
+- Admins/owners: rosters, schedules, role access, teacher training gates, curriculum publishing, AI entitlements, demo/production safety controls, and report/export oversight.
+
+## Safety/product constraints
+
+- No real student data in demo mode.
+- No arbitrary learner code execution in the P0 production-safe workflow; use syntax-only linting and teacher review first.
+- No unreviewed AI output in parent/student views.
+- No public student gallery, billing, or LMS/rostering integration until privacy/legal launch choices are made.
+- Completion, submission, review, mastery, and parent-ready reporting are separate states.
 
 ## Codology integration
 

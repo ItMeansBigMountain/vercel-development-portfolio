@@ -1,0 +1,82 @@
+{
+  "fixture_version": "archive-synthetic-fixtures@1",
+  "generated_at": "2026-08-25T00:00:00Z",
+  "notice": "Synthetic fixture data only. No real account identifiers, tokens, private messages, or platform credentials.",
+  "fixtures": [
+    {
+      "platform": "x_twitter",
+      "parser_version": "x_twitter_archive@1",
+      "source_urls": ["https://help.x.com/en/managing-your-account/how-to-download-your-x-archive", "https://docs.x.com/fundamentals/authentication/oauth-2-0/authorization-code"],
+      "archive_tree": ["manifest.js", "data/tweets.js", "data/like.js", "data/following.js", "data/ad-engagements.js"],
+      "expected_manifest": { "schema_version": "archive-manifest@1", "platform": "x_twitter", "parser_version": "x_twitter_archive@1", "accepted_categories": ["posts", "likes", "follows"], "quarantined_files": [] },
+      "raw_records": {
+        "data/tweets.js": [{ "tweet": { "id_str": "1000000000000000001", "created_at": "Tue Aug 25 00:00:00 +0000 2026", "full_text": "Synthetic post about privacy-first data tools.", "lang": "en" } }],
+        "data/like.js": [{ "like": { "tweetId": "1000000000000000002", "fullText": "Synthetic liked post about open standards." } }],
+        "data/following.js": [{ "following": { "accountId": "2000000000000000001", "userLink": "https://x.com/synthetic_account" } }]
+      },
+      "normalized_records": [
+        { "sourceRecordId": "1000000000000000001", "category": "posts", "kind": "archive-import", "occurredAt": "2026-08-25T00:00:00.000Z", "locale": "en", "content": "Synthetic post about privacy-first data tools." },
+        { "sourceRecordId": "like:1000000000000000002", "category": "likes", "kind": "archive-import", "occurredAt": "2026-08-25T00:00:00.000Z", "locale": "en", "content": "Synthetic liked post about open standards." },
+        { "sourceRecordId": "follow:2000000000000000001", "category": "follows", "kind": "archive-import", "occurredAt": "2026-08-25T00:00:00.000Z", "locale": null, "content": "https://x.com/synthetic_account" }
+      ]
+    },
+    {
+      "platform": "spotify",
+      "parser_version": "spotify_archive@1",
+      "source_urls": ["https://support.spotify.com/us/article/understanding-my-data/", "https://developer.spotify.com/documentation/web-api/concepts/scopes"],
+      "archive_tree": ["StreamingHistory_music_0.json", "YourLibrary.json"],
+      "expected_manifest": { "schema_version": "archive-manifest@1", "platform": "spotify", "parser_version": "spotify_archive@1", "accepted_categories": ["watch_history", "likes"], "quarantined_files": [] },
+      "raw_records": {
+        "StreamingHistory_music_0.json": [{ "endTime": "2026-08-25 00:03", "artistName": "Synthetic Artist", "trackName": "Deterministic Parser Song", "msPlayed": 180000 }],
+        "YourLibrary.json": { "tracks": [{ "artist": "Synthetic Artist", "album": "Archive Fixtures", "track": "Saved Synthetic Track", "uri": "spotify:track:synthetic000000000001" }] }
+      },
+      "normalized_records": [
+        { "sourceRecordId": "spotify:history:sha256:92201ad1", "category": "watch_history", "kind": "archive-import", "occurredAt": "2026-08-25T00:03:00.000Z", "locale": null, "content": "Synthetic Artist — Deterministic Parser Song", "durationMs": 180000 },
+        { "sourceRecordId": "spotify:track:synthetic000000000001", "category": "likes", "kind": "archive-import", "occurredAt": "2026-08-25T00:00:00.000Z", "locale": null, "content": "Synthetic Artist — Saved Synthetic Track" }
+      ]
+    },
+    {
+      "platform": "bluesky_atproto",
+      "parser_version": "bluesky_atproto_repo@1",
+      "source_urls": ["https://atproto.com/specs/oauth", "https://atproto.com/guides/account-migration"],
+      "archive_tree": ["repo.car", "decoded/app.bsky.feed.post/3synthetic.json", "decoded/app.bsky.feed.like/3syntheticlike.json", "decoded/app.bsky.graph.follow/3syntheticfollow.json"],
+      "expected_manifest": { "schema_version": "archive-manifest@1", "platform": "bluesky_atproto", "parser_version": "bluesky_atproto_repo@1", "accepted_categories": ["posts", "likes", "follows"], "quarantined_files": [] },
+      "raw_records": {
+        "decoded/app.bsky.feed.post/3synthetic.json": { "$type": "app.bsky.feed.post", "text": "Synthetic ATProto post for parser tests.", "createdAt": "2026-08-25T00:00:00.000Z" },
+        "decoded/app.bsky.feed.like/3syntheticlike.json": { "$type": "app.bsky.feed.like", "subject": { "uri": "at://did:plc:synthetic/app.bsky.feed.post/3abc", "cid": "bafyreiesynthetic" }, "createdAt": "2026-08-25T00:01:00.000Z" },
+        "decoded/app.bsky.graph.follow/3syntheticfollow.json": { "$type": "app.bsky.graph.follow", "subject": "did:plc:syntheticfollow", "createdAt": "2026-08-25T00:02:00.000Z" }
+      },
+      "normalized_records": [
+        { "sourceRecordId": "at://did:plc:synthetic/app.bsky.feed.post/3synthetic", "category": "posts", "kind": "archive-import", "occurredAt": "2026-08-25T00:00:00.000Z", "locale": "en", "content": "Synthetic ATProto post for parser tests." },
+        { "sourceRecordId": "at://did:plc:synthetic/app.bsky.feed.post/3abc#bafyreiesynthetic", "category": "likes", "kind": "archive-import", "occurredAt": "2026-08-25T00:01:00.000Z", "locale": null, "content": "at://did:plc:synthetic/app.bsky.feed.post/3abc" },
+        { "sourceRecordId": "did:plc:syntheticfollow", "category": "follows", "kind": "archive-import", "occurredAt": "2026-08-25T00:02:00.000Z", "locale": null, "content": "did:plc:syntheticfollow" }
+      ]
+    },
+    {
+      "platform": "mastodon_fediverse",
+      "parser_version": "mastodon_instance_export@1",
+      "source_urls": ["https://docs.joinmastodon.org/user/moving/#export", "https://docs.joinmastodon.org/api/oauth-scopes/"],
+      "archive_tree": ["outbox.json", "following_accounts.csv", "favourites.csv"],
+      "expected_manifest": { "schema_version": "archive-manifest@1", "platform": "mastodon_fediverse", "parser_version": "mastodon_instance_export@1", "accepted_categories": ["posts", "follows"], "quarantined_files": [] },
+      "raw_records": {
+        "outbox.json": { "orderedItems": [{ "id": "https://example.social/users/synthetic/statuses/1", "type": "Create", "published": "2026-08-25T00:00:00Z", "object": { "type": "Note", "content": "<p>Synthetic Mastodon status.</p>" } }] },
+        "following_accounts.csv": "Account address,Show boosts,Notify on new posts\nsynthetic@example.social,true,false\n"
+      },
+      "normalized_records": [
+        { "sourceRecordId": "https://example.social/users/synthetic/statuses/1", "category": "posts", "kind": "archive-import", "occurredAt": "2026-08-25T00:00:00.000Z", "locale": null, "content": "Synthetic Mastodon status." },
+        { "sourceRecordId": "synthetic@example.social", "category": "follows", "kind": "archive-import", "occurredAt": "2026-08-25T00:00:00.000Z", "locale": null, "content": "synthetic@example.social" }
+      ]
+    },
+    {
+      "platform": "generic_sample_required",
+      "parser_version": "manual_archive_sample_required@1",
+      "covers": ["facebook", "instagram", "threads", "tiktok", "reddit", "linkedin", "snapchat", "discord", "pinterest", "twitch"],
+      "source_urls": ["see ARCHIVE_SCHEMA_AND_FIXTURE_PLAN.md"],
+      "archive_tree": [],
+      "expected_manifest": { "schema_version": "archive-manifest@1", "platform": "generic_sample_required", "parser_version": "manual_archive_sample_required@1", "accepted_categories": [], "quarantined_files": ["unknown"] },
+      "raw_records": {},
+      "normalized_records": [],
+      "expected_result": "quarantine_unknown_schema_until_redacted_sample_fixture_exists"
+    }
+  ]
+}

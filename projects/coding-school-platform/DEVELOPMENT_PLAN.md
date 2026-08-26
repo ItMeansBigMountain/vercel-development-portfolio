@@ -1,6 +1,6 @@
 # coding-school-platform Development Plan
 
-Last updated: 2026-05-26
+Last updated: 2026-08-25
 
 ## Current role
 
@@ -19,6 +19,8 @@ High
 
 ## Existing direction artifacts
 
+- `COMPETITOR_RESEARCH_AND_PRODUCT_SPEC.md`
+- `IMPLEMENTATION_BACKLOG.md`
 - `CURRICULUM_SOURCE_OF_TRUTH.md`
 - `CODERSCHOOL_CRM_RESEARCH_AND_PLAN.md`
 - `PRODUCT_DIRECTION.md`
@@ -27,11 +29,19 @@ High
 
 ## Development phases
 
-1. Implement structured curriculum data from `CURRICULUM_SOURCE_OF_TRUTH.md`, with teacher mastery modules before student modules.
-2. Implement teacher login and today schedule from demo seed data.
-3. Add student after-class check-ins with curriculum tags, teacher-reviewed evidence, AI entitlement gating, and local tag parser.
-4. Render accomplishment badges, progress graph from evidence/progress events, and parent weekly dashboard.
-5. Connect Codology/Algorithm Academy lesson recommendations, starting with Basic 13 and Linear Search.
+1. Implement P0.1-P0.3 from `IMPLEMENTATION_BACKLOG.md`: role/demo/child-safety foundations, rosters/schedules/attendance, and structured activity schemas.
+2. Implement P0.4-P0.6: syntax-only linting with no arbitrary code execution, live classroom presence/submission states, and teacher review/feedback.
+3. Implement P0.7-P0.8: progress/mastery dashboards and AI-summary paste with entitlement gate, redaction warning, local fallback, and teacher confirmation.
+4. Implement P0.9: teacher training gates and versioned curriculum authoring before mastery approval/publishing.
+5. Keep P1/P2 work deferred until P0 proves child-safe parent reporting and teacher-reviewed progress evidence.
+
+## Non-negotiable P0 constraints
+
+- No real student data in demo mode.
+- No arbitrary learner code execution; P0 uses syntax-only linting and teacher review.
+- No unreviewed AI output in parent/student views.
+- Parent dashboards update only from teacher-reviewed evidence.
+- Public galleries, billing, production student records, and LMS/rostering integrations are deferred.
 
 ## Vercel / hosting plan
 
