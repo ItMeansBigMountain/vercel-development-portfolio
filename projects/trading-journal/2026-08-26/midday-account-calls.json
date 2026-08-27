@@ -1,0 +1,13 @@
+[
+  {"tool":"get_accounts","args":{}},
+  {"tool":"get_portfolio","args":{"account_number":"433711041"}},
+  {"tool":"get_equity_positions","args":{"account_number":"433711041"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","created_at_gte":"2026-08-20T00:00:00Z"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"new"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"queued"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"confirmed"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"unconfirmed"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"partially_filled"}},
+  {"tool":"get_realized_pnl","args":{"account_number":"433711041"}},
+  {"tool":"get_pnl_trade_history","args":{"account_number":"433711041"}}
+]

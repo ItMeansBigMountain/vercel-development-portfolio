@@ -56,6 +56,24 @@ REVIEW_LABELS = {
     "personal_info": "Hermes/Personal Info",
     "known_junk": "Hermes/Junk/Known",
 }
+JUNK_LABELS = {
+    "cooldown": "Hermes/Junk/Cooldown",
+    "laseraway": "Hermes/Junk/LaserAway",
+    "chess": "Hermes/Junk/Chess.com",
+    "instagram": "Hermes/Junk/Instagram",
+    "founderscard": "Hermes/Junk/FoundersCard",
+    "yieldi": "Hermes/Junk/Yieldi",
+    "crunch": "Hermes/Junk/Crunch",
+    "higgsfield": "Hermes/Junk/Higgsfield",
+    "yeezy": "Hermes/Junk/YEEZY",
+    "city_experiences": "Hermes/Junk/City Experiences",
+    "lelo": "Hermes/Junk/LELO",
+    "gnc": "Hermes/Junk/GNC",
+    "kling_ai": "Hermes/Junk/Kling AI",
+    "fundrise": "Hermes/Junk/Fundrise",
+}
+ALL_LABELS = {**SOURCE_LABELS, **REVIEW_LABELS, **JUNK_LABELS}
+
 
 @dataclass(frozen=True)
 class RuleResult:
@@ -105,6 +123,36 @@ def classify(account_email: str, msg: dict[str, Any]) -> RuleResult | None:
     # This must run before every content/sender rule (including 💌 day-ahead mail).
     if sender in OWN_EMAILS:
         return None
+
+    # Junk classification (checked first, before source labels)
+    if "cooldown" in raw and ("run" in raw or "club" in raw or "boulder" in raw or "san diego" in raw or "san francisco" in raw):
+        return RuleResult("cooldown", JUNK_LABELS["cooldown"], "Cooldown run club invite spam")
+    if "laseraway" in raw:
+        return RuleResult("laseraway", JUNK_LABELS["laseraway"], "LaserAway marketing spam")
+    if "chess.com" in raw or "streaks@chess.com" in sender:
+        return RuleResult("chess", JUNK_LABELS["chess"], "Chess.com streak/nag emails")
+    if "instagram" in raw and ("follow-suggestions" in sender or "follow suggestions" in raw):
+        return RuleResult("instagram", JUNK_LABELS["instagram"], "Instagram follow suggestions spam")
+    if "founderscard" in raw:
+        return RuleResult("founderscard", JUNK_LABELS["founderscard"], "FoundersCard marketing")
+    if "yieldi" in raw:
+        return RuleResult("yieldi", JUNK_LABELS["yieldi"], "Yieldi marketing")
+    if "crunch" in raw and ("crunch.com" in raw or "crunch fitness" in raw):
+        return RuleResult("crunch", JUNK_LABELS["crunch"], "Crunch marketing")
+    if "higgsfield" in raw:
+        return RuleResult("higgsfield", JUNK_LABELS["higgsfield"], "Higgsfield marketing")
+    if "yeezy" in raw:
+        return RuleResult("yeezy", JUNK_LABELS["yeezy"], "YEEZY marketing")
+    if "city experiences" in raw or "cityexperiences" in raw:
+        return RuleResult("city_experiences", JUNK_LABELS["city_experiences"], "City Experiences marketing")
+    if "lelo" in raw:
+        return RuleResult("lelo", JUNK_LABELS["lelo"], "LELO marketing")
+    if "gnc" in raw and ("gnc.com" in raw or "gnc live" in raw):
+        return RuleResult("gnc", JUNK_LABELS["gnc"], "GNC marketing")
+    if "kling" in raw and ("kling ai" in raw or "klingai" in raw):
+        return RuleResult("kling_ai", JUNK_LABELS["kling_ai"], "Kling AI marketing")
+    if "fundrise" in raw:
+        return RuleResult("fundrise", JUNK_LABELS["fundrise"], "Fundrise marketing")
 
     if sender == "dan@tldrnewsletter.com" and account == "fareed320@gmail.com":
         return RuleResult("tldr", SOURCE_LABELS["tldr"], "preferred TLDR source on personal-secondary")

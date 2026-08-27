@@ -1,0 +1,62 @@
+[
+  {
+    "tool": "get_watchlist_items",
+    "args": {
+      "watchlist_id": "eddbebe5-34cc-4df1-953c-d3e3cb55bc19"
+    },
+    "exception": "MCPError(-32602, 'invalid params: validating \"arguments\": validating root: unexpected additional properties [\"watchlist_id\"]', None)"
+  },
+  {
+    "tool": "get_watchlist_items",
+    "args": {
+      "watchlist_id": "a18cdf8c-46c3-4585-be8f-d2cd57ec8bb1"
+    },
+    "exception": "MCPError(-32602, 'invalid params: validating \"arguments\": validating root: unexpected additional properties [\"watchlist_id\"]', None)"
+  },
+  {
+    "tool": "get_watchlist_items",
+    "args": {
+      "watchlist_id": "e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e"
+    },
+    "exception": "MCPError(-32602, 'invalid params: validating \"arguments\": validating root: unexpected additional properties [\"watchlist_id\"]', None)"
+  },
+  {
+    "tool": "get_equity_tradability",
+    "args": {
+      "account_number": "433711041",
+      "symbols": [
+        "MA",
+        "XOM",
+        "SHOP",
+        "UBER",
+        "MSFT",
+        "PLTR",
+        "NVDA",
+        "AVGO",
+        "CAT",
+        "AMD"
+      ]
+    },
+    "isError": false,
+    "content": [
+      "{\"data\":{\"results\":[{\"symbol\":\"MA\",\"name\":\"Mastercard Incorporated\",\"simple_name\":\"Mastercard\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"XOM\",\"name\":\"ExxonMobil Holdings Corporation\",\"simple_name\":\"ExxonMobil Holdings Corporation\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"untradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"SHOP\",\"name\":\"Shopify Inc. Class A Subordinate Voting Shares\",\"simple_name\":\"Shopify\",\"state\":\"active\",\"country\":\"CA\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"UBER\",\"name\":\"Uber Technologies, Inc.\",\"simple_name\":\"Uber\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"MSFT\",\"name\":\"Microsoft Corporation Common Stock\",\"simple_name\":\"Microsoft\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"PLTR\",\"name\":\"Palantir Technologies Inc. Class A Common Stock\",\"simple_name\":\"Palantir Technologies\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":true,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"NVDA\",\"name\":\"NVIDIA Corporation Common Stock\",\"simple_name\":\"NVIDIA\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":true,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"AVGO\",\"name\":\"Broadcom Inc. Common Stock\",\"simple_name\":\"Broadcom\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":true,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"CAT\",\"name\":\"Caterpillar Inc.\",\"simple_name\":\"Caterpillar\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"AMD\",\"name\":\"Advanced Micro Devices, Inc. Common Stock\",\"simple_name\":\"AMD\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":true,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]}]},\"guide\":\"Headline answer: use the account_type_tradabilities entry matching the user's account_type. If account_type_tradabilities is empty, report that account-type tradability could not be determined and rely on tradeable + state alone. Any of tradeable=false, state='inactive', or 'untradable' overrides everything below \u2014 surface first. Session mapping: regular_hours uses the headline; extended_hours / all_day_hours need all_day_tradability='all_day_tradability_tradable'; 24/7 needs twenty_four_seven_tradability='twenty_four_seven_tradability_tradable'. Mention internal_halt_* only when internal_halt_sessions overlaps the session the user wants. Fractional and dollar-based orders place only in regular_hours regardless of the flags. See trading://market-hours for session clock times.\"}"
+    ],
+    "structuredContent": null
+  },
+  {
+    "tool": "get_equity_tradability",
+    "args": {
+      "account_number": "433711041",
+      "symbols": [
+        "MRVL",
+        "CRM",
+        "CRWD"
+      ]
+    },
+    "isError": false,
+    "content": [
+      "{\"data\":{\"results\":[{\"symbol\":\"MRVL\",\"name\":\"Marvell Technology, Inc. Common Stock\",\"simple_name\":\"Marvell Technology\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"CRM\",\"name\":\"Salesforce, Inc.\",\"simple_name\":\"Salesforce\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]},{\"symbol\":\"CRWD\",\"name\":\"CrowdStrike Holdings, Inc. Class A Common Stock\",\"simple_name\":\"CrowdStrike Holdings\",\"state\":\"active\",\"country\":\"US\",\"tradeable\":true,\"fractional_tradability\":\"tradable\",\"extended_hours_fractional_tradability\":false,\"all_day_tradability\":\"tradable\",\"short_selling_tradability\":\"tradable\",\"account_type_tradabilities\":[{\"account_type\":\"individual\",\"account_type_tradability\":\"tradable\"}]}]},\"guide\":\"Headline answer: use the account_type_tradabilities entry matching the user's account_type. If account_type_tradabilities is empty, report that account-type tradability could not be determined and rely on tradeable + state alone. Any of tradeable=false, state='inactive', or 'untradable' overrides everything below \u2014 surface first. Session mapping: regular_hours uses the headline; extended_hours / all_day_hours need all_day_tradability='all_day_tradability_tradable'; 24/7 needs twenty_four_seven_tradability='twenty_four_seven_tradability_tradable'. Mention internal_halt_* only when internal_halt_sessions overlaps the session the user wants. Fractional and dollar-based orders place only in regular_hours regardless of the flags. See trading://market-hours for session clock times.\"}"
+    ],
+    "structuredContent": null
+  }
+]

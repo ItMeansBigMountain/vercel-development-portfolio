@@ -1,0 +1,13 @@
+[
+  {"tool":"get_equity_quotes","args":{"symbols":["AAPL","AMZN","META","GOOGL","NFLX","MU","TSM","V","GE","VST","PANW","DELL","SNPS","ADSK","WDAY","AFRM","ULTA","OKTA","NTNX","IREN"]}},
+  {"tool":"get_equity_fundamentals","args":{"symbols":["AAPL","AMZN","META","GOOGL","NFLX","MU","TSM","V","GE","VST"]}},
+  {"tool":"get_equity_fundamentals","args":{"symbols":["PANW","DELL","SNPS","ADSK","WDAY","AFRM","ULTA","OKTA","NTNX","IREN"]}},
+  {"tool":"get_equity_historicals","args":{"symbols":["AAPL","AMZN","META","GOOGL","NFLX","MU","TSM","V","GE","VST"],"start_time":"2026-05-20T00:00:00Z","interval":"day","bounds":"regular","adjustment_type":"split"}},
+  {"tool":"get_equity_historicals","args":{"symbols":["PANW","DELL","SNPS","ADSK","WDAY","AFRM","ULTA","OKTA","NTNX","IREN"],"start_time":"2026-05-20T00:00:00Z","interval":"day","bounds":"regular","adjustment_type":"split"}},
+  {"tool":"get_equity_tradability","args":{"account_number":"433711041","symbols":["AAPL","AMZN","META","GOOGL","NFLX","MU","TSM","V","GE","VST"]}},
+  {"tool":"get_equity_tradability","args":{"account_number":"433711041","symbols":["PANW","DELL","SNPS","ADSK","WDAY","AFRM","ULTA","OKTA","NTNX","IREN"]}},
+  {"tool":"get_financials","args":{"symbols":["MA","XOM","SHOP","UBER","MSFT","PLTR","NVDA","AVGO","CAT","AMD","MRVL","CRM","CRWD"],"period":"quarterly","limit":4}},
+  {"tool":"get_equity_tax_lots","args":{"account_number":"433711041","symbol":"SHOP"}},
+  {"tool":"get_equity_tax_lots","args":{"account_number":"433711041","symbol":"MA"}},
+  {"tool":"get_equity_tax_lots","args":{"account_number":"433711041","symbol":"XOM"}}
+]

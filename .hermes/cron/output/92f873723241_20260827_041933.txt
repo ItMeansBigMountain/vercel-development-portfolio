@@ -1,0 +1,109 @@
+✅ **Morning Operator Report — Wed 2026-08-27**
+
+---
+
+### Work Source / Operating Pulse
+
+**Kanban Direction**
+- **Done (7)**: Clan War Board production audit, dual-mode ratings, network/replay regression, Account Legacy Card, plus 3 new-project deployments (Journal AI, Wornly, MusicAI)
+- **Blocked (1)**: Who's Grinding Plugin Hub PR #13917 — waiting on upstream review
+- **Next Up (1)**: BIS Loadouts prep for Plugin Hub submission
+- **Today's vector**: Unblock BIS Loadouts submission; monitor PR #13917; no new work until blocked clears
+
+**Google Workspace Pulse**
+
+**Needs Attention**
+- **Chase ATM withdrawal** $33.00 (…5360) — personal-main, 9:08 PM ET yesterday
+- **GitHub OAuth alerts** on both personal-main & personal-secondary: hCaptcha granted `user:email` scope — review authorized apps
+- **Google Developers**: Unused OAuth clients flagged for auto-deletion — audit projects on both personal accounts
+
+**Calendar**
+- **Mon 8/31 8:00 PM CDT** — Jared coding session (personal-main)
+  - Prep: Codewars.com / SoloLearn.com modules — he gets accomplishment rush from completions
+
+**Ops/Admin**
+- **Robinhood**: SCHO ETF shareholder docs; SOL staking +$0.17; trade confirmations available
+- **Vercel**: "Make your coding agent a Vercel expert" — potential agent hosting signal
+- **myQ/Chamberlain**: Video doorbell marketing ($79.99) — **cleanup candidate** (user owns Lumen but marketing is junk)
+
+**Interesting / Source Material**
+- **TLDR ×15** (personal-secondary): OpenAI Jalapeño chip beats Nvidia, Perplexity portable computer, Claude memory merge, Keycloak CVE-2026-18963 (CVSS 9.1), d-Matrix Raptor, GPT-5.6 on AWS GovCloud — prime faceless-video fuel
+- **Kinobody ×2** (personal-main): Richie 20lb fat loss interview; "3 Major Issues With GLP-1s" — **faceless video source queued/eligible**
+- **Grammarly Insights**: Not in today's batch — skip
+
+**Email Cleanup Candidates** (approved junk categories)
+- **Chess.com ×2**: "20 Day Streak About to End" / "Paused" — personal-secondary
+- **Instagram**: "See areeshafi, ackio4 in your feed" — burner
+- **myQ**: Video doorbell promo — personal-main
+- **TLDR duplicates**: Only fareed320@gmail.com feed is source; others = cleanup
+
+---
+
+### Email Priority + Cleanup
+
+**Priority (Life/Admin)**
+- Chase: ATM withdrawal $33 (…5360)
+- Robinhood: SCHO ETF docs, SOL staking +$0.17, trade confirmations
+- GitHub OAuth: hCaptcha added on both personal accounts — audit
+- Google Developers: Unused OAuth clients pending deletion — audit
+
+**Interesting / Source (Content Pipeline)**
+- TLDR (15 newsletters) → fareed320@gmail.com — **keep for video sourcing**
+- Kinobody (2) → personal-main — **faceless video source eligible**
+
+**Cleanup Actions (Approved Junk — Delete on Sight)**
+- Chess.com streak nags ×2
+- Instagram follow suggestions
+- myQ/Chamberlain marketing
+- Any TLDR outside fareed320@gmail.com
+
+**Needs Review**
+- Vercel coding agent email — assess for agent hosting relevance
+- Grok SuperGrok 20% off — trapiistan@gmail.com
+
+---
+
+### Chicago Local Pulse
+- No hyperlocal alerts in Gmail/Calendar today
+- Garage/myQ: marketing only, no door alerts
+
+---
+
+### Market Pulse
+- **Robinhood activity**: SCHO (short-term Treasury ETF) shareholder comms; SOL staking rewards posting; trade confirmations ready
+- **Chase**: Paze wallet promo (Domino's) — low signal
+
+---
+
+### AI + Coding News (Source-Backed)
+- **OpenAI Jalapeño**: Custom inference chip (Broadcom) beats Nvidia in testing, 700W, low-latency agent workloads
+- **Perplexity**: Portable computer + local AI agent
+- **Claude**: Memory combination feature
+- **Keycloak CVE-2026-18963** (CVSS 9.1): Unauthenticated ATO via reset-credentials endpoint
+- **d-Matrix Raptor**: New inference accelerator
+- **GPT-5.6**: Hitting AWS GovCloud
+
+---
+
+### Interesting Item
+**Vercel positioning coding agents as first-class deployment targets** — "Make your coding agent a Vercel expert" email suggests agent-native hosting is becoming a platform battleground. Worth tracking for Hermes deployment strategy.
+
+---
+
+### Numerology
+**8/27/2026** → 8+2+7+2+0+2+6 = 27 → **9** (completion, synthesis). Good day to close loops (BIS Loadouts prep, PR watch) rather than start new branches.
+
+---
+
+### Daily Challenge
+**Review both personal GitHub authorized OAuth apps** (hCaptcha just added) and **Google Cloud unused OAuth clients** — 15 min audit prevents auto-deletion surprises.
+
+---
+
+### One Big Priority
+**Unblock BIS Loadouts Plugin Hub submission** — prep package today so it ships the moment PR #13917 clears or stands alone.
+
+---
+
+### Hard Truth / Leverage Move
+You have **15 high-signal TLDR newsletters** and **2 Kinobody pieces** queued as faceless-video source — but the faceless pipeline is *paused*. Either resume scout→clip→upload→cleanup or explicitly park the inventory. Half-loaded content pipelines rot faster than empty ones.

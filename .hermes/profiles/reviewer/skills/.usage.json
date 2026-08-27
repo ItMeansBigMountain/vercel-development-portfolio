@@ -44,20 +44,35 @@
     "use_count": 2,
     "view_count": 2
   },
+  "grounded-citations": {
+    "archived_at": null,
+    "created_at": "2026-08-27T03:12:43.441403+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-27T03:30:18.495100+00:00",
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 0
+  },
   "kanban-worker": {
     "archived_at": null,
     "created_at": "2026-06-09T17:11:50.232448+00:00",
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-26T00:44:29.345380+00:00",
-    "last_viewed_at": "2026-08-26T00:44:29.344251+00:00",
+    "last_used_at": "2026-08-27T03:30:31.298029+00:00",
+    "last_viewed_at": "2026-08-27T03:30:31.296760+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 46,
-    "view_count": 36
+    "use_count": 48,
+    "view_count": 38
   },
   "requesting-code-review": {
     "archived_at": null,
@@ -80,14 +95,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-26T00:44:29.350952+00:00",
-    "last_viewed_at": "2026-08-26T00:44:29.349962+00:00",
+    "last_used_at": "2026-08-27T03:30:31.299423+00:00",
+    "last_viewed_at": "2026-08-27T03:30:31.292979+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 24,
-    "view_count": 15
+    "use_count": 26,
+    "view_count": 17
   },
   "test-driven-development": {
     "archived_at": null,

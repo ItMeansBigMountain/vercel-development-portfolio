@@ -80,6 +80,7 @@ if command -v rsync >/dev/null 2>&1; then
     --exclude='/hermes-agent/***' \
     --exclude='/credentials/***' \
     --exclude='/secrets/***' \
+    --exclude='/.curator_backups/***' \
     --exclude='/models_dev_cache.json' \
     --exclude='/processes.json' \
     --exclude='/gateway_state.json' \
@@ -163,6 +164,7 @@ exclude_dir_names = {
     '.pytest_cache', '.mypy_cache', '.ruff_cache', '.venv', 'venv', 'node_modules',
     'dist', 'build', 'web_dist', '.next', '.nuxt', '.terraform', '.terragrunt-cache',
     '.vercel', '.angular', '.turbo', '.parcel-cache', 'obj', 'test-results',
+    '.curator_backups',
 }
 exclude_file_globs = [
     '.env.*', 'models_dev_cache.json', '*secret*', '*token*', '*credential*', 'oauth*.json', 'keyring*',

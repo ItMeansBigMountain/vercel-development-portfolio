@@ -425,8 +425,9 @@ Only include `Order Preview` when preview/execution is requested. Only include `
 4. **Previewing then placing without a second gate.** Preview is not approval.
 5. **Forcing trades.** If no clean setup exists, say no trade.
 6. **Ignoring tiny-account math.** A $2 risk budget can make many otherwise-normal setups impractical.
-7. **Using options by default.** Default to equities.
-8. **Forgetting journal entries.** Journal every preview/execution/review that matters.
+8. **Using options by default.** Default to equities.
+9. **Misreading a partial fractional sale as a stale position.** When a filled sell is nearly equal to the current residual quantity, reconstruct the pre-sale quantity and verify the residual with current sellable shares plus `get_equity_tax_lots` before declaring broker inventory uncertain or sending another sell. Decimal residuals can legitimately differ by one millionth.
+10. **Forgetting journal entries.** Journal every preview/execution/review that matters.
 
 ## Verification Checklist
 

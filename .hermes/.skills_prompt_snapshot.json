@@ -42,8 +42,8 @@
       129
     ],
     "gaming/runelite-plugin-development/SKILL.md": [
-      1786927536479940803,
-      42836
+      1787701640938923265,
+      43153
     ],
     "gaming/minecraft-modpack-server/SKILL.md": [
       1787556700368474819,
@@ -292,6 +292,10 @@
     "devops/kanban-orchestrator/SKILL.md": [
       1780969689633102248,
       19034
+    ],
+    "devops/browser-oauth-automation/SKILL.md": [
+      1787803938605173736,
+      4779
     ],
     "business/affiliate-business-operations/SKILL.md": [
       1786557396679940557,
@@ -707,6 +711,21 @@
       }
     },
     {
+      "skill_name": "browser-oauth-automation",
+      "category": "devops",
+      "frontmatter_name": "browser-oauth-automation",
+      "description": "Automate browser OAuth reauth with Playwright.",
+      "platforms": [
+        "linux"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "cloud-app-deployment-ops",
       "category": "devops",
       "frontmatter_name": "cloud-app-deployment-ops",
@@ -744,7 +763,7 @@
       "skill_name": "kanban-worker",
       "category": "devops",
       "frontmatter_name": "kanban-worker",
-      "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+      "description": "",
       "platforms": [
         "linux",
         "macos",
@@ -761,7 +780,7 @@
       "skill_name": "sdlc-review",
       "category": "devops",
       "frontmatter_name": "sdlc-review",
-      "description": "Review Kanban handoffs and route verified outcomes.",
+      "description": "",
       "platforms": [
         "linux",
         "macos",

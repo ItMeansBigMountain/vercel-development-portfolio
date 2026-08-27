@@ -1,0 +1,10 @@
+[
+  {"tool":"get_portfolio","args":{"account_number":"433711041"}},
+  {"tool":"get_equity_positions","args":{"account_number":"433711041"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"new"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"queued"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"confirmed"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"unconfirmed"}},
+  {"tool":"get_equity_orders","args":{"account_number":"433711041","state":"partially_filled"}},
+  {"tool":"get_equity_quotes","args":{"symbols":["MA","XOM","SHOP","SPY","QQQ","IWM","XLF","XLE","XLY","XLK"]}}
+]

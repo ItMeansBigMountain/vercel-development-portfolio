@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+import os
+keys = [
+    "GOOGLE_PERSONAL_MAIN_EMAIL", "GOOGLE_PERSONAL_MAIN_PASSWORD",
+    "GOOGLE_PERSONAL_SECONDARY_EMAIL", "GOOGLE_PERSONAL_SECONDARY_PASSWORD",
+    "GOOGLE_TRAPIISTAN_EMAIL", "GOOGLE_TRAPIISTAN_PASSWORD",
+    "GOOGLE_CLASSICALECHOS_EMAIL", "GOOGLE_CLASSICALECHOS_PASSWORD",
+    "GOOGLE_BURNER_EMAIL", "GOOGLE_BURNER_PASSWORD",
+]
+missing = [key for key in keys if not os.environ.get(key)]
+if missing:
+    print("ENV_BLOCKED:" + ",".join(missing))
+else:
+    print("ENV_READY")

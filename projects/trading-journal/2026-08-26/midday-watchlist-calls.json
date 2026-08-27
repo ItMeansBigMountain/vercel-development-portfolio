@@ -1,0 +1,5 @@
+[
+  {"tool":"get_watchlist_items","args":{"list_id":"eddbebe5-34cc-4df1-953c-d3e3cb55bc19"}},
+  {"tool":"get_watchlist_items","args":{"list_id":"a18cdf8c-46c3-4585-be8f-d2cd57ec8bb1"}},
+  {"tool":"get_watchlist_items","args":{"list_id":"e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e"}}
+]

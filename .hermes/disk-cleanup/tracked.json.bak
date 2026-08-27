@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "path": "/opt/data/cache/spillover/call-8dd686c9-078b-426e-9aa0-581d45f866c2.txt",
+    "timestamp": "2026-08-25T17:33:02.017056+00:00",
+    "category": "temp",
+    "size": 246828
+  },
+  {
+    "path": "/opt/data/cache/blocked-scripts/blocked-1787735273-0565d09e.sh",
+    "timestamp": "2026-08-26T09:07:53.955334+00:00",
+    "category": "temp",
+    "size": 584
+  }
+]

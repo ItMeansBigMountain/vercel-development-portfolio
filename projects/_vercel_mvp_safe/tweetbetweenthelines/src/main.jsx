@@ -1,4 +1,0 @@
-import React from 'react';import{createRoot}from'react-dom/client';import'./styles.css';
-const summary="tweetBetweenTheLines review shell.";
-function App(){return <main><section className='hero'><p>HeRmEz deployed review shell</p><h1>Tweetbetweenthelines</h1><strong>Live Vercel placeholder for iterative editing.</strong></section><section className='grid'><article><h2>Purpose</h2><p>This project is now reachable as a live URL so we can edit and upgrade it from a visible baseline.</p></article><article><h2>Mode</h2><p>Static safe shell: no secrets, accounts, payments, or production integrations.</p></article><article><h2>Source Notes</h2><pre>{summary}</pre></article></section></main>}
-createRoot(document.getElementById('root')).render(<App/>);

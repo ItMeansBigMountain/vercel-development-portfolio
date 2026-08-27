@@ -20,27 +20,24 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 101
+        "completed": 102
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-08-26T04:22:26.197421+00:00",
       "paused_reason": null,
       "created_at": "2026-05-14T06:28:44.368316+00:00",
       "next_run_at": "2026-08-27T03:00:00+00:00",
-      "last_run_at": "2026-08-25T03:02:34.912007+00:00",
-      "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nwarning: exhaustive rename detection was skipped due to too many files.\nwarning: you may want to set your diff.renameLimit variable to at least 8516 and retry the command.\nERROR: HeRmEz backup stage rejected:\n  - secret-like filename: projects/hermes-social-publisher/docs/CREDENTIAL_MODEL.md",
+      "last_run_at": "2026-08-26T03:00:54.198782+00:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "discord:1541612171987918980",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": {
-        "at": "2026-08-26T03:00:22.033428+00:00",
-        "by": "064665236bea:105695:b39c9dfd58a84dea815872a4390a9af2"
-      },
-      "failure_streak": 1
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "92f873723241",
@@ -64,17 +61,17 @@
       "schedule_display": "30 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 98
+        "completed": 102
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-21T01:20:05.320432+00:00",
-      "next_run_at": "2026-08-26T13:30:00+00:00",
-      "last_run_at": "2026-08-25T13:31:01.207638+00:00",
-      "last_status": "blocked_config",
-      "last_error": "[blocked_config:silent] attached skill 'google-workspace' is not ready: missing credential file google_token.json. Provide the missing prerequisites or detach the skill from this job.",
+      "next_run_at": "2026-08-27T13:30:00+00:00",
+      "last_run_at": "2026-08-27T04:19:34.838370+00:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -92,8 +89,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "preflight_alerted": true,
-      "failure_streak": 2
+      "failure_streak": 0
     },
     {
       "id": "6355d735bb4a",
@@ -118,15 +114,15 @@
       "schedule_display": "every 360m",
       "repeat": {
         "times": null,
-        "completed": 313
+        "completed": 317
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-04T02:32:26.430124+00:00",
-      "next_run_at": "2026-08-26T05:26:50.038653+00:00",
-      "last_run_at": "2026-08-25T23:26:50.038653+00:00",
+      "next_run_at": "2026-08-27T05:43:56.938043+00:00",
+      "last_run_at": "2026-08-26T23:43:56.938043+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -173,10 +169,10 @@
       },
       "enabled": false,
       "state": "paused",
-      "paused_at": "2026-08-23T19:26:23.278240+00:00",
+      "paused_at": "2026-08-27T04:40:49.669778+00:00",
       "paused_reason": null,
       "created_at": "2026-06-04T12:55:03.480224+00:00",
-      "next_run_at": "2026-08-24T01:45:00+00:00",
+      "next_run_at": "2026-08-28T01:45:00+00:00",
       "last_run_at": "2026-08-23T01:47:29.797491+00:00",
       "last_status": "ok",
       "last_error": null,
@@ -221,15 +217,15 @@
       "schedule_display": "0 1 * * *",
       "repeat": {
         "times": null,
-        "completed": 80
+        "completed": 81
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-04T12:58:58.087889+00:00",
-      "next_run_at": "2026-08-27T01:00:00+00:00",
-      "last_run_at": "2026-08-26T01:16:45.307129+00:00",
+      "next_run_at": "2026-08-28T01:00:00+00:00",
+      "last_run_at": "2026-08-27T01:16:12.214669+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -269,15 +265,15 @@
       "schedule_display": "every 10m",
       "repeat": {
         "times": null,
-        "completed": 8687
+        "completed": 8834
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-06T02:05:15.742685+00:00",
-      "next_run_at": "2026-08-26T03:05:22.333095+00:00",
-      "last_run_at": "2026-08-26T02:55:22.333095+00:00",
+      "next_run_at": "2026-08-27T05:33:56.859489+00:00",
+      "last_run_at": "2026-08-27T05:23:56.859489+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -316,15 +312,15 @@
       "schedule_display": "0 14 * * *",
       "repeat": {
         "times": null,
-        "completed": 78
+        "completed": 79
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-07T00:27:10.163742+00:00",
-      "next_run_at": "2026-08-26T14:00:00+00:00",
-      "last_run_at": "2026-08-25T14:00:01.522698+00:00",
+      "next_run_at": "2026-08-27T14:00:00+00:00",
+      "last_run_at": "2026-08-26T14:00:50.045928+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -364,15 +360,15 @@
       "schedule_display": "15 13 * * *",
       "repeat": {
         "times": null,
-        "completed": 76
+        "completed": 77
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-12T04:20:40.734347+00:00",
-      "next_run_at": "2026-08-26T13:15:00+00:00",
-      "last_run_at": "2026-08-25T13:16:00.926320+00:00",
+      "next_run_at": "2026-08-27T13:15:00+00:00",
+      "last_run_at": "2026-08-26T13:15:49.007959+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -414,17 +410,17 @@
       "schedule_display": "50 13 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 50
+        "completed": 54
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-12T15:48:08.357771+00:00",
-      "next_run_at": "2026-08-26T13:50:00+00:00",
-      "last_run_at": "2026-08-25T13:50:00.288288+00:00",
-      "last_status": "blocked_config",
-      "last_error": "[blocked_config:silent] attached skill 'google-workspace' is not ready: missing credential file google_token.json. Provide the missing prerequisites or detach the skill from this job.",
+      "next_run_at": "2026-08-27T13:50:00+00:00",
+      "last_run_at": "2026-08-27T04:27:35.924591+00:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "discord:1524259597232242831",
       "origin": {
@@ -441,8 +437,7 @@
       "workdir": null,
       "profile": null,
       "fire_claim": null,
-      "preflight_alerted": true,
-      "failure_streak": 2
+      "failure_streak": 0
     },
     {
       "id": "f02334d43494",
@@ -466,15 +461,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 67
+        "completed": 68
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-12T17:32:19.594106+00:00",
-      "next_run_at": "2026-08-26T09:00:00+00:00",
-      "last_run_at": "2026-08-25T09:11:11.451886+00:00",
+      "next_run_at": "2026-08-27T09:00:00+00:00",
+      "last_run_at": "2026-08-26T09:08:22.362356+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -516,15 +511,15 @@
       "schedule_display": "35 13 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 53
+        "completed": 54
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-19T16:12:37.431999+00:00",
-      "next_run_at": "2026-08-26T13:35:00+00:00",
-      "last_run_at": "2026-08-25T13:37:13.497329+00:00",
+      "next_run_at": "2026-08-27T13:35:00+00:00",
+      "last_run_at": "2026-08-26T13:46:42.647358+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -567,15 +562,15 @@
       "schedule_display": "0 16 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 45
+        "completed": 46
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-19T18:35:06.052701+00:00",
-      "next_run_at": "2026-08-26T16:00:00+00:00",
-      "last_run_at": "2026-08-25T16:04:13.990199+00:00",
+      "next_run_at": "2026-08-27T16:00:00+00:00",
+      "last_run_at": "2026-08-26T16:16:36.913351+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -618,15 +613,15 @@
       "schedule_display": "30 19 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 46
+        "completed": 47
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-19T18:35:07.056543+00:00",
-      "next_run_at": "2026-08-26T19:30:00+00:00",
-      "last_run_at": "2026-08-25T19:31:53.343842+00:00",
+      "next_run_at": "2026-08-27T19:30:00+00:00",
+      "last_run_at": "2026-08-26T19:32:15.259125+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -712,17 +707,17 @@
       "schedule_display": "30 17 * * 1-5",
       "repeat": {
         "times": null,
-        "completed": 27
+        "completed": 28
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-17T16:12:35.294628+00:00",
-      "next_run_at": "2026-08-26T17:30:00+00:00",
-      "last_run_at": "2026-08-25T17:43:49.259553+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Non-streaming API call timed out after 90s with no response (threshold: 90s)",
+      "next_run_at": "2026-08-27T17:30:00+00:00",
+      "last_run_at": "2026-08-26T17:32:52.304905+00:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "discord:1524259597232242831",
       "origin": {
@@ -738,7 +733,7 @@
       ],
       "workdir": null,
       "fire_claim": null,
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
       "id": "e11ecd9b1861",
@@ -760,15 +755,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-10T23:16:50.928183+00:00",
-      "next_run_at": "2026-08-26T04:30:00+00:00",
-      "last_run_at": "2026-08-25T04:30:46.495097+00:00",
+      "next_run_at": "2026-08-28T04:30:00+00:00",
+      "last_run_at": "2026-08-27T04:30:55.610460+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -804,15 +799,15 @@
       "schedule_display": "15 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-11T00:15:18.540600+00:00",
-      "next_run_at": "2026-08-26T04:15:00+00:00",
-      "last_run_at": "2026-08-25T04:15:46.602988+00:00",
+      "next_run_at": "2026-08-28T04:15:00+00:00",
+      "last_run_at": "2026-08-27T04:15:52.850593+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -848,15 +843,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 504
+        "completed": 556
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T18:13:27.248211+00:00",
-      "next_run_at": "2026-08-26T03:24:22.008331+00:00",
-      "last_run_at": "2026-08-26T02:54:22.008331+00:00",
+      "next_run_at": "2026-08-27T05:27:56.177062+00:00",
+      "last_run_at": "2026-08-27T04:57:56.177062+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -901,15 +896,15 @@
       "schedule_display": "every 20m",
       "repeat": {
         "times": null,
-        "completed": 144
+        "completed": 218
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-23T19:26:23.167147+00:00",
-      "next_run_at": "2026-08-26T03:02:07.269089+00:00",
-      "last_run_at": "2026-08-26T02:42:07.269089+00:00",
+      "next_run_at": "2026-08-27T05:41:18.808062+00:00",
+      "last_run_at": "2026-08-27T05:21:18.808062+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -956,15 +951,15 @@
       "schedule_display": "5 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-23T23:49:24.871253+00:00",
-      "next_run_at": "2026-08-26T04:05:00+00:00",
-      "last_run_at": "2026-08-25T04:05:46.039296+00:00",
+      "next_run_at": "2026-08-28T04:05:00+00:00",
+      "last_run_at": "2026-08-27T04:05:50.506974+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1008,15 +1003,15 @@
       "schedule_display": "every 5m",
       "repeat": {
         "times": null,
-        "completed": 519
+        "completed": 793
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T01:02:31.821947+00:00",
-      "next_run_at": "2026-08-26T03:01:22.054919+00:00",
-      "last_run_at": "2026-08-26T02:56:22.054919+00:00",
+      "next_run_at": "2026-08-27T05:27:56.581035+00:00",
+      "last_run_at": "2026-08-27T05:22:56.581035+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1058,15 +1053,15 @@
       "schedule_display": "every 2m",
       "repeat": {
         "times": null,
-        "completed": 997
+        "completed": 1526
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T01:05:21.119487+00:00",
-      "next_run_at": "2026-08-26T03:00:25.552325+00:00",
-      "last_run_at": "2026-08-26T02:58:25.552325+00:00",
+      "next_run_at": "2026-08-27T05:27:00.074980+00:00",
+      "last_run_at": "2026-08-27T05:25:00.074980+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1310,7 +1305,417 @@
         "web"
       ],
       "workdir": "/opt/data/HeRmEz"
+    },
+    {
+      "id": "bc313de8ecac",
+      "name": "Hostinger external VPS and Hermes control-plane watchdog",
+      "prompt": "Run the read-only Hostinger control-plane watchdog. It must remain silent while healthy and alert only on VPS/container/API/backup problems or recovery. Never restart, stop, delete, redeploy, restore, purchase, or modify Hostinger resources.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "hostinger_control_plane_watchdog.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 10,
+        "display": "every 10m"
+      },
+      "schedule_display": "every 10m",
+      "repeat": {
+        "times": null,
+        "completed": 12
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:10:36.957818+00:00",
+      "next_run_at": "2026-08-27T05:32:00.577709+00:00",
+      "last_run_at": "2026-08-27T05:22:00.577709+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "discord:1541612171987918980",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499990220077137943",
+        "chat_name": "TRAPISTAN / #general",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "459c45fc3ecb",
+      "name": "Personal Main browser OAuth sanitized retry",
+      "prompt": "Use Hostinger-injected environment variables to complete Google Workspace OAuth for personal-main. Browser exceptions are redacted; never print or persist entered credentials. Verify the resulting token.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "google_workspace_browser_reauth_personal_main.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T03:30:50.191688+00:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:29:50.191732+00:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-27T03:31:28.083139+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 3\nstdout:\nBLOCKED profile=personal-main stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com",
+      "last_delivery_error": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524172425393340516",
+        "chat_name": "TRAPISTAN / #personal",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "27abf266b8a5",
+      "name": "Remaining Google Workspace autonomous browser OAuth",
+      "prompt": "Sequentially reauthenticate personal-secondary, trapiistan, classicalechos, and burner through the normal Google OAuth browser flow using Hostinger-injected credentials. Never print credentials; browser exceptions are redacted. Verify each resulting token.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "google_workspace_browser_reauth_remaining.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T03:32:44.963354+00:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:31:44.963400+00:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-27T03:38:02.093484+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\nBLOCKED profile=personal-secondary stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com\nBLOCKED profile=trapiistan stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com\nBLOCKED profile=classicalechos stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com snapshot=/opt/data/cache/oauth-debug/classicalechos-blocked.png\nBLOCKED profile=burner stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com snapshot=/opt/data/cache/oauth-debug/burner-blocked.png",
+      "last_delivery_error": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524172425393340516",
+        "chat_name": "TRAPISTAN / #personal",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "f03c0f22560e",
+      "name": "Personal Main OAuth visual debug",
+      "prompt": "Retry Personal Main Google Workspace OAuth with sanitized browser automation and save a screenshot only if blocked. Never print credentials.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "google_workspace_browser_reauth_personal_main.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T03:34:39.435729+00:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:33:39.435779+00:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-27T03:35:17.105166+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 3\nstdout:\nBLOCKED profile=personal-main stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com snapshot=/opt/data/cache/oauth-debug/personal-main-blocked.png",
+      "last_delivery_error": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524172425393340516",
+        "chat_name": "TRAPISTAN / #personal",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "56709b87bf1b",
+      "name": "Personal Main OAuth visible-button retry",
+      "prompt": "Retry Personal Main Google Workspace OAuth using corrected visible Google button selectors. Save a screenshot if blocked; never log credentials.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "google_workspace_browser_reauth_personal_main.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T03:36:45.712306+00:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:35:45.712377+00:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-27T03:37:22.074786+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 3\nstdout:\nBLOCKED profile=personal-main stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com snapshot=/opt/data/cache/oauth-debug/personal-main-blocked.png",
+      "last_delivery_error": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524172425393340516",
+        "chat_name": "TRAPISTAN / #personal",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "82be13efef74",
+      "name": "Personal Main OAuth role-button retry",
+      "prompt": "Retry Personal Main Google Workspace OAuth using Google accessibility-role button selection and explicit visible password-field waits. Save a snapshot if blocked and never log credentials.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "google_workspace_browser_reauth_personal_main.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T03:38:51.429234+00:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:37:51.429279+00:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-27T03:39:29.614919+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 3\nstdout:\nBLOCKED profile=personal-main stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com snapshot=/opt/data/cache/oauth-debug/personal-main-blocked.png",
+      "last_delivery_error": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524172425393340516",
+        "chat_name": "TRAPISTAN / #personal",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "bfa9aaedfd0d",
+      "name": "Personal Main OAuth keyboard-submit retry",
+      "prompt": "Retry Personal Main Google Workspace OAuth using keyboard Enter submission for Google email and password forms. Save a screenshot if blocked and never log credentials.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "google_workspace_browser_reauth_personal_main.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T03:41:02.155983+00:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:40:02.156041+00:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-27T03:41:39.449736+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 3\nstdout:\nBLOCKED profile=personal-main stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com snapshot=/opt/data/cache/oauth-debug/personal-main-blocked.png",
+      "last_delivery_error": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524172425393340516",
+        "chat_name": "TRAPISTAN / #personal",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "681ed8b9178f",
+      "name": "Personal Main OAuth hybrid-submit retry",
+      "prompt": "Retry Personal Main Google Workspace OAuth using keyboard Enter with button fallback for both email and password forms. Save screenshot if blocked; never log credentials.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "google_workspace_browser_reauth_personal_main.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-08-27T03:44:08.259053+00:00",
+        "display": "once in 1m"
+      },
+      "schedule_display": "once in 1m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-27T03:43:08.259106+00:00",
+      "next_run_at": null,
+      "last_run_at": "2026-08-27T03:45:11.847876+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 3\nstdout:\nBLOCKED profile=personal-main stage=browser title='Sign in - Google Accounts' url_host=accounts.google.com snapshot=/opt/data/cache/oauth-debug/personal-main-blocked.png",
+      "last_delivery_error": null,
+      "failure_streak": 1,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524172425393340516",
+        "chat_name": "TRAPISTAN / #personal",
+        "thread_id": null,
+        "user_id": "219376861866754049",
+        "scope_id": "1499990218890154135"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-26T03:00:22.033648+00:00"
+  "updated_at": "2026-08-27T05:25:00.075193+00:00"
 }

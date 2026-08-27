@@ -289,7 +289,7 @@ dashboard:
     password: ''
     secret: ''
     session_ttl_seconds: 604800
-  public_url: https://technician-double-network-decrease.trycloudflare.com
+  public_url: https://receiving-coleman-looked-bracelet.trycloudflare.com
   font: ibm-plex-mono
 privacy:
   redact_pii: false
@@ -596,7 +596,7 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
-_config_version: 37
+_config_version: 38
 custom_providers:
 - api_key: ${VENICE_API_KEY}
   api_mode: chat_completions

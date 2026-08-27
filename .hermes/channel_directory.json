@@ -1,16 +1,10 @@
 {
-  "updated_at": "2026-08-26T02:56:28.989866",
+  "updated_at": "2026-08-27T05:24:07.784522",
   "platforms": {
     "discord": [
       {
         "id": "1499990220077137943",
         "name": "general",
-        "guild": "TRAPISTAN",
-        "type": "channel"
-      },
-      {
-        "id": "1541612171987918980",
-        "name": "ops-alerts",
         "guild": "TRAPISTAN",
         "type": "channel"
       },
@@ -21,14 +15,8 @@
         "type": "channel"
       },
       {
-        "id": "1524259978167451689",
-        "name": "business",
-        "guild": "TRAPISTAN",
-        "type": "channel"
-      },
-      {
-        "id": "1524259597232242831",
-        "name": "trading",
+        "id": "1523247688689258586",
+        "name": "coding",
         "guild": "TRAPISTAN",
         "type": "channel"
       },
@@ -39,8 +27,20 @@
         "type": "channel"
       },
       {
-        "id": "1523247688689258586",
-        "name": "coding",
+        "id": "1524259597232242831",
+        "name": "trading",
+        "guild": "TRAPISTAN",
+        "type": "channel"
+      },
+      {
+        "id": "1524259978167451689",
+        "name": "business",
+        "guild": "TRAPISTAN",
+        "type": "channel"
+      },
+      {
+        "id": "1541612171987918980",
+        "name": "ops-alerts",
         "guild": "TRAPISTAN",
         "type": "channel"
       },
@@ -51,20 +51,20 @@
         "type": "channel"
       },
       {
-        "id": "1523247688689258586",
-        "name": "TRAPISTAN / #coding",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "1524259597232242831",
-        "name": "TRAPISTAN / #trading",
-        "type": "group",
-        "thread_id": null
-      },
-      {
         "id": "1499990220077137943",
         "name": "TRAPISTAN / #general",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1524172425393340516",
+        "name": "TRAPISTAN / #personal",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1523247688689258586",
+        "name": "TRAPISTAN / #coding",
         "type": "group",
         "thread_id": null
       },
@@ -75,14 +75,14 @@
         "thread_id": null
       },
       {
-        "id": "1541612171987918980",
-        "name": "TRAPISTAN / #ops-alerts",
+        "id": "1524259597232242831",
+        "name": "TRAPISTAN / #trading",
         "type": "group",
         "thread_id": null
       },
       {
-        "id": "1524172425393340516",
-        "name": "TRAPISTAN / #personal",
+        "id": "1541612171987918980",
+        "name": "TRAPISTAN / #ops-alerts",
         "type": "group",
         "thread_id": null
       },

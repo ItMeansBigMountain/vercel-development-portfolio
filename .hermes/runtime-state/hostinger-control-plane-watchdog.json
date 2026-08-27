@@ -1,0 +1,16 @@
+{
+  "backup_count": 2,
+  "checked_at": 1787808116,
+  "container_count": 1,
+  "cpu_percentage": 3.96,
+  "healthy": true,
+  "high_resource_count": 0,
+  "last_alert": 1787804152,
+  "memory_percentage": 10.31,
+  "mode": "read_only",
+  "newest_backup_age_hours": 8.9,
+  "project_state": "running",
+  "running_containers": 1,
+  "signature": "",
+  "vm_state": "running"
+}

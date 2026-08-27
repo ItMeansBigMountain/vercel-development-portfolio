@@ -1,13 +1,13 @@
-Remote-first via phone/laptop Discord. During app development, regularly share the easiest live test entry (public URL, install link, or QR) so the user can test and guide in real time; never localhost-only. Apps require web/iOS/Android. Whenever mentioning Kanban, include its live URL.
+Remote-first via phone/laptop Discord. Share live test entries (URL/install link/QR) for real-time testing. Never localhost-only. Apps require web/iOS/Android. Include Kanban live URL when mentioned.
 §
-OSRS/RuneLite: production Plugin Hub; preserve PRs; no dev modes/endpoint overrides. Research source before formulas. Clan War Board: CWA first; Wildy multi-only TDM and surprise KOTH; privacy opt-out; split ratings.
+OSRS/RuneLite: production Plugin Hub. Preserve PRs. No dev modes/endpoint overrides. Research source before formulas. Clan War Board: CWA first; Wildy multi-only TDM/surprise KOTH; privacy opt-out; split ratings.
 §
-VPS cleanup: user expects comprehensive RAM/disk audits first and explicit approval before deletion/process stops. Backups go in /opt/data/HeRmEz/projects/_backups, not .hermes.
+VPS: audit RAM/disk; approval for deletion/stops. Backups: projects/_backups. Browser credentials in Hostinger/container env only — use at runtime for autonomous OAuth/browser login. NEVER print/log/embed passwords/tokens.
 §
-Google/YT: Workspace R/W incl affan; Classical Echos downloader login. Audit OAuth scopes & credentials before generating auth URLs.
+Google/YT: Workspace R/W incl affan. Classical Echos downloader login. Audit OAuth scopes & credentials before auth URLs.
 §
-Email cleanup: known junk OK; source emails delete post-upload; Grammarly personal; Robinhood→trading; Zoom→class archive.
+Email: known junk OK; source emails delete post-upload; Grammarly personal; Robinhood→trading; Zoom→class archive.
 §
-YT: Viral Radar priority; faceless paused. Classical Echos→Trapiistan→fareed320. Credited sources/no filler; truthful titles/no title hashtags. Repair blockers then resume scout→clip→upload→cleanup; report URLs/queues/blockers.
+YT: Viral Radar priority. Classical Echos→Trapiistan→fareed320. Credited sources/no filler; truthful titles/no title hashtags. Repair blockers→scout→clip→upload→cleanup; report URLs/queues/blockers.
 §
-User prefers laconic updates, Windows one-line commands, raw failure logs, and internet-first troubleshooting crowdsourced from current docs/forums/issues.
+User DEMANDS: immediate tool use (execute when saying 'will perform'), Windows one-line commands, raw failure logs, internet-first troubleshooting from docs/forums/issues. ZERO tolerance for descriptions without action.

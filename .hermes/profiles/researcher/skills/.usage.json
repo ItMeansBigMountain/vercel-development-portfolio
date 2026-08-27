@@ -50,13 +50,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-25T03:57:45.455989+00:00",
+    "last_used_at": "2026-08-27T03:06:29.536967+00:00",
     "last_viewed_at": "2026-08-25T03:57:45.449714+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 7,
+    "use_count": 8,
     "view_count": 7
   },
   "kanban-worker": {
@@ -65,14 +65,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-25T03:57:40.589962+00:00",
-    "last_viewed_at": "2026-08-25T03:57:40.588651+00:00",
+    "last_used_at": "2026-08-27T03:06:39.776532+00:00",
+    "last_viewed_at": "2026-08-27T03:06:39.773150+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 85,
-    "view_count": 14
+    "use_count": 86,
+    "view_count": 15
   },
   "sdlc-review": {
     "archived_at": null,

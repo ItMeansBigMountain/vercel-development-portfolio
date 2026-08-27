@@ -1,0 +1,12 @@
+[
+  {
+    "pid": 138,
+    "create_time": 1787803455.22,
+    "purpose": "dashboard",
+    "install": "351f81cc0628",
+    "spawner_pid": null,
+    "spawner_create": null,
+    "registered_at": 1787803460.3553903,
+    "argv": "/opt/hermes/.venv/bin/hermes dashboard --host 0.0.0.0 --port 4860"
+  }
+]

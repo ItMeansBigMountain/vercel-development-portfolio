@@ -265,6 +265,8 @@
 /.hermes/*oauth_pending*.json
 /.hermes/**/*oauth_pending*.json
 /.hermes/*.bak*
+/.hermes/.curator_backups/
+/.hermes/.curator_backups/**
 
 # Deliberate recovery artifacts and registered submodule gitlinks are durable.
 # These narrow exceptions override broad machine-state/project ignore rules.
