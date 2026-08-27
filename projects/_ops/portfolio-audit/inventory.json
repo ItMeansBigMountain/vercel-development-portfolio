@@ -1,0 +1,1993 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T03:09:33.328848+00:00",
+  "source_document": "/opt/data/cache/documents/doc_76d816784680_message.txt",
+  "safety": "Audit only; no repository or deployment state was changed.",
+  "summary": {
+    "github_visible_repos": 74,
+    "github_owner_counts": {
+      "AllRightBet": 2,
+      "Cup-of-Java": 1,
+      "EZRA-HOLDINGS": 1,
+      "ItMeansBigMountain": 64,
+      "SolidReps": 5,
+      "walpolsh": 1
+    },
+    "github_archived": 1,
+    "github_private": 15,
+    "github_forks": 1,
+    "github_with_local_match": 31,
+    "listed_deployments": 55,
+    "reachable_deployments": 54,
+    "unreachable_deployments": 1,
+    "http_status_counts": {
+      "200": 54,
+      "None": 1
+    },
+    "submodules": 11,
+    "top_level_project_dirs": 70
+  },
+  "vercel_api": {
+    "token_present": true,
+    "probes": [
+      {
+        "path": "/v2/user",
+        "status": 403,
+        "error": {
+          "code": "forbidden",
+          "message": "Not authorized",
+          "invalidToken": true
+        }
+      },
+      {
+        "path": "/v2/teams",
+        "status": 403,
+        "error": {
+          "code": "forbidden",
+          "message": "Not authorized",
+          "invalidToken": true
+        }
+      },
+      {
+        "path": "/v9/projects",
+        "status": 403,
+        "error": {
+          "code": "forbidden",
+          "message": "Not authorized",
+          "invalidToken": true
+        }
+      }
+    ],
+    "diagnosis": "VERCEL_API_TOKEN is rejected by Vercel as invalid/not authorized on every tested identity, team, and project endpoint.",
+    "next_action": "Create a fresh Vercel access token for the intended account/team, replace VERCEL_API_TOKEN in the secret store, then rerun this audit; do not paste the token into Kanban or logs."
+  },
+  "duplicate_or_related_groups": [
+    {
+      "canonical": "Coding School",
+      "members": [
+        "Coding School",
+        "Algorithm Academy/Algos",
+        "School"
+      ],
+      "target": "https://coding-school-platform.vercel.app/"
+    },
+    {
+      "canonical": "Journal product (decision unresolved)",
+      "members": [
+        "Journal AI",
+        "Journal App"
+      ],
+      "target": null
+    },
+    {
+      "canonical": "Music product (decision unresolved)",
+      "members": [
+        "MusicAI",
+        "Music",
+        "Music Mood"
+      ],
+      "target": null
+    },
+    {
+      "canonical": "Local Meeting Transcriber",
+      "members": [
+        "Local Meeting Transcriber",
+        "Local Meeting Transcriber shell"
+      ],
+      "target": "https://local-meeting-transcriber-frontend.vercel.app/"
+    },
+    {
+      "canonical": "API Requests (decision unresolved)",
+      "members": [
+        "API Requests",
+        "API.Requests"
+      ],
+      "target": null
+    },
+    {
+      "canonical": "TicVoter",
+      "members": [
+        "TicVoter",
+        "TicVoter REST API"
+      ],
+      "target": null,
+      "note": "Related frontend/API pair, not necessarily duplicates."
+    },
+    {
+      "canonical": "Muscle Madness",
+      "members": [
+        "Muscle Madness",
+        "Muscle Madness API"
+      ],
+      "target": null,
+      "note": "Related frontend/API pair, not necessarily duplicates."
+    }
+  ],
+  "deployments": [
+    {
+      "label": "Kanban Board",
+      "url": "https://technician-double-network-decrease.trycloudflare.com/kanban/",
+      "status": null,
+      "final_url": null,
+      "title": null,
+      "reachable": false,
+      "error_type": "URLError",
+      "error": "[Errno -2] Name or service not known",
+      "repository_candidates": []
+    },
+    {
+      "label": "Clan War Board",
+      "url": "https://salmon-dune-01c80c60f.7.azurestaticapps.net/",
+      "status": 200,
+      "final_url": "https://salmon-dune-01c80c60f.7.azurestaticapps.net/",
+      "title": "Clan War Board | Old School RuneScape Clan Battles",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Coding School",
+      "url": "https://coding-school-platform.vercel.app/",
+      "status": 200,
+      "final_url": "https://coding-school-platform.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "tweetBetweenTheLines",
+      "url": "https://tweetbetweenthelines.vercel.app/",
+      "status": 200,
+      "final_url": "https://tweetbetweenthelines.vercel.app/",
+      "title": "tweetBetweenTheLines",
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/tweetBetweenTheLines"
+      ]
+    },
+    {
+      "label": "Wornly",
+      "url": "https://wornly-two.vercel.app/",
+      "status": 200,
+      "final_url": "https://wornly-two.vercel.app/",
+      "title": "Wornly \u2014 Shop what\u2019s heating up",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Journal AI",
+      "url": "https://journal-ai-sooty.vercel.app/",
+      "status": 200,
+      "final_url": "https://journal-ai-sooty.vercel.app/",
+      "title": "Journal AI",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Journal App",
+      "url": "https://journal-app-five-delta.vercel.app/",
+      "status": 200,
+      "final_url": "https://journal-app-five-delta.vercel.app/",
+      "title": "Journal AI",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "MusicAI",
+      "url": "https://musicai-rouge.vercel.app/",
+      "status": 200,
+      "final_url": "https://musicai-rouge.vercel.app/",
+      "title": "MusicAI \u2014 Your cross-platform music taste map",
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/musicAI"
+      ]
+    },
+    {
+      "label": "Card Intel Scanner",
+      "url": "https://card-intel-scanner.vercel.app/",
+      "status": 200,
+      "final_url": "https://card-intel-scanner.vercel.app/",
+      "title": "Card Intel Scanner",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Local Meeting Transcriber",
+      "url": "https://local-meeting-transcriber-frontend.vercel.app/",
+      "status": 200,
+      "final_url": "https://local-meeting-transcriber-frontend.vercel.app/",
+      "title": "LMT",
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/local-meeting-transcriber"
+      ]
+    },
+    {
+      "label": "Honda Tech Upgrade",
+      "url": "https://honda-tech-upgrade.vercel.app/",
+      "status": 200,
+      "final_url": "https://honda-tech-upgrade.vercel.app/",
+      "title": "Honda Tech Upgrade",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Faceless YouTube Channel",
+      "url": "https://faceless-youtube-channel-beta.vercel.app/",
+      "status": 200,
+      "final_url": "https://faceless-youtube-channel-beta.vercel.app/",
+      "title": "Faceless YouTube Channel",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Cox Elementary PTA review shell",
+      "url": "https://cox-elementary-pta.vercel.app/",
+      "status": 200,
+      "final_url": "https://cox-elementary-pta.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "3D React",
+      "url": "https://3d-react-web-itmeansbigmountains-projects.vercel.app/",
+      "status": 200,
+      "final_url": "https://3d-react-web-itmeansbigmountains-projects.vercel.app/",
+      "title": "3 Dimentional App",
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Addictive Mobile Games",
+      "url": "https://addictive-mobile-games.vercel.app/",
+      "status": 200,
+      "final_url": "https://addictive-mobile-games.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "API Requests",
+      "url": "https://api-requests-one.vercel.app/",
+      "status": 200,
+      "final_url": "https://api-requests-one.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/api.requests"
+      ]
+    },
+    {
+      "label": "API.Requests",
+      "url": "https://apirequests.vercel.app/",
+      "status": 200,
+      "final_url": "https://apirequests.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/api.requests"
+      ]
+    },
+    {
+      "label": "Cellphone Scripts",
+      "url": "https://cellphonescripts.vercel.app/",
+      "status": 200,
+      "final_url": "https://cellphonescripts.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/cellphone_scripts"
+      ]
+    },
+    {
+      "label": "Cloud Automation",
+      "url": "https://cloudautomation.vercel.app/",
+      "status": 200,
+      "final_url": "https://cloudautomation.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/CloudAutomation"
+      ]
+    },
+    {
+      "label": "Consumer Advocate",
+      "url": "https://consumer-advocate-app.vercel.app/",
+      "status": 200,
+      "final_url": "https://consumer-advocate-app.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Algorithm Academy/Algos",
+      "url": "https://algos-beta.vercel.app/",
+      "status": 200,
+      "final_url": "https://algos-beta.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Deployment Docs",
+      "url": "https://deploymentdocs.vercel.app/",
+      "status": 200,
+      "final_url": "https://deploymentdocs.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Docs",
+      "url": "https://docs-umber-two-76.vercel.app/",
+      "status": 200,
+      "final_url": "https://docs-umber-two-76.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Jupyter Notebooks",
+      "url": "https://jupyter-notebooks-green.vercel.app/",
+      "status": 200,
+      "final_url": "https://jupyter-notebooks-green.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/Jupyter.Notebooks"
+      ]
+    },
+    {
+      "label": "Legacy Source",
+      "url": "https://legacy-src.vercel.app/",
+      "status": 200,
+      "final_url": "https://legacy-src.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Local Meeting Transcriber shell",
+      "url": "https://local-meeting-transcriber.vercel.app/",
+      "status": 200,
+      "final_url": "https://local-meeting-transcriber.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Muscle Madness",
+      "url": "https://musclemadness-theta.vercel.app/",
+      "status": 200,
+      "final_url": "https://musclemadness-theta.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/muscleMadness"
+      ]
+    },
+    {
+      "label": "Muscle Madness API",
+      "url": "https://musclemadness-api.vercel.app/",
+      "status": 200,
+      "final_url": "https://musclemadness-api.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/muscleMadness_API"
+      ]
+    },
+    {
+      "label": "Music",
+      "url": "https://music-lac-seven.vercel.app/",
+      "status": 200,
+      "final_url": "https://music-lac-seven.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/music"
+      ]
+    },
+    {
+      "label": "Music Mood",
+      "url": "https://music-mood-app-chi.vercel.app/",
+      "status": 200,
+      "final_url": "https://music-mood-app-chi.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Networking",
+      "url": "https://networking-ebon.vercel.app/",
+      "status": 200,
+      "final_url": "https://networking-ebon.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/networking"
+      ]
+    },
+    {
+      "label": "Oyama Productions Legal",
+      "url": "https://oyama-productions-legal.vercel.app/",
+      "status": 200,
+      "final_url": "https://oyama-productions-legal.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Policy Pit",
+      "url": "https://policy-pit-app.vercel.app/",
+      "status": 200,
+      "final_url": "https://policy-pit-app.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Portfolio Sentiment",
+      "url": "https://portfolio-sentiment-subscription-ap.vercel.app/",
+      "status": 200,
+      "final_url": "https://portfolio-sentiment-subscription-ap.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Robinhood Email Reports",
+      "url": "https://robinhood-email-reports.vercel.app/",
+      "status": 200,
+      "final_url": "https://robinhood-email-reports.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "School",
+      "url": "https://school-plum-beta.vercel.app/",
+      "status": 200,
+      "final_url": "https://school-plum-beta.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/school"
+      ]
+    },
+    {
+      "label": "Scraper Project",
+      "url": "https://scraper-project-five.vercel.app/",
+      "status": 200,
+      "final_url": "https://scraper-project-five.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Selenium",
+      "url": "https://selenium-alpha.vercel.app/",
+      "status": 200,
+      "final_url": "https://selenium-alpha.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/selenium"
+      ]
+    },
+    {
+      "label": "Sleep Dream",
+      "url": "https://sleep-dream-app.vercel.app/",
+      "status": 200,
+      "final_url": "https://sleep-dream-app.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Social Media Analysis",
+      "url": "https://social-media-analysis-five.vercel.app/",
+      "status": 200,
+      "final_url": "https://social-media-analysis-five.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Stock News",
+      "url": "https://stock-news-frontend-chi.vercel.app/",
+      "status": 200,
+      "final_url": "https://stock-news-frontend-chi.vercel.app/",
+      "title": "StockNewsFrontend",
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/stockNews"
+      ]
+    },
+    {
+      "label": "Store Code Content Studio",
+      "url": "https://store-code-content-studio.vercel.app/",
+      "status": 200,
+      "final_url": "https://store-code-content-studio.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Survey Analytics",
+      "url": "https://survey-analytics-website.vercel.app/",
+      "status": 200,
+      "final_url": "https://survey-analytics-website.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "TicVoter",
+      "url": "https://ticvoter.vercel.app/",
+      "status": 200,
+      "final_url": "https://ticvoter.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/ticVoter"
+      ]
+    },
+    {
+      "label": "TicVoter REST API",
+      "url": "https://ticvoter-rest-api.vercel.app/",
+      "status": 200,
+      "final_url": "https://ticvoter-rest-api.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/ticVoter_REST.api"
+      ]
+    },
+    {
+      "label": "TikTok Clone",
+      "url": "https://tiktok-clone-eta-one.vercel.app/",
+      "status": 200,
+      "final_url": "https://tiktok-clone-eta-one.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "TikTok Shop Commerce",
+      "url": "https://tiktok-shop-shopify-commerce.vercel.app/",
+      "status": 200,
+      "final_url": "https://tiktok-shop-shopify-commerce.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Tournament Wager",
+      "url": "https://tournament-wager-app.vercel.app/",
+      "status": 200,
+      "final_url": "https://tournament-wager-app.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Tutoring REPL",
+      "url": "https://tutoring-repl.vercel.app/",
+      "status": 200,
+      "final_url": "https://tutoring-repl.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/tutoring.Repl"
+      ]
+    },
+    {
+      "label": "Tweet Video Generator",
+      "url": "https://tweetvideogenerator.vercel.app/",
+      "status": 200,
+      "final_url": "https://tweetvideogenerator.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/tweet_video_generator"
+      ]
+    },
+    {
+      "label": "Twitter Therapy",
+      "url": "https://twitter-therapy-app.vercel.app/",
+      "status": 200,
+      "final_url": "https://twitter-therapy-app.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": []
+    },
+    {
+      "label": "Utility Scripts",
+      "url": "https://utilityscripts.vercel.app/",
+      "status": 200,
+      "final_url": "https://utilityscripts.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/utilityScripts"
+      ]
+    },
+    {
+      "label": "Watson AI",
+      "url": "https://watsonai.vercel.app/",
+      "status": 200,
+      "final_url": "https://watsonai.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/watsonAI"
+      ]
+    },
+    {
+      "label": "WebCrawl",
+      "url": "https://webcrawl-ochre.vercel.app/",
+      "status": 200,
+      "final_url": "https://webcrawl-ochre.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/WebCrawl"
+      ]
+    },
+    {
+      "label": "WutHappened",
+      "url": "https://wuthappened.vercel.app/",
+      "status": 200,
+      "final_url": "https://wuthappened.vercel.app/",
+      "title": null,
+      "reachable": true,
+      "repository_candidates": [
+        "ItMeansBigMountain/wutHappened"
+      ]
+    }
+  ],
+  "github": {
+    "api_statuses": [
+      200
+    ],
+    "repos": [
+      {
+        "full_name": "ItMeansBigMountain/HeRmEz",
+        "name": "HeRmEz",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/HeRmEz",
+        "updated_at": "2026-08-26T04:22:52Z",
+        "default_branch": "main",
+        "description": "when openclaw sucks, we wear the belt ",
+        "homepage": null,
+        "language": null,
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/CombatAtlas",
+        "name": "CombatAtlas",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/CombatAtlas",
+        "updated_at": "2026-08-25T21:50:15Z",
+        "default_branch": "main",
+        "description": "Database app of martial art drills! ",
+        "homepage": null,
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/CombatAtlas"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/stockNews",
+        "name": "stockNews",
+        "private": false,
+        "archived": true,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/stockNews",
+        "updated_at": "2026-08-25T20:15:49Z",
+        "default_branch": "main",
+        "description": "LLM usage to read news pertaining to user's portfollio",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/stockNews"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/clan-war-board-osrs",
+        "name": "clan-war-board-osrs",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/clan-war-board-osrs",
+        "updated_at": "2026-08-23T22:01:30Z",
+        "default_branch": "main",
+        "description": "RuneLite plugin: CompetitionOverlay for Old School RuneScape.",
+        "homepage": null,
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/osrs-plugins/pr-review-pending/ClanWarBoard"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/clan-war-board-service",
+        "name": "clan-war-board-service",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/clan-war-board-service",
+        "updated_at": "2026-08-23T21:48:41Z",
+        "default_branch": "main",
+        "description": "Backend API, Terraform infra, and GitHub Actions deployment for Clan War Board.",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/osrs-plugins/services/clan-war-board-service"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/fashion-social",
+        "name": "fashion-social",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/fashion-social",
+        "updated_at": "2026-08-11T05:21:34Z",
+        "default_branch": "main",
+        "description": "Fashion social-commerce storefront with social proof, community voting, rate limits, and Stripe Checkout.",
+        "homepage": "https://wornly-two.vercel.app",
+        "language": "TypeScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/security-research-source-monorepo",
+        "name": "security-research-source-monorepo",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/security-research-source-monorepo",
+        "updated_at": "2026-08-10T23:01:56Z",
+        "default_branch": "main",
+        "description": "Private provenance-pinned monorepo of security research source archives",
+        "homepage": null,
+        "language": "C",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/breach-check-osrs",
+        "name": "breach-check-osrs",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/breach-check-osrs",
+        "updated_at": "2026-08-10T03:40:33Z",
+        "default_branch": "master",
+        "description": "RuneLite Deadman Breach Timer plugin.",
+        "homepage": null,
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/breach-check-osrs",
+          "projects/osrs-plugins/completed/DeadmanBreachTimer"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/whos-grinding-clan-panel-osrs",
+        "name": "whos-grinding-clan-panel-osrs",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/whos-grinding-clan-panel-osrs",
+        "updated_at": "2026-08-10T03:27:16Z",
+        "default_branch": "main",
+        "description": "RuneLite plugin: WhosGrindingClanPanel for Old School RuneScape.",
+        "homepage": null,
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/osrs-plugins/pr-review-pending/WhosGrindingClanPanel",
+          "projects/whos-grinding-clan-panel-osrs"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/bis-loadouts-osrs",
+        "name": "bis-loadouts-osrs",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/bis-loadouts-osrs",
+        "updated_at": "2026-08-10T03:26:58Z",
+        "default_branch": "main",
+        "description": "RuneLite plugin for boss-focused best-in-slot and best-available PvM gear loadout recommendations.",
+        "homepage": null,
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/osrs-plugins/completed/BisLoadouts"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/osrs-plugins-boilerplate-osrs",
+        "name": "osrs-plugins-boilerplate-osrs",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/osrs-plugins-boilerplate-osrs",
+        "updated_at": "2026-08-10T03:26:41Z",
+        "default_branch": "main",
+        "description": "RuneLite plugin: osrs-plugins-boilerplate for Old School RuneScape.",
+        "homepage": null,
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/osrs-plugins/_templates/osrs-plugins-boilerplate"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/youtube-automation",
+        "name": "youtube-automation",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/youtube-automation",
+        "updated_at": "2026-07-07T21:40:12Z",
+        "default_branch": "main",
+        "description": "YouTube automation codebase for faceless newsletter videos and Viral Radar creator clips",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/youtube-automation"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/robinhood-daily-portfolio-report",
+        "name": "robinhood-daily-portfolio-report",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/robinhood-daily-portfolio-report",
+        "updated_at": "2026-05-26T04:39:05Z",
+        "default_branch": "main",
+        "description": "Lightweight daily portfolio performance reports inspired by AZ204 Azure Functions lab",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/cox-elementary-pta",
+        "name": "cox-elementary-pta",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/cox-elementary-pta",
+        "updated_at": "2026-05-26T04:39:04Z",
+        "default_branch": "main",
+        "description": "Modern static website mockup for Cox Elementary PTA",
+        "homepage": null,
+        "language": "HTML",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/cox-elementary-pta"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/az204",
+        "name": "az204",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/az204",
+        "updated_at": "2026-05-26T04:39:04Z",
+        "default_branch": "main",
+        "description": "studying to be the GOAT",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/az204"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/algos",
+        "name": "algos",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/algos",
+        "updated_at": "2026-05-26T04:39:02Z",
+        "default_branch": "main",
+        "description": "Collection of challenge algorithms solved | Each branch is a different language or era ",
+        "homepage": "",
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/algos"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/OpEnCLAw",
+        "name": "OpEnCLAw",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/OpEnCLAw",
+        "updated_at": "2026-05-17T22:13:31Z",
+        "default_branch": "main",
+        "description": "im learning how to automate myself out of a job! ",
+        "homepage": null,
+        "language": "Jupyter Notebook",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/penTest",
+        "name": "penTest",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/penTest",
+        "updated_at": "2026-03-15T22:57:10Z",
+        "default_branch": "NOTES",
+        "description": "Each branch is a pen test project from my kali Linux machine",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/plugin-hub",
+        "name": "plugin-hub",
+        "private": false,
+        "archived": false,
+        "fork": true,
+        "html_url": "https://github.com/ItMeansBigMountain/plugin-hub",
+        "updated_at": "2026-02-11T18:41:38Z",
+        "default_branch": "master",
+        "description": "External plugins for RuneLite",
+        "homepage": "https://runelite.net/plugin-hub/",
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/plugin-hub"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/Multiplayer",
+        "name": "Multiplayer",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Multiplayer",
+        "updated_at": "2026-01-14T13:47:34Z",
+        "default_branch": "main",
+        "description": "Unity third person shooting game that will act as a template and known as \"multiplayer\"",
+        "homepage": null,
+        "language": "C#",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/pdf-emailer",
+        "name": "pdf-emailer",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/pdf-emailer",
+        "updated_at": "2025-10-19T04:04:04Z",
+        "default_branch": "main",
+        "description": "email a pdf using an LLM to generate the content for you to plug in your email list",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/local-meeting-transcriber",
+        "name": "local-meeting-transcriber",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/local-meeting-transcriber",
+        "updated_at": "2025-09-28T19:48:03Z",
+        "default_branch": "main",
+        "description": "free tool to record meetings and transcribe notes. it should be smart enough to differentiate different people",
+        "homepage": null,
+        "language": "C#",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/local-meeting-transcriber"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/mcp-servers",
+        "name": "mcp-servers",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/mcp-servers",
+        "updated_at": "2025-09-08T02:55:48Z",
+        "default_branch": "main",
+        "description": "a directory where I organize my mcp servers",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/mcp-servers"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/musicAI",
+        "name": "musicAI",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/musicAI",
+        "updated_at": "2025-08-31T15:38:25Z",
+        "default_branch": "main",
+        "description": "Music Statistics and Sentiment Analysis using flask",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/MusicAI"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/Generative-AI",
+        "name": "Generative-AI",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Generative-AI",
+        "updated_at": "2025-08-03T18:25:34Z",
+        "default_branch": "main",
+        "description": "All my projects using LLM ai models ",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/frequencyFinder.Hz",
+        "name": "frequencyFinder.Hz",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/frequencyFinder.Hz",
+        "updated_at": "2025-06-02T05:19:40Z",
+        "default_branch": "main",
+        "description": "Simple web app to catch a vibe",
+        "homepage": null,
+        "language": "HTML",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "SolidReps/srvo_backend",
+        "name": "srvo_backend",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/SolidReps/srvo_backend",
+        "updated_at": "2025-03-08T15:35:42Z",
+        "default_branch": "master",
+        "description": "SRVO main backend service",
+        "homepage": "",
+        "language": "Python",
+        "owner": "SolidReps",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/REST_Templates",
+        "name": "REST_Templates",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/REST_Templates",
+        "updated_at": "2024-08-26T02:40:11Z",
+        "default_branch": "main",
+        "description": "REST-API  CRUD Endpoints in different languages",
+        "homepage": null,
+        "language": "C++",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/school",
+        "name": "school",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/school",
+        "updated_at": "2024-08-20T13:21:01Z",
+        "default_branch": "main",
+        "description": "Three Years of Python Classwork",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "SolidReps/srvo_strategy_engine",
+        "name": "srvo_strategy_engine",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/SolidReps/srvo_strategy_engine",
+        "updated_at": "2024-08-04T00:59:57Z",
+        "default_branch": "master",
+        "description": "SRVO strategy engine service",
+        "homepage": "",
+        "language": "Python",
+        "owner": "SolidReps",
+        "local_matches": []
+      },
+      {
+        "full_name": "walpolsh/VaultCMS",
+        "name": "VaultCMS",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/walpolsh/VaultCMS",
+        "updated_at": "2024-06-21T23:43:12Z",
+        "default_branch": "main",
+        "description": "A CMS + FMS for Marketing Agency (AWS, FastAPI, Postgres, React)",
+        "homepage": "",
+        "language": "Python",
+        "owner": "walpolsh",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/Financial.Market.ML",
+        "name": "Financial.Market.ML",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Financial.Market.ML",
+        "updated_at": "2024-06-12T02:50:03Z",
+        "default_branch": "main",
+        "description": "Crypto - Stock - Forex | Machine Learning Algo Class from Udemy",
+        "homepage": "",
+        "language": "Jupyter Notebook",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/Persistent-GPT-api",
+        "name": "Persistent-GPT-api",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Persistent-GPT-api",
+        "updated_at": "2024-01-17T02:33:15Z",
+        "default_branch": "main",
+        "description": "Template to keep persistent data using chat gpt actions.",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "SolidReps/cardboard_browser_frontend",
+        "name": "cardboard_browser_frontend",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/SolidReps/cardboard_browser_frontend",
+        "updated_at": "2023-12-05T22:04:45Z",
+        "default_branch": "main",
+        "description": null,
+        "homepage": null,
+        "language": "JavaScript",
+        "owner": "SolidReps",
+        "local_matches": []
+      },
+      {
+        "full_name": "SolidReps/cardboard_desktop_frontend",
+        "name": "cardboard_desktop_frontend",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/SolidReps/cardboard_desktop_frontend",
+        "updated_at": "2023-12-04T16:50:49Z",
+        "default_branch": "master",
+        "description": "The desktop frontend for Cardboard",
+        "homepage": null,
+        "language": "Python",
+        "owner": "SolidReps",
+        "local_matches": []
+      },
+      {
+        "full_name": "SolidReps/cardboard_backend",
+        "name": "cardboard_backend",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/SolidReps/cardboard_backend",
+        "updated_at": "2023-12-03T18:39:23Z",
+        "default_branch": "master",
+        "description": "The Cardboard loyalty commerce platform backend",
+        "homepage": "",
+        "language": "Python",
+        "owner": "SolidReps",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/wutHappened",
+        "name": "wutHappened",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/wutHappened",
+        "updated_at": "2023-09-25T04:35:18Z",
+        "default_branch": "main",
+        "description": "Aggregate news sources to make news report script and images ",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "EZRA-HOLDINGS/FullStack-Website",
+        "name": "FullStack-Website",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/EZRA-HOLDINGS/FullStack-Website",
+        "updated_at": "2023-09-09T22:10:50Z",
+        "default_branch": "main",
+        "description": "Customer Onboarding Pipeline , Contact Information, & Showcase Prodcut",
+        "homepage": null,
+        "language": "HTML",
+        "owner": "EZRA-HOLDINGS",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/3D-React-Web",
+        "name": "3D-React-Web",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/3D-React-Web",
+        "updated_at": "2023-09-04T18:10:30Z",
+        "default_branch": "main",
+        "description": "using Three.js we can make 3D environments using react components and hooks!!",
+        "homepage": null,
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/Codology",
+        "name": "Codology",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Codology",
+        "updated_at": "2023-08-13T09:03:34Z",
+        "default_branch": "main",
+        "description": "Code language emblem guessing game app",
+        "homepage": "",
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/Codology"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/tweetBetweenTheLines",
+        "name": "tweetBetweenTheLines",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/tweetBetweenTheLines",
+        "updated_at": "2023-07-02T10:02:08Z",
+        "default_branch": "api-V2",
+        "description": "Twitter API usage | Sentiment Analysis & Graphing | Data Science & JSON",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/tweetBetweenTheLines"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/WebCrawl",
+        "name": "WebCrawl",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/WebCrawl",
+        "updated_at": "2023-04-09T02:43:27Z",
+        "default_branch": "main",
+        "description": "WebScraping & WebCrawling",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/WebCrawl"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/Kubernetes-Docker",
+        "name": "Kubernetes-Docker",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Kubernetes-Docker",
+        "updated_at": "2023-01-31T21:11:22Z",
+        "default_branch": "main",
+        "description": "Kubernetes Clusters of Docker Containers",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/darkSouls-Unity",
+        "name": "darkSouls-Unity",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/darkSouls-Unity",
+        "updated_at": "2023-01-28T14:37:15Z",
+        "default_branch": "main",
+        "description": "Unity C# Game following tutorials |  https://www.youtube.com/playlist?list=PLD_vBJjpCwJtrHIW1SS5_BNRk6KZJZ7_d",
+        "homepage": "",
+        "language": "C#",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/genSpark",
+        "name": "genSpark",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/genSpark",
+        "updated_at": "2022-11-27T02:02:10Z",
+        "default_branch": "main",
+        "description": "Projects done in genSpark initial boot-camp",
+        "homepage": null,
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/genSpark"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/CloudAutomation",
+        "name": "CloudAutomation",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/CloudAutomation",
+        "updated_at": "2022-10-21T18:06:39Z",
+        "default_branch": "Azure",
+        "description": "scripts that use SDKs , Terraform, & Ansible to  automate data extraction / motorization of Cloud Infrastructure.",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/CloudAutomation"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/RTS-JS-ChatRooms",
+        "name": "RTS-JS-ChatRooms",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/RTS-JS-ChatRooms",
+        "updated_at": "2022-10-10T15:49:57Z",
+        "default_branch": "main",
+        "description": "Using web, RTS, and Agora Javascript libraries, I made a web server that allows the creation and use of chat rooms. Flask web server, deployed on Azure Cloud",
+        "homepage": null,
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/OptaPlanner",
+        "name": "OptaPlanner",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/OptaPlanner",
+        "updated_at": "2022-09-06T21:47:55Z",
+        "default_branch": "Spring",
+        "description": "Java Artificial Intelligence video tutorial... Tutorial is using Quarkus Framework. I then converted the project into a Spring Boot / React.js project",
+        "homepage": null,
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "AllRightBet/alright-bet-client",
+        "name": "alright-bet-client",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/AllRightBet/alright-bet-client",
+        "updated_at": "2022-08-09T19:58:24Z",
+        "default_branch": "main",
+        "description": null,
+        "homepage": null,
+        "language": "JavaScript",
+        "owner": "AllRightBet",
+        "local_matches": []
+      },
+      {
+        "full_name": "AllRightBet/AlrightBetDB",
+        "name": "AlrightBetDB",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/AllRightBet/AlrightBetDB",
+        "updated_at": "2022-08-09T02:13:32Z",
+        "default_branch": "noAuth",
+        "description": null,
+        "homepage": null,
+        "language": "Java",
+        "owner": "AllRightBet",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/spring_Oauth",
+        "name": "spring_Oauth",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/spring_Oauth",
+        "updated_at": "2022-08-08T19:18:55Z",
+        "default_branch": "main",
+        "description": "account creation within SQL for different Web Service account OAUTH ",
+        "homepage": null,
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/React.web_userLoginForm",
+        "name": "React.web_userLoginForm",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/React.web_userLoginForm",
+        "updated_at": "2022-08-07T23:34:25Z",
+        "default_branch": "main",
+        "description": "genSpark user login form assignment",
+        "homepage": null,
+        "language": "CSS",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/react.web_MovieList",
+        "name": "react.web_MovieList",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/react.web_MovieList",
+        "updated_at": "2022-08-07T00:11:11Z",
+        "default_branch": "main",
+        "description": "https://www.youtube.com/watch?v=b9eMGE7QtTk |  React JS Full Course 2022",
+        "homepage": null,
+        "language": "CSS",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/react.web_MovieList"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/HTML_REGEX",
+        "name": "HTML_REGEX",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/HTML_REGEX",
+        "updated_at": "2022-08-03T23:41:20Z",
+        "default_branch": "main",
+        "description": null,
+        "homepage": null,
+        "language": "HTML",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/react.web_taskList",
+        "name": "react.web_taskList",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/react.web_taskList",
+        "updated_at": "2022-08-03T19:29:10Z",
+        "default_branch": "main",
+        "description": "Original React Web Front End Using JSON File",
+        "homepage": null,
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/react.web_taskList"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/Spring_Boot_webDev",
+        "name": "Spring_Boot_webDev",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Spring_Boot_webDev",
+        "updated_at": "2022-07-31T16:18:18Z",
+        "default_branch": "SQL_CONFIG",
+        "description": "spring boot web development template    |     Each branch is a different configuration",
+        "homepage": "",
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/spring_template",
+        "name": "spring_template",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/spring_template",
+        "updated_at": "2022-07-19T05:55:15Z",
+        "default_branch": "XML_CONFIG",
+        "description": "boiler Spring configurations",
+        "homepage": "",
+        "language": "Java",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/tweet_video_generator",
+        "name": "tweet_video_generator",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/tweet_video_generator",
+        "updated_at": "2022-07-15T21:12:33Z",
+        "default_branch": "main",
+        "description": "creates a video of a collection of tweets with speech to text",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "Cup-of-Java/genspark-group-challenge",
+        "name": "genspark-group-challenge",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/Cup-of-Java/genspark-group-challenge",
+        "updated_at": "2022-07-11T19:10:46Z",
+        "default_branch": "main",
+        "description": null,
+        "homepage": null,
+        "language": "Java",
+        "owner": "Cup-of-Java",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/muscleMadness_API",
+        "name": "muscleMadness_API",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/muscleMadness_API",
+        "updated_at": "2022-06-16T16:23:51Z",
+        "default_branch": "main",
+        "description": "Back-End Rest API for front end React-Native project ",
+        "homepage": null,
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/muscleMadness_API"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/snake-REACT_NATIVE",
+        "name": "snake-REACT_NATIVE",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/snake-REACT_NATIVE",
+        "updated_at": "2022-04-29T05:04:49Z",
+        "default_branch": "main",
+        "description": "Expo cli and react native game engine components",
+        "homepage": "",
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/watsonAI",
+        "name": "watsonAI",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/watsonAI",
+        "updated_at": "2022-04-29T05:03:58Z",
+        "default_branch": "main",
+        "description": "Discord Server Mod Bot with text sentiment and user personality insights. Custom databases per server when bot begins... using flask | Host bot and API then request api endpoints for server stats",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/ticVoter_REST.api",
+        "name": "ticVoter_REST.api",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/ticVoter_REST.api",
+        "updated_at": "2022-04-29T05:03:12Z",
+        "default_branch": "main",
+        "description": "REST backend for ticVoter react frontend",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/ticVoter_REST.api"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/ticVoter",
+        "name": "ticVoter",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/ticVoter",
+        "updated_at": "2022-04-29T05:02:57Z",
+        "default_branch": "main",
+        "description": "Swipe like tinder to vote on if you think the stock will go up or down this week! Votes reset per week",
+        "homepage": "",
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/ticVoter"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/muscleMadness",
+        "name": "muscleMadness",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/muscleMadness",
+        "updated_at": "2022-04-29T05:02:05Z",
+        "default_branch": "main",
+        "description": "Random workout generator ",
+        "homepage": "",
+        "language": "JavaScript",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/muscleMadness"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/Jupyter.Notebooks",
+        "name": "Jupyter.Notebooks",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Jupyter.Notebooks",
+        "updated_at": "2022-04-29T05:01:41Z",
+        "default_branch": "valueMetrics",
+        "description": "Machine learning |  Data-Science | Each branch is a different subject",
+        "homepage": "",
+        "language": "Jupyter Notebook",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/utilityScripts",
+        "name": "utilityScripts",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/utilityScripts",
+        "updated_at": "2022-04-29T05:01:11Z",
+        "default_branch": "main",
+        "description": "Basic scripts that can be used as boiler plates for projects | Each branch is a utility suite",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/selenium",
+        "name": "selenium",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/selenium",
+        "updated_at": "2022-04-29T05:00:59Z",
+        "default_branch": "main",
+        "description": "Selenium Web Bots! \"The turning point of my understanding\"",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/tutoring.Repl",
+        "name": "tutoring.Repl",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/tutoring.Repl",
+        "updated_at": "2022-04-29T05:00:06Z",
+        "default_branch": "main",
+        "description": "Collection of honorable mentions from lessons I have instructed.",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/tutoring.Repl"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/music",
+        "name": "music",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/music",
+        "updated_at": "2022-04-29T04:59:49Z",
+        "default_branch": "main",
+        "description": "Scripts dealing with sound",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/music"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/Fintech",
+        "name": "Fintech",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/Fintech",
+        "updated_at": "2022-04-29T04:58:49Z",
+        "default_branch": "robinStocks.cli",
+        "description": "Each Branch is a Finance Technology Project",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/api.requests",
+        "name": "api.requests",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/api.requests",
+        "updated_at": "2022-04-29T04:58:02Z",
+        "default_branch": "main",
+        "description": "http requests based scripts",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/api.requests"
+        ]
+      },
+      {
+        "full_name": "ItMeansBigMountain/networking",
+        "name": "networking",
+        "private": false,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/networking",
+        "updated_at": "2022-04-29T04:56:04Z",
+        "default_branch": "Nvidia",
+        "description": "Networking scripts for routers and switches.    |   Each branch is a networking topic",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": []
+      },
+      {
+        "full_name": "ItMeansBigMountain/cellphone_scripts",
+        "name": "cellphone_scripts",
+        "private": true,
+        "archived": false,
+        "fork": false,
+        "html_url": "https://github.com/ItMeansBigMountain/cellphone_scripts",
+        "updated_at": "2022-04-22T18:00:39Z",
+        "default_branch": "main",
+        "description": "Scripts that work with pythonista IOS",
+        "homepage": "",
+        "language": "Python",
+        "owner": "ItMeansBigMountain",
+        "local_matches": [
+          "projects/cellphone_scripts"
+        ]
+      }
+    ]
+  },
+  "local": {
+    "submodules": [
+      {
+        "name": "projects/algos",
+        "path": "projects/algos",
+        "url": "https://github.com/ItMeansBigMountain/algos.git",
+        "branch": "main"
+      },
+      {
+        "name": "projects/cox-elementary-pta",
+        "path": "projects/cox-elementary-pta",
+        "url": "https://github.com/ItMeansBigMountain/cox-elementary-pta.git",
+        "branch": "main"
+      },
+      {
+        "name": "projects/osrs-plugins/BisLoadouts",
+        "path": "projects/osrs-plugins/completed/BisLoadouts",
+        "url": "https://github.com/ItMeansBigMountain/bis-loadouts-osrs.git",
+        "branch": "main"
+      },
+      {
+        "name": "projects/osrs-plugins/ClanWarBoard",
+        "path": "projects/osrs-plugins/pr-review-pending/ClanWarBoard",
+        "url": "https://github.com/ItMeansBigMountain/clan-war-board-osrs.git",
+        "branch": "main"
+      },
+      {
+        "name": "projects/osrs-plugins/WhosGrindingClanPanel",
+        "path": "projects/osrs-plugins/pr-review-pending/WhosGrindingClanPanel",
+        "url": "https://github.com/ItMeansBigMountain/whos-grinding-clan-panel-osrs.git",
+        "branch": "main"
+      },
+      {
+        "name": "projects/plugin-hub",
+        "path": "projects/plugin-hub",
+        "url": "https://github.com/ItMeansBigMountain/plugin-hub.git",
+        "branch": "master"
+      },
+      {
+        "name": "projects/osrs-plugins/_templates/osrs-plugins-boilerplate",
+        "path": "projects/osrs-plugins/_templates/osrs-plugins-boilerplate",
+        "url": "https://github.com/ItMeansBigMountain/osrs-plugins-boilerplate-osrs.git",
+        "branch": "main"
+      },
+      {
+        "name": "projects/youtube-automation",
+        "path": "projects/youtube-automation",
+        "url": "https://github.com/ItMeansBigMountain/youtube-automation.git"
+      },
+      {
+        "name": "projects/osrs-plugins/services/clan-war-board-service",
+        "path": "projects/osrs-plugins/services/clan-war-board-service",
+        "url": "https://github.com/ItMeansBigMountain/clan-war-board-service.git",
+        "branch": "main"
+      },
+      {
+        "name": "projects/osrs-plugins/completed/DeadmanBreachTimer",
+        "path": "projects/osrs-plugins/completed/DeadmanBreachTimer",
+        "url": "https://github.com/ItMeansBigMountain/breach-check-osrs.git",
+        "branch": "master"
+      },
+      {
+        "name": "projects/CombatAtlas",
+        "path": "projects/CombatAtlas",
+        "url": "https://github.com/ItMeansBigMountain/CombatAtlas.git",
+        "branch": "main"
+      }
+    ],
+    "top_level_project_dirs": [
+      "projects/__pycache__",
+      "projects/_archive",
+      "projects/_backups",
+      "projects/_ops",
+      "projects/account-legacy-card-osrs",
+      "projects/addictive-mobile-games",
+      "projects/affiliate-ops",
+      "projects/agentic-ai-automation-business",
+      "projects/api.requests",
+      "projects/az204",
+      "projects/boss-k-c-rival-lookup-osrs",
+      "projects/boss-race-creator-osrs",
+      "projects/boss-readiness-score-osrs",
+      "projects/boss-streaks-osrs",
+      "projects/breach-check-osrs",
+      "projects/burnoutBoyz",
+      "projects/cellphone_scripts",
+      "projects/clan-grind-heatmap-osrs",
+      "projects/CloudAutomation",
+      "projects/coding-school-platform",
+      "projects/Codology",
+      "projects/CombatAtlas",
+      "projects/competition-overlay-osrs",
+      "projects/consumer-advocate-app",
+      "projects/faceless-youtube-channel",
+      "projects/genSpark",
+      "projects/group-iron-progress-board-osrs",
+      "projects/hermes-social-publisher",
+      "projects/honda-tech-upgrade",
+      "projects/ice-barrage-timer-osrs",
+      "projects/journal-ai",
+      "projects/legacy-src",
+      "projects/local-meeting-transcriber",
+      "projects/mcp-servers",
+      "projects/muscleMadness",
+      "projects/muscleMadness_API",
+      "projects/music",
+      "projects/music-mood-app",
+      "projects/MusicAI",
+      "projects/name-change-watcher-osrs",
+      "projects/osrs-plugins",
+      "projects/osrs-plugins-boilerplate",
+      "projects/oyama-productions-legal",
+      "projects/personal-progress-timeline-osrs",
+      "projects/plugin-hub",
+      "projects/policy-pit-app",
+      "projects/portfolio-sentiment-subscription-app",
+      "projects/react.web_MovieList",
+      "projects/react.web_taskList",
+      "projects/rival-radar-osrs",
+      "projects/skill-nemesis-osrs",
+      "projects/skill-race-creator-osrs",
+      "projects/skill-streaks-osrs",
+      "projects/smart-hiscore-lookup-osrs",
+      "projects/stockNews",
+      "projects/store-code-content-studio",
+      "projects/ticVoter",
+      "projects/ticVoter_REST.api",
+      "projects/tiktok-clone",
+      "projects/tiktok-shop-shopify-commerce",
+      "projects/tournament-wager-app",
+      "projects/trading-journal",
+      "projects/tutoring.Repl",
+      "projects/tweetBetweenTheLines",
+      "projects/twitter-therapy-app",
+      "projects/viral-clip-radar",
+      "projects/WebCrawl",
+      "projects/whos-grinding-clan-panel-osrs",
+      "projects/youtube-automation",
+      "projects/youtube-high-ticket-leverage"
+    ]
+  }
+}

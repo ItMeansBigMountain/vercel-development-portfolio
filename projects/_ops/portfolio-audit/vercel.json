@@ -1,0 +1,33 @@
+{
+  "user_status": 403,
+  "user": {
+    "error": {
+      "code": "forbidden",
+      "message": "Not authorized",
+      "invalidToken": true
+    }
+  },
+  "teams_status": 403,
+  "teams": {
+    "error": {
+      "code": "forbidden",
+      "message": "Not authorized",
+      "invalidToken": true
+    }
+  },
+  "scopes": [
+    {
+      "scope": "personal",
+      "team_id": null,
+      "status": 403,
+      "projects": [],
+      "error": {
+        "error": {
+          "code": "forbidden",
+          "message": "Not authorized",
+          "invalidToken": true
+        }
+      }
+    }
+  ]
+}
