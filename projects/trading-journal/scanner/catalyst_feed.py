@@ -212,7 +212,13 @@ def build_catalyst_feed(
     return normalized
 
 
-def parse_rss(xml_body: bytes | str, *, ticker: str, source: str = "Yahoo Finance") -> list[dict[str, Any]]:
+def parse_rss(
+    xml_body: bytes | str,
+    *,
+    ticker: str,
+    source: str = "Yahoo Finance",
+    now: datetime | None = None,
+) -> list[dict[str, Any]]:
     """Parse RSS XML and return normalized records; malformed XML returns no signals."""
     if not xml_body:
         return []
@@ -232,7 +238,7 @@ def parse_rss(xml_body: bytes | str, *, ticker: str, source: str = "Yahoo Financ
                 "publisher": creator,
             }
         )
-    return build_catalyst_feed(raw_items, ticker=ticker, source=source)
+    return build_catalyst_feed(raw_items, ticker=ticker, source=source, now=now)
 
 
 def fetch_yahoo_feed(ticker: str, *, timeout: float = 12.0, limit: int = 8) -> list[dict[str, Any]]:

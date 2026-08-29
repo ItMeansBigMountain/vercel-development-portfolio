@@ -12,7 +12,12 @@ class CatalystFeedTests(unittest.TestCase):
         <link>https://example.com/aapl</link><pubDate>Tue, 25 Aug 2026 15:00:00 GMT</pubDate></item>
         </channel></rss>"""
 
-        articles = parse_rss(xml, ticker="aapl", source="Yahoo Finance")
+        articles = parse_rss(
+            xml,
+            ticker="aapl",
+            source="Yahoo Finance",
+            now=datetime(2026, 8, 25, 16, tzinfo=timezone.utc),
+        )
 
         self.assertEqual(len(articles), 1)
         article = articles[0]
