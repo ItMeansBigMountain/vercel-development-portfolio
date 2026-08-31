@@ -14,6 +14,8 @@
 - Add dry-run provider that produces platform payload previews without publishing.
 - Import existing YouTube lane metadata without changing current upload behavior.
 - Unit-test idempotency, duplicate detection, account routing, and partial-platform failures.
+- For Postiz v2.23.0+, correlate Hermes attempt IDs with pending-post resolution; test an interrupted publish and require one terminal native post ID/URL before cleanup.
+- Add adapter contract tests for stateless MCP Streamable HTTP and sanitized key-in-URL OAuth discovery without recording credentials.
 
 ## Phase 2 — first live connector
 
@@ -28,6 +30,7 @@
 - Submit one canonical asset with platform-specific captions.
 - Confirm partial success does not trigger premature cleanup.
 - Add retry and dead-letter queues.
+- Stage large-video connector probes for X (1 MB ranged upload), LinkedIn (2 MB ranged upload), and Pinterest MP4 selection before production enablement.
 
 ## Phase 4 — automation integration
 
@@ -51,3 +54,11 @@
 - Duplicate submission is idempotent.
 - Partial failures preserve media and retry metadata.
 - Existing YouTube automation remains reversible and operational during migration.
+- A pinned Postiz version must be at or above every applicable published patched-version floor; unresolved advisories remain explicit risks rather than assumed fixed.
+- Before any Postiz upgrade: back up, inspect emitted migrations, test pending-post recovery and connector uploads in staging, and prohibit application-only rollback after an incompatible schema migration.
+
+## Upstream release watch
+
+- Evidence and migration notes: [`docs/RELEASE_WATCH.md`](docs/RELEASE_WATCH.md).
+- Postiz v2.23.0 introduces pending-post recovery, streamed provider uploads, stateless MCP HTTP, and security hardening. These require compatibility probes; they do not authorize an unattended production upgrade.
+- The 2026-08-31 executable gate is **not ready**: fixture contracts pass, but exact v2.23.0 source contains a stale LinkedIn `202306` request. See [`docs/POSTIZ_V2_23_RELEASE_GATE.md`](docs/POSTIZ_V2_23_RELEASE_GATE.md).
