@@ -1,0 +1,454 @@
+{
+  "generated_at": "2026-09-02T17:17:55.506694+00:00",
+  "policy": "Vercel is development/staging only. No production promotion before Oyama personally tests and approves an Actions-traceable preview. Manual/untraceable deployments are unacceptable.",
+  "scope": {
+    "candidate_count": 11,
+    "review_eligible_count": 0,
+    "browser_checked_preview_count": 3,
+    "excluded": "Static review shells, retired apps, and RuneLite plugin repos. RuneLite clients use Gradle/RuneLite/Plugin Hub verification; their web/API services still require GitHub Actions-backed Vercel development previews."
+  },
+  "sources": [
+    "current Kanban task/card census",
+    "projects/_docs/portfolio-sort-2026-08-31.md",
+    "projects/PROJECT_REVIEW_SHEET.md",
+    "Vercel team API",
+    "GitHub API/Actions",
+    "production-candidate-preview-browser-verification.json"
+  ],
+  "candidates": [
+    {
+      "order": 1,
+      "app": "tweetBetweenTheLines",
+      "owner_repo": "https://github.com/ItMeansBigMountain/HeRmEz",
+      "source": "projects/tweetBetweenTheLines",
+      "kind": "web/universal app",
+      "vercel_project": "tweetbetweenthelines",
+      "immutable_preview": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app",
+      "persistent_preview": null,
+      "deployment_id": "dpl_37rzk9EjZYGdLk1FrcUcSkuksNBj",
+      "deployment_sha": "0be45e3102379f0c5fb9ad5fe363c47d62fe27aa",
+      "github_actions": {
+        "remote_workflow": ".github/workflows/tweet-between-the-lines-vercel-dev.yml",
+        "latest_run": "https://github.com/ItMeansBigMountain/HeRmEz/actions/runs/33348943516",
+        "latest_conclusion": "failure"
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "Remote workflow exists but its only run failed before tests/build/deploy because projects/tweetBetweenTheLines/package-lock.json was absent at remote commit 5d1fd04272fec8b46e085aa1871b2ca5e80add4f; no stable preview alias exists. Reconcile remote history/source first, then rerun Actions.",
+      "browser_verification": {
+        "checks": 2,
+        "passed": 2,
+        "failed": 0,
+        "desktop": {
+          "app": "tweetbetweenthelines",
+          "device": "desktop",
+          "requested": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app",
+          "final_url": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app/",
+          "status": 200,
+          "title": "tweetBetweenTheLines",
+          "identity_ok": true,
+          "body_sample": "TWEETBETWEENTHELINES \u00b7 RUNNABLE WEB MVP See what your data can say \u2014 and exactly why. Analyze a synthetic fixture or your explicitly consented normalized JSON locally. Every metric keeps source records, deterministic derivation, confidence, and limitations visible. No data loaded. Start with the synthetic demo or explicitly consent to your own JSON export. Account Data Metrics Reflection Control Limits Sign in to your BetweenLines account Google and Apple sign-in create the first-party app accou",
+          "horizontal_overflow": false,
+          "console_errors": [],
+          "page_errors": [],
+          "failed_responses": [],
+          "navigation_error": null,
+          "passed": true
+        },
+        "mobile": {
+          "app": "tweetbetweenthelines",
+          "device": "mobile",
+          "requested": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app",
+          "final_url": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app/",
+          "status": 200,
+          "title": "tweetBetweenTheLines",
+          "identity_ok": true,
+          "body_sample": "TWEETBETWEENTHELINES \u00b7 RUNNABLE WEB MVP See what your data can say \u2014 and exactly why. Analyze a synthetic fixture or your explicitly consented normalized JSON locally. Every metric keeps source records, deterministic derivation, confidence, and limitations visible. No data loaded. Start with the synthetic demo or explicitly consent to your own JSON export. Account Data Metrics Reflection Control Limits Sign in to your BetweenLines account Google and Apple sign-in create the first-party app accou",
+          "horizontal_overflow": false,
+          "console_errors": [],
+          "page_errors": [],
+          "failed_responses": [],
+          "navigation_error": null,
+          "passed": true
+        }
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 2,
+      "app": "Journal AI",
+      "owner_repo": "https://github.com/ItMeansBigMountain/HeRmEz",
+      "source": "projects/journal-ai",
+      "kind": "web/universal app",
+      "vercel_project": "journal-ai",
+      "immutable_preview": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app",
+      "persistent_preview": null,
+      "deployment_id": "dpl_oC6Hs3NcuYCZ3NLyFaBj2xAsWByX",
+      "deployment_sha": "9e0a340c39f052b5cfe9f5ae8c8a79aea9350e90",
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "Preview is manual/untraceable (Vercel gitSource=null), has no stable alias, and desktop emits an unexplained 404 console error. A local workflow exists but is not on GitHub's default branch.",
+      "browser_verification": {
+        "checks": 2,
+        "passed": 1,
+        "failed": 1,
+        "desktop": {
+          "app": "journal-ai",
+          "device": "desktop",
+          "requested": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app",
+          "final_url": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app/",
+          "status": 200,
+          "title": "",
+          "identity_ok": true,
+          "body_sample": "PRIVATE BY DEFAULT Journal AI 0 local changes Journal Meetings Settings What deserves your attention? low steady good Save privately Your entries stay on this device until sync is configured.",
+          "horizontal_overflow": false,
+          "console_errors": [
+            "Failed to load resource: the server responded with a status of 404 ()"
+          ],
+          "page_errors": [],
+          "failed_responses": [],
+          "navigation_error": null,
+          "passed": false
+        },
+        "mobile": {
+          "app": "journal-ai",
+          "device": "mobile",
+          "requested": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app",
+          "final_url": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app/",
+          "status": 200,
+          "title": "",
+          "identity_ok": true,
+          "body_sample": "PRIVATE BY DEFAULT Journal AI 0 local changes Journal Meetings Settings What deserves your attention? low steady good Save privately Your entries stay on this device until sync is configured.",
+          "horizontal_overflow": false,
+          "console_errors": [],
+          "page_errors": [],
+          "failed_responses": [],
+          "navigation_error": null,
+          "passed": true
+        }
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 3,
+      "app": "Coding School / Algorithm Academy",
+      "owner_repo": "https://github.com/ItMeansBigMountain/HeRmEz",
+      "source": "projects/coding-school-platform",
+      "kind": "web/universal app",
+      "vercel_project": "coding-school-platform",
+      "immutable_preview": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app",
+      "persistent_preview": null,
+      "deployment_id": "dpl_5kknrFDQcYMrHHanMfojmRciQCrT",
+      "deployment_sha": "da5507236c741fec2d16e03cd0796c8ee5c03e0d",
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "Preview is manual/untraceable (Vercel gitSource=null), has no stable alias, and mobile viewport overflows (scrollWidth > clientWidth). Local CI/preview workflow is not on GitHub's default branch.",
+      "browser_verification": {
+        "checks": 2,
+        "passed": 1,
+        "failed": 1,
+        "desktop": {
+          "app": "coding-school-platform",
+          "device": "desktop",
+          "requested": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app",
+          "final_url": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app/",
+          "status": 200,
+          "title": "Algorithm Academy",
+          "identity_ok": true,
+          "body_sample": "ALGORITHM ACADEMY Learn by building Learner Teacher Admin Keep your streak alive 0 lessons completed \u00b7 0 teacher-approved Modules 1 Print 1-255 Basic 13 2 Print odd numbers 1-255 Basic 13 3 Sum 1-255 Basic 13 4 Print list values Basic 13 5 Find maximum Basic 13 6 Find average Basic 13 7 Collect odd numbers Basic 13 8 Square values Basic 13 9 Count above threshold Basic 13 10 Convert matches to zero Basic 13 11 Min, max, average Basic 13 12 Shift list values Basic 13 13 Replace negatives Basic 13",
+          "horizontal_overflow": false,
+          "console_errors": [],
+          "page_errors": [],
+          "failed_responses": [],
+          "navigation_error": null,
+          "passed": true
+        },
+        "mobile": {
+          "app": "coding-school-platform",
+          "device": "mobile",
+          "requested": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app",
+          "final_url": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app/",
+          "status": 200,
+          "title": "Algorithm Academy",
+          "identity_ok": true,
+          "body_sample": "ALGORITHM ACADEMY Learn by building Learner Teacher Admin Keep your streak alive 0 lessons completed \u00b7 0 teacher-approved Modules 1 Print 1-255 Basic 13 2 Print odd numbers 1-255 Basic 13 3 Sum 1-255 Basic 13 4 Print list values Basic 13 5 Find maximum Basic 13 6 Find average Basic 13 7 Collect odd numbers Basic 13 8 Square values Basic 13 9 Count above threshold Basic 13 10 Convert matches to zero Basic 13 11 Min, max, average Basic 13 12 Shift list values Basic 13 13 Replace negatives Basic 13",
+          "horizontal_overflow": true,
+          "console_errors": [],
+          "page_errors": [],
+          "failed_responses": [],
+          "navigation_error": null,
+          "passed": false
+        }
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 4,
+      "app": "CombatAtlas Web",
+      "owner_repo": "https://github.com/ItMeansBigMountain/CombatAtlas",
+      "source": "projects/CombatAtlas",
+      "kind": "web app",
+      "vercel_project": "combatatlas",
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "No Vercel Preview-environment deployment exists; existing Vercel deployment is target=production and is not an acceptable review build. No matching GitHub Actions Vercel-development workflow is present on the repository default branch.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 5,
+      "app": "CombatAtlas Universal",
+      "owner_repo": "https://github.com/ItMeansBigMountain/CombatAtlas",
+      "source": "projects/CombatAtlas/mobile",
+      "kind": "web/universal app",
+      "vercel_project": "combatatlas-mobile",
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "No Vercel Preview-environment deployment exists; existing Vercel deployment is target=production and is not an acceptable review build. Local production-only workflow is not published and violates the Vercel-development-only policy.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 6,
+      "app": "Wornly",
+      "owner_repo": "https://github.com/ItMeansBigMountain/fashion-social",
+      "source": "projects/_archive/wornly",
+      "kind": "web/universal commerce app",
+      "vercel_project": "fashion-social",
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "No Vercel Preview-environment deployment exists; existing Vercel deployment is target=production and is not an acceptable review build. No matching GitHub Actions Vercel-development workflow is present on the repository default branch.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 7,
+      "app": "Card Intel Scanner",
+      "owner_repo": "https://github.com/ItMeansBigMountain/HeRmEz",
+      "source": "projects/_archive/card-intel-scanner",
+      "kind": "web scanner app",
+      "vercel_project": "card-intel-scanner",
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "No Vercel Preview-environment deployment exists; existing Vercel deployment is target=production and is not an acceptable review build. No matching GitHub Actions Vercel-development workflow is present on the repository default branch.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 8,
+      "app": "Honda Tech Upgrade",
+      "owner_repo": "https://github.com/ItMeansBigMountain/HeRmEz",
+      "source": "projects/honda-tech-upgrade",
+      "kind": "web app",
+      "vercel_project": "honda-tech-upgrade",
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "No Vercel Preview-environment deployment exists; existing Vercel deployment is target=production and is not an acceptable review build. No matching GitHub Actions Vercel-development workflow is present on the repository default branch.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 9,
+      "app": "MusicAI",
+      "owner_repo": "https://github.com/ItMeansBigMountain/HeRmEz",
+      "source": "projects/MusicAI",
+      "kind": "web service/app",
+      "vercel_project": "musicai",
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "No Vercel Preview-environment deployment exists; existing Vercel deployment is target=production and is not an acceptable review build. No matching GitHub Actions Vercel-development workflow is present on the repository default branch.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 10,
+      "app": "BurnoutBoyz",
+      "owner_repo": "https://github.com/ItMeansBigMountain/HeRmEz",
+      "source": "projects/burnoutBoyz",
+      "kind": "web/universal app + service",
+      "vercel_project": null,
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "Local gates were recorded passing, but no Vercel development project/preview or remote GitHub Actions workflow exists; final reviewer card remains blocked.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    },
+    {
+      "order": 11,
+      "app": "Clan War Board service",
+      "owner_repo": "https://github.com/ItMeansBigMountain/clan-war-board-service",
+      "source": "projects/osrs-plugins/services/clan-war-board-service",
+      "kind": "web/API service (RuneLite client is separately verified)",
+      "vercel_project": null,
+      "immutable_preview": null,
+      "persistent_preview": null,
+      "github_actions": {
+        "remote_workflow": null,
+        "latest_run": null,
+        "latest_conclusion": null
+      },
+      "checks": {
+        "repo": "pass",
+        "tests_build_in_workflow": "fail",
+        "actions_deploy": "fail",
+        "persistent_preview_alias": "fail"
+      },
+      "blocker": "Standalone GitHub repo exists, but there is no GitHub Actions-backed Vercel development deployment. Azure/production migration is explicitly out of scope. RuneLite plugin verification remains Gradle/RuneLite/Plugin Hub only.",
+      "browser_verification": {
+        "checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "desktop": null,
+        "mobile": null
+      },
+      "review_eligible": false
+    }
+  ],
+  "safety": {
+    "production_promotions": 0,
+    "deployments_deleted": 0,
+    "aliases_changed": 0,
+    "secrets_exposed": false
+  }
+}

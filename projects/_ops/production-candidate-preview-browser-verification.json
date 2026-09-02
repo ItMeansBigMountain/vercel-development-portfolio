@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-09-02T17:14:13.286Z",
+  "checks": [
+    {
+      "app": "journal-ai",
+      "device": "desktop",
+      "requested": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app",
+      "final_url": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app/",
+      "status": 200,
+      "title": "",
+      "identity_ok": true,
+      "body_sample": "PRIVATE BY DEFAULT Journal AI 0 local changes Journal Meetings Settings What deserves your attention? low steady good Save privately Your entries stay on this device until sync is configured.",
+      "horizontal_overflow": false,
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "page_errors": [],
+      "failed_responses": [],
+      "navigation_error": null,
+      "passed": false
+    },
+    {
+      "app": "journal-ai",
+      "device": "mobile",
+      "requested": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app",
+      "final_url": "https://journal-qmx4djhze-itmeansbigmountains-projects.vercel.app/",
+      "status": 200,
+      "title": "",
+      "identity_ok": true,
+      "body_sample": "PRIVATE BY DEFAULT Journal AI 0 local changes Journal Meetings Settings What deserves your attention? low steady good Save privately Your entries stay on this device until sync is configured.",
+      "horizontal_overflow": false,
+      "console_errors": [],
+      "page_errors": [],
+      "failed_responses": [],
+      "navigation_error": null,
+      "passed": true
+    },
+    {
+      "app": "coding-school-platform",
+      "device": "desktop",
+      "requested": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app",
+      "final_url": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app/",
+      "status": 200,
+      "title": "Algorithm Academy",
+      "identity_ok": true,
+      "body_sample": "ALGORITHM ACADEMY Learn by building Learner Teacher Admin Keep your streak alive 0 lessons completed · 0 teacher-approved Modules 1 Print 1-255 Basic 13 2 Print odd numbers 1-255 Basic 13 3 Sum 1-255 Basic 13 4 Print list values Basic 13 5 Find maximum Basic 13 6 Find average Basic 13 7 Collect odd numbers Basic 13 8 Square values Basic 13 9 Count above threshold Basic 13 10 Convert matches to zero Basic 13 11 Min, max, average Basic 13 12 Shift list values Basic 13 13 Replace negatives Basic 13",
+      "horizontal_overflow": false,
+      "console_errors": [],
+      "page_errors": [],
+      "failed_responses": [],
+      "navigation_error": null,
+      "passed": true
+    },
+    {
+      "app": "coding-school-platform",
+      "device": "mobile",
+      "requested": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app",
+      "final_url": "https://coding-school-platform-5hh2k4xao-itmeansbigmountains-projects.vercel.app/",
+      "status": 200,
+      "title": "Algorithm Academy",
+      "identity_ok": true,
+      "body_sample": "ALGORITHM ACADEMY Learn by building Learner Teacher Admin Keep your streak alive 0 lessons completed · 0 teacher-approved Modules 1 Print 1-255 Basic 13 2 Print odd numbers 1-255 Basic 13 3 Sum 1-255 Basic 13 4 Print list values Basic 13 5 Find maximum Basic 13 6 Find average Basic 13 7 Collect odd numbers Basic 13 8 Square values Basic 13 9 Count above threshold Basic 13 10 Convert matches to zero Basic 13 11 Min, max, average Basic 13 12 Shift list values Basic 13 13 Replace negatives Basic 13",
+      "horizontal_overflow": true,
+      "console_errors": [],
+      "page_errors": [],
+      "failed_responses": [],
+      "navigation_error": null,
+      "passed": false
+    },
+    {
+      "app": "tweetbetweenthelines",
+      "device": "desktop",
+      "requested": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app",
+      "final_url": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app/",
+      "status": 200,
+      "title": "tweetBetweenTheLines",
+      "identity_ok": true,
+      "body_sample": "TWEETBETWEENTHELINES · RUNNABLE WEB MVP See what your data can say — and exactly why. Analyze a synthetic fixture or your explicitly consented normalized JSON locally. Every metric keeps source records, deterministic derivation, confidence, and limitations visible. No data loaded. Start with the synthetic demo or explicitly consent to your own JSON export. Account Data Metrics Reflection Control Limits Sign in to your BetweenLines account Google and Apple sign-in create the first-party app accou",
+      "horizontal_overflow": false,
+      "console_errors": [],
+      "page_errors": [],
+      "failed_responses": [],
+      "navigation_error": null,
+      "passed": true
+    },
+    {
+      "app": "tweetbetweenthelines",
+      "device": "mobile",
+      "requested": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app",
+      "final_url": "https://tweetbetweenthelines-2hr5230u9-itmeansbigmountains-projects.vercel.app/",
+      "status": 200,
+      "title": "tweetBetweenTheLines",
+      "identity_ok": true,
+      "body_sample": "TWEETBETWEENTHELINES · RUNNABLE WEB MVP See what your data can say — and exactly why. Analyze a synthetic fixture or your explicitly consented normalized JSON locally. Every metric keeps source records, deterministic derivation, confidence, and limitations visible. No data loaded. Start with the synthetic demo or explicitly consent to your own JSON export. Account Data Metrics Reflection Control Limits Sign in to your BetweenLines account Google and Apple sign-in create the first-party app accou",
+      "horizontal_overflow": false,
+      "console_errors": [],
+      "page_errors": [],
+      "failed_responses": [],
+      "navigation_error": null,
+      "passed": true
+    }
+  ]
+}
