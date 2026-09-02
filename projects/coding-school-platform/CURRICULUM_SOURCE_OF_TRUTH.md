@@ -1,6 +1,6 @@
 # Coding School Curriculum Source of Truth
 
-Last updated: 2026-08-25
+Last updated: 2026-08-29
 
 ## Purpose
 
@@ -184,21 +184,21 @@ Accomplishment loop:
 
 Best for: students ready to reason through arrays/lists and loops.
 
-Basic 13 sequence:
+Canonical Basic 13 sequence reconciled with the authenticated Algorithm Academy Drive sync:
 
 1. Print 1-255.
-2. Print odd numbers 1-255.
-3. Sum 1-255.
-4. Print all values in an array/list.
-5. Print maximum value.
-6. Print average.
-7. Push odd numbers into an array/list.
-8. Square all values.
-9. Count values greater than a threshold.
-10. Convert matching values to zero.
-11. Print min, max, and average.
-12. Shift array/list values.
-13. Replace negatives with `below zero`.
+2. Odd numbers.
+3. Running sum.
+4. Traverse array.
+5. Max.
+6. Average.
+7. Odd-number array.
+8. Count above Y.
+9. Square values.
+10. Replace negatives.
+11. Min/max/avg.
+12. Shift values.
+13. Replace negatives with Dojo.
 
 Mastery definition:
 

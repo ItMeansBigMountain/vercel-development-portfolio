@@ -108,7 +108,7 @@ export default function App() {
           <Text style={styles.section}>Modules</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.lessonRow}>
             {learnerLessons.map((lesson, index) => (
-              <Pressable key={lesson.id} accessibilityRole="button" accessibilityLabel={`Open ${lesson.title} lesson`} onPress={() => selectLesson(lesson.id)} style={[styles.lessonCard, selected.id === lesson.id && styles.lessonCardActive]}>
+              <Pressable key={lesson.id} accessibilityRole="button" accessibilityLabel={`Open ${lesson.title} lesson`} accessibilityState={{ selected: selected.id === lesson.id }} onPress={() => selectLesson(lesson.id)} style={[styles.lessonCard, selected.id === lesson.id && styles.lessonCardActive]}>
                 <Text style={styles.cardStep}>{index + 1}</Text><Text style={styles.cardTitle}>{lesson.title}</Text><Text style={styles.cardMeta}>{lesson.module}</Text>
               </Pressable>
             ))}
@@ -126,12 +126,12 @@ export default function App() {
             <View style={styles.wordBank}>
               {wordBank.map(item => <Pressable key={item} accessibilityRole="button" accessibilityLabel={`Toggle word bank ${item}`} accessibilityState={{ selected: selectedBanks.includes(item) }} onPress={() => toggleBank(item)} style={[styles.bankChip, selectedBanks.includes(item) && styles.bankChipActive]}><Text style={[styles.bankText, selectedBanks.includes(item) && styles.bankTextActive]}>{item}</Text></Pressable>)}
             </View>
-            <Pressable style={styles.hintButton} onPress={() => setHintIndex((hintIndex + 1) % safeHints.length)}><Text style={styles.hintButtonText}>Ask the safe AI coach for a hint</Text></Pressable>
+            <Pressable accessibilityRole="button" accessibilityLabel="Ask the safe AI coach for a hint" accessibilityState={{ expanded: hintIndex >= 0 }} style={styles.hintButton} onPress={() => setHintIndex((hintIndex + 1) % safeHints.length)}><Text style={styles.hintButtonText}>Ask the safe AI coach for a hint</Text></Pressable>
             {hintIndex >= 0 && <Text style={styles.hint}>Hint only — no answer: {safeHints[hintIndex]}</Text>}
             <Text style={styles.label}>Reflection</Text>
             <TextInput accessibilityLabel="Lesson reflection" multiline value={reflection} onChangeText={setReflection} placeholder="What did you try? What will you change next?" placeholderTextColor="#64748b" style={styles.reflection} />
             {validationMessage ? <Text accessibilityRole="alert" style={styles.validation}>{validationMessage}</Text> : null}
-            <Pressable style={styles.primary} onPress={submit}><Text style={styles.primaryText}>Save evidence for teacher review</Text></Pressable>
+            <Pressable accessibilityRole="button" accessibilityLabel="Save evidence for teacher review" style={styles.primary} onPress={submit}><Text style={styles.primaryText}>Save evidence for teacher review</Text></Pressable>
           </View>
           <Text style={styles.offline}>Offline-ready reading and drafts · Demo learner data only · No private profile fields</Text>
         </ScrollView>
@@ -143,7 +143,7 @@ export default function App() {
             return <View key={item.lessonId} style={styles.reviewCard}>
               <Text style={styles.module}>{lesson?.module}</Text><Text style={styles.title}>{lesson?.title}</Text>
               <Text style={styles.body}>Learner reflection: {item.reflection}</Text><Text style={styles.status}>Status: {item.status}</Text>
-              <View style={styles.actions}><Pressable style={styles.approve} onPress={() => review(item.lessonId, 'approved')}><Text style={styles.actionText}>Approve mastery</Text></Pressable><Pressable style={styles.revise} onPress={() => review(item.lessonId, 'needs-revision')}><Text style={styles.reviseText}>Request revision</Text></Pressable></View>
+              <View style={styles.actions}><Pressable accessibilityRole="button" accessibilityLabel="Approve mastery" accessibilityState={{ selected: item.status === 'approved' }} style={styles.approve} onPress={() => review(item.lessonId, 'approved')}><Text style={styles.actionText}>Approve mastery</Text></Pressable><Pressable accessibilityRole="button" accessibilityLabel="Request revision" accessibilityState={{ selected: item.status === 'needs-revision' }} style={styles.revise} onPress={() => review(item.lessonId, 'needs-revision')}><Text style={styles.reviseText}>Request revision</Text></Pressable></View>
             </View>;
           })}
         </ScrollView>

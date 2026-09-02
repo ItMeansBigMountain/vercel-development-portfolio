@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-29",
   "program": "Algorithm Academy / Coding School Platform",
   "canonicalDriveFolder": {
     "url": "https://drive.google.com/drive/folders/1pI-haF9EhHcHU__8zIRn1OPf4aH374TP",
@@ -12,7 +12,28 @@
       "eightWeekCurriculum": "https://docs.google.com/document/d/1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M/edit",
       "driveIndex": "https://docs.google.com/document/d/1QgBkr-DD89e6UW1oRy9w89wt_6N_frJFV1_XuDOsJmw/edit"
     },
-    "syncStatus": "blocked: researcher profile has no Google OAuth token; unauthenticated Drive folder redirected to Google sign-in and embedded folder view returned 401, so Drive docs were not modified in this run."
+    "syncStatus": "synced: authenticated Drive/Docs access as affan.fareed@gmail.com verified the Algorithm Academy folder and appended/read back the 2026-08-29 canonical module-map sync note in the Basic 13 workbook, teacher solutions/debugging guide, eight-week curriculum, and Drive index.",
+    "syncVerifiedAt": "2026-08-29",
+    "syncVerification": {
+      "account": "affan.fareed@gmail.com via HERMES_HOME=/opt/data token",
+      "driveFolderId": "1pI-haF9EhHcHU__8zIRn1OPf4aH374TP",
+      "driveFolderName": "Algorithm Academy",
+      "driveFolderOwner": "affan.fareed@gmail.com",
+      "docsReadAndUpdated": [
+        "1xb-cnvu2I_LR8YotTEzHrDZDDVINwJr9EvbjoS7Ti0Y",
+        "1RnlWxt0SUfy92-PbiCO0YfQy233YZ7GJS9vfC6FNTVA",
+        "1Jar1_DWBR50Sdfnl3mu_LH7UoEN-Wg86lIhcgxD1G0M",
+        "1QgBkr-DD89e6UW1oRy9w89wt_6N_frJFV1_XuDOsJmw"
+      ],
+      "readbackNeedles": [
+        "CANONICAL MODULE MAP SYNC — 2026-08-29",
+        "Data Objects and Arrays",
+        "APIs, JSON, Fetch, and Errors",
+        "teacher solutions, debugging notes, answer keys",
+        "understand → inputs/outputs"
+      ],
+      "syncNoteArtifact": "curriculum/drive-sync-note-2026-08-29.txt"
+    }
   },
   "constraints": [
     "ages 10-14 JavaScript Core track for student modules in this slice",

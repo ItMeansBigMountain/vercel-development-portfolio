@@ -1,0 +1,15 @@
+
+
+CANONICAL MODULE MAP SYNC — 2026-08-29
+Source of truth: repo curriculum/canonical-curriculum-manifest.json plus authenticated Drive verification by affan.fareed@gmail.com.
+
+Canonical ages 10–14 JavaScript Core sequence for this app slice:
+1. Teacher Mastery Track stays first and teacher-only: platform/safety onboarding, Basic 13 coaching mastery, Algorithm Academy coaching mastery, debugging coaching mastery, child-safe AI coding mastery, and portfolio coaching mastery.
+2. Basic 13 Foundations use this order: Print 1–255; Odd numbers; Running sum; Traverse array; Max; Average; Odd-number array; Count above Y; Square values; Replace negatives; Min/max/avg; Shift values; Replace negatives with Dojo.
+3. JavaScript Data Objects and Arrays is a separate beginner bridge module: Object Detective; Profile Card Builder; Array Explorer; Inventory Organizer; Scoreboard Refactor. Use fixture-only data and teach keys/values, arrays of objects, safe updates, and data-shape explanations.
+4. APIs, JSON, Fetch, and Errors is a separate beginner API module: JSON Message Decoder; Fetch Weather/Data Card; Friendly Error Handler. Use approved mock/public data only, require loading/error states, and never include private student data, tokens, addresses, school details, or secrets in API calls.
+5. Progress fields stay evidence-based: attempted, completed, teacher-reviewed, mastered, with studentId, lessonId, moduleId, badgeId, evidenceText, artifactUrlOrPath, teacherReviewStatus, masteryLevel, confidenceScore, createdAt, reviewedBy, reviewedAt, parentSafeSummary, and nextUnlockedLessonIds.
+
+Teacher/private boundary: teacher solutions, debugging notes, answer keys, and mastery artifacts remain private to teacher/admin surfaces. Learner-facing surfaces may show prompts, starter code, goals, rubrics, projects, and progress expectations, but not answer keys or full solutions.
+
+Learning loop for every lesson: understand → inputs/outputs → hand examples → pseudocode → implement → edge tests → debug → improve → explain.

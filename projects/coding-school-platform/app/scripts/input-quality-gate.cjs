@@ -87,14 +87,37 @@ async function assertVisibleAfterFocus(page, label) {
   }
 }
 
-async function assertButtonNames(page) {
-  const unnamed = await page.evaluate(() => Array.from(document.querySelectorAll('[role="button"],button'))
-    .map((node, index) => ({
-      index,
-      label: node.getAttribute('aria-label') || node.textContent || '',
-    }))
-    .filter(item => !item.label.trim()));
-  if (unnamed.length) throw new Error(`Found unnamed button(s): ${JSON.stringify(unnamed)}`);
+async function assertFocusableControlSemantics(page) {
+  const defects = await page.evaluate(() => {
+    const selector = 'button,[role="button"],[tabindex],input,textarea,select';
+    return Array.from(document.querySelectorAll(selector)).flatMap((node, index) => {
+      const element = /** @type {HTMLElement} */ (node);
+      if (element.tabIndex < 0 || element.getAttribute('aria-hidden') === 'true') return [];
+
+      const tag = element.tagName.toLowerCase();
+      const explicitRole = element.getAttribute('role');
+      const implicitRole = tag === 'button' ? 'button'
+        : tag === 'textarea' ? 'textbox'
+          : tag === 'select' ? 'combobox'
+            : tag === 'input' ? (element.getAttribute('type') === 'checkbox' ? 'checkbox' : 'textbox')
+              : null;
+      const role = explicitRole || implicitRole;
+      const labelledBy = element.getAttribute('aria-labelledby');
+      const labelledByText = labelledBy
+        ? labelledBy.split(/\s+/).map(id => document.getElementById(id)?.textContent || '').join(' ')
+        : '';
+      const label = element.getAttribute('aria-label')
+        || labelledByText
+        || (tag === 'input' || tag === 'textarea' || tag === 'select'
+          ? document.querySelector(`label[for="${element.id}"]`)?.textContent || element.getAttribute('placeholder') || ''
+          : element.textContent || element.getAttribute('title') || '');
+      const issues = [];
+      if (!role) issues.push('missing accessible role');
+      if (!label.trim()) issues.push('missing accessible name');
+      return issues.length ? [{ index, tag, role, label, issues }] : [];
+    });
+  });
+  if (defects.length) throw new Error(`Found focusable control semantic defect(s): ${JSON.stringify(defects)}`);
 }
 
 async function runViewport(browser, baseURL, viewport) {
@@ -109,14 +132,16 @@ async function runViewport(browser, baseURL, viewport) {
 
   await page.goto(baseURL, { waitUntil: 'networkidle' });
   await expectVisible(page, 'Learn by building');
-  await assertButtonNames(page);
+  await assertFocusableControlSemantics(page);
   await assertNoHorizontalOverflow(page, viewport.name);
 
   await page.keyboard.press('Tab');
   const activeRole = await page.evaluate(() => document.activeElement?.getAttribute('role') || document.activeElement?.tagName || 'none');
   if (activeRole === 'BODY' || activeRole === 'none') throw new Error(`${viewport.name} keyboard tab did not move focus`);
 
-  await page.getByText('Save evidence for teacher review').click();
+  const saveEvidence = page.getByRole('button', { name: 'Save evidence for teacher review' });
+  await saveEvidence.focus();
+  await page.keyboard.press('Enter');
   await expectVisible(page, 'Complete the trace-table blank');
 
   await page.getByLabel('Code draft').fill('');
@@ -139,11 +164,18 @@ async function runViewport(browser, baseURL, viewport) {
   await expectValue(page, 'Trace-table blank', 'value');
   await expectValue(page, 'Lesson reflection', 'pasted a reflection');
 
-  await page.getByText('Save evidence for teacher review').click();
+  await saveEvidence.focus();
+  await page.keyboard.press('Space');
   await page.getByLabel('Switch to teacher demo view').click();
   await expectVisible(page, 'Teacher review queue');
   await expectVisible(page, 'pasted a reflection');
-  await page.getByText('Approve mastery').click();
+  const requestRevision = page.getByRole('button', { name: 'Request revision' });
+  await requestRevision.focus();
+  await page.keyboard.press('Enter');
+  await expectVisible(page, 'Status: needs-revision');
+  const approveMastery = page.getByRole('button', { name: 'Approve mastery' });
+  await approveMastery.focus();
+  await page.keyboard.press('Space');
   await expectVisible(page, 'Status: approved');
 
   await page.getByLabel('Switch to parent demo view').click();
@@ -157,7 +189,7 @@ async function runViewport(browser, baseURL, viewport) {
   await expectVisible(page, 'demo roles available');
   await expectVisible(page, 'Parent-safe progress export avoids private profile fields');
   await assertNoHorizontalOverflow(page, viewport.name);
-  await assertButtonNames(page);
+  await assertFocusableControlSemantics(page);
 
   await context.close();
   if (errors.length) throw new Error(`${viewport.name} console/page errors: ${errors.join(' | ')}`);

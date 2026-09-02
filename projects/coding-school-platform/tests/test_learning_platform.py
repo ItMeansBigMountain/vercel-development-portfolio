@@ -61,6 +61,23 @@ class LearningPlatformTests(TestCase):
         self.assertTrue(all(item["ageBand"] in ("10-14 JavaScript Core", "adult teacher/coaches") for item in manifest["lessons"]))
         self.assertTrue(all(item["exercise"]["solutionVisibility"] == "teacher-only" for item in manifest["lessons"]))
         self.assertIn("teacherReviewStatus", manifest["progressFields"])
+        self.assertNotIn("blocked:", manifest["canonicalDriveFolder"]["syncStatus"])
+        self.assertEqual(manifest["canonicalDriveFolder"]["syncVerifiedAt"], "2026-08-29")
+
+    def test_source_of_truth_uses_canonical_basic_13_order(self) -> None:
+        source = (Path(__file__).resolve().parents[1] / "CURRICULUM_SOURCE_OF_TRUTH.md").read_text()
+        expected = [
+            "8. Count above Y.",
+            "9. Square values.",
+            "10. Replace negatives.",
+            "11. Min/max/avg.",
+            "12. Shift values.",
+            "13. Replace negatives with Dojo.",
+        ]
+        positions = [source.index(item) for item in expected]
+        self.assertEqual(positions, sorted(positions))
+        self.assertNotIn("Convert matching values to zero", source)
+        self.assertNotIn("Replace negatives with `below zero`", source)
 
     def test_demo_student_privacy_boundary(self) -> None:
         with self.assertRaises(ValueError):

@@ -1,0 +1,44 @@
+name: Coding School EAS internal preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: Native platform to build
+        required: true
+        default: all
+        type: choice
+        options: [all, android, ios]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coding-school-eas-${{ github.ref }}-${{ inputs.platform }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: coding-school-mobile-preview
+    defaults:
+      run:
+        working-directory: projects/coding-school-platform/app
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/coding-school-platform/app/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - name: Queue internal EAS preview
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          test -n "$EXPO_TOKEN" || { echo 'Missing EXPO_TOKEN in coding-school-mobile-preview' >&2; exit 1; }
+          npx eas-cli@22.4.0 build --profile preview --platform "${{ inputs.platform }}" --non-interactive --no-wait
+          echo 'Use the exact EAS build URL printed above; the completed build page provides the device install URL.' >> "$GITHUB_STEP_SUMMARY"
