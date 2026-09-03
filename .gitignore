@@ -154,6 +154,10 @@
 /projects/youtube-high-ticket-leverage/
 /projects/plugin-hub/
 
+# Game dev project - tracked in root repo
+!/projects/game-dev/
+!/projects/game-dev/**
+
 # Generated YouTube metrics (may exceed GitHub file limits)
 /projects/faceless-youtube-channel/ANALYTICS/youtube_metrics.jsonl
 
