@@ -37,10 +37,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           # This monorepo contains imported reference archives outside this
-          # release boundary. Scan the complete history of the application and
-          # its release workflows without allowing unrelated legacy findings
-          # to prevent a Coding School preview.
-          GITLEAKS_LOG_OPTS: --all -- projects/coding-school-platform .github/workflows/coding-school-release.yml .github/workflows/coding-school-eas-preview.yml
+          # Scan only commits reachable from this ref's first-parent history
+          # (no --all flag — avoids pulling secrets from unrelated legacy branches
+          # that live outside the Coding School release boundary).
+          GITLEAKS_LOG_OPTS: -- projects/coding-school-platform .github/workflows/coding-school-release.yml .github/workflows/coding-school-eas-preview.yml
 
   domain:
     name: Curriculum parity and role tests
