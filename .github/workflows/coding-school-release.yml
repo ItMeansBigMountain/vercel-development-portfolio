@@ -119,12 +119,19 @@ jobs:
           for name in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
             test -n "${!name:-}" || { echo "Missing $name in coding-school-preview" >&2; exit 1; }
           done
+      - name: Build Vercel prebuilt artifact
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npm ci --ignore-scripts
+          npx vercel@59.5.0 pull --yes --environment=preview
+          npx vercel@59.5.0 build
       - name: Deploy immutable preview
         id: deploy
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          url="$(npx vercel@59.5.0 deploy dist --yes --token="$VERCEL_TOKEN")"
+          url="$(npx vercel@59.5.0 deploy --prebuilt --yes)"
           case "$url" in https://*) ;; *) echo 'Vercel did not return an HTTPS preview URL' >&2; exit 1;; esac
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Preview: $url" >> "$GITHUB_STEP_SUMMARY"
