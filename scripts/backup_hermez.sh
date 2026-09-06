@@ -8,7 +8,17 @@ REPO="/opt/data/HeRmEz"
 SRC="/opt/data"
 BACKUP_DIR="$REPO/.hermes"
 PROJECTS_DIR="$REPO/projects"
+BACKUP_BRANCH="${HERMES_BACKUP_BRANCH:-workspace-backup}"
 STAMP="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+# Serialize runs. Snapshot staging uses an alternate Git index, so active
+# development branches and their staging areas are never changed.
+LOCK_FILE="${HERMES_BACKUP_LOCK_FILE:-/opt/data/.hermes-backup.lock}"
+exec 9>"$LOCK_FILE"
+if ! flock -n 9; then
+  echo "ERROR: another HeRmEz backup is already running" >&2
+  exit 1
+fi
 
 # Use the runtime GitHub token non-interactively when available. The helper
 # contains no credential; it prints the token from the process environment and
@@ -36,15 +46,14 @@ fi
 mkdir -p "$BACKUP_DIR" "$PROJECTS_DIR"
 
 git -C "$REPO" fetch origin --prune >/dev/null 2>&1 || true
-if git -C "$REPO" rev-parse --verify origin/main >/dev/null 2>&1; then
-  git -C "$REPO" merge --ff-only origin/main >/dev/null 2>&1 || true
-fi
 
 # Sanitize Hermes home into the repo. This intentionally excludes secrets,
 # credentials, runtime locks/pids, nested git metadata, and the repo itself to
 # avoid recursive backups. Prefer rsync when available; otherwise use a Python
 # fallback so the cron job works on minimal containers.
-if command -v rsync >/dev/null 2>&1; then
+if [ "${HERMES_BACKUP_SKIP_SYNC:-0}" = "1" ]; then
+  echo "INFO: sanitized Hermes-home sync skipped for verification"
+elif command -v rsync >/dev/null 2>&1; then
   rsync -a --delete \
     --exclude='/HeRmEz/***' \
     --exclude='/.env' \
@@ -94,7 +103,9 @@ if command -v rsync >/dev/null 2>&1; then
     --exclude='/*oauth_pending*.json' \
     --exclude='**/*oauth_pending*.json' \
     --exclude='/*.bak*' \
-    --exclude='/state.db' \
+    --exclude='/.hermes/state.db' \
+    --exclude='/.hermes/.agent-browser/***' \
+    --exclude='/.hermes/profiles/*/state.db*' \
     --exclude='**/*.db' \
     --exclude='**/*.sqlite' \
     --exclude='**/*.sqlite3' \
@@ -173,8 +184,6 @@ exclude_file_globs = [
 ]
 include_names = {'.env.discord.template'}
 
-if dst.exists():
-    shutil.rmtree(dst)
 dst.mkdir(parents=True, exist_ok=True)
 
 for root, dirs, files in os.walk(src):
@@ -201,8 +210,8 @@ for root, dirs, files in os.walk(src):
                 os.symlink(linkto, target)
             else:
                 shutil.copy2(source, target)
-        except FileNotFoundError:
-            # File changed/disappeared during backup; skip it.
+        except (FileNotFoundError, PermissionError):
+            # File changed/disappeared or unreadable during backup; skip it.
             continue
 PY
 fi
@@ -263,42 +272,72 @@ fi
 
 cd "$REPO"
 
-# Active workers may create and remove generated files while the backup stages.
-# Retry the whole add so a transient ENOENT cannot fail the daily snapshot.
+# Build the snapshot in an alternate index. This avoids committing unrelated
+# staged work and makes the backup independent of the checked-out branch.
+ALT_INDEX="$(mktemp)"
+rm -f "$ALT_INDEX"
+trap 'rm -f "$ASKPASS_HELPER" "$ALT_INDEX"' EXIT
+export GIT_INDEX_FILE="$ALT_INDEX"
+git read-tree HEAD
+
+# Active workers may create/remove generated files while staging. Retry the
+# alternate index only; the developer's real index remains untouched.
 add_ok=0
 for attempt in 1 2 3 4 5; do
-  if git add .gitignore .gitmodules README.md KANBAN.md .hermes projects scripts/backup_hermez.sh scripts/verify_hermez_backup_stage.py; then
-    add_ok=1
-    break
+  # Add tracked paths explicitly; nested repos that aren't registered submodules
+  # are skipped to avoid "does not have a commit checked out" failures.
+  if git add -A -- .gitignore .gitmodules README.md KANBAN.md .hermes \
+      scripts/backup_hermez.sh scripts/verify_hermez_backup_stage.py; then
+    # Stage projects/* content while ignoring nested .git directories and
+    # archive/backup directories containing large files or nested repos.
+    # Note: symlinks in _ops mean we skip the whole _ops directory.
+    if git add -A -- 'projects/*' ':!projects/**/.git/**' ':!projects/_ops/**' ':!projects/dayz-survival-unity/**' ':!projects/game-dev/**' ':!projects/_archive/**' ':!projects/_backups/**' ':!projects/mcp-unity/**' ':!projects/rts-js-chatrooms/**'; then
+      add_ok=1
+      break
+    fi
   fi
   sleep "$attempt"
 done
 if [ "$add_ok" -ne 1 ]; then
-  echo "ERROR: git staging remained unstable after 5 attempts" >&2
+  echo "ERROR: backup staging remained unstable after 5 attempts" >&2
   exit 1
 fi
 
 /opt/hermes/.venv/bin/python "$REPO/scripts/verify_hermez_backup_stage.py"
+TREE_SHA="$(git write-tree)"
 
-if git diff --cached --quiet; then
+REMOTE_PARENT="$(git rev-parse --verify "refs/remotes/origin/$BACKUP_BRANCH" 2>/dev/null || true)"
+if [ -n "$REMOTE_PARENT" ] && [ "$(git rev-parse "$REMOTE_PARENT^{tree}")" = "$TREE_SHA" ]; then
   echo "✅ **HeRmEz backup current**"
-  echo "• No changes to push"
+  echo "• Branch: $BACKUP_BRANCH"
+  echo "• Commit: ${REMOTE_PARENT:0:12}"
   exit 0
 fi
 
 COMMIT_MSG="chore: automated HeRmEz backup $STAMP"
-git commit -m "$COMMIT_MSG" >/dev/null
+if [ -n "$REMOTE_PARENT" ]; then
+  SNAPSHOT_SHA="$(printf '%s\n' "$COMMIT_MSG" | git commit-tree "$TREE_SHA" -p "$REMOTE_PARENT")"
+else
+  SNAPSHOT_SHA="$(printf '%s\n' "$COMMIT_MSG" | git commit-tree "$TREE_SHA" -p HEAD)"
+fi
 
-git push origin main >/dev/null
+if [ "${HERMES_BACKUP_DRY_RUN:-0}" = "1" ]; then
+  echo "✅ **HeRmEz backup dry run passed**"
+  echo "• Branch: $BACKUP_BRANCH"
+  echo "• Candidate: ${SNAPSHOT_SHA:0:12}"
+  exit 0
+fi
 
-HEAD_SHA="$(git rev-parse HEAD)"
-REMOTE_SHA="$(git ls-remote --heads origin main | awk '{print $1}')"
-if [ "$HEAD_SHA" != "$REMOTE_SHA" ]; then
+git push origin "$SNAPSHOT_SHA:refs/heads/$BACKUP_BRANCH" >/dev/null
+
+REMOTE_SHA="$(git ls-remote --heads origin "$BACKUP_BRANCH" | cut -f1)"
+if [ "$SNAPSHOT_SHA" != "$REMOTE_SHA" ]; then
   echo "ERROR: pushed backup but remote SHA mismatch" >&2
-  echo "local=$HEAD_SHA" >&2
+  echo "local=$SNAPSHOT_SHA" >&2
   echo "remote=$REMOTE_SHA" >&2
   exit 1
 fi
 
 echo "✅ **HeRmEz backup pushed**"
-echo "• Commit: ${HEAD_SHA:0:12}"
+echo "• Branch: $BACKUP_BRANCH"
+echo "• Commit: ${SNAPSHOT_SHA:0:12}"

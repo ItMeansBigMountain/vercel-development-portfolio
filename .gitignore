@@ -66,6 +66,8 @@
 /.hermes/secrets/
 /.hermes/models_dev_cache.json
 /.hermes/state.db
+/.hermes/.agent-browser/
+/.hermes/profiles/*/state.db*
 /.hermes/**/*.db
 /.hermes/**/*.sqlite
 /.hermes/**/*.sqlite3
