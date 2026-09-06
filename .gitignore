@@ -29,6 +29,9 @@
 **/*.pfx
 **/id_rsa*
 **/id_ed25519*
+**/*cookies*.json
+**/*.tfvars
+**/*.tfvars.json
 
 # Runtime locks / pids / sockets
 *.lock
@@ -227,6 +230,13 @@
 **/bin/
 **/obj/
 **/test-results/
+**/.playwright-browsers/
+
+# Disposable root-level agent scratch and generated evidence
+/.tmp*/
+/.tmp*
+/artifacts/
+/OUTPUTS/
 
 # Runtime databases and journals
 **/*.db
