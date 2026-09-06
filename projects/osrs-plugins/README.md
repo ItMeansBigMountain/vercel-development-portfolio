@@ -41,4 +41,19 @@ Useful docs:
 
 ## Current status
 
-- `WhosGrindingClanPanel` is still at the root path for submodule continuity while final failover/Hub prep is completed. Once we are ready to submit to Plugin Hub, move or re-register it under `pr-review-pending/` with a clean `.gitmodules` update.
+- `completed/BisLoadouts` — officially merged as Plugin Hub PR #14682. Icon-only marker update PR #16153 is the single currently open submission.
+- `completed/DeadmanBreachTimer` — officially merged as Plugin Hub PR #10567. Its approved icon update is queued after BIS Loadouts.
+- `completed/WhosGrindingClanPanel` — officially merged as Plugin Hub PR #13917. The official-hiscores snapshot fallback repair is pushed in the child repository; its marker update waits behind the icon release train.
+- `in-progress/ClanWarBoard` — active product development. PR #16152 was closed unmerged and must not be resubmitted until development and testing are complete.
+- `services/clan-war-board-service` — active backend supporting Clan War Board; it follows the product's in-progress lifecycle but remains separated from plugin source.
+- `_templates/osrs-plugins-boilerplate` — reusable starter only, never a shipping plugin.
+- `pr-review-pending/` — currently empty. Nothing is both locally complete and waiting for an initial Plugin Hub review.
+
+## Submission queue
+
+RuneLite allows one open Plugin Hub PR per author. Current order:
+
+1. BIS Loadouts icon update — open: https://github.com/runelite/plugin-hub/pull/16153
+2. Deadman Breach Timer icon update — queued after BIS closes or merges
+3. Who's Grinding Panel maintenance marker — queued after the approved icon updates
+4. Clan War Board initial submission — excluded until product development is explicitly complete
