@@ -1,0 +1,70 @@
+name: tweetBetweenTheLines Vercel development
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "projects/tweetBetweenTheLines/**"
+      - ".github/workflows/tweet-between-the-lines-vercel-dev.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tweet-between-the-lines-vercel-development
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: projects/tweetBetweenTheLines
+
+jobs:
+  deploy:
+    name: Deploy development preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: tweet-between-the-lines-development
+      url: ${{ steps.deploy.outputs.url }}
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - name: Reject incorrect Vercel project binding
+        shell: bash
+        run: |
+          test "$VERCEL_PROJECT_ID" = "prj_LsRQMFSOwUIeMNRiC8cioBstOpbw" || {
+            echo "Refusing deployment: VERCEL_PROJECT_ID is not the canonical tweetbetweenthelines project." >&2
+            exit 1
+          }
+          test "$VERCEL_ORG_ID" = "team_9IP8D1xXFQSrBMZrMjRnl9sD" || {
+            echo "Refusing deployment: VERCEL_ORG_ID does not match the canonical team." >&2
+            exit 1
+          }
+      - run: npm ci --ignore-scripts
+      - name: Pull development settings
+        run: npx --yes vercel@59.5.0 pull --yes --environment=development --token="${{ secrets.VERCEL_TOKEN }}"
+      - name: Verify pulled Vercel project identity
+        run: |
+          node -e 'const p=require("./.vercel/project.json"); if (p.projectId !== "prj_LsRQMFSOwUIeMNRiC8cioBstOpbw" || p.projectName !== "tweetbetweenthelines") { console.error("Refusing deployment: .vercel points at", p); process.exit(1); }'
+      - name: Build precompiled deployment
+        run: npx --yes vercel@59.5.0 build --token="${{ secrets.VERCEL_TOKEN }}"
+      - name: Deploy precompiled preview
+        id: deploy
+        run: |
+          url="$(npx --yes vercel@59.5.0 deploy --prebuilt --token="${{ secrets.VERCEL_TOKEN }}")"
+          case "$url" in https://*) ;; *) echo "Vercel did not return an HTTPS URL" >&2; exit 1;; esac
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          printf 'VERCEL_PREVIEW_URL=%s\n' "$url" > deployment-url.txt
+          printf '### Development deployment\n\n- Immutable preview: %s\n- Commit: `%s`\n' "$url" "$GITHUB_SHA" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: tweet-between-the-lines-vercel-url-${{ github.sha }}
+          path: projects/tweetBetweenTheLines/deployment-url.txt
+          if-no-files-found: error
+          retention-days: 30
