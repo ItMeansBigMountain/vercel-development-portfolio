@@ -267,6 +267,8 @@
 /.hermes/kanban/workspaces/
 /.hermes/kanban/logs/
 /.hermes/sandboxes/
+/.hermes/worktrees/
+/.hermes/HeRmEz-worktrees/
 /.hermes/image_cache/
 /.hermes/images/
 /.hermes/processes.json

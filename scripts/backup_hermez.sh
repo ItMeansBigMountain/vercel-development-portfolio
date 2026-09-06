@@ -106,6 +106,8 @@ elif command -v rsync >/dev/null 2>&1; then
     --exclude='/.hermes/state.db' \
     --exclude='/.hermes/.agent-browser/***' \
     --exclude='/.hermes/profiles/*/state.db*' \
+    --exclude='/.hermes/worktrees/***' \
+    --exclude='/.hermes/HeRmEz-worktrees/***' \
     --exclude='**/*.db' \
     --exclude='**/*.sqlite' \
     --exclude='**/*.sqlite3' \
