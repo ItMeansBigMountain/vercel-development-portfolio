@@ -1,0 +1,11 @@
+{
+  "name": "command-center",
+  "label": "Command Center",
+  "description": "Read-only operational overview with provenance and freshness",
+  "icon": "Activity",
+  "version": "1.0.0",
+  "tab": {"path": "/command-center", "position": "before:kanban"},
+  "entry": "dist/index.js",
+  "css": "dist/style.css",
+  "api": "plugin_api.py"
+}
