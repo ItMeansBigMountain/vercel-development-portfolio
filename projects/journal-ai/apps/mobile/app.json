@@ -32,9 +32,6 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.journalai.app",
-      "associatedDomains": [
-        "applinks:journal-ai-sooty.vercel.app"
-      ],
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -44,23 +41,6 @@
       "permissions": [
         "RECORD_AUDIO",
         "POST_NOTIFICATIONS"
-      ],
-      "intentFilters": [
-        {
-          "action": "VIEW",
-          "autoVerify": true,
-          "data": [
-            {
-              "scheme": "https",
-              "host": "journal-ai-sooty.vercel.app",
-              "pathPrefix": "/auth/callback"
-            }
-          ],
-          "category": [
-            "BROWSABLE",
-            "DEFAULT"
-          ]
-        }
       ]
     },
     "web": {
