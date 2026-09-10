@@ -1,0 +1,309 @@
+name: Coding School CI Quality Gates
+
+# Required quality gates that can be enforced via branch/environment protection rules
+# Local equivalents: run scripts in projects/coding-school-platform/app and root
+
+on:
+  pull_request:
+    paths:
+      - 'projects/coding-school-platform/**'
+      - '.github/workflows/ci-quality-gates.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'projects/coding-school-platform/**'
+      - '.github/workflows/ci-quality-gates.yml'
+  workflow_dispatch:
+
+# Fail closed: cancel in-progress runs for non-main refs; main runs complete
+concurrency:
+  group: coding-school-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+# Minimal permissions - only what each job needs
+permissions:
+  contents: read
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # QUALITY: Linting and formatting (if tooling exists)
+  # ─────────────────────────────────────────────────────────────────────────────
+  quality:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: projects/coding-school-platform/app
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/coding-school-platform/app/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Check for ESLint config
+        id: eslint
+        run: |
+          if [ -f .eslintrc.js ] || [ -f .eslintrc.json ] || [ -f .eslintrc.yml ] || [ -f .eslintrc.yaml ] || [ -f eslint.config.js ] || [ -f eslint.config.mjs ]; then
+            echo "has_eslint=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_eslint=false" >> "$GITHUB_OUTPUT"
+            echo "No ESLint config found; skipping lint step (not a failure)"
+          fi
+      - name: Run ESLint
+        if: steps.eslint.outputs.has_eslint == 'true'
+        run: npx eslint . --ext .ts,.tsx --max-warnings 0
+      - name: Check for Prettier config
+        id: prettier
+        run: |
+          if [ -f .prettierrc ] || [ -f .prettierrc.json ] || [ -f .prettierrc.yml ] || [ -f .prettierrc.yaml ] || [ -f prettier.config.js ] || [ -f prettier.config.mjs ] || grep -q '"prettier"' package.json; then
+            echo "has_prettier=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_prettier=false" >> "$GITHUB_OUTPUT"
+            echo "No Prettier config found; skipping format check (not a failure)"
+          fi
+      - name: Run Prettier check
+        if: steps.prettier.outputs.has_prettier == 'true'
+        run: npx prettier --check .
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # TYPECHECK: TypeScript strict mode
+  # ─────────────────────────────────────────────────────────────────────────────
+  typecheck:
+    name: TypeScript Type Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: projects/coding-school-platform/app
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/coding-school-platform/app/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Run TypeScript type check
+        run: npm run typecheck
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # DOMAIN: Python curriculum/role tests (backend logic)
+  # ─────────────────────────────────────────────────────────────────────────────
+  domain:
+    name: Curriculum & Role Tests (Python)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: projects/coding-school-platform
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.13'
+      - name: Install pytest
+        run: pip install pytest
+      - name: Run Python unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Python compileall (syntax check)
+        run: python -m compileall -q coding_school examples tests
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SECURITY: Dependency audit + secret scan
+  # ─────────────────────────────────────────────────────────────────────────────
+  security:
+    name: Security & Dependency Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITLEAKS_LOG_OPTS: -- projects/coding-school-platform .github/workflows/ci-quality-gates.yml
+      - name: Setup Node.js for npm audit
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/coding-school-platform/app/package-lock.json
+      - name: Install dependencies
+        working-directory: projects/coding-school-platform/app
+        run: npm ci --ignore-scripts
+      - name: npm audit (high+)
+        working-directory: projects/coding-school-platform/app
+        run: npm audit --audit-level=high
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # WEB BUILD: Production web export + Playwright smoke + input quality gates
+  # ─────────────────────────────────────────────────────────────────────────────
+  web-build-and-test:
+    name: Web Build + Smoke + Input Gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: projects/coding-school-platform/app
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/coding-school-platform/app/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: TypeScript type check (redundant fast gate)
+        run: npm run typecheck
+      - name: Production web build
+        run: npm run build:web
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Four-role smoke test (mobile + desktop)
+        run: npm run smoke:web
+      - name: Five-viewport input quality gates
+        run: npm run gate:inputs
+      - name: Provenance assertion (no private data in bundle)
+        run: npm run assert:provenance
+      - name: Upload web build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: coding-school-web-${{ github.sha }}
+          path: |
+            projects/coding-school-platform/app/dist
+            projects/coding-school-platform/app/input-quality-report.json
+          if-no-files-found: error
+          retention-days: 14
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ANDROID VALIDATION: Expo export for Android (no device test without EAS)
+  # ─────────────────────────────────────────────────────────────────────────────
+  android-validation:
+    name: Android Export Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: projects/coding-school-platform/app
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/coding-school-platform/app/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Expo export for Android
+        run: npx expo export --platform android --output-dir dist-android
+      - name: Validate Android bundle exists
+        run: |
+          if [ ! -d dist-android ] || [ -z "$(ls -A dist-android)" ]; then
+            echo "Android export directory is empty" >&2
+            exit 1
+          fi
+          echo "Android export OK: $(du -sh dist-android)"
+      - name: Upload Android export artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: coding-school-android-${{ github.sha }}
+          path: projects/coding-school-platform/app/dist-android
+          if-no-files-found: error
+          retention-days: 7
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # IOS VALIDATION: Expo export for iOS (no device test without macOS runner/EAS)
+  # ─────────────────────────────────────────────────────────────────────────────
+  ios-validation:
+    name: iOS Export Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: projects/coding-school-platform/app
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/coding-school-platform/app/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Expo export for iOS
+        run: npx expo export --platform ios --output-dir dist-ios
+      - name: Validate iOS bundle exists
+        run: |
+          if [ ! -d dist-ios ] || [ -z "$(ls -A dist-ios)" ]; then
+            echo "iOS export directory is empty" >&2
+            exit 1
+          fi
+          echo "iOS export OK: $(du -sh dist-ios)"
+      - name: Upload iOS export artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: coding-school-ios-${{ github.sha }}
+          path: projects/coding-school-platform/app/dist-ios
+          if-no-files-found: error
+          retention-days: 7
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # GATE SUMMARY: Aggregate status for branch protection
+  # ─────────────────────────────────────────────────────────────────────────────
+  gate-summary:
+    name: Gate Summary (required for protection)
+    if: always()
+    needs: [quality, typecheck, domain, security, web-build-and-test, android-validation, ios-validation]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check all required jobs passed
+        run: |
+          echo "Job results:"
+          echo "  quality: ${{ needs.quality.result }}"
+          echo "  typecheck: ${{ needs.typecheck.result }}"
+          echo "  domain: ${{ needs.domain.result }}"
+          echo "  security: ${{ needs.security.result }}"
+          echo "  web-build-and-test: ${{ needs.web-build-and-test.result }}"
+          echo "  android-validation: ${{ needs.android-validation.result }}"
+          echo "  ios-validation: ${{ needs.ios-validation.result }}"
+          echo ""
+          failed=0
+          for job in quality typecheck domain security web-build-and-test android-validation ios-validation; do
+            result="${{ needs.$job.result }}"
+            if [ "$result" != "success" ]; then
+              echo "❌ FAILED: $job ($result)"
+              failed=1
+            else
+              echo "✅ PASSED: $job"
+            fi
+          done
+          if [ $failed -eq 1 ]; then
+            echo "::error::One or more required quality gates failed"
+            exit 1
+          fi
+          echo "All required quality gates passed"
