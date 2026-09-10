@@ -14,8 +14,9 @@ permissions:
 
 jobs:
   production:
-    needs: [ci-quality-gates]
     name: Approval-gated Azure production
+    needs:
+      - ci-quality-gates
     if: >-
       github.event_name == 'workflow_dispatch' &&
       inputs.promote_production == true &&
