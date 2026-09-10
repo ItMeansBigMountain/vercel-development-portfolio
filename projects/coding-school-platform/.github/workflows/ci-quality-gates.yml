@@ -293,8 +293,8 @@ jobs:
           echo "  ios-validation: ${{ needs.ios-validation.result }}"
           echo ""
           failed=0
-          for job in quality typecheck domain security web-build-and-test android-validation ios-validation; do
-            result="${{ needs.$job.result }}"
+          for job in quality typecheck domain security "web-build-and-test" android-validation ios-validation; do
+            result="${{ needs[job].result }}"
             if [ "$result" != "success" ]; then
               echo "❌ FAILED: $job ($result)"
               failed=1
