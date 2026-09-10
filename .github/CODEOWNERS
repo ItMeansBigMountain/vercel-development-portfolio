@@ -1,0 +1,4 @@
+# Release controls require review from the repository owner.
+/.github/workflows/ @ItMeansBigMountain
+/projects/coding-school-platform/app/package-lock.json @ItMeansBigMountain
+/projects/coding-school-platform/app/ops/ @ItMeansBigMountain
