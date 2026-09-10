@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       source_run_id:
-        description: Successful main CI run ID whose exact artifact was preview-approved
+        description: Successful coding-school CI run ID whose exact artifact was preview-approved
         required: true
         type: string
       expected_source_sha:
-        description: Full 40-character main commit SHA approved in preview
+        description: Full 40-character coding-school commit SHA approved in preview
         required: true
         type: string
       promote_production:
@@ -33,7 +33,7 @@ concurrency:
 jobs:
   validate-source:
     name: Validate approved CI source
-    if: inputs.promote_production == true && github.ref == 'refs/heads/main'
+    if: inputs.promote_production == true && github.ref == 'refs/heads/coding-school'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
@@ -45,16 +45,16 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
         with:
-          ref: main
+          ref: coding-school
           persist-credentials: false
-      - name: Require source SHA to be current main
+      - name: Require source SHA to be current release branch
         id: source
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPOSITORY: ${{ github.repository }}
         run: |
           case "$SOURCE_SHA" in [0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]) ;; *) exit 1;; esac
-          test "$(gh api "repos/$GH_REPOSITORY/commits/main" --jq .sha)" = "$SOURCE_SHA" || { echo 'Source is not current main' >&2; exit 1; }
+          test "$(gh api "repos/$GH_REPOSITORY/commits/coding-school" --jq .sha)" = "$SOURCE_SHA" || { echo 'Source is not current coding-school' >&2; exit 1; }
           echo "source_sha=$SOURCE_SHA" >> "$GITHUB_OUTPUT"
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
         with:
@@ -62,7 +62,7 @@ jobs:
           path: ${{ env.APP_PATH }}
           run-id: ${{ env.SOURCE_RUN_ID }}
           github-token: ${{ github.token }}
-      - name: Verify exact successful main run and artifact digest
+      - name: Verify exact successful release-branch run and artifact digest
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPOSITORY: ${{ github.repository }}
@@ -98,7 +98,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
         with:
-          ref: main
+          ref: coding-school
           persist-credentials: false
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
         with:
