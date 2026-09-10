@@ -27,7 +27,8 @@
     "build:android": "expo export --platform android",
     "build:ios": "expo export --platform ios",
     "smoke:web": "node scripts/smoke-release.cjs",
-    "gate:inputs": "node scripts/input-quality-gate.cjs"
+    "gate:inputs": "node scripts/input-quality-gate.cjs",
+    "assert:provenance": "node scripts/provenance-assertion.cjs"
   },
   "private": true
 }
