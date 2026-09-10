@@ -41,3 +41,7 @@
 	path = projects/CombatAtlas
 	url = https://github.com/ItMeansBigMountain/CombatAtlas.git
 	branch = main
+[submodule "projects/_archive/Generative-AI"]
+	path = projects/_archive/Generative-AI
+	url = https://github.com/ItMeansBigMountain/Generative-AI.git
+	branch = main
