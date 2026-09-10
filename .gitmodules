@@ -45,3 +45,54 @@
 	path = projects/_archive/Generative-AI
 	url = https://github.com/ItMeansBigMountain/Generative-AI.git
 	branch = main
+[submodule "projects/_archive/HTML_REGEX"]
+	path = projects/_archive/HTML_REGEX
+	url = https://github.com/ItMeansBigMountain/HTML_REGEX.git
+[submodule "projects/_archive/Kubernetes-Docker"]
+	path = projects/_archive/Kubernetes-Docker
+	url = https://github.com/ItMeansBigMountain/Kubernetes-Docker.git
+[submodule "projects/_archive/Multiplayer"]
+	path = projects/_archive/Multiplayer
+	url = https://github.com/ItMeansBigMountain/Multiplayer.git
+[submodule "projects/_archive/OptaPlanner"]
+	path = projects/_archive/OptaPlanner
+	url = https://github.com/ItMeansBigMountain/OptaPlanner.git
+[submodule "projects/_archive/REST_Templates"]
+	path = projects/_archive/REST_Templates
+	url = https://github.com/ItMeansBigMountain/REST_Templates.git
+[submodule "projects/_archive/React.web_userLoginForm"]
+	path = projects/_archive/React.web_userLoginForm
+	url = https://github.com/ItMeansBigMountain/React.web_userLoginForm.git
+[submodule "projects/_archive/Spring_Boot_webDev"]
+	path = projects/_archive/Spring_Boot_webDev
+	url = https://github.com/ItMeansBigMountain/Spring_Boot_webDev.git
+[submodule "projects/_archive/darkSouls-Unity"]
+	path = projects/_archive/darkSouls-Unity
+	url = https://github.com/ItMeansBigMountain/darkSouls-Unity.git
+[submodule "projects/_archive/frequencyFinder.Hz"]
+	path = projects/_archive/frequencyFinder.Hz
+	url = https://github.com/ItMeansBigMountain/frequencyFinder.Hz.git
+[submodule "projects/_archive/pdf-emailer"]
+	path = projects/_archive/pdf-emailer
+	url = https://github.com/ItMeansBigMountain/pdf-emailer.git
+[submodule "projects/_archive/penTest"]
+	path = projects/_archive/penTest
+	url = https://github.com/ItMeansBigMountain/penTest.git
+[submodule "projects/_archive/robinhood-daily-portfolio-report"]
+	path = projects/_archive/robinhood-daily-portfolio-report
+	url = https://github.com/ItMeansBigMountain/robinhood-daily-portfolio-report.git
+[submodule "projects/_archive/security-research-source-monorepo"]
+	path = projects/_archive/security-research-source-monorepo
+	url = https://github.com/ItMeansBigMountain/security-research-source-monorepo.git
+[submodule "projects/_archive/snake-REACT_NATIVE"]
+	path = projects/_archive/snake-REACT_NATIVE
+	url = https://github.com/ItMeansBigMountain/snake-REACT_NATIVE.git
+[submodule "projects/_archive/spring_Oauth"]
+	path = projects/_archive/spring_Oauth
+	url = https://github.com/ItMeansBigMountain/spring_Oauth.git
+[submodule "projects/_archive/spring_template"]
+	path = projects/_archive/spring_template
+	url = https://github.com/ItMeansBigMountain/spring_template.git
+[submodule "projects/_archive/wornly"]
+	path = projects/_archive/wornly
+	url = https://github.com/ItMeansBigMountain/wornly.git
