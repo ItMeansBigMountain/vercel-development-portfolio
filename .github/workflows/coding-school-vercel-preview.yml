@@ -1,0 +1,203 @@
+# Coding School Vercel Preview Deployment
+# Follows the GitHub Actions → Vercel Development/Preview Pipeline Standard
+# Deploys immutable preview AFTER CI quality gates pass
+
+name: Coding School Vercel Preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/coding-school-platform/**'
+      - '.github/workflows/coding-school-vercel-preview.yml'
+      - '.github/workflows/coding-school-ci-quality-gates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # id-token: write  # Not needed - using project-scoped token
+
+concurrency:
+  group: coding-school-vercel-preview-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  VERCEL_CLI_VERSION: '59.5.0'
+  NODE_VERSION: '22'
+  APP_PATH: 'projects/coding-school-platform/app'
+
+jobs:
+  verify-config:
+    name: Verify Vercel Configuration
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: coding-school-preview
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - name: Validate required environment configuration
+        run: |
+          for name in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
+            test -n "${!name:-}" || { echo "Missing $name in coding-school-preview environment" >&2; exit 1; }
+          done
+      - name: Verify Vercel project binding
+        run: |
+          test "${{ env.VERCEL_PROJECT_ID }}" = "prj_2RTTGwmqepGM9TMkyX2iXX9jbrNt" || {
+            echo "Refusing deployment: VERCEL_PROJECT_ID mismatch" >&2
+            exit 1
+          }
+          test "${{ env.VERCEL_ORG_ID }}" = "team_9IP8D1xXFQSrBMZrMjRnl9sD" || {
+            echo "Refusing deployment: VERCEL_ORG_ID mismatch" >&2
+            exit 1
+          }
+
+  deploy:
+    name: Deploy Immutable Vercel Preview
+    needs: verify-config
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: coding-school-preview
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: ${{ env.APP_PATH }}/package-lock.json
+
+      - name: Download web build artifact from CI
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
+        with:
+          pattern: coding-school-web-${{ github.sha }}
+          path: ${{ env.APP_PATH }}
+
+      - name: Verify build artifact exists
+        run: |
+          test -d "${{ env.APP_PATH }}/dist" || {
+            echo "No build output found in artifact at ${{ env.APP_PATH }}/dist" >&2
+            exit 1
+          }
+          echo "Build artifact verified: $(du -sh ${{ env.APP_PATH }}/dist)"
+
+      - name: Pull Vercel project settings
+        working-directory: ${{ env.APP_PATH }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx --yes vercel@${{ env.VERCEL_CLI_VERSION }} pull --yes --environment=preview
+
+      - name: Verify pulled Vercel project identity
+        working-directory: ${{ env.APP_PATH }}
+        run: |
+          node -e '
+            const fs = require("fs");
+            const p = JSON.parse(fs.readFileSync(".vercel/project.json", "utf8"));
+            const expectedProjectId = "prj_2RTTGwmqepGM9TMkyX2iXX9jbrNt";
+            const expectedProjectName = "coding-school-platform";
+            if (p.projectId !== expectedProjectId || p.projectName !== expectedProjectName) {
+              console.error("Refusing deployment: .vercel points at", p, "expected", { projectId: expectedProjectId, projectName: expectedProjectName });
+              process.exit(1);
+            }
+            console.log("Vercel project identity verified:", p);
+          '
+
+      - name: Build precompiled deployment
+        working-directory: ${{ env.APP_PATH }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx --yes vercel@${{ env.VERCEL_CLI_VERSION }} build --token="${{ secrets.VERCEL_TOKEN }}"
+
+      - name: Deploy precompiled immutable preview
+        id: deploy
+        working-directory: ${{ env.APP_PATH }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          url="$(npx --yes vercel@${{ env.VERCEL_CLI_VERSION }} deploy --prebuilt --token="${{ secrets.VERCEL_TOKEN }}")"
+          case "$url" in https://*) ;; *) echo "Vercel did not return an HTTPS URL" >&2; exit 1;; esac
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          printf 'VERCEL_IMMUTABLE_URL=%s\n' "$url" > deployment-url.txt
+          printf '### Immutable Vercel Preview\n\n- Immutable URL: %s\n- Commit: `%s`\n- Run: %s\n' "$url" "${{ github.sha }}" "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Emit deployment metadata JSON
+        id: metadata
+        working-directory: ${{ env.APP_PATH }}
+        run: |
+          # Use node to emit valid JSON with real timestamps
+          node -e '
+            const fs = require("fs");
+            const metadata = {
+              app: "coding-school-platform",
+              repository: "${{ github.repository }}",
+              commit_sha: "${{ github.sha }}",
+              commit_short: "${{ github.sha }}".substring(0, 7),
+              workflow_run_id: "${{ github.run_id }}",
+              workflow_run_url: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+              vercel_project_id: "prj_2RTTGwmqepGM9TMkyX2iXX9jbrNt",
+              vercel_org_id: "${{ env.VERCEL_ORG_ID }}",
+              immutable_url: "${{ steps.deploy.outputs.url }}",
+              deployed_at: new Date().toISOString(),
+              github_actor: "${{ github.actor }}",
+              github_ref: "${{ github.ref }}"
+            };
+            fs.writeFileSync("deployment-metadata.json", JSON.stringify(metadata, null, 2) + "\n");
+          '
+
+      - name: Upload deployment metadata
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coding-school-platform-deployment-metadata-${{ github.sha }}
+          path: ${{ env.APP_PATH }}/deployment-metadata.json
+          if-no-files-found: error
+          retention-days: 90
+
+  browser-smoke:
+    name: Browser Smoke & Identity Tests
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Playwright
+        run: |
+          npm install -g playwright@1.48.0
+          npx playwright install --with-deps chromium
+
+      - name: Download deployment metadata
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
+        with:
+          pattern: 'coding-school-platform-deployment-metadata-*'
+          path: deployment-metadata
+          merge-multiple: true
+
+      - name: Run browser smoke tests
+        working-directory: ${{ env.APP_PATH }}
+        run: |
+          node ops/browser-smoke.mjs
+
+      - name: Upload browser smoke results
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coding-school-platform-browser-smoke-${{ github.sha }}
+          path: ${{ env.APP_PATH }}/browser-smoke-results.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Fail if smoke tests failed
+        if: failure()
+        run: |
+          cat ${{ env.APP_PATH }}/browser-smoke-results.json
+          exit 1
