@@ -25,7 +25,7 @@ Create a GitHub Environment named `coding-school-production` with the following 
 > **Note**: These are configuration variables, not secrets. They are referenced via `${{ vars.* }}` in the workflow.
 
 ### Environment Secrets
-None required — authentication uses GitHub OIDC workload identity federation.
+None required — Azure CLI authentication and Static Web Apps deployment authorization both use short-lived GitHub OIDC identity tokens. Configure the Static Web App deployment authorization policy for GitHub before promotion; do not create or retrieve a deployment token.
 
 ## 2. Azure OIDC Workload Identity Federation Setup
 
@@ -145,17 +145,17 @@ az staticwebapp create \
 2. **Validate artifact** — Verifies `dist/` directory exists in artifact
 3. **Validate OIDC config** — Checks all required Azure environment variables are set
 4. **Azure login** — Uses `azure/login` v2 with OIDC (no secrets)
-5. **Obtain ephemeral token** — Calls `az staticwebapp secrets list` to get one-time deployment token
-6. **Deploy** — Uses `Azure/static-web-apps-deploy` v1 with `skip_app_build: true`
+5. **Request GitHub identity token** — Uses the job's `id-token: write` permission to mint a short-lived token
+6. **Deploy** — Passes `github_id_token` to `Azure/static-web-apps-deploy` v1 with `skip_app_build: true`; its legacy required `azure_static_web_apps_api_token` input is explicitly empty, so no Static Web Apps deployment token is listed, emitted, or stored
 7. **Verify production identity** — Fetches production URL, asserts "Algorithm Academy" in HTML
 
 ### Security Controls
 - **No long-lived secrets**: Uses GitHub OIDC workload identity federation
 - **Least-privilege RBAC**: Service Principal has `Static Web Apps Contributor` on single resource only
-- **Ephemeral deployment token**: Token fetched at deploy time, masked in logs, not stored
+- **No reusable deployment token**: Static Web Apps authorizes the short-lived GitHub identity token; the workflow never calls `az staticwebapp secrets list`
 - **Protected environment**: Requires manual approval in GitHub UI before production job runs
 - **Branch restriction**: Only `main` branch can trigger (OIDC subject + environment branch policy + workflow `if`)
-- **Serialized production**: Concurrency via GitHub environment (one production deploy at a time)
+- **Serialized production**: Fixed workflow concurrency group `coding-school-production` queues overlapping promotions
 
 ### Artifacts
 - No artifacts produced by this workflow (uses upstream CI artifact)
@@ -183,20 +183,15 @@ cat > ops/rollback-evidence/production-rollback-<incident-id>.json <<'EOF'
 }
 EOF
 
-# 2. Option A: Redeploy previous verified artifact (recommended)
-#    - Find the previous successful `coding-school-web-<sha>` artifact
-#    - Trigger workflow_dispatch with that SHA (requires workflow modification)
-#    OR
-#    - Use Azure Static Web App → Deployments → Redeploy previous deployment
+# 2. Create a protected revert PR that restores the approved revision.
+#    Let the complete CI and preview workflow build a new immutable artifact from
+#    the revert commit; do not bypass current-main provenance checks.
 
-# 3. Option B: Azure Portal rollback
-#    - Go to Azure Static Web App → Deployments
-#    - Find previous successful deployment
-#    - Click "Redeploy" or "Promote to production"
+# 3. Obtain Oyama preview approval, then dispatch production first with
+#    dry_run=true and finally with dry_run=false after protected approval.
 
-# 4. Reconcile via GitHub Actions (within 1 business day)
-#    - Push rollback-evidence commit
-#    - Trigger production promotion with verified previous commit
+# 4. Record the incident, source run/SHA, artifact ID/digest, workflow deployment
+#    record, Azure deployment record, and desktop/mobile browser verification.
 ```
 
 ## 7. Verification Checklist
