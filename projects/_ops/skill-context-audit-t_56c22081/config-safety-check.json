@@ -1,0 +1,54 @@
+{
+  "default": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  },
+  "software-developer": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  },
+  "social-growth": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  },
+  "trading-specialist": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  },
+  "business-operator": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  },
+  "personal": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  },
+  "fitness": {
+    "config_absent_before": true,
+    "config_absent_after": true
+  },
+  "redteam": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  },
+  "researcher": {
+    "changed_top_level_keys": [
+      "skills"
+    ],
+    "only_skills_changed": true
+  }
+}

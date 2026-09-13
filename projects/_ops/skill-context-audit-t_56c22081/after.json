@@ -1,0 +1,4099 @@
+{
+  "schema_version": 1,
+  "label": "after",
+  "generated_at": "2026-09-13T11:49:13.541389+00:00",
+  "token_method": "UTF-8 description bytes divided by 4, ceiling; deterministic estimate",
+  "profiles": {
+    "default": {
+      "home": "/opt/data",
+      "config": "/opt/data/config.yaml",
+      "indexed_skills": 22,
+      "description_chars": 1753,
+      "description_bytes": 1753,
+      "description_token_estimate": 439,
+      "runtime_index_chars": 2923,
+      "runtime_index_bytes": 2929,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-09T19:21:13.494730+00:00",
+            "last_reused_patch_generation": 3,
+            "last_used_at": "2026-09-13T05:54:21.583092+00:00",
+            "last_viewed_at": "2026-09-13T05:54:21.580923+00:00",
+            "patch_count": 18,
+            "patch_generation": 3,
+            "pinned": false,
+            "state": "active",
+            "use_count": 127,
+            "view_count": 124
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T05:54:26.953846+00:00",
+            "last_viewed_at": "2026-09-13T05:54:26.951694+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 102,
+            "view_count": 100
+          }
+        },
+        {
+          "name": "kanban-orchestrator",
+          "skill_id": "devops/kanban-orchestrator",
+          "description": "Decomposition playbook + anti-temptation rules for an orc...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T05:08:36.311156+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-09T01:48:09.635453+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T05:56:21.612974+00:00",
+            "last_viewed_at": "2026-09-13T05:56:21.609946+00:00",
+            "patch_count": 8,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 86,
+            "view_count": 86
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T09:35:11.455247+00:00",
+            "last_viewed_at": "2026-09-10T09:35:11.452337+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 103,
+            "view_count": 103
+          }
+        },
+        {
+          "name": "project-portfolio-lifecycle",
+          "skill_id": "devops/project-portfolio-lifecycle",
+          "description": "Portfolio decisions: archive, absorb, consolidate, or scrap.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-02T17:45:52.501100+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-02T17:46:49.372290+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-06T20:31:04.348299+00:00",
+            "last_viewed_at": "2026-09-06T20:31:04.342197+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "webhook-subscriptions",
+          "skill_id": "devops/webhook-subscriptions",
+          "description": "Webhook subscriptions: event-driven agent runs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.792112+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "github-repo-management",
+          "skill_id": "github/github-repo-management",
+          "description": "Clone/create/fork repos; manage remotes, releases.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T22:37:56.151647+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T18:32:10.158646+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-04T03:06:31.059254+00:00",
+            "last_viewed_at": "2026-09-04T03:06:31.056462+00:00",
+            "patch_count": 32,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 55,
+            "view_count": 54
+          }
+        },
+        {
+          "name": "native-mcp",
+          "skill_id": "mcp/native-mcp",
+          "description": "MCP client: connect servers, register tools (stdio/HTTP).",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.708320+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-12T14:46:06.300902+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T06:21:19.569919+00:00",
+            "last_viewed_at": "2026-09-10T06:21:19.567382+00:00",
+            "patch_count": 8,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 53,
+            "view_count": 53
+          }
+        },
+        {
+          "name": "document-to-action-items",
+          "skill_id": "productivity/document-to-action-items",
+          "description": "Extract cited obligations, deadlines, tasks from documents.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.894164+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "email-discussion-briefing",
+          "skill_id": "productivity/email-discussion-briefing",
+          "description": "Read the user's current Gmail profiles read-only, summari...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T17:13:55.526642+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-29T07:00:10.789854+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-03T01:46:25.676021+00:00",
+            "last_viewed_at": "2026-09-03T01:46:25.673892+00:00",
+            "patch_count": 6,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 6,
+            "view_count": 6
+          }
+        },
+        {
+          "name": "google-workspace",
+          "skill_id": "productivity/google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T17:07:23.940211+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-27T07:59:49.658744+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-12T13:30:55.611683+00:00",
+            "last_viewed_at": "2026-09-10T06:14:07.515018+00:00",
+            "patch_count": 139,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 376,
+            "view_count": 187
+          }
+        },
+        {
+          "name": "meeting-action-items",
+          "skill_id": "productivity/meeting-action-items",
+          "description": "Turn meeting notes into cited decisions, owners, tickets.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.916461+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "professional-work",
+          "skill_id": "productivity/professional-work",
+          "description": "Provides guidance, research, and actionable advice for th...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-28T15:54:00.459720+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-19T03:45:23.896125+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:31:20.845903+00:00",
+            "last_viewed_at": "2026-08-27T07:31:20.843776+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 10,
+            "view_count": 10
+          }
+        },
+        {
+          "name": "session-librarian",
+          "skill_id": "productivity/session-librarian",
+          "description": "Organize sessions by prompt: find, rename, archive, prune.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.932186+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-07T22:24:49.504256+00:00",
+            "last_viewed_at": "2026-09-07T22:24:49.498864+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "weekly-review-planning",
+          "skill_id": "productivity/weekly-review-planning",
+          "description": "Weekly reset: commitments, stalled work, next-week plan.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.935582+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-30T02:14:11.518931+00:00",
+            "last_viewed_at": "2026-08-30T02:14:11.515524+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "workspace-productivity-integrations",
+          "skill_id": "productivity/workspace-productivity-integrations",
+          "description": "Use when operating productivity/workspace systems such as...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T03:47:56.092092+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.335037+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-08-27T07:39:00.488701+00:00",
+            "last_viewed_at": "2026-08-27T07:39:00.485572+00:00",
+            "patch_count": 4,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 6,
+            "view_count": 6
+          }
+        },
+        {
+          "name": "grounded-citations",
+          "skill_id": "research/grounded-citations",
+          "description": "Ground answers and documents in cited, verifiable sources.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.908868+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-02T17:14:10.640892+00:00",
+            "last_viewed_at": "2026-09-02T17:14:10.633002+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 15,
+            "view_count": 15
+          }
+        },
+        {
+          "name": "research-intelligence-sources",
+          "skill_id": "research/research-intelligence-sources",
+          "description": "Use when gathering external research intelligence from pa...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T09:35:32.836139+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-28T13:30:19.493527+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-04T07:08:28.432403+00:00",
+            "last_viewed_at": "2026-09-04T07:08:28.429290+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 17,
+            "view_count": 17
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T05:27:46.043415+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T05:54:21.572436+00:00",
+            "last_viewed_at": "2026-09-13T05:54:21.569503+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 13,
+            "view_count": 13
+          }
+        },
+        {
+          "name": "github",
+          "skill_id": "software-development/github",
+          "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-07T09:51:09.174876+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "software-project-delivery",
+          "skill_id": "software-development/software-project-delivery",
+          "description": "Use when delivering software projects end-to-end: portfol...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.521387+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-04T22:55:32.132633+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-04T23:07:18.397099+00:00",
+            "last_viewed_at": "2026-09-04T23:07:18.395078+00:00",
+            "patch_count": 59,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 64,
+            "view_count": 63
+          }
+        }
+      ]
+    },
+    "software-developer": {
+      "home": "/opt/data/profiles/software-developer",
+      "config": "/opt/data/profiles/software-developer/config.yaml",
+      "indexed_skills": 59,
+      "description_chars": 4578,
+      "description_bytes": 4578,
+      "description_token_estimate": 1145,
+      "runtime_index_chars": 7068,
+      "runtime_index_bytes": 7080,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-07T17:25:27.356676+00:00",
+            "last_reused_patch_generation": 3,
+            "last_used_at": "2026-09-13T11:40:56.482903+00:00",
+            "last_viewed_at": "2026-09-13T11:40:56.479156+00:00",
+            "patch_count": 18,
+            "patch_generation": 3,
+            "pinned": false,
+            "state": "active",
+            "use_count": 95,
+            "view_count": 83
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T11:40:56.475638+00:00",
+            "last_viewed_at": "2026-09-13T11:40:56.469689+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 112,
+            "view_count": 96
+          }
+        },
+        {
+          "name": "visual-artifact-design",
+          "skill_id": "creative/visual-artifact-design",
+          "description": "Use when creating visual artifacts from Hermes: diagrams,...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:39.491850+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-08T06:28:50.786573+00:00",
+            "last_used_at": "2026-08-11T02:49:01.426503+00:00",
+            "last_viewed_at": "2026-08-11T02:49:01.424615+00:00",
+            "patch_count": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 8,
+            "view_count": 8
+          }
+        },
+        {
+          "name": "api-ci-cd-onboarding",
+          "skill_id": "devops/api-ci-cd-onboarding",
+          "description": "Use when onboarding API credentials or CI deployments.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-31T00:50:23.022635+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-31T00:51:13.699925+00:00",
+            "last_reused_patch_generation": 3,
+            "last_used_at": "2026-09-13T06:16:25.412322+00:00",
+            "last_viewed_at": "2026-09-13T06:16:25.406742+00:00",
+            "patch_count": 3,
+            "patch_generation": 3,
+            "pinned": false,
+            "state": "active",
+            "use_count": 9,
+            "view_count": 9
+          }
+        },
+        {
+          "name": "app-deploy-policy",
+          "skill_id": "devops/app-deploy-policy",
+          "description": "Deploy: CI/CD for apps; Plugin Hub for OSRS; Vercel=dev.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-02T17:46:34.688421+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-10T05:17:02.413853+00:00",
+            "last_reused_patch_generation": 17,
+            "last_used_at": "2026-09-13T11:27:54.847167+00:00",
+            "last_viewed_at": "2026-09-13T11:27:54.842285+00:00",
+            "patch_count": 17,
+            "patch_generation": 17,
+            "pinned": false,
+            "state": "active",
+            "use_count": 35,
+            "view_count": 35
+          }
+        },
+        {
+          "name": "azure-terraform-github-actions",
+          "skill_id": "devops/azure-terraform-github-actions",
+          "description": "Deploy Azure infra via Terraform and GitHub Actions.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T04:48:10.116586+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-09T20:34:17.968856+00:00",
+            "last_reused_patch_generation": 9,
+            "last_used_at": "2026-09-10T05:15:11.562129+00:00",
+            "last_viewed_at": "2026-09-10T05:15:11.552134+00:00",
+            "patch_count": 9,
+            "patch_generation": 9,
+            "pinned": false,
+            "state": "active",
+            "use_count": 15,
+            "view_count": 10
+          }
+        },
+        {
+          "name": "browser-oauth-automation",
+          "skill_id": "devops/browser-oauth-automation",
+          "description": "Automate browser OAuth reauth with Playwright.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-27T03:50:29.452239+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-05T00:48:25.272747+00:00",
+            "last_reused_patch_generation": 9,
+            "last_used_at": "2026-09-07T21:38:51.100676+00:00",
+            "last_viewed_at": "2026-09-07T21:38:51.098629+00:00",
+            "patch_count": 9,
+            "patch_generation": 9,
+            "pinned": false,
+            "state": "active",
+            "use_count": 19,
+            "view_count": 19
+          }
+        },
+        {
+          "name": "cloud-app-deployment-ops",
+          "skill_id": "devops/cloud-app-deployment-ops",
+          "description": "Use when setting up cloud provider CLIs, credentials, or ...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-14T19:47:57.869546+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-05T05:34:10.313436+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-10T06:49:40.353834+00:00",
+            "last_viewed_at": "2026-09-10T05:15:28.403363+00:00",
+            "patch_count": 54,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 91,
+            "view_count": 86
+          }
+        },
+        {
+          "name": "git-backup-workflow",
+          "skill_id": "devops/git-backup-workflow",
+          "description": "Daily git backup to workspace-backup via alternate index.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-06T20:19:26.582927+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-06T20:44:59.295434+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-07T05:41:49.370268+00:00",
+            "last_viewed_at": "2026-09-07T05:41:49.361793+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "kanban-orchestrator",
+          "skill_id": "devops/kanban-orchestrator",
+          "description": "Decomposition playbook + anti-temptation rules for an orc...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T05:08:36.311156+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-09T01:48:09.635453+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-07T08:23:42.460412+00:00",
+            "last_viewed_at": "2026-09-07T08:23:42.457824+00:00",
+            "patch_count": 8,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 70,
+            "view_count": 70
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T11:40:50.731787+00:00",
+            "last_viewed_at": "2026-09-13T11:40:50.725470+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 181,
+            "view_count": 181
+          }
+        },
+        {
+          "name": "project-portfolio-lifecycle",
+          "skill_id": "devops/project-portfolio-lifecycle",
+          "description": "Portfolio decisions: archive, absorb, consolidate, or scrap.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-02T17:45:52.501100+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-02T17:46:49.372290+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-06T20:32:46.532701+00:00",
+            "last_viewed_at": "2026-09-06T20:32:46.528017+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "rtk-output-filter",
+          "skill_id": "devops/rtk-output-filter",
+          "description": "Use when explicitly filtering noisy test output with RTK ...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-10T09:46:20.371475+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-10T09:50:43.341032+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T09:46:20.379882+00:00",
+            "last_viewed_at": "2026-09-10T09:46:20.371492+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "sdlc-review",
+          "skill_id": "devops/sdlc-review",
+          "description": "Review Kanban handoffs and route verified outcomes.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.928954+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-06T02:29:48.691617+00:00",
+            "last_viewed_at": "2026-08-23T21:25:36.627171+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 12,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "system-portfolio-cleanup",
+          "skill_id": "devops/system-portfolio-cleanup",
+          "description": "Audit workspace against mandate; classify, archive, dehost.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-25T07:13:24.750116+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-06T18:55:36.276714+00:00",
+            "last_reused_patch_generation": 3,
+            "last_used_at": "2026-09-06T18:55:13.761392+00:00",
+            "last_viewed_at": "2026-09-06T18:55:13.757895+00:00",
+            "patch_count": 8,
+            "patch_generation": 8,
+            "pinned": false,
+            "state": "active",
+            "use_count": 13,
+            "view_count": 13
+          }
+        },
+        {
+          "name": "tweetbetweenthelines-deployment",
+          "skill_id": "devops/tweetbetweenthelines-deployment",
+          "description": "Deploy tweetBetweenTheLines via Vercel/GitHub Actions/EAS.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-25T17:48:33.546182+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-06T21:16:11.348030+00:00",
+            "last_reused_patch_generation": 8,
+            "last_used_at": "2026-09-06T21:15:28.621416+00:00",
+            "last_viewed_at": "2026-09-06T21:15:28.618657+00:00",
+            "patch_count": 9,
+            "patch_generation": 9,
+            "pinned": false,
+            "state": "active",
+            "use_count": 12,
+            "view_count": 12
+          }
+        },
+        {
+          "name": "unity-mcp-integration",
+          "skill_id": "devops/unity-mcp-integration",
+          "description": "Integrate Unity Editor with Hermes Agent via official and...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-03T15:24:20.929681+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-03T15:24:27.983244+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-08T03:02:39.053485+00:00",
+            "last_viewed_at": "2026-09-08T03:02:39.050995+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 8,
+            "view_count": 8
+          }
+        },
+        {
+          "name": "webhook-subscriptions",
+          "skill_id": "devops/webhook-subscriptions",
+          "description": "Webhook subscriptions: event-driven agent runs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.792112+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "minecraft-modpack-server",
+          "skill_id": "gaming/minecraft-modpack-server",
+          "description": "Host modded Minecraft servers (CurseForge, Modrinth).",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-24T07:31:40.384003+00:00",
+            "created_by": "installed",
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "runelite-plugin-development",
+          "skill_id": "gaming/runelite-plugin-development",
+          "description": "Develop, debug, consolidate, and publish RuneLite/OSRS pl...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-06T00:38:17.566913+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-13T06:07:45.607643+00:00",
+            "last_reused_patch_generation": 27,
+            "last_used_at": "2026-09-13T09:00:13.448388+00:00",
+            "last_viewed_at": "2026-09-13T06:14:04.081532+00:00",
+            "patch_count": 263,
+            "patch_generation": 27,
+            "pinned": false,
+            "state": "active",
+            "use_count": 226,
+            "view_count": 211
+          }
+        },
+        {
+          "name": "codebase-inspection",
+          "skill_id": "github/codebase-inspection",
+          "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-06T02:00:25.945842+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T19:12:45.112740+00:00",
+            "last_viewed_at": "2026-09-09T19:12:45.080150+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 44,
+            "view_count": 44
+          }
+        },
+        {
+          "name": "github-issue-to-pr",
+          "skill_id": "github/github-issue-to-pr",
+          "description": "Carry a GitHub issue to a verified PR with honest CI state.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.905708+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-04T03:06:31.073201+00:00",
+            "last_viewed_at": "2026-09-04T03:06:31.070475+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "github-pr-workflow",
+          "skill_id": "github/github-pr-workflow",
+          "description": "GitHub PR lifecycle: branch, commit, open, CI, merge.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T12:58:37.902485+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-03T14:15:16.696070+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T09:00:13.509382+00:00",
+            "last_viewed_at": "2026-09-09T19:12:41.207694+00:00",
+            "patch_count": 10,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 115,
+            "view_count": 31
+          }
+        },
+        {
+          "name": "github-repo-management",
+          "skill_id": "github/github-repo-management",
+          "description": "Clone/create/fork repos; manage remotes, releases.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T22:37:56.151647+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T18:32:10.158646+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T19:07:08.389495+00:00",
+            "last_viewed_at": "2026-09-09T19:07:08.387023+00:00",
+            "patch_count": 32,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 64,
+            "view_count": 63
+          }
+        },
+        {
+          "name": "github-workflows",
+          "skill_id": "github/github-workflows",
+          "description": "Use when operating GitHub from Hermes: authentication, is...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:17.695916+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-10T05:17:02.331861+00:00",
+            "last_reused_patch_generation": 3,
+            "last_used_at": "2026-09-13T11:27:54.864322+00:00",
+            "last_viewed_at": "2026-09-13T11:27:54.861744+00:00",
+            "patch_count": 16,
+            "patch_generation": 3,
+            "pinned": false,
+            "state": "active",
+            "use_count": 61,
+            "view_count": 61
+          }
+        },
+        {
+          "name": "platform-device-integrations",
+          "skill_id": "integrations/platform-device-integrations",
+          "description": "Use when operating specialized external integrations from...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-28T04:23:26.743210+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:02:31.329738+00:00",
+            "last_viewed_at": "2026-08-27T03:02:31.327855+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 5,
+            "view_count": 5
+          }
+        },
+        {
+          "name": "native-mcp",
+          "skill_id": "mcp/native-mcp",
+          "description": "MCP client: connect servers, register tools (stdio/HTTP).",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.708320+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-12T14:46:06.300902+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T06:20:31.293912+00:00",
+            "last_viewed_at": "2026-09-10T00:17:57.450212+00:00",
+            "patch_count": 8,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 39,
+            "view_count": 38
+          }
+        },
+        {
+          "name": "obliteratus",
+          "skill_id": "mlops/inference/obliteratus",
+          "description": "OBLITERATUS: abliterate LLM refusals (diff-in-means).",
+          "usage": {}
+        },
+        {
+          "name": "outlines",
+          "skill_id": "mlops/inference/outlines",
+          "description": "Outlines: structured JSON/regex/Pydantic LLM generation.",
+          "usage": {}
+        },
+        {
+          "name": "mlops-model-tooling",
+          "skill_id": "mlops/mlops-model-tooling",
+          "description": "Use when operating ML/LLM tooling across Hugging Face, lo...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:33.173331+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-07T02:46:33.173352+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T00:25:01.935684+00:00",
+            "last_viewed_at": "2026-09-10T00:25:01.921165+00:00",
+            "patch_count": 1,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "dspy",
+          "skill_id": "mlops/research/dspy",
+          "description": "DSPy: declarative LM programs, auto-optimize prompts, RAG.",
+          "usage": {}
+        },
+        {
+          "name": "axolotl",
+          "skill_id": "mlops/training/axolotl",
+          "description": "Axolotl: YAML LLM fine-tuning (LoRA, DPO, GRPO).",
+          "usage": {}
+        },
+        {
+          "name": "fine-tuning-with-trl",
+          "skill_id": "mlops/training/trl-fine-tuning",
+          "description": "TRL: SFT, DPO, PPO, GRPO, reward modeling for LLM RLHF.",
+          "usage": {}
+        },
+        {
+          "name": "unsloth",
+          "skill_id": "mlops/training/unsloth",
+          "description": "Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.",
+          "usage": {}
+        },
+        {
+          "name": "document-production-workflows",
+          "skill_id": "productivity/document-production-workflows",
+          "description": "Use when extracting, editing, creating, or QAing document...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:32.165533+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-07T02:46:32.165554+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:49:32.686290+00:00",
+            "last_viewed_at": "2026-08-27T07:49:32.684370+00:00",
+            "patch_count": 1,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "docx",
+          "skill_id": "productivity/docx",
+          "description": "Create, read, edit, template, and review Word .docx files.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.898466+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "google-workspace",
+          "skill_id": "productivity/google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T17:07:23.940211+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-27T07:59:49.658744+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-10T00:25:01.941284+00:00",
+            "last_viewed_at": "2026-09-10T00:25:01.927920+00:00",
+            "patch_count": 139,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 362,
+            "view_count": 179
+          }
+        },
+        {
+          "name": "linear",
+          "skill_id": "productivity/linear",
+          "description": "Linear: manage issues, projects, teams via GraphQL + curl.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.685995+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "pdf",
+          "skill_id": "productivity/pdf",
+          "description": "PDF files: create, read, merge, fill, OCR, edit text.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.922897+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "xlsx",
+          "skill_id": "productivity/xlsx",
+          "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.939858+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:51:43.777423+00:00",
+            "last_viewed_at": "2026-08-27T07:51:43.775419+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "secret-audit-and-precommit",
+          "skill_id": "secret-audit-and-precommit/secret-audit-and-precommit",
+          "description": "Audit secrets; pre-commit hooks; GitGuardian.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-27T06:27:30.739302+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-08-27T06:27:38.853527+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-10T05:28:16.907773+00:00",
+            "last_viewed_at": "2026-09-10T05:28:16.903280+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T04:16:34.022012+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T11:40:50.728362+00:00",
+            "last_viewed_at": "2026-09-13T11:40:50.720959+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 116,
+            "view_count": 104
+          }
+        },
+        {
+          "name": "agent-reach-integration",
+          "skill_id": "social-media/agent-reach-integration",
+          "description": "Use when public pages are blocked; run Agent Reach safely.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-10T09:35:17.864300+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-10T09:42:40.237462+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-10T09:44:38.364227+00:00",
+            "last_viewed_at": "2026-09-10T09:44:38.361861+00:00",
+            "patch_count": 2,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "youtube-automation-with-tts",
+          "skill_id": "social-media/youtube-automation-with-tts",
+          "description": "Automated faceless YouTube video generation with professi...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T00:21:18.846681+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T17:56:27.688559+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-06T22:02:53.369902+00:00",
+            "last_viewed_at": "2026-09-06T22:02:53.366578+00:00",
+            "patch_count": 147,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 509,
+            "view_count": 138
+          }
+        },
+        {
+          "name": "youtube-quota-queue-management",
+          "skill_id": "social-media/youtube-quota-queue-management",
+          "description": "Manage YouTube upload queues when channels hit daily limits.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-02T09:51:23.767730+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-02T09:54:51.336314+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-06T22:04:32.230574+00:00",
+            "last_viewed_at": "2026-09-06T22:04:32.228057+00:00",
+            "patch_count": 2,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 5,
+            "view_count": 5
+          }
+        },
+        {
+          "name": "youtube-transcript-ingestion",
+          "skill_id": "social-media/youtube-transcript-ingestion",
+          "description": "Robust YouTube transcript pipeline with URL parsing, capt...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-06T22:23:04.175468+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-07T05:14:16.762940+00:00",
+            "last_viewed_at": "2026-09-07T05:14:16.756367+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "debugging-hermes-tui-commands",
+          "skill_id": "software-development/debugging-hermes-tui-commands",
+          "description": "Debug Hermes TUI slash commands: Python, gateway, Ink UI.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.625336+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "github",
+          "skill_id": "software-development/github",
+          "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T06:21:14.005130+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-06T03:11:18.089953+00:00",
+            "last_viewed_at": "2026-09-06T03:08:00.884210+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 10,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-s6-container-supervision",
+          "skill_id": "software-development/hermes-s6-container-supervision",
+          "description": "Modify, debug, or extend the s6-overlay supervision tree ...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.662547+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T01:27:22.511980+00:00",
+            "last_viewed_at": "2026-09-05T01:27:22.509685+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 5,
+            "view_count": 5
+          }
+        },
+        {
+          "name": "inspecting-hermes-desktop-dom",
+          "skill_id": "software-development/inspecting-hermes-desktop-dom",
+          "description": "Read the live Hermes desktop DOM/CSS over CDP.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.913078+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "plan",
+          "skill_id": "software-development/plan",
+          "description": "Write a markdown plan to .hermes/plans/; no execution.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.736437+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": "2026-07-20T16:06:37.986976+00:00",
+            "last_viewed_at": "2026-07-20T16:06:37.981676+00:00",
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "python-development-tools",
+          "skill_id": "software-development/python-development-tools",
+          "description": "Use when developing, debugging, or automating Python work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-24T07:51:24.638662+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T00:25:01.915874+00:00",
+            "last_viewed_at": "2026-09-10T00:25:01.888044+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 8,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "software-project-delivery",
+          "skill_id": "software-development/software-project-delivery",
+          "description": "Use when delivering software projects end-to-end: portfol...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.521387+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-10T05:17:02.210343+00:00",
+            "last_reused_patch_generation": 3,
+            "last_used_at": "2026-09-13T06:31:34.533047+00:00",
+            "last_viewed_at": "2026-09-13T06:31:34.522443+00:00",
+            "patch_count": 61,
+            "patch_generation": 3,
+            "pinned": false,
+            "state": "active",
+            "use_count": 89,
+            "view_count": 81
+          }
+        },
+        {
+          "name": "software-quality-workflows",
+          "skill_id": "software-development/software-quality-workflows",
+          "description": "Use when validating, debugging, simplifying, or spiking s...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-24T19:16:07.723677+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-11T03:36:07.817348+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T11:27:54.873302+00:00",
+            "last_viewed_at": "2026-09-13T11:27:54.870410+00:00",
+            "patch_count": 19,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 80,
+            "view_count": 66
+          }
+        },
+        {
+          "name": "test-driven-development",
+          "skill_id": "software-development/test-driven-development",
+          "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T05:53:03.366345+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T06:58:45.763231+00:00",
+            "last_viewed_at": "2026-09-13T06:58:45.760356+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 55,
+            "view_count": 54
+          }
+        },
+        {
+          "name": "writing-plans",
+          "skill_id": "software-development/writing-plans",
+          "description": "Write implementation plans: bite-sized tasks, paths, code.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T16:57:55.296109+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": "2026-07-20T16:06:37.996531+00:00",
+            "last_viewed_at": "2026-07-20T16:06:37.992823+00:00",
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "trap-chat",
+          "skill_id": "trap-chat/trap-chat",
+          "description": "Build the Trap Chat competitive chat-roulette web app.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-04T03:08:02.198964+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-09T03:07:35.686649+00:00",
+            "last_reused_patch_generation": 21,
+            "last_used_at": "2026-09-09T03:03:13.003247+00:00",
+            "last_viewed_at": "2026-09-09T03:03:12.997981+00:00",
+            "patch_count": 25,
+            "patch_generation": 25,
+            "pinned": false,
+            "state": "active",
+            "use_count": 34,
+            "view_count": 27
+          }
+        },
+        {
+          "name": "blocked-page-recovery",
+          "skill_id": "web/blocked-page-recovery",
+          "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.881990+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T09:35:28.434121+00:00",
+            "last_viewed_at": "2026-09-10T09:35:28.424807+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        }
+      ]
+    },
+    "social-growth": {
+      "home": "/opt/data/profiles/social-growth",
+      "config": "/opt/data/profiles/social-growth/config.yaml",
+      "indexed_skills": 33,
+      "description_chars": 2690,
+      "description_bytes": 2702,
+      "description_token_estimate": 676,
+      "runtime_index_chars": 4053,
+      "runtime_index_bytes": 4077,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.374500+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-05T21:49:31.163267+00:00",
+            "last_viewed_at": "2026-09-05T21:49:31.160848+00:00",
+            "patch_count": 16,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 73,
+            "view_count": 72
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-07T17:22:55.449110+00:00",
+            "last_viewed_at": "2026-09-07T17:22:55.446361+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 73,
+            "view_count": 72
+          }
+        },
+        {
+          "name": "affiliate-business-operations",
+          "skill_id": "business/affiliate-business-operations",
+          "description": "Operate affiliate programs safely: accounts, tracking URL...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T02:19:02.138429+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T17:56:36.681729+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-08T23:49:31.746950+00:00",
+            "last_viewed_at": "2026-09-08T23:49:31.743686+00:00",
+            "patch_count": 7,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "baoyu-article-illustrator",
+          "skill_id": "creative/baoyu-article-illustrator",
+          "description": "Article illustrations: type \u00d7 style \u00d7 palette consistency.",
+          "usage": {}
+        },
+        {
+          "name": "baoyu-comic",
+          "skill_id": "creative/baoyu-comic",
+          "description": "Knowledge comics (\u77e5\u8bc6\u6f2b\u753b): educational, biography, tutorial.",
+          "usage": {}
+        },
+        {
+          "name": "claude-design",
+          "skill_id": "creative/claude-design",
+          "description": "Design one-off HTML artifacts (landing, deck, prototype).",
+          "usage": {}
+        },
+        {
+          "name": "creative-ideation",
+          "skill_id": "creative/creative-ideation",
+          "description": "Generate ideas via named methods from creative practice.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-24T07:31:39.593149+00:00",
+            "created_by": "installed",
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-25T03:57:05.118608+00:00",
+            "last_viewed_at": "2026-08-25T03:57:05.116209+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "creative-production-systems",
+          "skill_id": "creative/creative-production-systems",
+          "description": "Use when generating or orchestrating creative media with ...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-10T23:04:09.515667+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-30T02:10:10.454724+00:00",
+            "last_viewed_at": "2026-08-30T02:10:10.452645+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 5,
+            "view_count": 5
+          }
+        },
+        {
+          "name": "pixel-art",
+          "skill_id": "creative/pixel-art",
+          "description": "Pixel art w/ era palettes (NES, Game Boy, PICO-8).",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-24T07:31:40.262930+00:00",
+            "created_by": "installed",
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "popular-web-designs",
+          "skill_id": "creative/popular-web-designs",
+          "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-15T03:14:48.572266+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-07-15T05:56:26.829857+00:00",
+            "last_used_at": "2026-08-11T00:43:25.997592+00:00",
+            "last_viewed_at": "2026-08-11T00:43:25.992975+00:00",
+            "patch_count": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 5,
+            "view_count": 5
+          }
+        },
+        {
+          "name": "visual-artifact-design",
+          "skill_id": "creative/visual-artifact-design",
+          "description": "Use when creating visual artifacts from Hermes: diagrams,...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:39.491850+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-08T06:28:50.786573+00:00",
+            "last_used_at": "2026-08-11T02:49:01.426503+00:00",
+            "last_viewed_at": "2026-08-11T02:49:01.424615+00:00",
+            "patch_count": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 8,
+            "view_count": 8
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-03T20:16:33.352668+00:00",
+            "last_viewed_at": "2026-09-03T20:16:33.350202+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 92,
+            "view_count": 92
+          }
+        },
+        {
+          "name": "music-and-audio-workflows",
+          "skill_id": "media/music-and-audio-workflows",
+          "description": "Use when working with music and audio: songwriting, AI mu...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:31.159934+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-07T02:46:31.159964+00:00",
+            "last_used_at": "2026-08-12T17:57:59.330083+00:00",
+            "last_viewed_at": "2026-08-12T17:57:59.327788+00:00",
+            "patch_count": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "creator-business-operations",
+          "skill_id": "productivity/creator-business-operations",
+          "description": "Use when operating creator/business growth systems: offer...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.516739+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-11T02:31:53.994141+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-08T22:57:05.757761+00:00",
+            "last_viewed_at": "2026-09-08T22:57:05.751711+00:00",
+            "patch_count": 6,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 27,
+            "view_count": 27
+          }
+        },
+        {
+          "name": "document-production-workflows",
+          "skill_id": "productivity/document-production-workflows",
+          "description": "Use when extracting, editing, creating, or QAing document...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:32.165533+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-07T02:46:32.165554+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:49:32.686290+00:00",
+            "last_viewed_at": "2026-08-27T07:49:32.684370+00:00",
+            "patch_count": 1,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "docx",
+          "skill_id": "productivity/docx",
+          "description": "Create, read, edit, template, and review Word .docx files.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.898466+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "google-workspace",
+          "skill_id": "productivity/google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T17:07:23.940211+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-27T07:59:49.658744+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-07T11:21:11.362879+00:00",
+            "last_viewed_at": "2026-09-07T11:21:11.360173+00:00",
+            "patch_count": 139,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 360,
+            "view_count": 179
+          }
+        },
+        {
+          "name": "pdf",
+          "skill_id": "productivity/pdf",
+          "description": "PDF files: create, read, merge, fill, OCR, edit text.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.922897+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "workspace-productivity-integrations",
+          "skill_id": "productivity/workspace-productivity-integrations",
+          "description": "Use when operating productivity/workspace systems such as...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T03:47:56.092092+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.335037+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-08-27T07:39:00.488701+00:00",
+            "last_viewed_at": "2026-08-27T07:39:00.485572+00:00",
+            "patch_count": 4,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 6,
+            "view_count": 6
+          }
+        },
+        {
+          "name": "xlsx",
+          "skill_id": "productivity/xlsx",
+          "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.939858+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:51:43.777423+00:00",
+            "last_viewed_at": "2026-08-27T07:51:43.775419+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "competitor-news-monitor",
+          "skill_id": "research/competitor-news-monitor",
+          "description": "Watch named companies for material news; cited digests.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.889575+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "grounded-citations",
+          "skill_id": "research/grounded-citations",
+          "description": "Ground answers and documents in cited, verifiable sources.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.908868+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-07T11:11:47.077916+00:00",
+            "last_viewed_at": "2026-09-07T11:11:47.073898+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 19,
+            "view_count": 19
+          }
+        },
+        {
+          "name": "research-intelligence-sources",
+          "skill_id": "research/research-intelligence-sources",
+          "description": "Use when gathering external research intelligence from pa...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T09:35:32.836139+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-28T13:30:19.493527+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-04T07:08:28.432403+00:00",
+            "last_viewed_at": "2026-09-04T07:08:28.429290+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 17,
+            "view_count": 17
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-07T11:14:12.436317+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-08T23:58:56.709977+00:00",
+            "last_viewed_at": "2026-09-08T23:58:56.706840+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 5,
+            "view_count": 5
+          }
+        },
+        {
+          "name": "affan-content-intelligence-charter",
+          "skill_id": "social-media/affan-content-intelligence-charter",
+          "description": "Use for Affan\u2019s personal-brand content strategy.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T04:28:33.814967+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-07T17:10:26.167812+00:00",
+            "last_viewed_at": "2026-09-07T17:10:26.165545+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "parrot-ai-creative-pipeline",
+          "skill_id": "social-media/parrot-ai-creative-pipeline",
+          "description": "Use when leveraging the user's paid Parrot AI account for...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-15T22:33:45.826018+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T18:16:28.494226+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-08T22:57:05.761274+00:00",
+            "last_viewed_at": "2026-09-08T22:57:05.755191+00:00",
+            "patch_count": 8,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 16,
+            "view_count": 16
+          }
+        },
+        {
+          "name": "scheduled-youtube-publish-loop-repair",
+          "skill_id": "social-media/scheduled-youtube-publish-loop-repair",
+          "description": "Fix YouTube publish loops stuck at 0/N uploaded.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-07T09:42:04.599092+00:00",
+            "created_by": "agent",
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "social-video-cron-growth-loop",
+          "skill_id": "social-media/social-video-cron-growth-loop",
+          "description": "Run scheduled social-video jobs as full research-to-publi...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T00:28:30.328615+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-09T02:57:09.894112+00:00",
+            "last_reused_patch_generation": 4,
+            "last_used_at": "2026-09-08T23:59:08.712054+00:00",
+            "last_viewed_at": "2026-09-08T23:59:08.707781+00:00",
+            "patch_count": 140,
+            "patch_generation": 7,
+            "pinned": false,
+            "state": "active",
+            "use_count": 580,
+            "view_count": 172
+          }
+        },
+        {
+          "name": "youtube-automation-with-tts",
+          "skill_id": "social-media/youtube-automation-with-tts",
+          "description": "Automated faceless YouTube video generation with professi...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T00:21:18.846681+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T17:56:27.688559+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-08T23:15:33.026532+00:00",
+            "last_viewed_at": "2026-09-08T23:15:33.020261+00:00",
+            "patch_count": 147,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 525,
+            "view_count": 152
+          }
+        },
+        {
+          "name": "youtube-quota-queue-management",
+          "skill_id": "social-media/youtube-quota-queue-management",
+          "description": "Manage YouTube upload queues when channels hit daily limits.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-02T09:51:23.767730+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-02T09:54:51.336314+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-02T17:23:36.401663+00:00",
+            "last_viewed_at": "2026-09-02T17:23:36.398938+00:00",
+            "patch_count": 2,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "youtube-source-acquisition-policy-2026-09",
+          "skill_id": "social-media/youtube-source-acquisition-policy-2026-09",
+          "description": "Use when YouTube downloads fail on a VPS with bot check.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-07T11:22:38.475660+00:00",
+            "created_by": "agent",
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "blocked-page-recovery",
+          "skill_id": "web/blocked-page-recovery",
+          "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.881990+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        }
+      ]
+    },
+    "trading-specialist": {
+      "home": "/opt/data/profiles/trading-specialist",
+      "config": "/opt/data/profiles/trading-specialist/config.yaml",
+      "indexed_skills": 16,
+      "description_chars": 1240,
+      "description_bytes": 1240,
+      "description_token_estimate": 310,
+      "runtime_index_chars": 2053,
+      "runtime_index_bytes": 2059,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.374500+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-05T03:17:06.212915+00:00",
+            "last_viewed_at": "2026-09-05T03:17:06.206695+00:00",
+            "patch_count": 16,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 72,
+            "view_count": 71
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T03:26:12.865533+00:00",
+            "last_viewed_at": "2026-09-05T03:26:12.863071+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 71,
+            "view_count": 70
+          }
+        },
+        {
+          "name": "browser-oauth-automation",
+          "skill_id": "devops/browser-oauth-automation",
+          "description": "Automate browser OAuth reauth with Playwright.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-27T03:50:29.452239+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-05T00:48:25.272747+00:00",
+            "last_reused_patch_generation": 8,
+            "last_used_at": "2026-09-05T00:48:17.977989+00:00",
+            "last_viewed_at": "2026-09-05T00:48:17.975822+00:00",
+            "patch_count": 9,
+            "patch_generation": 9,
+            "pinned": false,
+            "state": "active",
+            "use_count": 18,
+            "view_count": 18
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-03T20:16:33.352668+00:00",
+            "last_viewed_at": "2026-09-03T20:16:33.350202+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 92,
+            "view_count": 92
+          }
+        },
+        {
+          "name": "document-to-action-items",
+          "skill_id": "productivity/document-to-action-items",
+          "description": "Extract cited obligations, deadlines, tasks from documents.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.894164+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "google-workspace",
+          "skill_id": "productivity/google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T17:07:23.940211+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-27T07:59:49.658744+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-04T22:07:27.698531+00:00",
+            "last_viewed_at": "2026-09-04T22:07:27.696084+00:00",
+            "patch_count": 139,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 355,
+            "view_count": 174
+          }
+        },
+        {
+          "name": "pdf",
+          "skill_id": "productivity/pdf",
+          "description": "PDF files: create, read, merge, fill, OCR, edit text.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.922897+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "xlsx",
+          "skill_id": "productivity/xlsx",
+          "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.939858+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-08T02:58:50.151535+00:00",
+            "last_viewed_at": "2026-09-08T02:58:50.144421+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "competitor-news-monitor",
+          "skill_id": "research/competitor-news-monitor",
+          "description": "Watch named companies for material news; cited digests.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.889575+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "grounded-citations",
+          "skill_id": "research/grounded-citations",
+          "description": "Ground answers and documents in cited, verifiable sources.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.908868+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T14:31:11.770151+00:00",
+            "last_viewed_at": "2026-09-09T14:31:11.765934+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 20,
+            "view_count": 20
+          }
+        },
+        {
+          "name": "research-intelligence-sources",
+          "skill_id": "research/research-intelligence-sources",
+          "description": "Use when gathering external research intelligence from pa...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T09:35:32.836139+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-28T13:30:19.493527+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T14:31:11.767916+00:00",
+            "last_viewed_at": "2026-09-09T14:31:11.763356+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 20,
+            "view_count": 20
+          }
+        },
+        {
+          "name": "robinhood-trading-operator",
+          "skill_id": "research/robinhood-trading-operator",
+          "description": "Use when operating the user's Robinhood Agentic Trading a...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-12T15:23:13.659551+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T17:50:50.184376+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-11T22:00:47.745292+00:00",
+            "last_viewed_at": "2026-09-11T18:31:41.482408+00:00",
+            "patch_count": 37,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 447,
+            "view_count": 144
+          }
+        },
+        {
+          "name": "trading-operations-reporting",
+          "skill_id": "research/trading-operations-reporting",
+          "description": "Generate concise trading status reports for scheduled checks",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-10T05:45:28.290542+00:00",
+            "created_by": "agent",
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T05:46:07.538133+00:00",
+            "last_viewed_at": "2026-09-10T05:46:07.535601+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-07T21:31:37.247541+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T19:30:57.043975+00:00",
+            "last_viewed_at": "2026-09-09T19:30:57.040627+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 15,
+            "view_count": 15
+          }
+        },
+        {
+          "name": "blocked-page-recovery",
+          "skill_id": "web/blocked-page-recovery",
+          "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.881990+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        }
+      ]
+    },
+    "business-operator": {
+      "home": "/opt/data/profiles/business-operator",
+      "config": "/opt/data/profiles/business-operator/config.yaml",
+      "indexed_skills": 23,
+      "description_chars": 1836,
+      "description_bytes": 1836,
+      "description_token_estimate": 459,
+      "runtime_index_chars": 2703,
+      "runtime_index_bytes": 2709,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.374500+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-05T03:17:06.212915+00:00",
+            "last_viewed_at": "2026-09-05T03:17:06.206695+00:00",
+            "patch_count": 16,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 72,
+            "view_count": 71
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T03:26:12.865533+00:00",
+            "last_viewed_at": "2026-09-05T03:26:12.863071+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 71,
+            "view_count": 70
+          }
+        },
+        {
+          "name": "affiliate-business-operations",
+          "skill_id": "business/affiliate-business-operations",
+          "description": "Operate affiliate programs safely: accounts, tracking URL...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T02:19:02.138429+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T17:56:36.681729+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T04:32:26.230025+00:00",
+            "last_viewed_at": "2026-09-05T04:32:26.224048+00:00",
+            "patch_count": 7,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-03T20:16:33.352668+00:00",
+            "last_viewed_at": "2026-09-03T20:16:33.350202+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 92,
+            "view_count": 92
+          }
+        },
+        {
+          "name": "browser-assisted-personal-applications",
+          "skill_id": "productivity/browser-assisted-personal-applications",
+          "description": "Use when helping the user find, evaluate, and apply to re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-28T13:32:52.823970+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-07-25T02:00:23.279875+00:00",
+            "last_used_at": "2026-07-25T01:20:55.319632+00:00",
+            "last_viewed_at": "2026-07-25T01:20:55.317649+00:00",
+            "patch_count": 10,
+            "pinned": false,
+            "state": "stale",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "creator-business-operations",
+          "skill_id": "productivity/creator-business-operations",
+          "description": "Use when operating creator/business growth systems: offer...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.516739+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-11T02:31:53.994141+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T04:51:00.896308+00:00",
+            "last_viewed_at": "2026-09-05T04:51:00.893772+00:00",
+            "patch_count": 6,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 14,
+            "view_count": 14
+          }
+        },
+        {
+          "name": "document-production-workflows",
+          "skill_id": "productivity/document-production-workflows",
+          "description": "Use when extracting, editing, creating, or QAing document...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:32.165533+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-07T02:46:32.165554+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:49:32.686290+00:00",
+            "last_viewed_at": "2026-08-27T07:49:32.684370+00:00",
+            "patch_count": 1,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "docx",
+          "skill_id": "productivity/docx",
+          "description": "Create, read, edit, template, and review Word .docx files.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.898466+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "email-discussion-briefing",
+          "skill_id": "productivity/email-discussion-briefing",
+          "description": "Read the user's current Gmail profiles read-only, summari...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T17:13:55.526642+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-29T07:00:10.789854+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-03T01:46:25.676021+00:00",
+            "last_viewed_at": "2026-09-03T01:46:25.673892+00:00",
+            "patch_count": 6,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 6,
+            "view_count": 6
+          }
+        },
+        {
+          "name": "google-workspace",
+          "skill_id": "productivity/google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T17:07:23.940211+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-27T07:59:49.658744+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-05T04:50:10.058063+00:00",
+            "last_viewed_at": "2026-09-05T04:50:10.055469+00:00",
+            "patch_count": 139,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 358,
+            "view_count": 177
+          }
+        },
+        {
+          "name": "linear",
+          "skill_id": "productivity/linear",
+          "description": "Linear: manage issues, projects, teams via GraphQL + curl.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.685995+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "meeting-action-items",
+          "skill_id": "productivity/meeting-action-items",
+          "description": "Turn meeting notes into cited decisions, owners, tickets.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.916461+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "pdf",
+          "skill_id": "productivity/pdf",
+          "description": "PDF files: create, read, merge, fill, OCR, edit text.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.922897+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "product-price-monitor",
+          "skill_id": "productivity/product-price-monitor",
+          "description": "Watch product, flight, or listing prices; alert on target.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.925903+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "professional-work",
+          "skill_id": "productivity/professional-work",
+          "description": "Provides guidance, research, and actionable advice for th...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-28T15:54:00.459720+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-19T03:45:23.896125+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T04:32:26.243149+00:00",
+            "last_viewed_at": "2026-09-05T04:32:26.237275+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 11,
+            "view_count": 11
+          }
+        },
+        {
+          "name": "workspace-productivity-integrations",
+          "skill_id": "productivity/workspace-productivity-integrations",
+          "description": "Use when operating productivity/workspace systems such as...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T03:47:56.092092+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.335037+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-05T04:33:38.491236+00:00",
+            "last_viewed_at": "2026-09-05T04:33:38.484027+00:00",
+            "patch_count": 4,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "xlsx",
+          "skill_id": "productivity/xlsx",
+          "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.939858+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:51:43.777423+00:00",
+            "last_viewed_at": "2026-08-27T07:51:43.775419+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "competitor-news-monitor",
+          "skill_id": "research/competitor-news-monitor",
+          "description": "Watch named companies for material news; cited digests.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.889575+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "grounded-citations",
+          "skill_id": "research/grounded-citations",
+          "description": "Ground answers and documents in cited, verifiable sources.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.908868+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-02T17:14:10.640892+00:00",
+            "last_viewed_at": "2026-09-02T17:14:10.633002+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 15,
+            "view_count": 15
+          }
+        },
+        {
+          "name": "research-intelligence-sources",
+          "skill_id": "research/research-intelligence-sources",
+          "description": "Use when gathering external research intelligence from pa...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T09:35:32.836139+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-28T13:30:19.493527+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-04T07:08:28.432403+00:00",
+            "last_viewed_at": "2026-09-04T07:08:28.429290+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 17,
+            "view_count": 17
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T04:33:38.475485+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T04:33:38.478158+00:00",
+            "last_viewed_at": "2026-09-05T04:33:38.475497+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "blocked-page-recovery",
+          "skill_id": "web/blocked-page-recovery",
+          "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.881990+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        }
+      ]
+    },
+    "personal": {
+      "home": "/opt/data/profiles/personal",
+      "config": "/opt/data/profiles/personal/config.yaml",
+      "indexed_skills": 22,
+      "description_chars": 1729,
+      "description_bytes": 1729,
+      "description_token_estimate": 433,
+      "runtime_index_chars": 2729,
+      "runtime_index_bytes": 2735,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.374500+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-08T21:49:38.413645+00:00",
+            "last_viewed_at": "2026-09-08T21:49:38.407597+00:00",
+            "patch_count": 16,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 73,
+            "view_count": 72
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T00:00:41.515991+00:00",
+            "last_viewed_at": "2026-09-09T00:00:41.510634+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 74,
+            "view_count": 73
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T19:07:57.076645+00:00",
+            "last_viewed_at": "2026-09-09T19:07:57.071649+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 93,
+            "view_count": 93
+          }
+        },
+        {
+          "name": "email-inbox-triage",
+          "skill_id": "email/email-inbox-triage",
+          "description": "Triage an inbox: prioritize threads, draft replies safely.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.902410+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-09T19:07:44.716107+00:00",
+            "last_viewed_at": "2026-09-08T23:42:10.792680+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 6
+          }
+        },
+        {
+          "name": "browser-assisted-personal-applications",
+          "skill_id": "productivity/browser-assisted-personal-applications",
+          "description": "Use when helping the user find, evaluate, and apply to re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-28T13:32:52.823970+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-07-25T02:00:23.279875+00:00",
+            "last_used_at": "2026-07-25T01:20:55.319632+00:00",
+            "last_viewed_at": "2026-07-25T01:20:55.317649+00:00",
+            "patch_count": 10,
+            "pinned": false,
+            "state": "stale",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "document-production-workflows",
+          "skill_id": "productivity/document-production-workflows",
+          "description": "Use when extracting, editing, creating, or QAing document...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:46:32.165533+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-07T02:46:32.165554+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:49:32.686290+00:00",
+            "last_viewed_at": "2026-08-27T07:49:32.684370+00:00",
+            "patch_count": 1,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "docx",
+          "skill_id": "productivity/docx",
+          "description": "Create, read, edit, template, and review Word .docx files.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.898466+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "email-discussion-briefing",
+          "skill_id": "productivity/email-discussion-briefing",
+          "description": "Read the user's current Gmail profiles read-only, summari...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T17:13:55.526642+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-29T07:00:10.789854+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-06T18:27:28.688412+00:00",
+            "last_viewed_at": "2026-09-06T18:27:28.680890+00:00",
+            "patch_count": 6,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 7,
+            "view_count": 7
+          }
+        },
+        {
+          "name": "google-workspace",
+          "skill_id": "productivity/google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T17:07:23.940211+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-09-08T21:57:57.511034+00:00",
+            "last_reused_patch_generation": 5,
+            "last_used_at": "2026-09-09T19:07:44.282720+00:00",
+            "last_viewed_at": "2026-09-08T23:42:21.919527+00:00",
+            "patch_count": 142,
+            "patch_generation": 5,
+            "pinned": false,
+            "state": "active",
+            "use_count": 375,
+            "view_count": 190
+          }
+        },
+        {
+          "name": "meeting-action-items",
+          "skill_id": "productivity/meeting-action-items",
+          "description": "Turn meeting notes into cited decisions, owners, tickets.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.916461+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "pdf",
+          "skill_id": "productivity/pdf",
+          "description": "PDF files: create, read, merge, fill, OCR, edit text.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.922897+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "personal-life-management",
+          "skill_id": "productivity/personal-life-management",
+          "description": "Use when managing long-term personal life context.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T04:28:56.627753+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-09T02:56:21.472713+00:00",
+            "last_reused_patch_generation": 11,
+            "last_used_at": "2026-09-09T19:07:57.082844+00:00",
+            "last_viewed_at": "2026-09-09T19:07:57.079550+00:00",
+            "patch_count": 11,
+            "patch_generation": 11,
+            "pinned": false,
+            "state": "active",
+            "use_count": 11,
+            "view_count": 9
+          }
+        },
+        {
+          "name": "product-price-monitor",
+          "skill_id": "productivity/product-price-monitor",
+          "description": "Watch product, flight, or listing prices; alert on target.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.925903+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "professional-work",
+          "skill_id": "productivity/professional-work",
+          "description": "Provides guidance, research, and actionable advice for th...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-28T15:54:00.459720+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-19T03:45:23.896125+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T04:39:36.588057+00:00",
+            "last_viewed_at": "2026-09-05T04:39:36.585090+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 13,
+            "view_count": 13
+          }
+        },
+        {
+          "name": "session-librarian",
+          "skill_id": "productivity/session-librarian",
+          "description": "Organize sessions by prompt: find, rename, archive, prune.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.932186+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-30T02:14:11.529052+00:00",
+            "last_viewed_at": "2026-08-30T02:14:11.526273+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "weekly-review-planning",
+          "skill_id": "productivity/weekly-review-planning",
+          "description": "Weekly reset: commitments, stalled work, next-week plan.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.935582+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T04:27:38.359783+00:00",
+            "last_viewed_at": "2026-09-05T04:27:38.351411+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "workspace-productivity-integrations",
+          "skill_id": "productivity/workspace-productivity-integrations",
+          "description": "Use when operating productivity/workspace systems such as...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T03:47:56.092092+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.335037+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-08-27T07:39:00.488701+00:00",
+            "last_viewed_at": "2026-08-27T07:39:00.485572+00:00",
+            "patch_count": 4,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 6,
+            "view_count": 6
+          }
+        },
+        {
+          "name": "xlsx",
+          "skill_id": "productivity/xlsx",
+          "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.939858+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T21:33:22.444565+00:00",
+            "last_viewed_at": "2026-09-05T21:33:22.442669+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 2,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "grounded-citations",
+          "skill_id": "research/grounded-citations",
+          "description": "Ground answers and documents in cited, verifiable sources.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.908868+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-02T17:14:10.640892+00:00",
+            "last_viewed_at": "2026-09-02T17:14:10.633002+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 15,
+            "view_count": 15
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-08T21:49:59.369432+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-08T21:49:59.371627+00:00",
+            "last_viewed_at": "2026-09-08T21:49:59.369446+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "blocked-page-recovery",
+          "skill_id": "web/blocked-page-recovery",
+          "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.881990+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        }
+      ]
+    },
+    "fitness": {
+      "home": "/opt/data/profiles/fitness",
+      "config": "/opt/data/profiles/fitness/config.yaml",
+      "indexed_skills": 0,
+      "description_chars": 0,
+      "description_bytes": 0,
+      "description_token_estimate": 0,
+      "runtime_index_chars": 0,
+      "runtime_index_bytes": 0,
+      "skills": []
+    },
+    "redteam": {
+      "home": "/opt/data/profiles/redteam",
+      "config": "/opt/data/profiles/redteam/config.yaml",
+      "indexed_skills": 17,
+      "description_chars": 1288,
+      "description_bytes": 1288,
+      "description_token_estimate": 322,
+      "runtime_index_chars": 2566,
+      "runtime_index_bytes": 2574,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.374500+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-13T05:58:25.238846+00:00",
+            "last_viewed_at": "2026-09-13T05:58:25.236056+00:00",
+            "patch_count": 16,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 73,
+            "view_count": 72
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T05:58:25.230239+00:00",
+            "last_viewed_at": "2026-09-13T05:58:25.227353+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 74,
+            "view_count": 73
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T05:58:19.205250+00:00",
+            "last_viewed_at": "2026-09-13T05:58:19.199937+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 101,
+            "view_count": 101
+          }
+        },
+        {
+          "name": "codebase-inspection",
+          "skill_id": "github/codebase-inspection",
+          "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-06T02:00:25.945842+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T15:49:34.365381+00:00",
+            "last_viewed_at": "2026-09-05T15:49:34.363279+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 41,
+            "view_count": 41
+          }
+        },
+        {
+          "name": "github-repo-management",
+          "skill_id": "github/github-repo-management",
+          "description": "Clone/create/fork repos; manage remotes, releases.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T22:37:56.151647+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-12T18:32:10.158646+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-04T03:06:31.059254+00:00",
+            "last_viewed_at": "2026-09-04T03:06:31.056462+00:00",
+            "patch_count": 32,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 55,
+            "view_count": 54
+          }
+        },
+        {
+          "name": "native-mcp",
+          "skill_id": "mcp/native-mcp",
+          "description": "MCP client: connect servers, register tools (stdio/HTTP).",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.708320+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-12T14:46:06.300902+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T03:26:12.859316+00:00",
+            "last_viewed_at": "2026-09-05T03:26:12.854284+00:00",
+            "patch_count": 8,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 31,
+            "view_count": 31
+          }
+        },
+        {
+          "name": "authorized-mantis-review",
+          "skill_id": "red-teaming/authorized-mantis-review",
+          "description": "Use when an authorized red-team review may use Mantis.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-10T09:44:24.617623+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T09:45:35.101098+00:00",
+            "last_viewed_at": "2026-09-10T09:45:35.094093+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "godmode",
+          "skill_id": "red-teaming/godmode",
+          "description": "Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-07T02:42:26.655107+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_used_at": "2026-06-28T04:21:17.970072+00:00",
+            "last_viewed_at": "2026-06-28T04:21:17.966527+00:00",
+            "patch_count": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 2
+          }
+        },
+        {
+          "name": "security-research-repository-triage",
+          "skill_id": "red-teaming/security-research-repository-triage",
+          "description": "Use when triaging offensive-security source archives.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T15:52:20.378150+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-05T15:52:20.441770+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-10T09:35:20.123384+00:00",
+            "last_viewed_at": "2026-09-10T09:35:20.118245+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "grounded-citations",
+          "skill_id": "research/grounded-citations",
+          "description": "Ground answers and documents in cited, verifiable sources.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.908868+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-02T17:14:10.640892+00:00",
+            "last_viewed_at": "2026-09-02T17:14:10.633002+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 15,
+            "view_count": 15
+          }
+        },
+        {
+          "name": "intelbase",
+          "skill_id": "research/intelbase",
+          "description": "Use when the user asks to use IntelBase for authorized em...",
+          "usage": {}
+        },
+        {
+          "name": "research-intelligence-sources",
+          "skill_id": "research/research-intelligence-sources",
+          "description": "Use when gathering external research intelligence from pa...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T09:35:32.836139+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-28T13:30:19.493527+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-04T07:08:28.432403+00:00",
+            "last_viewed_at": "2026-09-04T07:08:28.429290+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 17,
+            "view_count": 17
+          }
+        },
+        {
+          "name": "secret-audit-and-precommit",
+          "skill_id": "secret-audit-and-precommit/secret-audit-and-precommit",
+          "description": "Audit secrets; pre-commit hooks; GitGuardian.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-27T06:27:30.739302+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-08-27T06:27:38.853527+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-10T09:45:35.104289+00:00",
+            "last_viewed_at": "2026-09-10T09:45:35.096436+00:00",
+            "patch_count": 1,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 4,
+            "view_count": 4
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T15:49:29.315109+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-13T05:58:19.202750+00:00",
+            "last_viewed_at": "2026-09-13T05:58:19.196848+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 10,
+            "view_count": 10
+          }
+        },
+        {
+          "name": "github",
+          "skill_id": "software-development/github",
+          "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth.",
+          "usage": {}
+        },
+        {
+          "name": "blocked-page-recovery",
+          "skill_id": "web/blocked-page-recovery",
+          "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.881990+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        }
+      ]
+    },
+    "researcher": {
+      "home": "/opt/data/profiles/researcher",
+      "config": "/opt/data/profiles/researcher/config.yaml",
+      "indexed_skills": 17,
+      "description_chars": 1279,
+      "description_bytes": 1279,
+      "description_token_estimate": 320,
+      "runtime_index_chars": 2160,
+      "runtime_index_bytes": 2166,
+      "skills": [
+        {
+          "name": "computer-use",
+          "skill_id": "autonomous-ai-agents/computer-use",
+          "description": "Drive the desktop background-first; escalate on signal.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-11T01:28:01.081583+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T03:49:13.700776+00:00",
+            "last_viewed_at": "2026-08-27T03:49:13.697897+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 3,
+            "view_count": 3
+          }
+        },
+        {
+          "name": "hermes-agent-operations",
+          "skill_id": "autonomous-ai-agents/hermes-agent-operations",
+          "description": "Use when configuring, extending, troubleshooting, or oper...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-21T04:25:04.510142+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-25T01:49:46.374500+00:00",
+            "last_reused_patch_generation": 1,
+            "last_used_at": "2026-09-05T16:56:05.945801+00:00",
+            "last_viewed_at": "2026-09-05T16:56:05.943690+00:00",
+            "patch_count": 16,
+            "patch_generation": 1,
+            "pinned": false,
+            "state": "active",
+            "use_count": 73,
+            "view_count": 72
+          }
+        },
+        {
+          "name": "hermes-agent",
+          "skill_id": "autonomous-ai-agents/hermes-agent",
+          "description": "Configure, extend, or contribute to Hermes Agent.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-29T04:28:02.991198+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T16:56:04.822727+00:00",
+            "last_viewed_at": "2026-09-05T16:56:04.819019+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 73,
+            "view_count": 72
+          }
+        },
+        {
+          "name": "browser-oauth-automation",
+          "skill_id": "devops/browser-oauth-automation",
+          "description": "Automate browser OAuth reauth with Playwright.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-27T03:50:29.452239+00:00",
+            "created_by": "agent",
+            "last_patched_at": "2026-09-05T00:48:25.272747+00:00",
+            "last_reused_patch_generation": 8,
+            "last_used_at": "2026-09-05T00:48:17.977989+00:00",
+            "last_viewed_at": "2026-09-05T00:48:17.975822+00:00",
+            "patch_count": 9,
+            "patch_generation": 9,
+            "pinned": false,
+            "state": "active",
+            "use_count": 18,
+            "view_count": 18
+          }
+        },
+        {
+          "name": "kanban-worker",
+          "skill_id": "devops/kanban-worker",
+          "description": "Pitfalls, examples, and edge cases for Hermes Kanban work...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-07-08T07:21:11.764715+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T17:00:41.458700+00:00",
+            "last_viewed_at": "2026-09-05T17:00:41.456566+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 96,
+            "view_count": 96
+          }
+        },
+        {
+          "name": "document-to-action-items",
+          "skill_id": "productivity/document-to-action-items",
+          "description": "Extract cited obligations, deadlines, tasks from documents.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.894164+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "docx",
+          "skill_id": "productivity/docx",
+          "description": "Create, read, edit, template, and review Word .docx files.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.898466+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "google-workspace",
+          "skill_id": "productivity/google-workspace",
+          "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-05-31T17:07:23.940211+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-08-27T07:59:49.658744+00:00",
+            "last_reused_patch_generation": 2,
+            "last_used_at": "2026-09-04T22:07:27.698531+00:00",
+            "last_viewed_at": "2026-09-04T22:07:27.696084+00:00",
+            "patch_count": 139,
+            "patch_generation": 2,
+            "pinned": false,
+            "state": "active",
+            "use_count": 355,
+            "view_count": 174
+          }
+        },
+        {
+          "name": "pdf",
+          "skill_id": "productivity/pdf",
+          "description": "PDF files: create, read, merge, fill, OCR, edit text.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.922897+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "product-price-monitor",
+          "skill_id": "productivity/product-price-monitor",
+          "description": "Watch product, flight, or listing prices; alert on target.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.925903+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "xlsx",
+          "skill_id": "productivity/xlsx",
+          "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.939858+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-08-27T07:51:43.777423+00:00",
+            "last_viewed_at": "2026-08-27T07:51:43.775419+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "competitor-news-monitor",
+          "skill_id": "research/competitor-news-monitor",
+          "description": "Watch named companies for material news; cited digests.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.889575+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        },
+        {
+          "name": "grounded-citations",
+          "skill_id": "research/grounded-citations",
+          "description": "Ground answers and documents in cited, verifiable sources.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.908868+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T16:56:11.105472+00:00",
+            "last_viewed_at": "2026-09-05T16:56:11.098430+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 19,
+            "view_count": 19
+          }
+        },
+        {
+          "name": "intelbase",
+          "skill_id": "research/intelbase",
+          "description": "Use when the user asks to use IntelBase for authorized em...",
+          "usage": {}
+        },
+        {
+          "name": "research-intelligence-sources",
+          "skill_id": "research/research-intelligence-sources",
+          "description": "Use when gathering external research intelligence from pa...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-06-18T09:35:32.836139+00:00",
+            "created_by": null,
+            "last_patched_at": "2026-06-28T13:30:19.493527+00:00",
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T18:36:19.168337+00:00",
+            "last_viewed_at": "2026-09-05T18:36:19.165846+00:00",
+            "patch_count": 2,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 22,
+            "view_count": 22
+          }
+        },
+        {
+          "name": "self-review-gates",
+          "skill_id": "self-review-gates/self-review-gates",
+          "description": "Self-review standards for every profile - derived from re...",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-09-05T16:55:37.645140+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": "2026-09-05T16:55:37.649837+00:00",
+            "last_viewed_at": "2026-09-05T16:55:37.645151+00:00",
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 1,
+            "view_count": 1
+          }
+        },
+        {
+          "name": "blocked-page-recovery",
+          "skill_id": "web/blocked-page-recovery",
+          "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+          "usage": {
+            "archived_at": null,
+            "created_at": "2026-08-16T05:12:26.881990+00:00",
+            "created_by": null,
+            "last_patched_at": null,
+            "last_reused_patch_generation": 0,
+            "last_used_at": null,
+            "last_viewed_at": null,
+            "patch_count": 0,
+            "patch_generation": 0,
+            "pinned": false,
+            "state": "active",
+            "use_count": 0,
+            "view_count": 0
+          }
+        }
+      ]
+    }
+  }
+}

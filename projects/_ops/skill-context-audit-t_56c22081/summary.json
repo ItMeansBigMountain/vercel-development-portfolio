@@ -1,0 +1,112 @@
+{
+  "profiles": [
+    {
+      "profile": "default",
+      "before_skills": 99,
+      "after_skills": 22,
+      "disabled": 77,
+      "before_description_tokens_est": 1950,
+      "after_description_tokens_est": 439,
+      "reduction_tokens_est": 1511,
+      "reduction_percent": 77.5,
+      "before_runtime_index_chars": 11176,
+      "after_runtime_index_chars": 2923
+    },
+    {
+      "profile": "software-developer",
+      "before_skills": 101,
+      "after_skills": 59,
+      "disabled": 42,
+      "before_description_tokens_est": 1992,
+      "after_description_tokens_est": 1145,
+      "reduction_tokens_est": 847,
+      "reduction_percent": 42.5,
+      "before_runtime_index_chars": 11385,
+      "after_runtime_index_chars": 7068
+    },
+    {
+      "profile": "social-growth",
+      "before_skills": 99,
+      "after_skills": 33,
+      "disabled": 66,
+      "before_description_tokens_est": 1957,
+      "after_description_tokens_est": 676,
+      "reduction_tokens_est": 1281,
+      "reduction_percent": 65.5,
+      "before_runtime_index_chars": 11201,
+      "after_runtime_index_chars": 4053
+    },
+    {
+      "profile": "trading-specialist",
+      "before_skills": 96,
+      "after_skills": 16,
+      "disabled": 80,
+      "before_description_tokens_est": 1888,
+      "after_description_tokens_est": 310,
+      "reduction_tokens_est": 1578,
+      "reduction_percent": 83.6,
+      "before_runtime_index_chars": 10795,
+      "after_runtime_index_chars": 2053
+    },
+    {
+      "profile": "business-operator",
+      "before_skills": 95,
+      "after_skills": 23,
+      "disabled": 72,
+      "before_description_tokens_est": 1866,
+      "after_description_tokens_est": 459,
+      "reduction_tokens_est": 1407,
+      "reduction_percent": 75.4,
+      "before_runtime_index_chars": 10698,
+      "after_runtime_index_chars": 2703
+    },
+    {
+      "profile": "personal",
+      "before_skills": 96,
+      "after_skills": 22,
+      "disabled": 74,
+      "before_description_tokens_est": 1885,
+      "after_description_tokens_est": 433,
+      "reduction_tokens_est": 1452,
+      "reduction_percent": 77.0,
+      "before_runtime_index_chars": 10896,
+      "after_runtime_index_chars": 2729
+    },
+    {
+      "profile": "fitness",
+      "before_skills": 0,
+      "after_skills": 0,
+      "disabled": 0,
+      "before_description_tokens_est": 0,
+      "after_description_tokens_est": 0,
+      "reduction_tokens_est": 0,
+      "reduction_percent": 0,
+      "before_runtime_index_chars": 0,
+      "after_runtime_index_chars": 0
+    },
+    {
+      "profile": "redteam",
+      "before_skills": 97,
+      "after_skills": 17,
+      "disabled": 80,
+      "before_description_tokens_est": 1909,
+      "after_description_tokens_est": 322,
+      "reduction_tokens_est": 1587,
+      "reduction_percent": 83.1,
+      "before_runtime_index_chars": 10997,
+      "after_runtime_index_chars": 2566
+    },
+    {
+      "profile": "researcher",
+      "before_skills": 95,
+      "after_skills": 17,
+      "disabled": 78,
+      "before_description_tokens_est": 1866,
+      "after_description_tokens_est": 320,
+      "reduction_tokens_est": 1546,
+      "reduction_percent": 82.9,
+      "before_runtime_index_chars": 10813,
+      "after_runtime_index_chars": 2160
+    }
+  ]
+}
