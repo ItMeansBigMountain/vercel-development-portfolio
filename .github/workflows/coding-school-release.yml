@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       source_run_id:
-        description: Successful coding-school CI run ID whose exact artifact was preview-approved
+        description: Successful main CI run ID whose exact artifact was preview-approved
         required: true
         type: string
       expected_source_sha:
-        description: Full 40-character coding-school commit SHA approved in preview
+        description: Full 40-character main commit SHA approved in preview
         required: true
         type: string
       promote_production:
@@ -33,7 +33,7 @@ concurrency:
 jobs:
   validate-source:
     name: Validate approved CI source
-    if: inputs.promote_production == true && github.ref == 'refs/heads/coding-school'
+    if: inputs.promote_production == true && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
@@ -45,16 +45,16 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
         with:
-          ref: coding-school
+          ref: main
           persist-credentials: false
-      - name: Require source SHA to be current release branch
+      - name: Require source SHA to be current main
         id: source
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPOSITORY: ${{ github.repository }}
         run: |
           case "$SOURCE_SHA" in [0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]) ;; *) exit 1;; esac
-          test "$(gh api "repos/$GH_REPOSITORY/commits/coding-school" --jq .sha)" = "$SOURCE_SHA" || { echo 'Source is not current coding-school' >&2; exit 1; }
+          test "$(gh api "repos/$GH_REPOSITORY/commits/main" --jq .sha)" = "$SOURCE_SHA" || { echo 'Source is not current main' >&2; exit 1; }
           echo "source_sha=$SOURCE_SHA" >> "$GITHUB_OUTPUT"
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
         with:
@@ -62,7 +62,7 @@ jobs:
           path: ${{ env.APP_PATH }}
           run-id: ${{ env.SOURCE_RUN_ID }}
           github-token: ${{ github.token }}
-      - name: Verify exact successful release-branch run and artifact digest
+      - name: Verify exact successful main run and artifact digest
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPOSITORY: ${{ github.repository }}
@@ -98,39 +98,57 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
         with:
-          ref: coding-school
+          ref: main
           persist-credentials: false
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
         with:
           name: coding-school-production-candidate-${{ needs.validate-source.outputs.source_sha }}
           path: ${{ env.APP_PATH }}
       - name: Verify candidate checksums and configuration
+        env:
+          AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+          AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+          AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          AZURE_RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
+          AZURE_STATIC_WEB_APP_NAME: ${{ vars.AZURE_STATIC_WEB_APP_NAME }}
         working-directory: ${{ env.APP_PATH }}
         run: |
           sha256sum --check artifact-files.sha256
-          test -n "$PRODUCTION_URL"
+          for name in AZURE_CLIENT_ID AZURE_TENANT_ID AZURE_SUBSCRIPTION_ID AZURE_RESOURCE_GROUP AZURE_STATIC_WEB_APP_NAME PRODUCTION_URL; do
+            test -n "${!name:-}" || { echo "Missing $name in coding-school-production" >&2; exit 1; }
+            case "${!name}" in pending-*|placeholder|todo|changeme) echo "$name is still a placeholder" >&2; exit 1;; esac
+          done
           case "$PRODUCTION_URL" in https://*) ;; *) exit 1;; esac
-      - name: Obtain GitHub OIDC identity token for Azure Static Web Apps
-        id: id-token
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+      - name: Authenticate to Azure with environment-bound GitHub OIDC
+        uses: azure/login@7184910d9eb2b1c5e48f7073824a90609bb9b6d6 # v2.3.0
         with:
-          script: return await core.getIDToken('api://AzureADTokenExchange')
-          result-encoding: string
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
       - name: Dry-run release rehearsal
         if: inputs.dry_run == true
-        env:
-          OIDC_TOKEN: ${{ steps.id-token.outputs.result }}
         run: |
-          test -n "$OIDC_TOKEN"
-          echo 'Dry run passed: protected environment approved, exact artifact verified, OIDC token issued; deployment intentionally skipped.' >> "$GITHUB_STEP_SUMMARY"
+          az account show --query 'not_null(id)' --output tsv | grep -qx true
+          echo 'Dry run passed: protected environment approved, exact artifact verified, and Azure OIDC login succeeded; deployment intentionally skipped.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Obtain ephemeral Static Web Apps deployment token
+        if: inputs.dry_run == false
+        id: swa-token
+        env:
+          AZURE_RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
+          AZURE_STATIC_WEB_APP_NAME: ${{ vars.AZURE_STATIC_WEB_APP_NAME }}
+        run: |
+          token="$(az staticwebapp secrets list --name "$AZURE_STATIC_WEB_APP_NAME" --resource-group "$AZURE_RESOURCE_GROUP" --query properties.apiKey --output tsv)"
+          test -n "$token" || { echo 'Azure returned no deployment token' >&2; exit 1; }
+          echo "::add-mask::$token"
+          echo "token=$token" >> "$GITHUB_OUTPUT"
       - name: Deploy prebuilt artifact with GitHub OIDC
         if: inputs.dry_run == false
         uses: Azure/static-web-apps-deploy@4d27395796ac319302594769cfe812bd207490b1 # v1
         with:
+          azure_static_web_apps_api_token: ${{ steps.swa-token.outputs.token }}
           action: upload
           app_location: projects/coding-school-platform/app/dist
           skip_app_build: true
-          github_id_token: ${{ steps.id-token.outputs.result }}
       - name: Verify production classroom workflow
         if: inputs.dry_run == false
         env:

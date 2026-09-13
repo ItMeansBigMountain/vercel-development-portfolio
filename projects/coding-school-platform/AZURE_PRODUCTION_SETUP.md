@@ -64,15 +64,15 @@ Link the GitHub repository to the Azure AD App via OIDC:
 az ad app federated-credential create \
   --id <APP_ID> \
   --parameters '{
-    "name": "github-actions-main",
+    "name": "github-actions-coding-school-production",
     "issuer": "https://token.actions.githubusercontent.com",
-    "subject": "repo:ItMeansBigMountain/HeRmEz:ref:refs/heads/main",
-    "description": "GitHub Actions OIDC for Coding School production promotion from main branch",
+    "subject": "repo:ItMeansBigMountain/HeRmEz:environment:coding-school-production",
+    "description": "GitHub Actions OIDC for the protected Coding School production environment",
     "audiences": ["api://AzureADTokenExchange"]
   }'
 ```
 
-> **Critical**: The `subject` must exactly match `repo:<owner>/<repo>:ref:refs/heads/main`. Only `main` branch can obtain tokens.
+> **Critical**: The `subject` must exactly match `repo:ItMeansBigMountain/HeRmEz:environment:coding-school-production`. The GitHub environment independently restricts deployments to exact branch `main`.
 
 #### 5. Record Configuration
 | Setting | Value |
@@ -223,9 +223,9 @@ After setup, verify by:
 - **Vercel Preview workflow**: `.github/workflows/coding-school-vercel-preview.yml` ✅
 - **Build verified locally**: `npm run build:web` + `npm run smoke:web` + `npm run gate:inputs` ✅
 - **GitHub Environment `coding-school-preview`**: Created, configured ✅
-- **GitHub Environment `coding-school-production`**: Created, protected-branch policy set ⚠️ (approval gate requires billing plan upgrade)
-- **Azure OIDC federated credential**: NOT YET CONFIGURED (requires Azure owner device-code authorization)
-- **Azure Static Web App**: NOT YET CREATED
-- **Azure variables in `coding-school-production`**: NOT YET SET
+- **GitHub Environment `coding-school-production`**: Created with exact `main` branch policy; no required reviewer is configured because the private-repository plan exposes no environment-reviewer control and the repository has no independent collaborator ⚠️
+- **Azure OIDC federated credential**: NOT VERIFIED; the six environment entries are placeholders, so the configured app registration cannot be identified safely
+- **Azure Static Web App**: NOT VERIFIED from the placeholder configuration
+- **Azure variables in `coding-school-production`**: All six names exist, but all six values are placeholders and must be replaced through GitHub Environment settings
 
-> **Blocked on**: Azure owner must run device-code login (`az login --use-device-code`), create Static Web App, configure OIDC federated credential, and set GitHub Environment variables. Then Oyama must personally approve preview before production promotion.
+> **Blocked on**: An independent GitHub reviewer must be added (and the plan upgraded if required), then configured with self-review prevention. The Azure owner must replace all six placeholder values, verify or create the Static Web App, and configure an exact OIDC credential with subject `repo:ItMeansBigMountain/HeRmEz:environment:coding-school-production`, issuer `https://token.actions.githubusercontent.com`, and audience `api://AzureADTokenExchange`. Do not promote production until both controls read back successfully.

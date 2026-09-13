@@ -10,7 +10,7 @@ if (run.conclusion !== 'success' && !sameActiveRun) throw new Error(`Source run 
 if (run.event !== process.env.SOURCE_EVENT) throw new Error(`Unexpected source event ${run.event}`);
 if (run.head_sha !== process.env.SOURCE_SHA) throw new Error('Source run SHA mismatch');
 if (manifest.source_run_id !== Number(process.env.SOURCE_RUN_ID) || manifest.source_sha !== process.env.SOURCE_SHA) throw new Error('Release manifest source mismatch');
-if (process.env.SOURCE_EVENT === 'push' && run.head_branch !== 'coding-school') throw new Error('Production source is not coding-school');
+if (process.env.SOURCE_EVENT === 'push' && run.head_branch !== 'main') throw new Error('Production source is not main');
 const artifacts = JSON.parse(execFileSync('gh', ['api', `repos/${process.env.GH_REPOSITORY}/actions/runs/${process.env.SOURCE_RUN_ID}/artifacts`], { encoding: 'utf8' })).artifacts;
 const artifact = artifacts.find(item => item.name === 'coding-school-web' && !item.expired);
 if (!artifact || !artifact.digest?.startsWith('sha256:')) throw new Error('Artifact ID/digest unavailable');

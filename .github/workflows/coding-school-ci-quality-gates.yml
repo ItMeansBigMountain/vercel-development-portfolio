@@ -4,7 +4,7 @@ on:
   pull_request:
     paths: ['projects/coding-school-platform/**', '.github/workflows/coding-school-*.yml']
   push:
-    branches: [coding-school]
+    branches: [main, coding-school]
     paths: ['projects/coding-school-platform/**', '.github/workflows/coding-school-*.yml']
   workflow_dispatch:
 
@@ -200,7 +200,7 @@ jobs:
 
   preview:
     name: Verified Vercel Preview
-    if: github.event_name == 'push' && github.ref == 'refs/heads/coding-school'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/coding-school')
     needs: gate-summary
     permissions:
       actions: read
