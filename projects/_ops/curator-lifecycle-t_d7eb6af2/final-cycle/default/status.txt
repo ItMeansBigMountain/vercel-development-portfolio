@@ -1,0 +1,40 @@
+curator: ENABLED
+  runs:           19
+  last run:       1s ago
+  last summary:   auto: no changes; llm: skipped (consolidation off)
+  last report:    /opt/data/logs/curator/20260913-120933
+  interval:       every 7d
+  stale after:    30d unused
+  archive after:  90d unused
+  consolidate:    off (prune-only; LLM merge pass opt-in)
+
+curator-managed skills: 35 total  (agent-created=18  bundled=17)
+  active     34
+  stale      1
+  archived   0
+
+unmanaged (no provenance marker): 57 total
+  pre-dates marker    8
+  foreground-created  49
+  never auto-staled or archived — `hermes curator adopt <name>` hands one over
+
+least recently active (top 5):
+  box                                       activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  competitor-news-monitor                   activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  document-to-action-items                  activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  docx                                      activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  inspecting-hermes-desktop-dom             activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+
+most active (top 5):
+  runelite-plugin-development               activity=575  use=166  view=166  patches=243  last_activity=13d ago
+  codebase-inspection                       activity= 80  use= 40  view= 40  patches=  0  last_activity=10d ago
+  browser-oauth-automation                  activity= 55  use= 22  view= 22  patches= 11  last_activity=7d ago
+  profile-consolidation-workflow            activity= 32  use= 11  view= 11  patches= 10  last_activity=5d ago
+  trap-chat                                 activity= 32  use= 12  view= 12  patches=  8  last_activity=8d ago
+
+least active (top 5):
+  box                                       activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  competitor-news-monitor                   activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  document-to-action-items                  activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  docx                                      activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  github                                    activity=  0  use=  0  view=  0  patches=  0  last_activity=never

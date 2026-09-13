@@ -1,0 +1,5 @@
+curator: running review pass...
+curator: consolidation is off — running prune-only (deterministic stale/archive). Pass --consolidate or set `curator.consolidate: true` to enable the LLM merge pass.
+curator: snapshot created (2026-09-13T12-09-33Z)
+curator: auto: no changes; llm: skipped (consolidation off)
+auto: checked=35 stale=0 archived=0 reactivated=0

@@ -1,0 +1,170 @@
+{
+  "default": {
+    "config_path": "/opt/data/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  },
+  "software-developer": {
+    "config_path": "/opt/data/profiles/software-developer/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  },
+  "social-growth": {
+    "config_path": "/opt/data/profiles/social-growth/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  },
+  "trading-specialist": {
+    "config_path": "/opt/data/profiles/trading-specialist/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  },
+  "business-operator": {
+    "config_path": "/opt/data/profiles/business-operator/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  },
+  "personal": {
+    "config_path": "/opt/data/profiles/personal/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  },
+  "redteam": {
+    "config_path": "/opt/data/profiles/redteam/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  },
+  "researcher": {
+    "config_path": "/opt/data/profiles/researcher/config.yaml",
+    "changes": [
+      {
+        "path": "skills.guard_agent_created",
+        "expected": true,
+        "before": false,
+        "after": true
+      }
+    ],
+    "only_expected_change": true,
+    "effective": {
+      "enabled": true,
+      "interval_hours": 168,
+      "min_idle_hours": 2,
+      "stale_after_days": 30,
+      "archive_after_days": 90,
+      "consolidate": false,
+      "guard_agent_created": true
+    }
+  }
+}

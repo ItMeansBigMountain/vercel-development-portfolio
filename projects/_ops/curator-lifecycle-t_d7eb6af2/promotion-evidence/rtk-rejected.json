@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-13T12:07:38.972259+00:00",
+  "profile": "software-developer",
+  "dry_run": false,
+  "scanned": 1,
+  "passed": 0,
+  "rejected": 1,
+  "promoted": 0,
+  "audits": [
+    {
+      "skill": "rtk-output-filter",
+      "path": "/opt/data/profiles/software-developer/skills/devops/rtk-output-filter",
+      "passed": false,
+      "checks": [
+        "name",
+        "frontmatter_new_skill",
+        "content_size",
+        "skills_guard"
+      ],
+      "failures": [
+        "frontmatter: Description is 98 chars \u2014 new skills must fit the 60-char system-prompt budget (one sentence, trigger first, ends with a period). The skill index truncates longer descriptions to 57 chars + '...', destroying the routing signal. Move detail into the skill body.",
+        "security_scan: Blocked (community source + dangerous verdict, 3 findings). --force does not override a dangerous verdict.; Scan: rtk-output-filter (curator-promotion/community)  Verdict: DANGEROUS\n  CRITICAL destructive    SKILL.md:95                    \"rm -rf /opt/data/profiles/software-developer/skills/devops/r\"\n  HIGH     exfiltration   SKILL.md:37                    \"Do not prefix quiet commands or commands where complete outp\"\n  MEDIUM   supply_chain   SKILL.md:72                    \"uv pip install --python projects/_ops/rtk-output-filter-t_55\"\n\nDecision: BLOCKED \u2014 Blocked (community source + dangerous verdict, 3 findings). --force does not override a dangerous verdict."
+      ],
+      "security_scan": "Scan: rtk-output-filter (curator-promotion/community)  Verdict: DANGEROUS\n  CRITICAL destructive    SKILL.md:95                    \"rm -rf /opt/data/profiles/software-developer/skills/devops/r\"\n  HIGH     exfiltration   SKILL.md:37                    \"Do not prefix quiet commands or commands where complete outp\"\n  MEDIUM   supply_chain   SKILL.md:72                    \"uv pip install --python projects/_ops/rtk-output-filter-t_55\"\n\nDecision: BLOCKED \u2014 Blocked (community source + dangerous verdict, 3 findings). --force does not override a dangerous verdict."
+    }
+  ],
+  "command_results": []
+}

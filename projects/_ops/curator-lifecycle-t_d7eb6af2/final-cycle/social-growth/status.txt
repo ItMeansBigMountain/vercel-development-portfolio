@@ -1,0 +1,40 @@
+curator: ENABLED
+  runs:           19
+  last run:       1s ago
+  last summary:   auto: no changes; llm: skipped (consolidation off)
+  last report:    /opt/data/profiles/social-growth/logs/curator/20260913-120807
+  interval:       every 7d
+  stale after:    30d unused
+  archive after:  90d unused
+  consolidate:    off (prune-only; LLM merge pass opt-in)
+
+curator-managed skills: 34 total  (agent-created=17  bundled=17)
+  active     33
+  stale      1
+  archived   0
+
+unmanaged (no provenance marker): 58 total
+  pre-dates marker    8
+  foreground-created  50
+  never auto-staled or archived — `hermes curator adopt <name>` hands one over
+
+least recently active (top 5):
+  blocked-page-recovery                     activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  box                                       activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  competitor-news-monitor                   activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  document-to-action-items                  activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  docx                                      activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+
+most active (top 5):
+  runelite-plugin-development               activity=575  use=166  view=166  patches=243  last_activity=13d ago
+  codebase-inspection                       activity= 82  use= 41  view= 41  patches=  0  last_activity=5d ago
+  browser-oauth-automation                  activity= 47  use= 19  view= 19  patches=  9  last_activity=5d ago
+  grounded-citations                        activity= 38  use= 19  view= 19  patches=  0  last_activity=6d ago
+  trap-chat                                 activity= 32  use= 12  view= 12  patches=  8  last_activity=8d ago
+
+least active (top 5):
+  blocked-page-recovery                     activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  box                                       activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  competitor-news-monitor                   activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  discord-redteam-workspace-setup           activity=  0  use=  0  view=  0  patches=  0  last_activity=never
+  document-to-action-items                  activity=  0  use=  0  view=  0  patches=  0  last_activity=never

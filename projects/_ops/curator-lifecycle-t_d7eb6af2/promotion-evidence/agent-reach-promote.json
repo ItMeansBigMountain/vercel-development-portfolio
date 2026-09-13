@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-09-13T12:07:38.640944+00:00",
+  "profile": "software-developer",
+  "dry_run": false,
+  "scanned": 1,
+  "passed": 1,
+  "rejected": 0,
+  "promoted": 1,
+  "audits": [
+    {
+      "skill": "agent-reach-integration",
+      "path": "/opt/data/profiles/software-developer/skills/social-media/agent-reach-integration",
+      "passed": true,
+      "checks": [
+        "name",
+        "frontmatter_new_skill",
+        "content_size",
+        "skills_guard"
+      ],
+      "failures": [],
+      "security_scan": "Scan: agent-reach-integration (curator-promotion/community)  Verdict: SAFE\n  MEDIUM   supply_chain   SKILL.md:95                    \"`uv pip install --python /opt/data/profiles/software-develop\"\n\nDecision: ALLOWED \u2014 Allowed (community source, safe verdict)"
+    }
+  ],
+  "command_results": [
+    {
+      "command": [
+        "/opt/hermes/.venv/bin/hermes",
+        "--profile",
+        "software-developer",
+        "curator",
+        "adopt",
+        "agent-reach-integration"
+      ],
+      "returncode": 0,
+      "stdout": "curator: adopted 'agent-reach-integration' into curator management\n",
+      "stderr": ""
+    }
+  ]
+}

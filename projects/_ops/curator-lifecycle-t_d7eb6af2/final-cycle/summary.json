@@ -1,0 +1,106 @@
+{
+  "default": {
+    "counts": {
+      "scanned": 35,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  },
+  "software-developer": {
+    "counts": {
+      "scanned": 33,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  },
+  "social-growth": {
+    "counts": {
+      "scanned": 34,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  },
+  "trading-specialist": {
+    "counts": {
+      "scanned": 32,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  },
+  "business-operator": {
+    "counts": {
+      "scanned": 31,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  },
+  "personal": {
+    "counts": {
+      "scanned": 32,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  },
+  "redteam": {
+    "counts": {
+      "scanned": 32,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  },
+  "researcher": {
+    "counts": {
+      "scanned": 31,
+      "marked_stale": 0,
+      "archived": 0,
+      "reactivated": 0
+    },
+    "returncodes": {
+      "dry-run": 0,
+      "normal": 0,
+      "status": 0
+    }
+  }
+}

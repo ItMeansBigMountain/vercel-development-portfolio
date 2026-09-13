@@ -1,0 +1,5 @@
+curator: running DRY-RUN (report only, no mutations)...
+curator: consolidation is off — running prune-only (deterministic stale/archive). Pass --consolidate or set `curator.consolidate: true` to enable the LLM merge pass.
+curator: dry-run auto: no changes; llm: skipped (consolidation off)
+auto (preview): 31 candidate skill(s) — no transitions applied in dry-run
+dry-run: no changes applied. Read the report with `hermes curator status` and run `hermes curator run` (no flag) to apply.
