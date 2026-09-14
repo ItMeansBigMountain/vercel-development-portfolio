@@ -1,0 +1,174 @@
+# Journal AI Web Production Promotion
+# Promotes verified immutable preview to Vercel production (alias)
+
+name: Journal AI Web Production Promotion
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: Successful main CI run ID whose exact artifact was preview-approved
+        required: true
+        type: string
+      expected_source_sha:
+        description: Full 40-character main commit SHA approved in preview
+        required: true
+        type: string
+      promote_production:
+        description: I verified the preview and request production promotion
+        required: true
+        default: false
+        type: boolean
+      dry_run:
+        description: Verify provenance/configuration without deploying
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: journal-ai-web-production
+  cancel-in-progress: false
+
+jobs:
+  validate-source:
+    name: Validate approved CI source
+    if: inputs.promote_production == true && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      source_sha: ${{ steps.source.outputs.source_sha }}
+    env:
+      APP_PATH: projects/journal-ai/frontend/journal-app
+      SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+      SOURCE_SHA: ${{ inputs.expected_source_sha }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Require source SHA to be current main
+        id: source
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          case "$SOURCE_SHA" in [0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]) ;; *) exit 1;; esac
+          test "$(gh api "repos/$GH_REPOSITORY/commits/main" --jq .sha)" = "$SOURCE_SHA" || { echo 'Source is not current main' >&2; exit 1; }
+          echo "source_sha=$SOURCE_SHA" >> "$GITHUB_OUTPUT"
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
+        with:
+          name: journal-ai-web-${{ inputs.expected_source_sha }}
+          path: ${{ env.APP_PATH }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+      - name: Verify build artifact exists
+        run: |
+          test -d "${{ env.APP_PATH }}/dist" || { echo "No dist directory in downloaded artifact" >&2; exit 1; }
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: journal-ai-web-production-candidate-${{ inputs.expected_source_sha }}
+          path: ${{ env.APP_PATH }}/dist
+          if-no-files-found: error
+          retention-days: 90
+
+  production:
+    name: Vercel Production Promotion
+    needs: validate-source
+    if: inputs.promote_production == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: journal-ai-web-production
+      url: https://journal-ai.vercel.app
+    env:
+      APP_PATH: projects/journal-ai/frontend/journal-app
+      SOURCE_SHA: ${{ needs.validate-source.outputs.source_sha }}
+      VERCEL_CLI_VERSION: '59.5.0'
+      NODE_VERSION: '22'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: projects/journal-ai/frontend/journal-app/package-lock.json
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.2.1
+        with:
+          name: journal-ai-web-production-candidate-${{ needs.validate-source.outputs.source_sha }}
+          path: ${{ env.APP_PATH }}/dist
+      - name: Validate required environment configuration
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          for name in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
+            test -n "${!name:-}" || { echo "Missing $name in journal-ai-web-production environment" >&2; exit 1; }
+          done
+          test "$VERCEL_PROJECT_ID" = prj_DNm9psJiy1AcN0CLUWyY67l2q5fZ
+          test "$VERCEL_ORG_ID" = team_9IP8D1xXFQSrBMZrMjRnl9sD
+      - name: Pull Vercel project settings
+        working-directory: ${{ env.APP_PATH }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx --yes vercel@${{ env.VERCEL_CLI_VERSION }} pull --yes --environment=production
+      - name: Verify pulled Vercel project identity
+        working-directory: ${{ env.APP_PATH }}
+        run: |
+          node -e '
+            const fs = require("fs");
+            const p = JSON.parse(fs.readFileSync(".vercel/project.json", "utf8"));
+            const expectedProjectId = "prj_DNm9psJiy1AcN0CLUWyY67l2q5fZ";
+            const expectedProjectName = "journal-ai";
+            if (p.projectId !== expectedProjectId || p.projectName !== expectedProjectName) {
+              console.error("Refusing deployment: .vercel points at", p, "expected", { projectId: expectedProjectId, projectName: expectedProjectName });
+              process.exit(1);
+            }
+          '
+      - name: Dry-run production promotion
+        if: inputs.dry_run == true
+        run: |
+          echo 'Dry run passed: protected environment approved, exact artifact verified, and Vercel project identity confirmed; deployment intentionally skipped.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Build precompiled deployment for production
+        if: inputs.dry_run == false
+        working-directory: ${{ env.APP_PATH }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx --yes vercel@${{ env.VERCEL_CLI_VERSION }} build --token="${{ secrets.VERCEL_TOKEN }}"
+      - name: Deploy precompiled to production (alias)
+        if: inputs.dry_run == false
+        id: deploy
+        working-directory: ${{ env.APP_PATH }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          url="$(npx --yes vercel@${{ env.VERCEL_CLI_VERSION }} deploy --prebuilt --token="${{ secrets.VERCEL_TOKEN }}" --prod)"
+          case "$url" in https://*) ;; *) echo "Vercel did not return an HTTPS URL" >&2; exit 1;; esac
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          printf '### Vercel Production Promotion\n\n- Production URL: %s\n- Commit: `%s`\n- Run: %s\n' "$url" "${{ env.SOURCE_SHA }}" "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
+      - name: Browser smoke test on production
+        if: inputs.dry_run == false
+        run: |
+          printf '{"immutable_url":"%s","commit_sha":"%s","environment":"production"}\n' "https://journal-ai.vercel.app" "${{ env.SOURCE_SHA }}" > production-deployment-metadata.json
+          mkdir -p deployment-metadata
+          cp production-deployment-metadata.json deployment-metadata/
+          npm install -g playwright@1.48.0
+          npx playwright install --with-deps chromium
+          node ops/browser-smoke.mjs
+      - name: Upload production deployment evidence
+        if: inputs.dry_run == false
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: journal-ai-web-production-evidence-${{ needs.validate-source.outputs.source_sha }}
+          path: |
+            production-deployment-metadata.json
+            browser-smoke-results.json
+          if-no-files-found: error
+          retention-days: 90

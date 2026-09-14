@@ -1,0 +1,45 @@
+name: CombatAtlas EAS preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: Preview platform
+        required: true
+        type: choice
+        options: [all, ios, android]
+        default: all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: combatatlas-eas-preview-${{ github.ref }}-${{ inputs.platform }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: combatatlas-preview
+    defaults:
+      run:
+        working-directory: projects/CombatAtlas/mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/CombatAtlas/mobile/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run doctor
+      - name: Require scoped Expo credential
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: test -n "$EXPO_TOKEN" || { echo 'EXPO_TOKEN is not configured for combatatlas-preview.' >&2; exit 1; }
+      - name: Queue internal preview build
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: npx eas-cli@latest build --profile preview --platform "${{ inputs.platform }}" --non-interactive --no-wait

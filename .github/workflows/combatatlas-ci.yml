@@ -1,0 +1,79 @@
+name: CombatAtlas CI
+
+on:
+  pull_request:
+    paths:
+      - 'projects/CombatAtlas/**'
+      - '.github/workflows/combatatlas-*.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'projects/CombatAtlas/**'
+      - '.github/workflows/combatatlas-*.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: combatatlas-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  web:
+    name: Web lint, test, data, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: projects/CombatAtlas
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/CombatAtlas/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run lint
+      - run: npm test
+      - run: npm run validate:data
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: combatatlas-web-${{ github.sha }}
+          path: projects/CombatAtlas/dist
+          if-no-files-found: error
+          retention-days: 14
+
+  mobile:
+    name: Expo test, doctor, export
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: projects/CombatAtlas/mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/CombatAtlas/mobile/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run doctor
+      - run: npm run export:web
+      - run: npx expo export --platform ios --output-dir dist-ios
+      - uses: actions/upload-artifact@v4
+        with:
+          name: combatatlas-expo-${{ github.sha }}
+          path: |
+            projects/CombatAtlas/mobile/dist
+            projects/CombatAtlas/mobile/dist-ios
+          if-no-files-found: error
+          retention-days: 14

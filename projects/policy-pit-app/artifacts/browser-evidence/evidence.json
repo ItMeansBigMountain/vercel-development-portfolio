@@ -1,0 +1,48 @@
+{
+  "url": "https://policy-pit-877o8klwc-itmeansbigmountains-projects.vercel.app",
+  "checks": [
+    {
+      "device": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "finalUrl": "https://policy-pit-877o8klwc-itmeansbigmountains-projects.vercel.app/",
+      "title": "Policy Pit — Development Preview",
+      "body": "Skip to comparison PP Policy Pit Development preview · sample data COMPARE IDEAS BEFORE PARTIES Which policy approach fits you? Try one small, private-on-this-device comparison flow using fictional candidates and illustrative policy statements. Sample comparison 1 of 3 ENERGY How should the sample candidates approach new electricity generation? Candidate Blue Use public incentives to speed up renewable generation and grid storage. Candidate Red Reduce permitting barriers and let competing energy",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "resultVisible": true,
+      "restartVerified": true,
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedResponses": [],
+      "screenshot": "/opt/data/HeRmEz/projects/policy-pit-app/artifacts/browser-evidence/desktop.png",
+      "passed": true
+    },
+    {
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "finalUrl": "https://policy-pit-877o8klwc-itmeansbigmountains-projects.vercel.app/",
+      "title": "Policy Pit — Development Preview",
+      "body": "Skip to comparison PP Policy Pit Development preview · sample data COMPARE IDEAS BEFORE PARTIES Which policy approach fits you? Try one small, private-on-this-device comparison flow using fictional candidates and illustrative policy statements. Sample comparison 1 of 3 ENERGY How should the sample candidates approach new electricity generation? Candidate Blue Use public incentives to speed up renewable generation and grid storage. Candidate Red Reduce permitting barriers and let competing energy",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "resultVisible": true,
+      "restartVerified": true,
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedResponses": [],
+      "screenshot": "/opt/data/HeRmEz/projects/policy-pit-app/artifacts/browser-evidence/mobile.png",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

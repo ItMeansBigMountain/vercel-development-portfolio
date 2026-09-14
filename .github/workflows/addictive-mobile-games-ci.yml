@@ -1,0 +1,138 @@
+# CI Workflow — Addictive Mobile Games
+# Install, Lint, Test, Build, Secret-Scan
+
+name: Addictive Mobile Games CI
+
+on:
+  pull_request:
+    paths:
+      - 'projects/addictive-mobile-games/**'
+      - '.github/workflows/addictive-mobile-games-*.yml'
+      - '.github/gitleaks.toml'
+  push:
+    branches: [main]
+    paths:
+      - 'projects/addictive-mobile-games/**'
+      - '.github/workflows/addictive-mobile-games-*.yml'
+      - '.github/gitleaks.toml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-addictive-mobile-games-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  NODE_VERSION: '22'
+
+jobs:
+  secret-scan:
+    name: Secret Scan (gitleaks)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Run gitleaks (PR diff only)
+        if: github.event_name == 'pull_request'
+        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2.7.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITLEAKS_CONFIG: .github/gitleaks.toml
+          GITLEAKS_LOG_OPTS: --log-opts="--since=${{ github.event.pull_request.base.sha }}"
+          GITLEAKS_EXIT_CODE: "1"
+      - name: Run gitleaks (full history on protected branch)
+        if: github.event_name != 'pull_request'
+        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2.7.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITLEAKS_CONFIG: .github/gitleaks.toml
+          GITLEAKS_EXIT_CODE: "1"
+
+  lint:
+    name: Lint & Typecheck
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: projects/addictive-mobile-games
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: projects/addictive-mobile-games/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Run lint
+        run: npm run lint
+      - name: Run typecheck
+        run: npx tsc --noEmit
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: projects/addictive-mobile-games
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: projects/addictive-mobile-games/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Run tests
+        run: npm test --if-present
+      - name: Upload coverage
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coverage-${{ github.sha }}
+          path: projects/addictive-mobile-games/coverage
+          if-no-files-found: ignore
+          retention-days: 14
+
+  build:
+    name: Production Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [secret-scan, lint, test]
+    defaults:
+      run:
+        working-directory: projects/addictive-mobile-games
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: projects/addictive-mobile-games/package-lock.json
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Build for production
+        run: npm run build
+      - name: Upload build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: build-${{ github.sha }}
+          path: |
+            projects/addictive-mobile-games/dist
+            projects/addictive-mobile-games/build
+            projects/addictive-mobile-games/.vercel/output
+          if-no-files-found: error
+          retention-days: 14

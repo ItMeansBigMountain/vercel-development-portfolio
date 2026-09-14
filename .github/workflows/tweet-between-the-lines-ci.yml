@@ -1,0 +1,50 @@
+name: tweetBetweenTheLines CI
+
+on:
+  pull_request:
+    paths:
+      - "projects/tweetBetweenTheLines/**"
+      - ".github/workflows/tweet-between-the-lines-*.yml"
+  push:
+    branches: [main]
+    paths:
+      - "projects/tweetBetweenTheLines/**"
+      - ".github/workflows/tweet-between-the-lines-*.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tweet-between-the-lines-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: projects/tweetBetweenTheLines
+
+jobs:
+  quality:
+    name: Lint, test, build, and fixtures
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/tweetBetweenTheLines/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run lint
+      - run: npm run validate:fixtures
+      - run: npm test
+      - run: npm run build
+      - name: Package static web export
+        run: tar -C apps/mobile -czf web-export.tgz dist
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: tweet-between-the-lines-web-${{ github.sha }}
+          path: projects/tweetBetweenTheLines/web-export.tgz
+          if-no-files-found: error
+          retention-days: 14

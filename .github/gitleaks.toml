@@ -1,0 +1,57 @@
+# Gitleaks Configuration — Addictive Mobile Games
+# Extends default rules; allowlist only reviewed fingerprints with owner/expiry rationale
+
+title = "Gitleaks Configuration for Addictive Mobile Games"
+
+[extend]
+# Use default gitleaks rules (DO NOT DISABLE)
+useDefault = true
+
+[allowlist]
+description = "Narrow, reviewed allowlist entries — each must have owner, rationale, and expiry date in comments"
+
+paths = [
+    "package-lock\\.json",
+    "yarn\\.lock",
+    "pnpm-lock\\.yaml",
+    "pnpm-lock\\.json",
+    "Cargo\\.lock",
+    "go\\.sum",
+    "dist/.*",
+    "build/.*",
+    "\\.next/.*",
+    "\\.vercel/.*",
+    "\\.turbo/.*",
+    "coverage/.*",
+    "\\.cache/.*",
+    "node_modules/.*",
+    "\\.env\\.example",
+    "\\.env\\.template",
+    "\\.env\\.sample",
+]
+
+# Configuration files (only if reviewed)
+# REVIEW BEFORE ADDING: workflow, JSON, YAML, TOML can contain secrets
+# paths += [
+#     "\\.github/.*",
+#     ".*\\.json",
+#     ".*\\.yaml",
+#     ".*\\.yml",
+#     ".*\\.toml",
+# ]
+
+# Application-specific allowlist entries (EXAMPLE FORMAT — REPLACE WITH ACTUAL REVIEWED ENTRIES)
+# Each entry MUST have a comment with: owner, rationale, expiry date
+# paths += [
+#     "apps/<app>/config/test-fixtures\\.json",  # owner: @team, rationale: test fixtures only, expiry: 2026-12-31
+# ]
+
+# Commit allowlist (specific commit SHAs that are known clean)
+# commits = [
+#     "abc1234...",  # owner: @team, rationale: baseline commit, expiry: 2026-12-31
+# ]
+
+# Regex allowlist for specific patterns (use sparingly)
+# regexes = [
+#     '''EXAMPLE_PATTERN''',  # owner: @team, rationale: documented test pattern, expiry: 2026-12-31
+# ]

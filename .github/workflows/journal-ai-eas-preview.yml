@@ -1,0 +1,47 @@
+# Journal AI EAS Internal Preview
+# Queues EAS preview builds for native platforms on demand
+
+name: Journal AI EAS Internal Preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: Native platform to build
+        required: true
+        default: all
+        type: choice
+        options: [all, android, ios]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: journal-ai-eas-${{ github.ref }}-${{ inputs.platform }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: journal-ai-mobile-preview
+    defaults:
+      run:
+        working-directory: projects/journal-ai/apps/mobile
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.1.0
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/journal-ai/apps/mobile/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - name: Queue internal EAS preview
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          test -n "$EXPO_TOKEN" || { echo 'Missing EXPO_TOKEN in journal-ai-mobile-preview' >&2; exit 1; }
+          npx eas-cli@22.4.0 build --profile preview --platform "${{ inputs.platform }}" --non-interactive --no-wait
+          echo 'Use the exact EAS build URL printed above; the completed build page provides the device install URL.' >> "$GITHUB_STEP_SUMMARY"

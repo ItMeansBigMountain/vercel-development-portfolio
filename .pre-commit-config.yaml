@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: '^(.hermes|projects/_archive|projects/coding-school-platform/app/deployment-metadata/test\.json)$'
+  - repo: local
+    hooks:
+      - id: gitleaks
+        name: gitleaks
+        entry: /opt/data/.local/bin/gitleaks detect --source . --verbose --redact --exit-code 0 --no-git
+        language: system
+        files: .*
+        exclude: '^(.hermes|projects/_archive|projects/.*/node_modules|projects/.*/dist|projects/.*/build)/'

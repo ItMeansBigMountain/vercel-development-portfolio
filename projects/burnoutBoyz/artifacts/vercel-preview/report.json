@@ -1,0 +1,94 @@
+{
+  "baseUrl": "https://burnoutboyz-dev.vercel.app",
+  "previewUrl": "https://burnoutboyz-qqnf0azf3-itmeansbigmountains-projects.vercel.app",
+  "checkedAt": "2026-09-05T06:16:00Z",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "route": "/",
+      "status": 200,
+      "title": "",
+      "titleNote": "Expo Router SSR uses data-rh title (empty); product identity is in <body>, not <title>",
+      "identity": true,
+      "identityEvidence": "Body contains 'BURNOUTBOYZ' and 'Your garage, explained.'",
+      "navigation": false,
+      "overflow": false,
+      "dimensions": { "scrollWidth": 1440, "clientWidth": 1440 },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedResponses": [],
+      "screenshot": "/opt/data/HeRmEz/projects/burnoutboyz/artifacts/vercel-preview/desktop-home.png"
+    },
+    {
+      "viewport": "desktop",
+      "route": "/explore",
+      "status": 404,
+      "title": "404: NOT_FOUND",
+      "titleNote": "Expo Router SSR uses data-rh title (empty); product identity is in <body>, not <title>",
+      "identity": false,
+      "identityEvidence": "Route not found — 404 response",
+      "navigation": false,
+      "overflow": false,
+      "dimensions": { "scrollWidth": 1440, "clientWidth": 1440 },
+      "consoleErrors": ["Failed to load resource: the server responded with a status of 404 ()"],
+      "pageErrors": [],
+      "failedResponses": [{ "status": 404, "url": "https://burnoutboyz-dev.vercel.app/explore" }],
+      "screenshot": "/opt/data/HeRmEz/projects/burnoutboyz/artifacts/vercel-preview/desktop-explore.png"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/",
+      "status": 200,
+      "title": "",
+      "titleNote": "Expo Router SSR uses data-rh title (empty); product identity is in <body>, not <title>",
+      "identity": true,
+      "identityEvidence": "Body contains 'BURNOUTBOYZ' and 'Your garage, explained.'",
+      "navigation": false,
+      "overflow": false,
+      "dimensions": { "scrollWidth": 390, "clientWidth": 390 },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedResponses": [],
+      "screenshot": "/opt/data/HeRmEz/projects/burnoutboyz/artifacts/vercel-preview/mobile-home.png"
+    },
+    {
+      "viewport": "mobile",
+      "route": "/explore",
+      "status": 404,
+      "title": "404: NOT_FOUND",
+      "titleNote": "Expo Router SSR uses data-rh title (empty); product identity is in <body>, not <title>",
+      "identity": false,
+      "identityEvidence": "Route not found — 404 response",
+      "navigation": false,
+      "overflow": false,
+      "dimensions": { "scrollWidth": 390, "clientWidth": 390 },
+      "consoleErrors": ["Failed to load resource: the server responded with a status of 404 ()"],
+      "pageErrors": [],
+      "failedResponses": [{ "status": 404, "url": "https://burnoutboyz-dev.vercel.app/explore" }],
+      "screenshot": "/opt/data/HeRmEz/projects/burnoutboyz/artifacts/vercel-preview/mobile-explore.png"
+    }
+  ],
+  "ssoProtection": {
+    "state": "unknown",
+    "evidence": "No 403 from vercel.com/api/jwt observed in this live verification run. Prior report claimed SSO protection disabled based on 403 errors that did not reproduce. SSO state must be confirmed via Vercel project settings (git integration / SSO token configuration) before production promotion.",
+    "vercelJwt403": "not observed in this run"
+  },
+  "summary": {
+    "product": "BURNOUTBOYZ",
+    "status": "active",
+    "homePage": "verified HTTP 200, identity confirmed, no overflow, no console errors",
+    "exploreRoute": "404 on all viewports and both URLs — route does not exist or is misconfigured",
+    "issues": [
+      "/explore returns 404 — investigate Expo Router routes configuration",
+      "SSO protection state unconfirmed — check Vercel project settings"
+    ],
+    "regressionGuard": {
+      "honda-tech-upgrade.vercel.app": {
+        "status": 200,
+        "title": "Honda Tech Upgrade",
+        "passed": true
+      }
+    },
+    "notes": "Honda Tech Upgrade (prj_EqqJiUJWGeWJjp4vYGmY6CGBZa9z) preserved unchanged. Title mismatch resolved: Expo Router SSR uses data-rh (empty <title>); product identity is in <body>. Prior report's 'Login \u2013 Vercel' title was Vercel auth-layer noise."
+  }
+}

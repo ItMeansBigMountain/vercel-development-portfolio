@@ -1,0 +1,52 @@
+name: tweetBetweenTheLines EAS preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: Native preview platform
+        required: true
+        default: all
+        type: choice
+        options: [all, ios, android]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tweet-between-the-lines-eas-preview-${{ inputs.platform }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: projects/tweetBetweenTheLines
+
+jobs:
+  build:
+    name: EAS internal preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: tweet-between-the-lines-mobile-preview
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: projects/tweetBetweenTheLines/package-lock.json
+      - run: npm ci --ignore-scripts
+      - name: Verify Expo project binding
+        run: |
+          node -e "const c=require('./apps/mobile/app.json').expo; if(!c.extra?.eas?.projectId) throw new Error('Set expo.extra.eas.projectId with eas init before requesting signed builds')"
+      - name: Queue signed internal builds
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          npx --yes eas-cli@22.4.0 build --non-interactive --no-wait --profile preview --platform "${{ inputs.platform }}" --json > eas-builds.json
+          node -e "const fs=require('fs'); const data=JSON.parse(fs.readFileSync('eas-builds.json')); const builds=Array.isArray(data)?data:[data]; if(!builds.length) throw new Error('EAS returned no builds'); const lines=builds.map(b=>'- '+(b.platform||'build')+': '+(b.buildDetailsPageUrl||b.url||b.id)); fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, '### EAS preview builds\n\n'+lines.join('\n')+'\n')"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: tweet-between-the-lines-eas-builds-${{ github.sha }}
+          path: projects/tweetBetweenTheLines/eas-builds.json
+          if-no-files-found: error
+          retention-days: 30

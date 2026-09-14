@@ -1,0 +1,14 @@
+{
+  "app": "coding-school-platform",
+  "repository": "ItMeansBigMountain/HeRmEz",
+  "commit_sha": "0f39db7c9a17e91400e1fe47a4b062d68a85d982",
+  "commit_short": "0f39db7",
+  "workflow_run_id": "123456789",
+  "workflow_run_url": "https://github.com/ItMeansBigMountain/HeRmEz/actions/runs/123456789",
+  "vercel_project_id": "prj_2RTTGwmqepGM9TMkyX2iXX9jbrNt",
+  "vercel_org_id": "team_9IP8D1xXFQSrBMZrMjRnl9sD",
+  "immutable_url": "http://127.0.0.1:3000",
+  "deployed_at": "2026-09-10T03:45:00.000Z",
+  "github_actor": "test",
+  "github_ref": "refs/heads/main"
+}
